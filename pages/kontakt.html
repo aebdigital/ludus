@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | LUDUS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/kontakt.css">
+</head>
+<body>
+    
+    <div class="hero-contact" style="background-image: url('../images/digital.jpg');">
+        <h1>Kontakt</h1>
+    </div>
+
+    <main class="container fade-in-up">
+        <div class="contact-layout">
+            
+            <div class="contact-form-container">
+                <h2 style="margin-bottom: 2rem; font-family: var(--font-heading);">Napíšte nám</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Meno a Priezvisko</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Správa</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-cta">Odoslať správu</button>
+                </form>
+            </div>
+
+            <div class="tuition-info">
+                <h2 style="margin-bottom: 2rem; font-family: var(--font-heading);">Školné</h2>
+                <p style="margin-bottom: 2rem; color: #666;">Školné na mesiac sa odvíja od toho, či žiak dodá škole na začiatku školského roka čestné prehlásenie.</p>
+
+                <div class="price-card">
+                    <h4>Žiaci s čestným prehlásením</h4>
+                    <div class="price">42€ <span style="font-size: 1rem; color: #999;">/ mesiac</span></div>
+                    <a href="#" class="btn-cta">Prihláška</a>
+                </div>
+
+                <div class="price-card">
+                    <h4>Žiaci BEZ čestného prehlásenia</h4>
+                    <div class="price">52€ <span style="font-size: 1rem; color: #999;">/ mesiac</span></div>
+                    <a href="#" class="btn-cta">Prihláška</a>
+                </div>
+
+                <div class="price-card">
+                    <h4>Súrodenci s čestným prehlásením</h4>
+                    <div class="price">35€ <span style="font-size: 1rem; color: #999;">/ mesiac</span></div>
+                    <a href="#" class="btn-cta">Prihláška</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- GSAP Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js?v=9.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js?v=9.0"></script>
+    
+    <!-- Lenis Smooth Scrolling -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js?v=9.0"></script>
+
+    <script src="../scripts/components.js" data-depth="1"></script>
+    <script src="../scripts/animations.js"></script>
+    <script src="../scripts/button-animation.js"></script>
+</body>
+</html>

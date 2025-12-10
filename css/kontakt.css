@@ -1,0 +1,100 @@
+.hero-contact {
+    height: 50vh;
+    background-image: url('../images/digital.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 var(--radius) var(--radius);
+    margin-top: 80px;
+}
+
+.hero-contact::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-contact h1 {
+    position: relative;
+    color: white;
+    font-size: 6rem;
+    font-family: var(--font-heading);
+    z-index: 1;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+}
+
+.contact-form-container, .tuition-info {
+    background: white;
+    padding: 4rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: var(--radius);
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: var(--radius);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background: var(--bg-color);
+}
+
+.price-card {
+    border-bottom: 1px solid #eee;
+    padding: 2rem 0;
+}
+
+.price-card:last-child {
+    border-bottom: none;
+}
+
+.price-card h4 {
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+}
+
+.price-card .btn-cta {
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: 10px 25px;
+}
+
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        margin-top: 2rem;
+    }
+}
