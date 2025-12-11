@@ -15,21 +15,24 @@ const lenis = new Lenis({
     infinite: false,
 });
 
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
-
 // Connect Lenis to GSAP ScrollTrigger
 lenis.on('scroll', ScrollTrigger.update);
 
+// Synchronize Lenis with GSAP Ticker
 gsap.ticker.add((time) => {
     lenis.raf(time * 1000);
 });
 
 gsap.ticker.lagSmoothing(0);
+
+// Optimize performance: Pause ticker when tab is inactive
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+        gsap.ticker.sleep();
+    } else {
+        gsap.ticker.wake();
+    }
+});
 
 // Wait for DOM to load and check if GSAP is available
 document.addEventListener('DOMContentLoaded', function() {
