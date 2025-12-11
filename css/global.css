@@ -4,7 +4,7 @@
 
 :root {
     --primary-color: #000000;
-    --header-bg: rgba(255, 255, 255, 0.85); /* White see-through */
+    --header-bg: rgba(255, 255, 255, 0.95); /* White less see-through */
     --footer-bg: #ffd37c;
     --secondary-color: #ffffff;
     --accent-color: #ffd37c; /* Yellow for buttons */
@@ -82,12 +82,15 @@ header {
     align-items: center;
     text-decoration: none;
     margin-right: auto; /* Pushes everything else to right if flex is default, but we want center nav */
+    cursor: pointer; /* Ensure pointer cursor on hover */
 }
 /* Wait, to center nav, header-inner needs specific handling */
 .header-inner {
-    display: grid;
-    grid-template-columns: 100px 1fr 100px; /* Logo - Nav - Spacer/CTA */
+    width: var(--site-width);
+    display: grid; /* Changed to grid */
+    grid-template-columns: auto 1fr auto; /* Flexible: Logo (auto), Nav (1fr), Socials (auto) */
     align-items: center;
+    gap: 1.5rem; /* Add some space between grid columns */
 }
 
 .logo img {
@@ -119,7 +122,7 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--accent-color); /* Accent color on hover */
+    color: #666; /* Dark grey on hover, instead of accent yellow */
     text-decoration: none; /* No underline */
     transform: scale(1.05); /* Slight scale up */
 }
@@ -147,6 +150,14 @@ footer {
     margin-bottom: 1rem;
     color: var(--primary-color); /* Black */
     font-size: 2rem;
+}
+
+.footer-logo {
+    max-height: 50px; /* Adjust as needed */
+    width: auto;
+    margin-bottom: 1rem;
+    display: block; /* Ensures it takes up full width for text-align to apply */
+    /* Removed margin: auto to align left */
 }
 
 .footer-section a {

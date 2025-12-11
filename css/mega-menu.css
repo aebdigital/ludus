@@ -6,12 +6,15 @@
 .mega-menu {
     position: absolute;
     top: 100%;
-    left: 0;
-    width: 100%;
-    background: white;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border-top: 1px solid #f0f0f0;
-    padding: 3rem 0;
+    left: 50%; /* Center the mega menu */
+    transform: translateX(-50%) translateY(10px);
+    background: var(--header-bg); /* Match header background */
+    backdrop-filter: blur(12px); /* Match header blur */
+    -webkit-backdrop-filter: blur(12px);
+    width: 60%; /* 60% width as requested */
+    min-width: 800px; /* Ensure it's not too small on smaller screens */
+    /* Removed box-shadow and border-top for seamless look */
+    padding: 3rem; /* Adjusted padding as it's not 100% width now */
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
@@ -21,10 +24,12 @@
 .has-mega-menu:hover .mega-menu {
     opacity: 1;
     visibility: visible;
+    transform: translateX(-50%) translateY(0);
 }
 
 .mega-menu-content {
-    width: var(--site-width);
+    /* No longer need site-width as mega-menu itself is % width */
+    max-width: 1200px; /* Constrain content width inside the 60% */
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -32,37 +37,42 @@
 }
 
 .mega-menu-links {
-    flex: 2;
-    columns: 2; /* 2 Column layout for links */
-    column-gap: 4rem;
+    flex: 2; /* Takes 2 parts of available flex space */
+    /* Removed max-width to let flex control sizing more naturally */
 }
 
 .mega-menu-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: block; /* Override global nav ul flex */
+    columns: 2; /* Split content into 2 columns directly on the UL */
+    column-gap: 3rem;
 }
 
 .mega-menu-list li {
     margin-bottom: 1rem;
-    break-inside: avoid; /* Prevent split across columns */
+    /* break-inside: avoid; Removed to allow natural top-to-bottom flow */
 }
 
 .mega-menu-list a {
-    display: block;
+    display: block; /* Force block to stack properly */
     color: var(--primary-color);
-    font-size: 1.2rem;
+    font-size: 2.2rem; /* 2x bigger as requested */
     font-weight: 500;
     text-decoration: none;
     transition: color 0.2s, transform 0.2s;
     font-family: var(--font-heading);
     letter-spacing: 0.5px;
     padding: 5px 0;
+    transform: none !important; /* Override global nav hover scale */
+    line-height: 1.2; /* Tighten line height for larger text */
 }
 
 .mega-menu-list a:hover {
-    color: var(--accent-color);
-    transform: translateX(10px);
+    color: #666; /* Dark grey instead of yellow */
+    transform: translateX(5px) !important; /* Specific hover effect for mega menu */
+    text-decoration: none;
 }
 
 /* Static Right Side Image */

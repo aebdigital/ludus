@@ -1,0 +1,68 @@
+/* Skolne Page Styles */
+
+.skolne-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.price-card {
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.price-card h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.price-tag {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    font-family: var(--font-heading);
+    display: block;
+    margin: 1rem 0;
+}
+
+.price-period {
+    font-size: 1.2rem;
+    color: #999;
+    font-weight: normal;
+}
+
+.price-card .btn-cta {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}

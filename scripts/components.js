@@ -4,7 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const depth = scriptTag ? parseInt(scriptTag.getAttribute('data-depth') || '0') : 0;
     
     // Check if we are on the homepage
-    const isHomepage = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/') || window.location.pathname === '/ludus/';
+    // Ensure we are at root depth (0) AND matches index patterns to avoid hiding nav on sub-folder index.html pages
+    let isHomepage = false;
+    if (depth === 0) {
+        const path = window.location.pathname;
+        isHomepage = path.endsWith('index.html') || path.endsWith('/') || path === '/ludus/';
+    }
 
     loadHeader(depth, isHomepage);
     loadFooter(depth);
@@ -31,62 +36,63 @@ function loadHeader(depth, isHomepage) {
 
     const logoPath = depth === 0 ? 'index.html' : (depth === 1 ? '../index.html' : '../../index.html');
     const imgPath = depth === 0 ? 'images/loga-4/logo-main.png' : (depth === 1 ? '../images/loga-4/logo-main.png' : '../../images/loga-4/logo-main.png');
+    // Contact path needs to be dynamic too
+    const contactPath = getPath('kontakt.html', true);
 
     // --- MENU DATA STRUCTURE ---
     const menuData = [
         {
             title: "Ludus Academy",
-            url: getPath('academy.html', true),
-            image: "images/sculpture.jpg", // Static image for the category
+            url: getPath('ludus_academy/index.html', true),
+            image: "images/logo-academy-main.jpeg", 
             links: [
-                { name: "O nás", url: getPath('academy.html', true), image: "images/sculpture.jpg" },
-                { name: "Kniha", url: getPath('kniha.html', true), image: "images/kniha/ukazka1.png" },
-                { name: "Kontakt", url: getPath('kontakt.html', true), image: "images/digital.jpg" },
-                { name: "Kurzy", url: getPath('academy.html', true), image: "images/painting.jpg" },
-                { name: "Workshopy", url: getPath('academy.html', true), image: "images/kniha/kniha-hero.jpeg" },
-                { name: "Tréningy pre firmy", url: getPath('ludus_academy/treningy-firmy.html', true), image: "images/logo.jpg" }
+                { name: "O nás", url: getPath('ludus_academy/index.html', true), image: "images/sculpture.jpg" },
+                { name: "Kniha", url: getPath('ludus_academy/kniha.html', true), image: "images/kniha/ukazka1.png" },
+                { name: "Kurzy", url: getPath('ludus_academy/index.html', true), image: "images/painting.jpg" },
+                { name: "Workshopy", url: getPath('ludus_academy/index.html', true), image: "images/kniha/kniha-hero.jpeg" },
+                { name: "Tréningy pre firmy", url: getPath('ludus_academy/treningy-firmy.html', true), image: "images/logo.jpg" },
+                { name: "Blog", url: getPath('ludus_academy/blog.html', true), image: "images/digital.jpg" }
             ]
         },
         {
             title: "Škola Ludus",
-            url: getPath('skola.html', true),
+            url: getPath('szus/index.html', true),
             image: "images/painting.jpg",
             links: [
-                { name: "História", url: getPath('historia.html', true), image: "images/kniha/ukazka2.png" },
-                { name: "Prihláška do SZUŠ LUDUS", url: getPath('kontakt.html', true), image: "images/kniha/kniha-hero.jpeg" },
-                { name: "Školné", url: getPath('kontakt.html', true), image: "images/sculpture.jpg" },
-                { name: "Pedagógovia", url: getPath('skola.html', true), image: "images/o-nas/katarina-baranova.jpg" },
-                { name: "Kontakt", url: getPath('kontakt.html', true), image: "images/digital.jpg" },
-                { name: "Výučba", url: getPath('vyucba.html', true), image: "images/painting.jpg" },
-                { name: "Fotogaléria", url: getPath('galeria-skola.html', true), image: "images/kniha/ukazka3.png" }
+                { name: "História", url: getPath('szus/historia.html', true), image: "images/kniha/ukazka2.png" },
+                { name: "Prihláška do SZUŠ", url: contactPath, image: "images/kniha/kniha-hero.jpeg" },
+                { name: "Školné", url: getPath('szus/skolne.html', true), image: "images/sculpture.jpg" },
+                { name: "Pedagógovia", url: getPath('szus/index.html', true), image: "images/o-nas/katarina-baranova.jpg" },
+                { name: "Výučba", url: getPath('szus/vyucba.html', true), image: "images/painting.jpg" },
+                { name: "Galéria", url: getPath('szus/galeria.html', true), image: "images/kniha/ukazka3.png" }
             ]
         },
         {
             title: "Divadlo Ludus",
-            url: getPath('divadlo.html', true),
+            url: getPath('divadlo/index.html', true),
             image: "images/digital.jpg",
             links: [
-                { name: "História", url: getPath('historia.html', true), image: "images/kniha/ukazka1.png" },
-                { name: "Aktivity", url: getPath('divadlo-aktivity.html', true), image: "images/sculpture.jpg" },
-                { name: "Naše priestory", url: getPath('priestory.html', true), image: "images/digital.jpg" },
-                { name: "Program a rezervácia", url: getPath('divadlo.html', true), image: "images/painting.jpg" },
-                { name: "Kontakt", url: getPath('kontakt.html', true), image: "images/kniha/kniha-hero.jpeg" },
-                { name: "Galéria", url: getPath('galeria-divadlo.html', true), image: "images/logo.jpg" }
+                { name: "História", url: getPath('szus/historia.html', true), image: "images/kniha/ukazka1.png" }, // Reusing historia? Or divadlo has own? User said "Historia in in szus". Divadlo has historia link in menu. Assuming same? Or pages/divadlo/historia.html? I moved pages/historia.html to szus/historia.html. I will point to szus/historia.html for now unless specified.
+                { name: "Aktivity", url: getPath('divadlo/aktivity.html', true), image: "images/sculpture.jpg" },
+                { name: "Naše priestory", url: getPath('divadlo/priestory.html', true), image: "images/digital.jpg" },
+                { name: "Program a rezervácia", url: getPath('divadlo/index.html', true), image: "images/painting.jpg" },
+                { name: "Galéria", url: getPath('divadlo/galeria.html', true), image: "images/logo.jpg" }
             ]
         },
         {
             title: "Ludus Tábor",
-            url: getPath('tabor.html', true),
-            image: "images/kniha/kniha-hero.jpeg",
+            url: getPath('tabor/index.html', true),
+            image: "images/tabor-main.jpg",
             links: [
-                { name: "O tábore", url: getPath('tabor.html', true), image: "images/kniha/ukazka2.png" },
-                { name: "Cena a prihlásanie", url: getPath('tabor.html', true), image: "images/sculpture.jpg" }
+                { name: "O tábore", url: getPath('tabor/index.html', true), image: "images/kniha/ukazka2.png" },
+                { name: "Cena a prihlásanie", url: getPath('tabor/index.html', true), image: "images/sculpture.jpg" }
             ]
         }
     ];
 
     // Build Nav HTML
-    let navHTML = '';
+    // Initialize with a placeholder div to maintain grid layout on homepage
+    let navHTML = '<div class="nav-placeholder"></div>';
     
     // Only build nav if NOT homepage
     if (!isHomepage) {
@@ -124,8 +130,20 @@ function loadHeader(depth, isHomepage) {
                     <img src="${imgPath}" alt="LUDUS Logo">
                 </a>
                 ${navHTML}
-                <!-- Empty div to maintain spacing if nav is missing or for mobile menu toggle later -->
-                <div style="width: 60px;"></div> 
+                <!-- Group social icons and Kontakt button together in the rightmost grid column -->
+                <div class="header-right-group" style="display: flex; align-items: center; gap: 15px;">
+                    <div class="header-socials" style="display: flex; gap: 15px;">
+                        <a href="https://www.facebook.com/skolaludus" target="_blank" style="display: flex; align-items: center;">
+                            <img src="${depth === 0 ? 'images/icons/facebook.svg' : (depth === 1 ? '../images/icons/facebook.svg' : '../../images/icons/facebook.svg')}" alt="Facebook" style="width: 24px; height: 24px;">
+                        </a>
+                        <a href="#" target="_blank" style="display: flex; align-items: center;">
+                            <img src="${depth === 0 ? 'images/icons/instagram.svg' : (depth === 1 ? '../images/icons/instagram.svg' : '../../images/icons/instagram.svg')}" alt="Instagram" style="width: 24px; height: 24px;">
+                        </a>
+                    </div>
+                    
+                    <a href="${contactPath}" class="btn-cta">Kontakt</a>
+                </div>
+
                 <div class="mega-menu-image-container" id="mega-menu-image"></div>
             </div>
         </header>
@@ -179,37 +197,86 @@ function loadFooter(depth) {
         return path;
     };
 
+    const imgPath = depth === 0 ? 'images/loga-4/logo-main.png' : (depth === 1 ? '../images/loga-4/logo-main.png' : '../../images/loga-4/logo-main.png');
+    const contactPath = getPath('kontakt.html', true);
+
+    const academyLinks = [
+        { name: "O nás", url: getPath('ludus_academy/index.html', true) },
+        { name: "Kniha", url: getPath('ludus_academy/kniha.html', true) },
+        { name: "Kurzy", url: getPath('ludus_academy/index.html', true) },
+        { name: "Workshopy", url: getPath('ludus_academy/index.html', true) },
+        { name: "Tréningy pre firmy", url: getPath('ludus_academy/treningy-firmy.html', true) },
+        { name: "Blog", url: getPath('ludus_academy/blog.html', true) }
+    ];
+
+    const schoolLinks = [
+        { name: "História", url: getPath('szus/historia.html', true) },
+        { name: "Prihláška do SZUŠ", url: contactPath },
+        { name: "Školné", url: getPath('szus/skolne.html', true) },
+        { name: "Pedagógovia", url: getPath('szus/index.html', true) },
+        { name: "Výučba", url: getPath('szus/vyucba.html', true) },
+        { name: "Galéria", url: getPath('szus/galeria.html', true) }
+    ];
+
+    const theaterLinks = [
+        { name: "História", url: getPath('szus/historia.html', true) },
+        { name: "Aktivity", url: getPath('divadlo/aktivity.html', true) },
+        { name: "Naše priestory", url: getPath('divadlo/priestory.html', true) },
+        { name: "Program a rezervácia", url: getPath('divadlo/index.html', true) },
+        { name: "Galéria", url: getPath('divadlo/galeria.html', true) }
+    ];
+
+    const campLinks = [
+        { name: "O tábore", url: getPath('tabor/index.html', true) },
+        { name: "Cena a prihlásanie", url: getPath('tabor/index.html', true) }
+    ];
+
     const footerHTML = `
         <footer>
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>LUDUS</h3>
-                    <p>Umelecká škola a divadlo s 55-ročnou tradíciou.</p>
+                    <img src="${imgPath}" alt="LUDUS Logo" class="footer-logo">
+                    <div style="margin-top: 1rem; font-size: 0.95rem;">
+                        <p style="margin-bottom: 0.5rem;">Email: <a href="mailto:info@skolaludus.sk" style="color: inherit; text-decoration: none;">info@skolaludus.sk</a></p>
+                        <p style="margin-bottom: 0.5rem;">Tel: <a href="tel:+421905543282" style="color: inherit; text-decoration: none;">0905 543 282</a></p>
+                        <p style="margin-bottom: 0.5rem;">Palackého 22, 811 02 Bratislava</p>
+                        <p style="margin-bottom: 0.5rem;">IČO: 30849331</p>
+                        <p style="margin-bottom: 1rem;">DIČ: 2021878100</p>
+                        
+                        <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: none; margin-top: 1.5rem;">Sledujte nás</h4>
+                        <div style="display: flex; gap: 15px;">
+                            <a href="https://www.facebook.com/skolaludus" target="_blank" style="display: inline-block;">
+                                <img src="${depth === 0 ? 'images/icons/facebook.svg' : (depth === 1 ? '../images/icons/facebook.svg' : '../../images/icons/facebook.svg')}" alt="Facebook" style="width: 24px; height: 24px;">
+                            </a>
+                            <a href="#" target="_blank" style="display: inline-block;">
+                                <img src="${depth === 0 ? 'images/icons/instagram.svg' : (depth === 1 ? '../images/icons/instagram.svg' : '../../images/icons/instagram.svg')}" alt="Instagram" style="width: 24px; height: 24px;">
+                            </a>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="footer-section">
-                    <h3>Rýchle odkazy</h3>
-                    <a href="${getPath('historia.html', true)}">História</a>
-                    <a href="${getPath('skola.html', true)}">Škola</a>
-                    <a href="${getPath('academy.html', true)}">Academy</a>
-                    <a href="${getPath('tabor.html', true)}">Tábor</a>
-                    <a href="${getPath('kniha.html', true)}">Kniha</a>
-                    <a href="${getPath('blog.html', true)}">Blog</a>
-                    <a href="${getPath('kontakt.html', true)}">Kontakt</a>
+                    <h3>Ludus Academy</h3>
+                    ${academyLinks.map(link => `<a href="${link.url}">${link.name}</a>`).join('')}
                 </div>
+
                 <div class="footer-section">
-                    <h3>Kontakt</h3>
-                    <p>Email: <a href="mailto:info@skolaludus.sk" style="color: inherit; text-decoration: none;">info@skolaludus.sk</a></p>
-                    <p>Tel: <a href="tel:+421905543282" style="color: inherit; text-decoration: none;">0905 543 282</a></p>
-                    <p>Palackého 22, 811 02 Bratislava</p>
-                    <p>IČO: 30849331</p>
-                    <p>DIČ: 2021878100</p>
+                    <h3>Škola Ludus</h3>
+                    ${schoolLinks.map(link => `<a href="${link.url}">${link.name}</a>`).join('')}
                 </div>
-                 <div class="footer-section map-section">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.378961730419!2d17.10825997631988!3d48.14138097124373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c894247e68501%3A0xa11aa04d315433c6!2sDivadlo%20Ludus!5e0!3m2!1ssk!2ssk!4v1709141000000!5m2!1ssk!2ssk" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <div class="footer-section">
+                    <h3>Divadlo Ludus</h3>
+                    ${theaterLinks.map(link => `<a href="${link.url}">${link.name}</a>`).join('')}
+                </div>
+
+                <div class="footer-section">
+                    <h3>Ludus Tábor</h3>
+                    ${campLinks.map(link => `<a href="${link.url}">${link.name}</a>`).join('')}
                 </div>
             </div>
             <div style="text-align: center; margin-top: 2rem; border-top: 1px solid #333; padding-top: 1rem;">
-                <p>&copy; 2025 LUDUS. All rights reserved.</p>
+                <p style="font-size: 0.9rem;">&copy; 2025 LUDUS. All rights reserved.</p>
             </div>
         </footer>
     `;

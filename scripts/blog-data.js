@@ -3,7 +3,7 @@ const blogData = [
         id: "radost-z-improvizacie",
         title: "Radosť z improvizácie",
         date: "4. 2. 2022",
-        image: "../images/kniha/ukazka1.png", // Placeholder using existing image
+        image: "../../images/blog/improvizacia.png",
         preview: "Improvizácia je v slovníku cudzích slov definovaná ako „konanie bez prípravy, alebo reakcia na danú situáciu bez prípravy“. Improvizovať znamená tvoriť bez prípravy, napochytro pripravovať.",
         content: `
             <p><strong>IMPROVIZÁCIA</strong></p>
@@ -24,7 +24,7 @@ const blogData = [
         id: "tvorive-divergentne-myslenie",
         title: "Tvorivé - divergentné – myslenie v každodennom živote",
         date: "4. 2. 2022",
-        image: "../images/kniha/ukazka2.png", // Placeholder
+        image: "../../images/blog/divergentne.png",
         preview: "“ Tým čo je vo vnútri našich hláv sa navzájom líšime, rovnako ako sa líšime tým, čo máme zvonku”. Denne nás stretávajú rôzne výzvy a úlohy, ktoré potrebujeme riešiť.",
         content: `
             <p>“ Tým čo je vo vnútri našich hláv sa navzájom líšime, rovnako ako sa líšime tým, čo máme zvonku”</p>
@@ -67,7 +67,7 @@ const blogData = [
         id: "kairos-rozhodujuci-okamih",
         title: "KAIROS a jeho „Rozhodujúci okamih“",
         date: "4. 2. 2022",
-        image: "../images/kniha/ukazka3.png", // Placeholder
+        image: "../../images/blog/kairos.png",
         preview: "Viete kto je to Kairos? V starovekom Grécku ľudia verili v boha okamihu, ktorý sa volal KAIROS. Podľa Starovekých grékov je KAIROS “správny, šťastný a rozhodujúci moment“ pre naše aktivity a prácu.",
         content: `
             <p><strong>Viete kto je to Kairos?</strong></p>

@@ -1,13 +1,38 @@
 /* Academy Styles */
 
-/* Header Text Intro */
-.text-intro {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    color: #555;
-    margin: 0 auto 3rem auto;
-    max-width: 800px;
+/* Academy Intro Layout */
+.academy-intro-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+}
+
+.academy-intro-text h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+}
+
+.academy-intro-text p {
+    font-size: 1.15rem;
+    color: #444;
+    line-height: 1.7;
+    text-align: left; /* Reset from possible center alignment */
+}
+
+.academy-intro-image {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* Section Headings */
@@ -96,3 +121,80 @@
 .bg-school-workshop { background-image: url('../images/kniha/kniha-hero.jpeg'); }
 .bg-teacher { background-image: url('../images/digital.jpg'); }
 .bg-creative { background-image: url('../images/sculpture.jpg'); }
+
+/* Mission Section Styles */
+.mission-section {
+    background: #ffffff; /* White bg for contrast against light green page */
+    padding: 4rem;
+    border-radius: var(--radius);
+    margin-top: 6rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+}
+
+.mission-col h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.mission-col h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+}
+
+.mission-col p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+}
+
+.values-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.values-list li::before {
+    content: '•';
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+@media (max-width: 768px) {
+    .academy-intro-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .mission-section {
+        padding: 2rem;
+    }
+    .mission-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
