@@ -1,0 +1,104 @@
+/* Mega Menu Styles - Full Width */
+.has-mega-menu {
+    position: static; /* Allows menu to be full width relative to header */
+}
+
+.mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-top: 1px solid #f0f0f0;
+    padding: 3rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1100;
+}
+
+.has-mega-menu:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mega-menu-content {
+    width: var(--site-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.mega-menu-links {
+    flex: 2;
+    columns: 2; /* 2 Column layout for links */
+    column-gap: 4rem;
+}
+
+.mega-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mega-menu-list li {
+    margin-bottom: 1rem;
+    break-inside: avoid; /* Prevent split across columns */
+}
+
+.mega-menu-list a {
+    display: block;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s;
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+    padding: 5px 0;
+}
+
+.mega-menu-list a:hover {
+    color: var(--accent-color);
+    transform: translateX(10px);
+}
+
+/* Static Right Side Image */
+.mega-menu-static-image {
+    flex: 1;
+    max-width: 400px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.mega-menu-static-image::after {
+    content: '';
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(0,0,0,0.2);
+}
+
+/* Floating Hover Image (Cursor Follower) */
+.mega-menu-image-container {
+    position: fixed;
+    width: 250px;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius);
+    pointer-events: none;
+    z-index: 1200;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    top: 0;
+    left: 0;
+}

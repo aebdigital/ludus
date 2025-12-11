@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - LUDUS</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+    
+    <!-- Hero title will be updated by JS -->
+    <div class="hero-small" style="background-image: url('../images/kniha/kniha-hero.jpeg');">
+        <h1>Načítavam článok...</h1>
+    </div>
+
+    <main class="container section fade-in-up">
+        <div class="blog-post-content">
+            <!-- Blog content injected here by JS -->
+             <div style="text-align: center; padding: 2rem;">
+                <p>Načítavam obsah...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- GSAP Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js?v=9.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js?v=9.0"></script>
+    
+    <!-- Lenis Smooth Scrolling -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js?v=9.0"></script>
+
+    <script src="../scripts/components.js" data-depth="1"></script>
+    <script src="../scripts/animations.js"></script>
+    <script src="../scripts/button-animation.js"></script>
+
+    <!-- Blog Scripts -->
+    <script src="../scripts/blog-data.js"></script>
+    <script src="../scripts/blog-loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* Tabor Page Styles */
+
+.tabor-intro {
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+    text-align: center;
+}
+
+.tabor-workshops {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.workshop-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.workshop-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.workshop-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    color: var(--primary-color);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.info-box {
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.info-box h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.price-highlight {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    font-weight: 800;
+    font-family: var(--font-heading);
+    display: block;
+    margin: 1rem 0;
+}
+
+.turnus-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.turnus-card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: var(--radius);
+    border-left: 5px solid var(--accent-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.turnus-info h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.staff-list-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .turnus-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}

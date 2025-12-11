@@ -28,19 +28,36 @@
 
 .contact-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted for more flexible columns */
     gap: 4rem;
     margin-top: -50px;
     position: relative;
     z-index: 10;
 }
 
-.contact-form-container, .tuition-info {
+.contact-form-container, .tuition-info, .company-info { /* Added .company-info */
     background: white;
     padding: 4rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     border-radius: var(--radius);
 }
+
+.company-info p {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.company-info .contact-link {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.company-info .contact-link:hover {
+    color: var(--accent-color);
+}
+
 
 .form-group {
     margin-bottom: 2rem;

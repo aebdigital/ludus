@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Manrope:wght@600;700;800&display=swap');
+@import url('button.css');
+@import url('mega-menu.css');
 
 :root {
     --primary-color: #000000;
@@ -74,10 +76,18 @@ header {
     align-items: center;
 }
 
+/* Ensure logo is on the left, nav in center */
 .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
+    margin-right: auto; /* Pushes everything else to right if flex is default, but we want center nav */
+}
+/* Wait, to center nav, header-inner needs specific handling */
+.header-inner {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px; /* Logo - Nav - Spacer/CTA */
+    align-items: center;
 }
 
 .logo img {
@@ -86,10 +96,15 @@ header {
     object-fit: contain;
 }
 
+nav {
+    display: flex;
+    justify-content: center; /* Centers the UL */
+}
+
 nav ul {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 3rem; /* Wider gap for main items */
 }
 
 nav a {
@@ -99,12 +114,14 @@ nav a {
     font-family: var(--font-heading);
     font-size: 1.4rem;
     letter-spacing: 1px;
-    transition: color 0.3s;
+    transition: transform 0.3s, color 0.3s;
+    display: inline-block;
 }
 
 nav a:hover {
-    color: #666; /* Dark grey hover */
-    text-decoration: underline;
+    color: var(--accent-color); /* Accent color on hover */
+    text-decoration: none; /* No underline */
+    transform: scale(1.05); /* Slight scale up */
 }
 
 /* Footer */
@@ -152,8 +169,6 @@ footer {
     opacity: 0.7;
     color: var(--primary-color);
 }
-
-@import url('button.css');
 
 /* Hero Defaults */
 .hero-small {
@@ -213,13 +228,24 @@ img {
     box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
 }
 
+@media (max-width: 1024px) {
+    .header-inner {
+        grid-template-columns: auto 1fr; /* Simplification for tablet */
+        gap: 1rem;
+    }
+    nav { justify-content: flex-end; }
+    .mega-menu { width: 90%; left: 5%; }
+}
+
 @media (max-width: 768px) {
     .header-inner {
         flex-direction: column;
+        display: flex;
         gap: 1rem;
     }
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 1rem;
     }
 }

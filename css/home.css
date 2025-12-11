@@ -61,6 +61,23 @@
     transform: translate(-50%, 40%);
 }
 
+/* Logo Styling */
+.section-logo {
+    display: block;
+    max-width: 150px; /* Initial size */
+    max-height: 100px;
+    margin: 0 auto 1rem auto;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+    background-color: white; /* White background */
+    padding: 10px 15px; /* Add some padding */
+    border-radius: var(--radius); /* Rounded corners */
+}
+
+/* Special sizing for specific logos if needed */
+.section-logo[alt*="Academy"] { max-width: 250px; }
+
 .section-content h2 {
     font-family: var(--font-heading);
     font-size: 4rem;
@@ -89,6 +106,7 @@
 .bg-painting { background-image: url('../images/painting.jpg'); }
 .bg-sculpture { background-image: url('../images/sculpture.jpg'); }
 .bg-digital { background-image: url('../images/digital.jpg'); }
+.bg-tabor { background-image: url('../images/kniha/kniha-hero.jpeg'); }
 
 @media (max-width: 768px) {
     .intro-container {
