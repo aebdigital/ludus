@@ -47,7 +47,14 @@
 }
 
 .author-layout.reversed {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1.5fr 2fr;
+}
+
+/* Specific styling for headings within text content on this page */
+.text-content h3 {
+    font-size: 4.5rem; /* 3x bigger */
+    margin-bottom: 2rem;
+    line-height: 1.1;
 }
 
 .quote-box {

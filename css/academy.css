@@ -1,17 +1,22 @@
 /* Academy Styles */
 
-/* Academy Intro Layout */
-.academy-intro-layout {
+/* Academy Intro Layout (using shared school-intro-layout structure) */
+.school-intro-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
-    margin-bottom: 5rem;
-    margin-top: 3rem;
+    margin-bottom: 4rem;
 }
 
-.academy-intro-text h2 {
-    font-size: 3rem;
+.school-intro-layout .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.school-intro-layout .text-content h2 {
+    /* font-size removed to inherit global 5rem */
     line-height: 1.2;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
@@ -19,20 +24,28 @@
     font-family: var(--font-heading);
 }
 
-.academy-intro-text p {
-    font-size: 1.15rem;
+.school-intro-layout .text-content p {
+    /* font-size removed to inherit global 23px */
     color: #444;
-    line-height: 1.7;
-    text-align: left; /* Reset from possible center alignment */
+    text-align: left;
 }
 
-.academy-intro-image {
+.school-intro-layout img {
     width: 100%;
     height: 400px;
-    background-size: cover;
-    background-position: center;
-    border-radius: var(--radius);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .school-intro-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .school-intro-layout img {
+        order: -1;
+    }
 }
 
 /* Section Headings */
@@ -94,6 +107,11 @@
     text-align: center;
 }
 
+.course-content h3 {
+    line-height: 1.2;
+    text-align: center;
+}
+
 .course-card h3 {
     font-family: var(--font-heading);
     margin-bottom: 1rem;
@@ -111,16 +129,16 @@
 }
 
 /* Background Images for specific courses */
-.bg-acting { background-image: url('../images/digital.jpg'); }
-.bg-advanced { background-image: url('../images/sculpture.jpg'); }
-.bg-improv { background-image: url('../images/painting.jpg'); }
-.bg-lab { background-image: url('../images/kniha/kniha-hero.jpeg'); }
-.bg-writing { background-image: url('../images/digital.jpg'); } /* Reusing for now */
-.bg-presentation { background-image: url('../images/sculpture.jpg'); }
-.bg-audio { background-image: url('../images/painting.jpg'); }
-.bg-school-workshop { background-image: url('../images/kniha/kniha-hero.jpeg'); }
-.bg-teacher { background-image: url('../images/digital.jpg'); }
-.bg-creative { background-image: url('../images/sculpture.jpg'); }
+.bg-acting { background-image: url('../images/academy/IMG_1128.jpeg'); }
+.bg-advanced { background-image: url('../images/academy/IMG_1323.jpeg'); }
+.bg-improv { background-image: url('../images/academy/IMG_3649.jpeg'); }
+.bg-lab { background-image: url('../images/academy/IMG_4194.jpeg'); }
+.bg-writing { background-image: url('../images/academy/IMG_4766.jpeg'); }
+.bg-presentation { background-image: url('../images/academy/IMG_6884.jpeg'); }
+.bg-audio { background-image: url('../images/academy/IMG_8616.jpeg'); }
+.bg-school-workshop { background-image: url('../images/academy/IMG_9005.jpeg'); }
+.bg-teacher { background-image: url('../images/academy/IMG_9026.jpeg'); }
+.bg-creative { background-image: url('../images/academy/IMG_9087.jpeg'); }
 
 /* Mission Section Styles */
 .mission-section {
@@ -156,7 +174,6 @@
 
 .mission-col p {
     font-size: 1.1rem;
-    line-height: 1.8;
     color: #444;
     margin-bottom: 1rem;
 }
@@ -171,7 +188,6 @@
     padding-left: 2rem;
     margin-bottom: 1rem;
     font-size: 1.1rem;
-    line-height: 1.6;
     color: #444;
 }
 

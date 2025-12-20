@@ -45,7 +45,6 @@
 .company-info p {
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
-    line-height: 1.6;
 }
 
 .company-info .contact-link {
@@ -60,15 +59,21 @@
 
 
 .form-group {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 0.8rem;
     font-weight: bold;
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+}
+
+.contact-form-container .btn-cta {
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .form-group input, .form-group textarea, .form-group select {

@@ -6,39 +6,43 @@
 .mega-menu {
     position: absolute;
     top: 100%;
-    left: 50%; /* Center the mega menu */
-    transform: translateX(-50%) translateY(10px);
-    background: var(--header-bg); /* Match header background */
-    backdrop-filter: blur(12px); /* Match header blur */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.98); /* Slightly more opaque to match header appearance */
+    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    width: 60%; /* 60% width as requested */
-    min-width: 800px; /* Ensure it's not too small on smaller screens */
-    /* Removed box-shadow and border-top for seamless look */
-    padding: 3rem; /* Adjusted padding as it's not 100% width now */
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+    width: 60%;
+    min-width: 800px;
     z-index: 1100;
+    border-radius: 0 0 var(--radius) var(--radius);
+    /* Height-based dropdown animation */
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .has-mega-menu:hover .mega-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
+    max-height: 500px; /* Adjust based on content height */
+    padding: 0;
 }
 
 .mega-menu-content {
     /* No longer need site-width as mega-menu itself is % width */
-    max-width: 1200px; /* Constrain content width inside the 60% */
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     display: flex;
     justify-content: space-between;
-    gap: 4rem;
+    gap: 0;
+    min-height: 400px; /* Force consistent height across all menus */
 }
 
 .mega-menu-links {
     flex: 2; /* Takes 2 parts of available flex space */
+    min-width: 0; /* Allow flex item to shrink and force text wrapping */
     /* Removed max-width to let flex control sizing more naturally */
+    padding: 3rem;
 }
 
 .mega-menu-list {
@@ -51,13 +55,15 @@
 }
 
 .mega-menu-list li {
-    margin-bottom: 1rem;
-    /* break-inside: avoid; Removed to allow natural top-to-bottom flow */
+    margin-bottom: 0.5rem;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
 }
 
 .mega-menu-list a {
     display: block; /* Force block to stack properly */
     color: var(--primary-color);
+    white-space: normal; /* Allow text to wrap */
     font-size: 2.2rem; /* 2x bigger as requested */
     font-weight: 500;
     text-decoration: none;
@@ -67,48 +73,84 @@
     padding: 5px 0;
     transform: none !important; /* Override global nav hover scale */
     line-height: 1.2; /* Tighten line height for larger text */
+    position: relative; /* For pseudo-element underline */
+    width: fit-content; /* Ensure underline matches text width */
+    max-width: 100%; /* Ensure text wraps within container */
+}
+
+.mega-menu-list a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px; /* Adjust vertical position */
+    width: 100%;
+    height: 12px; /* Thickness of the crayon stroke */
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='12' viewBox='0 0 100 12' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'%3E%3Cpath d='M0,8 Q50,0 100,8' stroke='%23ffd37c' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke' opacity='1'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: scaleX(0); /* Animate width from center or left */
+    transform-origin: left;
+    transition: opacity 0.2s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: -1;
+    pointer-events: none;
 }
 
 .mega-menu-list a:hover {
-    color: #666; /* Dark grey instead of yellow */
+    color: #000; /* Keep black to contrast with yellow underline */
     transform: translateX(5px) !important; /* Specific hover effect for mega menu */
     text-decoration: none;
 }
 
+.mega-menu-list a:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* Active category styling - artistic yellow blob */
+.has-mega-menu.active-category > a {
+    position: relative;
+    z-index: 1;
+}
+
+.has-mega-menu.active-category > a::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -15px;
+    right: -15px;
+    bottom: -8px;
+    background: var(--accent-color);
+    border-radius: 45% 55% 60% 40% / 55% 45% 55% 45%;
+    z-index: -1;
+    transform: rotate(-2deg);
+}
+
+/* Active link within mega menu - same underline as hover */
+.mega-menu-list a.active-link::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
 /* Static Right Side Image */
 .mega-menu-static-image {
-    flex: 1;
-    max-width: 400px;
-    height: 300px;
+    flex: 0 0 400px; /* Fixed width, don't grow or shrink */
+    width: 400px;
+    height: 350px; /* Fixed height reduced */
     background-size: cover;
     background-position: center;
-    border-radius: var(--radius);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-radius: var(--radius); /* Consistent radius */
+    box-shadow: none;
     position: relative;
     overflow: hidden;
+    transition: background-image 0.3s ease; /* Smooth transition for image change */
+    align-self: center; /* Center vertically in the menu */
+    margin-right: 1rem; /* Reduced space from the right edge */
 }
 
 .mega-menu-static-image::after {
     content: '';
     position: absolute;
     top:0; left:0; right:0; bottom:0;
-    background: rgba(0,0,0,0.2);
-}
-
-/* Floating Hover Image (Cursor Follower) */
-.mega-menu-image-container {
-    position: fixed;
-    width: 250px;
-    height: 160px;
-    background-size: cover;
-    background-position: center;
-    border-radius: var(--radius);
-    pointer-events: none;
-    z-index: 1200;
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-    top: 0;
-    left: 0;
+    background: rgba(0,0,0,0.1); /* Slight overlay */
 }

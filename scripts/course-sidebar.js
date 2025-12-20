@@ -24,7 +24,7 @@ function loadCourseSidebar() {
     let html = '';
 
     // Render Kurzy
-    html = `<h3><a href="../../ludus_academy/index.html#kurzy-section" class="sidebar-category-link">Kurzy</a></h3><ul class="course-list">`;
+    html = `<h3>Kurzy</h3><ul class="course-list">`;
     allCourses.filter(item => item.type === 'kurz').forEach(course => {
         const isActive = currentFile === course.url ? 'active' : '';
         html += `<li><a href="${course.url}" class="${isActive}">${course.name}</a></li>`;
@@ -32,7 +32,7 @@ function loadCourseSidebar() {
     html += `</ul>`;
 
     // Render Workshopy
-    html += `<h3 style="margin-top: 2rem;"><a href="../../ludus_academy/index.html#workshops-section" class="sidebar-category-link">Workshopy</a></h3><ul class="course-list">`;
+    html += `<h3 style="margin-top: 2rem;">Workshopy</h3><ul class="course-list">`;
     allCourses.filter(item => item.type === 'workshop').forEach(workshop => {
         const isActive = currentFile === workshop.url ? 'active' : '';
         html += `<li><a href="${workshop.url}" class="${isActive}">${workshop.name}</a></li>`;

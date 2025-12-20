@@ -20,12 +20,25 @@
 }
 
 #course-sidebar h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 0.5rem;
+    font-size: 2.9rem; /* 20% smaller than 3.6rem */
+    margin-bottom: 0.75rem; /* Half of 1.5rem */
+    border-bottom: none; /* Remove border */
+    padding-bottom: 0;
     color: var(--primary-color);
     text-align: left;
+    font-weight: 700;
+}
+
+#course-sidebar h3 a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0; /* Remove button-like padding if inherited */
+    background: none !important; /* Ensure no background */
+}
+
+#course-sidebar h3 a:hover {
+    padding-left: 0; /* No hover shift */
+    color: inherit;
 }
 
 #course-sidebar ul {
@@ -33,7 +46,7 @@
 }
 
 #course-sidebar li {
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.4rem;
 }
 
 #course-sidebar a {

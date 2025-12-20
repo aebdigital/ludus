@@ -44,7 +44,7 @@
 .price-tag {
     font-size: 3.5rem;
     font-weight: 800;
-    color: var(--accent-color);
+    color: var(--primary-color);
     font-family: var(--font-heading);
     display: block;
     margin: 1rem 0;

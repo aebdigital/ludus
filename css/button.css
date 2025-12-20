@@ -5,12 +5,13 @@
     justify-content: center;
     background-color: var(--accent-color);
     color: var(--primary-color);
-    padding: 12px 35px;
+    padding: 8px 35px; /* Decreased vertical padding */
     text-decoration: none;
     text-transform: uppercase;
     font-family: var(--font-heading);
     font-weight: bold;
     font-size: 1.2rem;
+    line-height: 1.4; /* Increased line-height */
     letter-spacing: 1px;
     border-radius: var(--radius);
     transition: transform 0.3s, background-color 0.3s;
@@ -34,7 +35,7 @@
     position: relative;
     overflow: hidden;
     display: block;
-    line-height: 1;
+    line-height: 1.4;
 }
 
 .btn-text {

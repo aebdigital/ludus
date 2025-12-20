@@ -65,7 +65,6 @@
 .staff-bio {
     font-size: 0.95rem;
     color: #555;
-    line-height: 1.6;
 }
 
 /* --- Featured First Staff Member (Desktop) --- */
@@ -123,7 +122,8 @@
 
 .school-intro-layout img {
     width: 100%;
-    height: auto;
+    height: 400px; /* Fixed height to match design */
+    object-fit: cover; /* Ensure image covers the area */
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }

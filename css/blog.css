@@ -50,7 +50,6 @@
 
 .post-body {
     font-size: 1.15rem;
-    line-height: 1.8;
     color: #333;
 }
 
@@ -210,7 +209,6 @@
     font-size: 1rem;
     color: #555;
     margin-bottom: 1.5rem;
-    line-height: 1.6;
     flex-grow: 1; /* Pushes 'read more' to bottom */
 }
 
