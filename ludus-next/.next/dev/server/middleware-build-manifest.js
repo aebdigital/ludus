@@ -1,0 +1,51 @@
+globalThis.__BUILD_MANIFEST = {
+  "pages": {
+    "/_app": [
+      "static/chunks/e1aff_next_dist_compiled_622fecc6._.js",
+      "static/chunks/e1aff_next_dist_shared_lib_9dcf1a29._.js",
+      "static/chunks/e1aff_next_dist_client_a085dc48._.js",
+      "static/chunks/e1aff_next_dist_3f010fc7._.js",
+      "static/chunks/e1aff_next_app_5ccf874c.js",
+      "static/chunks/[next]_entry_page-loader_ts_82a3cdbe._.js",
+      "static/chunks/e1aff_react-dom_e65296c7._.js",
+      "static/chunks/e1aff_b0849446._.js",
+      "static/chunks/[root-of-the-server]__74edc37b._.js",
+      "static/chunks/ludushub_ludus-next_pages__app_2da965e7._.js",
+      "static/chunks/turbopack-ludushub_ludus-next_pages__app_6d3b497a._.js"
+    ],
+    "/_error": [
+      "static/chunks/e1aff_next_dist_compiled_622fecc6._.js",
+      "static/chunks/e1aff_next_dist_shared_lib_3d3ba265._.js",
+      "static/chunks/e1aff_next_dist_client_a085dc48._.js",
+      "static/chunks/e1aff_next_dist_0c17056b._.js",
+      "static/chunks/e1aff_next_error_42bd1081.js",
+      "static/chunks/[next]_entry_page-loader_ts_4a29be15._.js",
+      "static/chunks/e1aff_react-dom_e65296c7._.js",
+      "static/chunks/e1aff_b0849446._.js",
+      "static/chunks/[root-of-the-server]__e184e82b._.js",
+      "static/chunks/ludushub_ludus-next_pages__error_2da965e7._.js",
+      "static/chunks/turbopack-ludushub_ludus-next_pages__error_bc0a6b6e._.js"
+    ]
+  },
+  "devFiles": [],
+  "polyfillFiles": [
+    "static/chunks/ab849_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_2b619349._.js",
+    "static/chunks/ab849_next_dist_compiled_react-dom_7a32f605._.js",
+    "static/chunks/ab849_next_dist_compiled_react-server-dom-turbopack_46e07a23._.js",
+    "static/chunks/ab849_next_dist_compiled_next-devtools_index_ecc2c2ce.js",
+    "static/chunks/ab849_next_dist_compiled_443a2bde._.js",
+    "static/chunks/ab849_next_dist_client_8c151788._.js",
+    "static/chunks/ab849_next_dist_937150d4._.js",
+    "static/chunks/ab849_@swc_helpers_cjs_a139b7cb._.js",
+    "static/chunks/ludushub_ludus-next_a0ff3932._.js",
+    "static/chunks/turbopack-ludushub_ludus-next_179ad159._.js"
+  ]
+};
+globalThis.__BUILD_MANIFEST.lowPriorityFiles = [
+"/static/" + process.env.__NEXT_BUILD_ID + "/_buildManifest.js",
+"/static/" + process.env.__NEXT_BUILD_ID + "/_ssgManifest.js"
+];
