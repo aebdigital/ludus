@@ -70,3 +70,28 @@ Require stack:
 - /Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/node_modules/next/dist/server/dev/next-dev-server.js
 - /Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/node_modules/next/dist/server/next.js
 - /Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/node_modules/next/dist/server/lib/start-server.js
+[12:17:23.265] Server  LOG     ○ Compiling / ...
+[12:17:26.061] Server  ERROR   Error: ENOENT: no such file or directory, open '/Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/.next/dev/server/app-paths-manifest.json'
+[12:17:26.283] Server  ERROR   ⨯ Error: Cannot find module '../chunks/ssr/[turbopack]_runtime.js'
+Require stack:
+- /Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/.next/dev/server/pages/_document.js
+- /Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/node_modules/next/dist/server/require.js
+- /Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/node_modules/next/dist/server/load-components.js
+- /Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/node_modules/next/dist/build/utils.js
+- /Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/node_modules/next/dist/build/swc/options.js
+- /Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/node_modules/next/dist/build/swc/index.js
+- /Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/node_modules/next/dist/server/config.js
+- /Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/node_modules/next/dist/server/next.js
+- /Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/node_modules/next/dist/server/lib/start-server.js
+[12:17:26.583] Server  ERROR   Error: Cannot find module '/Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/node_modules/styled-jsx/index.js'
+Require stack:
+- /Users/alexanderhidveghy/Documents/cms/ludushub/node_modules/next/dist/compiled/next-server/pages-turbo.runtime.dev.js
+- /Users/alexanderhidveghy/Documents/cms/ludushub/node_modules/next/dist/server/route-modules/pages/module.compiled.js
+- /Users/alexanderhidveghy/Documents/cms/ludushub/node_modules/next/dist/server/route-modules/pages/vendored/contexts/html-context.js
+- /Users/alexanderhidveghy/Documents/cms/ludushub/node_modules/next/dist/pages/_document.js
+- /Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/node_modules/next/dist/server/load-default-error-components.js
+- /Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/node_modules/next/dist/server/dev/next-dev-server.js
+- /Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/node_modules/next/dist/server/next.js
+- /Users/alexanderhidveghy/Documents/cms/ludushub/ludus-next/node_modules/next/dist/server/lib/start-server.js
+[12:28:46.081] Server  LOG     ✓ Compiled in 198ms
