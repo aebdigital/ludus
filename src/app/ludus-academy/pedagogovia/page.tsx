@@ -129,7 +129,7 @@ export default function LudusAcademyPedagogoviaPage() {
           </main>
 
           {/* Sidebar Column */}
-          <Sidebar />
+          <Sidebar category="ludus-academy" />
         </div>
       </div>
     </>
