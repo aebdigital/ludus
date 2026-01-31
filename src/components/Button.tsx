@@ -12,6 +12,7 @@ interface ButtonProps {
   disabled?: boolean;
   target?: string;
   rel?: string;
+  download?: boolean | string;
 }
 
 export default function Button({
@@ -23,7 +24,8 @@ export default function Button({
   className = '',
   disabled = false,
   target,
-  rel
+  rel,
+  download
 }: ButtonProps) {
   const baseClasses = variant === 'primary'
     ? 'btn-cta'
@@ -40,7 +42,7 @@ export default function Button({
 
   if (href) {
     return (
-      <Link href={href} className={`${baseClasses} ${className}`} target={target} rel={rel}>
+      <Link href={href} className={`${baseClasses} ${className}`} target={target} rel={rel} download={download}>
         {content}
       </Link>
     );
