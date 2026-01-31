@@ -206,13 +206,13 @@ export default function KnihaPage() {
                         <h2 className="text-[2.5rem] font-bold mb-6 leading-tight">
                             AKO ROZPRÚDIŤ SVOJE KREATÍVNE "JA"
                         </h2>
-                        <ul className="space-y-2 mb-8 text-black">
+                        <ul className="space-y-2 mb-8 text-white/90">
                             <li className="flex items-center gap-2"><span className="text-white">•</span> 8 TIPOV</li>
                             <li className="flex items-center gap-2"><span className="text-white">•</span> 16 PRAKTICKÝCH CVIČENÍ</li>
                             <li className="flex items-center gap-2"><span className="text-white">•</span> NA KAŽDODENNÝ TRÉNING KREATIVITY</li>
                         </ul>
                         <p className="mb-0">
-                            Bežná cena: <span className="line-through text-black">4.80 EUR</span>, <span className="text-[#a3d76e] font-bold">TERAZ: Zdarma</span>
+                            Bežná cena: <span className="line-through text-white/50">4.80 EUR</span>, <span className="text-[#a3d76e] font-bold">TERAZ: Zdarma</span>
                         </p>
                     </div>
 
@@ -229,7 +229,7 @@ export default function KnihaPage() {
                         <h3 className="text-xl font-bold mb-4">DARČEK PRE VÁS: Stiahnite si E-book ZDARMA</h3>
                         <form className="space-y-4" onSubmit={handleSubmit}>
                             <div>
-                                <label htmlFor="ebook-email" className="block text-sm mb-1 text-black">*Váš email:</label>
+                                <label htmlFor="ebook-email" className="block text-sm mb-1 text-white">*Váš email:</label>
                                 <input
                                     type="email"
                                     id="ebook-email"
@@ -242,7 +242,7 @@ export default function KnihaPage() {
                                 />
                             </div>
                             <div>
-                                <label htmlFor="ebook-name" className="block text-sm mb-1 text-black">*Meno:</label>
+                                <label htmlFor="ebook-name" className="block text-sm mb-1 text-white">*Meno:</label>
                                 <input
                                     type="text"
                                     id="ebook-name"
