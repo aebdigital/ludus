@@ -29,18 +29,9 @@ export default async function Home() {
       {/* Intro Container - 4 Main Sections */}
       <main className="flex h-[50vh] w-[calc(100%-2rem)] mx-auto mt-20 p-4 gap-4 max-md:flex-col max-md:h-auto">
         <IntroSection
-          href="/ludus-academy"
-          title="Ludus Academy"
-          description="Kurzy pre pokrocilych a dospelych"
-          backgroundImage="/images/academy-main-new.jpeg"
-          logo="/images/loga-4/logo-academy.png"
-          logoAlt="Logo Ludus Academy"
-        />
-
-        <IntroSection
           href="/skola-ludus"
-          title="Skola Ludus"
-          description="Objavte svet divadla a umenia"
+          title="Škola Ludus"
+          description="SZUŠ s tvorivou dramatikou pre deti a tínedžerov"
           backgroundImage="/images/skola-main.jpeg"
           logo="/images/loga-4/logo-skola.png"
           logoAlt="Logo Skola Ludus"
@@ -48,17 +39,26 @@ export default async function Home() {
 
         <IntroSection
           href="/divadlo-ludus"
-          title="Ludus Divadlo"
-          description="Profesionalna divadelna tvorba"
+          title="DIVADLO LUDUS"
+          description="divadelná tvorba pre mladých"
           backgroundImage="/images/divadlo-main.jpg"
           logo="/images/loga-4/logo-divadlo.jpg"
           logoAlt="Logo Ludus Divadlo"
         />
 
         <IntroSection
+          href="/ludus-academy"
+          title="Ludus Academy"
+          description="Divadelné kurzy a workshopy pre dospelých"
+          backgroundImage="/images/academy-main-new.jpeg"
+          logo="/images/loga-4/logo-academy.png"
+          logoAlt="Logo Ludus Academy"
+        />
+
+        <IntroSection
           href="/ludus-tabor"
           title="Ludus Tabor"
-          description="Letne divadelne tabory"
+          description="Denný letný divadelný tábor pre deti a tínedžerov"
           backgroundImage="/images/tabor/IMG_5438.jpeg"
           logo="/images/loga-4/logo-tabor.png"
           logoAlt="Logo Ludus Tabor"
@@ -93,21 +93,21 @@ export default async function Home() {
                         <span className={`text-[0.7rem] font-bold px-2 py-1 rounded ${badge.className}`}>
                           {badge.label}
                         </span>
-                        <span className="text-[0.85rem] text-gray-500 font-semibold uppercase tracking-wider">
+                        <span className="text-[0.85rem] text-black font-semibold uppercase tracking-wider">
                           {formatDate(item.date)}
                         </span>
                       </div>
                       <h3 className="text-[1.4rem] font-bold mt-0 mb-2" style={{ fontFamily: 'var(--font-body)' }}>
                         {item.title}
                       </h3>
-                      <p className="text-base text-gray-600 m-0">
+                      <p className="text-base text-black m-0">
                         {item.description}
                       </p>
                     </article>
                   );
                 })
               ) : (
-                <p className="text-gray-500">Ziadne aktuality</p>
+                <p className="text-black">Ziadne aktuality</p>
               )}
             </div>
           </div>

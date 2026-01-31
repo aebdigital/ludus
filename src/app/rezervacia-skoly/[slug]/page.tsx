@@ -229,7 +229,7 @@ export default function SchoolReservationPage({ params }: { params: Promise<{ sl
                             onChange={handleChange}
                             className="mt-1 w-5 h-5 text-purple-600 rounded border-gray-300 focus:ring-purple-500"
                         />
-                        <label htmlFor="gdpr" className="text-xs text-gray-600 leading-relaxed">
+                        <label htmlFor="gdpr" className="text-xs text-black leading-relaxed">
                             <span className="font-bold block mb-1 text-black">Súhlasím so spracovaním osobných údajov</span>
                             V súlade s ustanovením § 13 ods. 1. Písm. a) zákona č.18/2018 Z. z. o ochrane osobných údajov a o zmene a doplnení niektorých zákonov a v súlade s čl. 28 ods. 3 nariadenia Európskeho parlamentu a Rady EÚ č. 2016/679 o ochrane fyzických osôb pri spracúvaní osobných údajov a o voľnom pohybe takýchto údajov, ktorým sa ruší smernica č. 95/46/ES (všeobecné nariadenie o ochrane údajov, ďalej len GDPR) a § 34 ods. 3 zákona č. 3../2017 Z. z. o ochrane osobných údajov si dovoľujeme si informovať dotknuté osoby že ich OÚ sú nami spracovávané v rozsahu a súlade s daným zákonom
                         </label>

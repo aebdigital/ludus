@@ -1,13 +1,16 @@
 'use client';
 
 import Button from '@/components/Button';
+import MapSection from '@/components/MapSection';
+import { useState } from 'react';
+import Image from 'next/image';
 
 export default function KontaktPage() {
   return (
     <>
       {/* Hero */}
       <section
-        className="h-[50vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+        className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
         style={{ backgroundImage: "url('/images/logo.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/50" />
@@ -22,45 +25,14 @@ export default function KontaktPage() {
       <div className="w-[95%] mx-auto py-8">
         <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-16 -mt-12 relative z-10">
           {/* Contact Form */}
-          <div className="bg-white p-16 shadow-[0_10px_30px_rgba(0,0,0,0.1)] rounded-xl max-md:p-8">
+          <div className="bg-white p-16 shadow-[0_10px_30px_rgba(0,0,0,0.1)] rounded-xl max-md:p-8 h-fit">
             <h2
               className="text-[2.5rem] mb-8"
               style={{ fontFamily: 'var(--font-heading)' }}
             >
               Napíšte nám
             </h2>
-            <form className="flex flex-col gap-6">
-              <div className="form-group">
-                <label htmlFor="name">Meno a priezvisko</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="phone">Telefón</label>
-                <input type="tel" id="phone" name="phone" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="subject">Predmet</label>
-                <select id="subject" name="subject">
-                  <option value="">Vyberte predmet</option>
-                  <option value="kurzy">Kurzy a workshopy</option>
-                  <option value="skola">Prihláška do SZUŠ</option>
-                  <option value="divadlo">Rezervácia vstupeniek</option>
-                  <option value="tabor">Letný tábor</option>
-                  <option value="ine">Iné</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">Správa</label>
-                <textarea id="message" name="message" rows={5} required />
-              </div>
-              <Button type="submit">
-                Odoslať
-              </Button>
-            </form>
+            <ContactForm />
           </div>
 
           {/* Contact Info */}
@@ -72,88 +44,234 @@ export default function KontaktPage() {
               Kontaktné údaje
             </h2>
             <div className="space-y-6">
+              {/* Adresa prevádzok */}
               <div>
                 <h3
                   className="text-[1.5rem] mb-2 text-black"
                   style={{ fontFamily: 'var(--font-heading)' }}
                 >
-                  Adresa
+                  Adresa prevádzok
                 </h3>
-                <p className="text-[1.1rem] text-[#444]">
+                <p className="text-[1.1rem] text-[#000]">
                   Palackého 22<br />
-                  811 02 Bratislava
-                </p>
-              </div>
-              <div>
-                <h3
-                  className="text-[1.5rem] mb-2 text-black"
-                  style={{ fontFamily: 'var(--font-heading)' }}
-                >
-                  Email
-                </h3>
-                <a
-                  href="mailto:info@skolaludus.sk"
-                  className="text-[1.1rem] text-black underline font-bold hover:text-[#ffd37c]"
-                >
-                  info@skolaludus.sk
-                </a>
-              </div>
-              <div>
-                <h3
-                  className="text-[1.5rem] mb-2 text-black"
-                  style={{ fontFamily: 'var(--font-heading)' }}
-                >
-                  Telefón
-                </h3>
-                <a
-                  href="tel:+421905543282"
-                  className="text-[1.1rem] text-black underline font-bold hover:text-[#ffd37c]"
-                >
-                  0905 543 282
-                </a>
-              </div>
-              <div>
-                <h3
-                  className="text-[1.5rem] mb-2 text-black"
-                  style={{ fontFamily: 'var(--font-heading)' }}
-                >
-                  Úradné hodiny
-                </h3>
-                <p className="text-[1.1rem] text-[#444]">
-                  Pondelok - Piatok: 9:00 - 17:00
+                  811 02, Bratislava
                 </p>
               </div>
 
-              {/* Added Fakturačné údaje here */}
-              <div className="pt-8 border-t border-gray-100 mt-8">
-                <h3
-                  className="text-[1.5rem] mb-4 text-black"
-                  style={{ fontFamily: 'var(--font-heading)' }}
-                >
-                  Fakturačné údaje
-                </h3>
-                <div className="space-y-2 text-[1.1rem] text-[#444]">
-                  <p><strong>Názov:</strong> Občianske združenie LUDUS</p>
-                  <p><strong>IČO:</strong> 30849331</p>
-                  <p><strong>DIČ:</strong> 2021878100</p>
-                  <p><strong>Adresa:</strong> Palackého 22, 811 02 Bratislava</p>
-                  <p className="pt-2">
-                    <strong>Bankové spojenie:</strong><br />
-                    IBAN: SK00 0000 0000 0000 0000 0000
-                  </p>
+              <div className="border-t border-gray-100 pt-6"></div>
+
+              <div className="grid grid-cols-2 gap-12 max-lg:grid-cols-1">
+                {/* Left Column: SZUŠ LUDUS */}
+                <div>
+                  <h3
+                    className="text-[1.5rem] mb-4 text-black"
+                    style={{ fontFamily: 'var(--font-heading)' }}
+                  >
+                    SZUŠ LUDUS
+                  </h3>
+
+                  <div className="space-y-6">
+                    {/* Zástupca */}
+                    <div>
+                      <p className="text-[1.1rem] text-[#000]">
+                        <strong>Zástupca riaditeľa</strong><br />
+                        Jakub Ružička<br />
+                        <a href="tel:0905126296" className="hover:text-[#ffd37c]">0905 126 296</a><br />
+                        <a href="mailto:jakubludus@gmail.com" className="hover:text-[#ffd37c]">jakubludus@gmail.com</a>
+                      </p>
+                    </div>
+
+                    {/* Zriaďovateľ */}
+                    <div>
+                      <p className="text-[1.1rem] text-[#000]">
+                        <strong>Zriaďovateľ</strong><br />
+                        Mgr.art. Peter Kuba<br />
+                        <a href="tel:0905218088" className="hover:text-[#ffd37c]">0905 218 088</a>
+                      </p>
+                    </div>
+
+                    {/* Riaditeľka */}
+                    <div>
+                      <p className="text-[1.1rem] text-[#000]">
+                        <strong>Riaditeľka</strong><br />
+                        Mgr. art Katarína Baranová ArtD.<br />
+                        <a href="tel:0905543282" className="hover:text-[#ffd37c]">0905 543 282</a><br />
+                        <a href="mailto:info@skolaludus.sk" className="hover:text-[#ffd37c]">info@skolaludus.sk</a>
+                      </p>
+                    </div>
+
+                    {/* Organizačný manager */}
+                    <div>
+                      <p className="text-[1.1rem] text-[#000]">
+                        <strong>Organizačný manager</strong><br />
+                        Mgr.art Michal Rovňák<br />
+                        <a href="tel:0905462342" className="hover:text-[#ffd37c]">0905 462 342</a><br />
+                        <a href="mailto:rovnakludus@gmail.com" className="hover:text-[#ffd37c]">rovnakludus@gmail.com</a>
+                      </p>
+                    </div>
+                  </div>
                 </div>
+
+                {/* Right Column: Other Entities */}
+                <div className="space-y-8">
+                  {/* Divadlo Ludus */}
+                  <div>
+                    <h3
+                      className="text-[1.5rem] mb-2 text-black"
+                      style={{ fontFamily: 'var(--font-heading)' }}
+                    >
+                      Divadlo LUDUS
+                    </h3>
+                    <p className="text-[1.1rem] text-[#000]">
+                      <strong>Kontakt:</strong> <a href="mailto:info@skolaludus.sk" className="hover:text-[#ffd37c]">info@skolaludus.sk</a>
+                    </p>
+                  </div>
+
+                  <div className="border-t border-gray-100"></div>
+
+                  {/* Ludus Academy */}
+                  <div>
+                    <h3
+                      className="text-[1.5rem] mb-2 text-black"
+                      style={{ fontFamily: 'var(--font-heading)' }}
+                    >
+                      LUDUS ACADEMY
+                    </h3>
+                    <div className="space-y-2">
+                      <p className="text-[1.1rem] text-[#000]"><strong>Kontaktná osoba</strong><br />Mgr. art Jozef Jurčišin Kukľa</p>
+                      <p className="text-[1.1rem] text-[#000]"><strong>Email:</strong> <a href="mailto:info@ludusacademy.sk" className="hover:text-[#ffd37c]">info@ludusacademy.sk</a></p>
+                      <p className="text-[1.1rem] text-[#000]"><strong>Telefón:</strong> <a href="tel:0947942125" className="hover:text-[#ffd37c]">0947 942 125</a></p>
+                    </div>
+                  </div>
+
+                  <div className="border-t border-gray-100"></div>
+
+                  {/* Ludus Tábor */}
+                  <div>
+                    <h3
+                      className="text-[1.5rem] mb-2 text-black"
+                      style={{ fontFamily: 'var(--font-heading)' }}
+                    >
+                      LUDUS TÁBOR
+                    </h3>
+                    <div className="space-y-2">
+                      <p className="text-[1.1rem] text-[#000]"><strong>Kontaktná osoba</strong><br />Jakub Ružička</p>
+                      <p className="text-[1.1rem] text-[#000]"><strong>Email:</strong> <a href="mailto:ludustabor@gmail.com" className="hover:text-[#ffd37c]">ludustabor@gmail.com</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 grid grid-cols-2 gap-4">
+                <Image
+                  src="/fotky priestorov/vchod do školy/vchod_1.jpg"
+                  alt="Vchod do školy 1"
+                  width={400}
+                  height={300}
+                  className="w-full h-[200px] object-cover rounded-xl shadow-sm"
+                />
+                <Image
+                  src="/fotky priestorov/vchod do školy/vchod_2.jpg"
+                  alt="Vchod do školy 2"
+                  width={400}
+                  height={300}
+                  className="w-full h-[200px] object-cover rounded-xl shadow-sm"
+                />
               </div>
             </div>
           </div>
-
-
         </div>
 
-        {/* Map placeholder */}
-        <div className="mt-16 bg-gray-200 rounded-xl h-[400px] flex items-center justify-center">
-          <p className="text-gray-500 text-xl">Mapa - Palackého 22, Bratislava</p>
-        </div>
+        {/* Map Section */}
+        <MapSection />
       </div>
     </>
+  );
+}
+
+
+function ContactForm() {
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<'success' | 'error' | null>(null);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+    setStatus(null);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      subject: formData.get('subject'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+      <div className="form-group">
+        <label htmlFor="name">Meno a priezvisko</label>
+        <input type="text" id="name" name="name" required disabled={loading} className="w-full p-2 border rounded" />
+      </div>
+      <div className="form-group">
+        <label htmlFor="email">Email</label>
+        <input type="email" id="email" name="email" required disabled={loading} className="w-full p-2 border rounded" />
+      </div>
+      <div className="form-group">
+        <label htmlFor="phone">Telefón</label>
+        <input type="tel" id="phone" name="phone" disabled={loading} className="w-full p-2 border rounded" />
+      </div>
+      <div className="form-group">
+        <label htmlFor="subject">Predmet</label>
+        <select id="subject" name="subject" disabled={loading} className="w-full p-2 border rounded">
+          <option value="">Vyberte predmet</option>
+          <option value="skola-ludus">ŠKOLA LUDUS</option>
+          <option value="ludus-academy">LUDUS ACADEMY</option>
+          <option value="divadlo-ludus">DIVADLO LUDUS</option>
+          <option value="ludus-tabor">LUDUS TÁBOR</option>
+        </select>
+      </div>
+      <div className="form-group">
+        <label htmlFor="message">Správa</label>
+        <textarea id="message" name="message" rows={5} required disabled={loading} className="w-full p-2 border rounded" />
+      </div>
+
+      {status === 'success' && (
+        <div className="bg-green-100 text-green-700 p-3 rounded mb-2">
+          Správa bola úspešne odoslaná. Ďakujeme!
+        </div>
+      )}
+
+      {status === 'error' && (
+        <div className="bg-red-100 text-red-700 p-3 rounded mb-2">
+          Chyba pri odosielaní. Skúste to prosím neskôr.
+        </div>
+      )}
+
+      <Button type="submit" disabled={loading}>
+        {loading ? 'Odosielam...' : 'Odoslať'}
+      </Button>
+    </form>
   );
 }

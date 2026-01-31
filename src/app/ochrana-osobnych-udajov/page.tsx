@@ -103,7 +103,7 @@ export default function OchranaOsobnychUdajovPage() {
                     </div>
 
                     <div className="pt-8 border-t border-gray-200">
-                        <p className="text-gray-600">
+                        <p className="text-black">
                             Tieto Zásady nadobúdajú účinnosť dňom 25. 4. 2025.
                         </p>
                     </div>

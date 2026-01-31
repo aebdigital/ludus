@@ -47,11 +47,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <article className="flex-[2]">
             <div className="bg-white p-12 rounded-xl shadow-[0_5px_20px_rgba(0,0,0,0.05)] max-md:p-6">
               <header className="mb-8 border-b border-gray-200 pb-4">
-                <span className="text-base text-gray-500 font-bold">{post.date}</span>
+                <span className="text-base text-black font-bold">{post.date}</span>
               </header>
 
               <div
-                className="text-[1.15rem] text-[#333] [&_p]:mb-6 [&_ul]:mb-6 [&_ul]:pl-6 [&_li]:mb-2"
+                className="text-[1.15rem] text-[#000] [&_p]:mb-6 [&_ul]:mb-6 [&_ul]:pl-6 [&_li]:mb-2"
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
 
@@ -89,7 +89,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     >
                       {recPost.title}
                     </span>
-                    <span className="text-[0.8rem] text-gray-500">{recPost.date}</span>
+                    <span className="text-[0.8rem] text-black">{recPost.date}</span>
                   </Link>
                 ))}
               </div>

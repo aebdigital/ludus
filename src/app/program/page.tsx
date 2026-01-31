@@ -7,9 +7,10 @@ export const revalidate = 0; // Ensure dynamic data fetching
 export default async function ProgramPage({
     searchParams,
 }: {
-    searchParams: { category?: string };
+    searchParams: Promise<{ category?: string }>;
 }) {
-    const category = (searchParams.category as ProgramCategory) || undefined;
+    const { category: categoryParam } = await searchParams;
+    const category = (categoryParam as ProgramCategory) || 'skola-ludus';
 
     // Fetch events based on category (or all if none, filters in client)
     // Actually, better fetch filtered by category to optimize, 

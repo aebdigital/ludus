@@ -5,7 +5,6 @@ import Button from '@/components/Button';
 export default function PrihlaskaPage() {
   return (
     <>
-      {/* Hero */}
       <section
         className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
         style={{ backgroundImage: "url('/images/skola/IMG_4742.jpeg')" }}
@@ -20,108 +19,84 @@ export default function PrihlaskaPage() {
       </section>
 
       <div className="w-[95%] mx-auto py-12">
-        <div className="grid grid-cols-2 gap-16 max-lg:grid-cols-1">
-          {/* Form */}
-          <div className="bg-white p-12 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.1)] max-md:p-8">
-            <h2
-              className="text-[2.5rem] mb-8"
-              style={{ fontFamily: 'var(--font-heading)' }}
-            >
-              Prihláška do SZUŠ LUDUS
-            </h2>
-            <form className="flex flex-col gap-4">
-              <div className="form-group">
-                <label htmlFor="childName">Meno a priezvisko dieťaťa *</label>
-                <input type="text" id="childName" name="childName" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="birthDate">Dátum narodenia *</label>
-                <input type="date" id="birthDate" name="birthDate" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="parentName">Meno a priezvisko rodiča/zákonného zástupcu *</label>
-                <input type="text" id="parentName" name="parentName" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Email *</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="phone">Telefón *</label>
-                <input type="tel" id="phone" name="phone" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="address">Adresa trvalého bydliska</label>
-                <input type="text" id="address" name="address" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="level">Stupeň štúdia *</label>
-                <select id="level" name="level" required>
-                  <option value="">Vyberte stupeň</option>
-                  <option value="pripravka">Prípravné štúdium (5-6 rokov)</option>
-                  <option value="stupen1">Základné štúdium I. stupeň (7-14 rokov)</option>
-                  <option value="stupen2">Základné štúdium II. stupeň (14-18 rokov)</option>
-                  <option value="dospeli">Štúdium pre dospelých (18+)</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <label htmlFor="note">Poznámka</label>
-                <textarea id="note" name="note" rows={4} />
-              </div>
-              <Button type="submit" className="mt-4">
-                Odoslať prihlášku
+        <div className="grid grid-cols-[1.5fr_1fr] gap-12 max-lg:grid-cols-1">
+          {/* Main Content */}
+          <div>
+            {/* Info Section */}
+            <div className="bg-white p-12 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.1)] mb-12">
+              <h2
+                className="text-[2rem] mb-8 border-b-2 border-[#ffd37c] pb-2 inline-block"
+                style={{ fontFamily: 'var(--font-heading)' }}
+              >
+                Často kladené otázky!
+              </h2>
+              <ul className="space-y-4 list-disc pl-5">
+                {[
+                  "Prihlášku si nemusíte tlačiť, ani nám posielať, my všetko pripravíme a nachystáme.",
+                  "Ak vyplňate prihlášku v mobile- otočte si telefón naležato a v pravom rohu hore sa prepnite na SR a zadajte SZUŠ Ludus. Systém je centrálny pre ČR aj SR. Po výške telefónu sa vám ikonka krajiny totiž neukáže.",
+                  "Podľa veku vášho dieťaťa vyplňate štúdium buď do 15 rokov alebo nad 15 rokov. ( Info nájdete pri prihláške)",
+                  "Konkurz prebieha v malých skupinkách, hravou formou, takže nie je potrebné si nič chystať a ani sa špeciálne pripravovať.",
+                  "Ďalší konkurz pravdepodobne nebude, pretože zo skúseností minulých rokov naplníme kapacity. Ak, tak v septembri bude iba dodatočný konkurz pre určité veky, ktoré budeme potrebovať ešte doplniť.",
+                  "Mladších žiakov ako 8 rokov alebo 2. ročník ZŠ v školskom roku 2024/25 naša škola neprijíma. To, či otvoríme najmladší ročník s 8 ročnými deťmi závisí od počtu prihlásených a prijatých detí. Niekedy odporúčame ešte rok počkať."
+                ].map((text, i) => (
+                  <li key={i} className="text-[#555] leading-relaxed">
+                    {text}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Application Form Placeholder / Link */}
+            <div className="bg-gray-50 p-12 rounded-xl border-2 border-dashed border-gray-300 text-center">
+              <h3 className="text-xl font-bold mb-4">Elektronická prihláška</h3>
+              <p className="mb-6 text-black">
+                Prihláška prebieha cez externý systém iZUŠ. Budete presmerovaní.
+              </p>
+              <Button
+                href="https://www.izus.cz/prihlaska_do_zus/"
+                className="inline-block"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Prejsť na prihlášku (iZUŠ)
               </Button>
-            </form>
+            </div>
           </div>
 
-          {/* Info */}
-          <div>
-            <div className="bg-white p-12 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.1)] mb-8 max-md:p-8">
+          {/* Sidebar Info */}
+          <div className="space-y-8">
+            {/* Konkurz Info */}
+            <div className="bg-[#ffd37c] p-8 rounded-xl text-black">
               <h2
                 className="text-[2rem] mb-6"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
-                Postup prihlásenia
+                Konkurz 2024/2025
               </h2>
-              <ol className="list-decimal pl-6 space-y-4">
-                <li className="text-[1.1rem] text-[#444]">
-                  Vyplňte online prihlášku alebo navštívte kanceláriu školy.
-                </li>
-                <li className="text-[1.1rem] text-[#444]">
-                  Budeme vás kontaktovať ohľadom termínu prijímacieho pohovoru.
-                </li>
-                <li className="text-[1.1rem] text-[#444]">
-                  Po úspešnom pohovore dostanete rozhodnutie o prijatí.
-                </li>
-                <li className="text-[1.1rem] text-[#444]">
-                  Uhraďte školné a zúčastnite sa prvej hodiny.
-                </li>
-              </ol>
-            </div>
-
-            <div className="bg-[#ffd37c] p-12 rounded-xl max-md:p-8">
-              <h2
-                className="text-[2rem] mb-6 text-black"
-                style={{ fontFamily: 'var(--font-heading)' }}
-              >
-                Dôležité termíny
-              </h2>
-              <ul className="list-none p-0 space-y-4">
-                <li className="text-[1.1rem]">
-                  <strong>Zápis na nový školský rok:</strong><br />
-                  Apríl - Jún
-                </li>
-                <li className="text-[1.1rem]">
-                  <strong>Prijímacie pohovory:</strong><br />
-                  Máj - Jún
-                </li>
-                <li className="text-[1.1rem]">
-                  <strong>Začiatok školského roka:</strong><br />
-                  September
-                </li>
-              </ul>
+              <div className="space-y-4">
+                <div>
+                  <p className="font-bold uppercase text-sm opacity-70">Termín</p>
+                  <p className="text-lg">Prvá polovica júna (termín upresníme v apríli)</p>
+                </div>
+                <div>
+                  <p className="font-bold uppercase text-sm opacity-70">Vek žiakov</p>
+                  <p className="text-lg">8 - 16 rokov (preferujeme od 9 r.)</p>
+                </div>
+                <div>
+                  <p className="font-bold uppercase text-sm opacity-70">Miesto</p>
+                  <p className="text-lg">SZUŠ Ludus, Palackého 22<br /><span className="text-sm">(vchod z terasy nad Merkantilom)</span></p>
+                </div>
+                <div>
+                  <p className="font-bold uppercase text-sm opacity-70">Čas</p>
+                  <p className="text-lg">14:30 - 19:00<br /><span className="text-sm">(konkrétny čas vám pošleme)</span></p>
+                </div>
+              </div>
+              <div className="mt-8 pt-6 border-t border-black/10">
+                <p className="text-sm">Vyplňte prihlášku and budeme vás informovať emailom, aby vám termín neunikol.</p>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </>

@@ -18,7 +18,7 @@ export default async function ProgramDetailPage({ params }: { params: Promise<{ 
                 <div className="mt-4 p-4 bg-gray-100 rounded text-left inline-block">
                     <p>Checked Slug: <strong>{slug}</strong></p>
                     <p>Environment SITE_ID configured: <strong>{process.env.NEXT_PUBLIC_SITE_ID ? 'YES' : 'NO'}</strong></p>
-                    <p className="text-xs text-gray-500 mt-2">Check console for more details</p>
+                    <p className="text-xs text-black mt-2">Check console for more details</p>
                 </div>
             </div>
         );
@@ -207,7 +207,7 @@ export default async function ProgramDetailPage({ params }: { params: Promise<{ 
                         {event.description ? (
                             <div className="whitespace-pre-wrap">{event.description}</div>
                         ) : (
-                            <p className="text-gray-500 italic">Bez popisu</p>
+                            <p className="text-black italic">Bez popisu</p>
                         )}
 
 
@@ -238,7 +238,7 @@ export default async function ProgramDetailPage({ params }: { params: Promise<{ 
                                 <ul className="space-y-3">
                                     {event.team_members.map((member, i) => (
                                         <li key={i} className="flex justify-between items-baseline border-b border-gray-100 pb-1">
-                                            <span className="text-gray-500 text-sm">{member.role}</span>
+                                            <span className="text-black text-sm">{member.role}</span>
                                             <span className="font-medium">{member.name}</span>
                                         </li>
                                     ))}
@@ -261,7 +261,7 @@ export default async function ProgramDetailPage({ params }: { params: Promise<{ 
                                                 {new Date(evt.event_date).toLocaleDateString('sk-SK', { weekday: 'long', day: 'numeric', month: 'long' })} {evt.time}
                                             </div>
 
-                                            <div className="flex justify-between items-center text-gray-600 mb-4">
+                                            <div className="flex justify-between items-center text-black mb-4">
                                                 <span>{evt.venue}</span>
                                                 {evt.price && (
                                                     <span className="font-medium text-black">

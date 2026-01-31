@@ -13,9 +13,9 @@ export default function Header() {
 
   const getActiveCategory = () => {
     const categoryMap: { [key: string]: number } = {
-      'ludus-academy': 0,
-      'skola-ludus': 1,
-      'divadlo-ludus': 2,
+      'skola-ludus': 0,
+      'divadlo-ludus': 1,
+      'ludus-academy': 2,
       'ludus-tabor': 3,
       'program': 4
     };
@@ -106,34 +106,7 @@ export default function Header() {
 
         {/* Right Group - Social + Contact */}
         <div className="flex items-center gap-4">
-          <div className="flex gap-4">
-            <a
-              href="https://www.facebook.com/skolaludus"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center hover:scale-115 transition-transform duration-300"
-            >
-              <Image
-                src="/images/icons/facebook.svg"
-                alt="Facebook"
-                width={24}
-                height={24}
-              />
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center hover:scale-115 transition-transform duration-300"
-            >
-              <Image
-                src="/images/icons/instagram.svg"
-                alt="Instagram"
-                width={24}
-                height={24}
-              />
-            </a>
-          </div>
+
           <Link href="/kontakt" className="btn-cta">
             <span className="btn-text-container">
               <span className="btn-text btn-text-visible">Kontakt</span>

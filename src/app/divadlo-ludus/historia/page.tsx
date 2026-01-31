@@ -1,194 +1,473 @@
+'use client';
+
+import Image from 'next/image';
+import Button from '@/components/Button';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+
+const programItems = [
+    { date: '20. 12.', title: 'Snehová kráľovná', time: '18:00', venue: 'BlackBox' },
+    { date: '22. 12.', title: 'Vianočná rozprávka', time: '17:00', venue: 'BlackBox' },
+    { date: '10. 01.', title: 'Improvizačný večer', time: '19:00', venue: 'BlackBox' },
+    { date: '15. 01.', title: 'Absolventské predstavenie', time: '18:00', venue: 'BlackBox' },
+    { date: '25. 01.', title: 'Hosťujúce divadlo', time: '19:00', venue: 'BlackBox' },
+    { date: '05. 02.', title: 'Detské predstavenie', time: '10:00', venue: 'BlackBox' }
+];
+
+interface Founder {
+    name: string;
+    description: string;
+    image: string;
+    details: string[];
+    pastRoles: string[];
+}
+
+const founders: Founder[] = [
+    {
+        name: "Mgr. art PETER KUBA",
+        description: "Spoluzakladateľ divadla a školy LUDUS, zriaďovateľ SZUŠ LUDUS",
+        image: "/images/skola/eb61223e-a3d6-4b29-990e-8cc94452d20f.jpg",
+        details: [
+            "Štúdium na VŠMU odbor herectvo",
+            "Dlhoročný umelecký šéf and režisér Divadla Ludus kreatívneho centra mladých"
+        ],
+        pastRoles: [
+            "pedagóg doplňujúceho pedagogického štúdia na VŠMU",
+            "pedagóg na konzervatóriu v Bratislave",
+            "umelecký šéf detskej dramatickej družiny Československého rozhlasu",
+            "člen Divadla pre deti a mládež Trnava",
+            "moderátor detskej relácie „Poďte s nami“ pre STV"
+        ]
+    },
+    {
+        name: "XÉNIA KUBOVÁ - GRACOVÁ",
+        description: "Spoluzakladateľka školy LUDUS, bývalý dlhoročný pedagóg",
+        image: "/images/skola/IMG_9980.jpeg",
+        details: [
+            "Štúdium na štátnom konzervatórium v Bratlavě",
+            "Dlhoročný pedagóg v škole LUDUS a autorka učebných osnov a metodiky pre ĽŠU – literárno dramatický odbor"
+        ],
+        pastRoles: [
+            "členka dedinského divadla a herečka Žilinského divadla",
+            "Spoluzakladateľka súboru LUDUS",
+            "Vedúca odboru LŠU, zástupca riaditeľa",
+            "Porotkyňa prednesu na rôznych súťažiach",
+            "pedagóg v rozhlasovej dramatickej družine"
+        ]
+    }
+];
+
 export default function HistoriaPage() {
+    const [selectedFounder, setSelectedFounder] = useState<Founder | null>(null);
+
     return (
-        <>
-            <section className="pt-32 pb-16 bg-[#ffd37c]">
-                <div className="w-[95%] mx-auto text-center">
-                    <h1
-                        className="text-[3rem] md:text-[5rem] text-black mb-4"
-                        style={{ fontFamily: 'var(--font-heading)' }}
-                    >
-                        HISTÓRIA LUDUSU
-                    </h1>
-                </div>
+        <div className="bg-[#fcfcfc] min-h-screen">
+            {/* Hero */}
+            <section
+                className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+                style={{ backgroundImage: "url('/images/divadlo-main.jpg')" }}
+            >
+                <div className="absolute inset-0 bg-black/40" />
+                <h1
+                    className="relative text-white text-[5rem] z-10 text-center max-md:text-[3rem]"
+                    style={{ fontFamily: 'var(--font-heading)' }}
+                >
+                    História
+                </h1>
             </section>
 
-            <div className="w-[95%] mx-auto py-16">
-                <div className="max-w-4xl mx-auto space-y-8 text-lg leading-relaxed text-[#444]">
+            <div className="w-[95%] max-w-7xl mx-auto py-20">
+                {/* Founders Grid */}
+                <div className="grid grid-cols-2 gap-8 mb-24 max-md:grid-cols-1">
+                    {founders.map((founder, index) => (
+                        <div
+                            key={index}
+                            className="group relative h-[600px] cursor-pointer overflow-hidden rounded-2xl shadow-xl transition-all duration-500 hover:shadow-2xl"
+                            onClick={() => setSelectedFounder(founder)}
+                        >
+                            <Image
+                                src={founder.image}
+                                alt={founder.name}
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+                            <div className="absolute bottom-10 left-10 right-10 z-10">
+                                <h3
+                                    className="text-white text-[2.5rem] leading-none mb-3"
+                                    style={{ fontFamily: 'var(--font-heading)' }}
+                                >
+                                    {founder.name}
+                                </h3>
+                                <p className="text-[#ffd37c] font-bold text-lg leading-snug max-w-[80%]">
+                                    {founder.description}
+                                </p>
+                                <div className="mt-4 flex items-center gap-2 text-white/80 font-medium text-left">
+                                    <span>Viac o zakladateľovi</span>
+                                    <span className="text-xl">→</span>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
 
-                    <p>
-                        Peter Kuba sa spolu so Xéniou začali v roku 1970 venovať mladým ľuďom, ktorí milujú divadlo.
-                        Vznikol nápad poňať bežný literárno-dramatický odbor Ľudovej školy umenia ako divadelné zoskupenie. A tak
-                        spolu s Jurajom Bindzárom založili LUDUS. Jeho ciele definovali vo svojom manifeste:
-                    </p>
-
-                    <div className="pl-6 border-l-4 border-[#ffd37c] italic font-semibold space-y-1">
-                        <p>Hra ako základné umelecko – pedagogické východisko</p>
-                        <p>Hra ako krídla slobodného človeka</p>
-                        <p>Hra ako krídla fantázie</p>
-                        <p>Hra oslobodzujúca od všednosti, konvencie a nepravdy</p>
-                        <p>Hra ako kľúč k svetu a životu</p>
-                        <p>Hra ako prapodstata umeleckého prejavu a tvorby vôbec</p>
-                    </div>
-
-                    <p>
-                        Tieto princípy sa ukázali ako veľmi nadčasové a týchto zásad sa Ludus držal celé desaťročia a platia až doteraz.
-                        Ludus sa stal miestom, kde deti a mladí ľudia našli miesto, kde sa cítili slobodne. Našli svoju vnútornú slobodu.
-                        Hrali sa. A vďaka hre sa učili... To je stále základný princíp Ludusu. Hra, ako cesta.
-                    </p>
-
-                    <p>
-                        Z Ludusu sa postupne stala mimoriadne úspešná škola pre deti a mladých, ktorých životom bolo divadlo.
-                        Vysoké renomé školy sa začalo prejavovať aj v počte úspešných uchádzačov o štúdium herectva.
-                        Začiatkom 80tych rokov získal Ludus veľkorysé priestory na Rezedovej ulici – s vlastnou divadelnou sálou.
-                        Úroveň predstavení sa tým posunula na ešte vyššiu úroveň. Inscenácie, ktorých interpretmi boli žiaci Ludusu,
-                        už pripomínali tvorbu profesionálnych divadiel.
-                        Tu vznikli azda najúspešnejšie inscenácie, ako bol Robinson, Jarné prebudenie, Malomeštiakova svadba,
-                        Klauniády, Gebuliaci, Bez pravidiel, Džungľa.
-                        Od polovice 80. rokov Ludus absolvoval viaceré úspešné zájazdy za hranice, dokonca do „kapitalistickej
-                        cudziny“. Inscenácia „Jarné prebudenie“ získala hlavnú cenu na festivale v Belgickom meste St. Vith.
-                        Ludus reprezentoval slovenskú kultúru na zájazdoch vo Viedni, v St. Lambrechte v Rakúsku, v Belgicku,
-                        nemeckom Padernborne, v Liverpoole, v LeMans a Grenobli.
-                    </p>
-
-                    <p>
-                        Veľkú zmenu v organizácii prinieslo založenie „Divadla/školy Ludus“. Išlo o jedinečné spojenie školy a divadla,
-                        spojenie detí - žiakov a profesionálnych hercov, ktorí pôsobili v škole ako pedagógovia.
-                        Nová doba priniesla Ludusu aj ďalšie sťahovanie – tentokrát do Bratislavskej Petržalky – na Tupolevovu ulicu.
-                        A nielen to. Jedinečné spojenie divadla a školy sa muselo skončiť kvôli „zásahu zhora“. Peter a Xénia boli
-                        postavení pred voľbu: Divadlo, alebo škola? Iba jedno mohlo byť naďalej podporované Bratislavským
-                        samosprávnym krajom. Rozhodnutie padlo a vzniklo profesionálne divadlo pre mládež – Divadlo Ludus
-                        a začlenilo sa do siete divadiel v pôsobnosti BSK.
-                        Lenže myšlienka Ludusu, ako priestoru pre mladých, bola silnejšia. Preto vznikla Súkromná základná umelecká
-                        škola LUDUS.
-                    </p>
-
-                    {/* The "2" separator from the text */}
-                    <div className="text-center py-4 text-2xl font-bold opacity-20">2</div>
-
-                    <p>
-                        Divadlo Ludus následne pôsobilo v priestoroch PKO, Tower stage, Divadlo L+S.
-                        Následne sa v roku 2025 divadlo presťahovalo na Malú scénu STU.
-                        Toto sťahovanie bolo definitívne posledné. V tomto roku bolo totiž divadlo definitívne zrušené rozhodnutím
-                        BSK a prišlo o svoj názov LUDUS. O značku, pod ktorou 55 rokov pôsobilo a ovplyvnilo obrovské množstvo detí
-                        a mladých ľudí, ktorým učarovalo divadlo.
-                        Školu LUDUS však nijaké negatívne javy neovplyvnili. Stále rovnako, ako pred 55 rokmi vedie svojich žiakov
-                        k tvorivosti, radosti z hry a k láske k umeniu.
-                        Jedna zmena sa však predsa len udiala. A to zmena mimoriadne pozitívna.
-                        Náhle osirelú značku Divadlo LUDUS prevzala pod krídla Škola LUDUS.
-                        Škola a divadlo LUDUS sú opäť spolu a v roku 2026 začíname písať novú a veríme že výraznú kapitolu
-                        „nového“ divadla LUDUS.
-                    </p>
-
-                    <div className="mt-12 space-y-8">
-                        <div>
-                            <h3 className="text-xl font-bold mb-4 uppercase">ÚSPEŠNÉ PROJEKTY PRE MLÁDEŽ, KTORÉ VZNIKLI V DIVADLE LUDUS:</h3>
-                            <ul className="space-y-1 text-base">
-                                <li>1974 - I. Demovič / P. Kuba: Tonic klub</li>
-                                <li>1975 – W. Shakespeare / J. Bindzár: Zimná rozprávka</li>
-                                <li>1977 - N. V. Gogoľ / J. Bindzár: Nos</li>
-                                <li>1978 – Ľ. Feldek: Zlatúšik</li>
-                                <li>1979 – O. Šulaj / B. Uhlár: Frontové divadlo</li>
-                                <li>1980 – B. Brecht: Malomeštiakova svadba</li>
-                                <li>1980 – Č. Ajtmatov / P. Kuba: Biela loď</li>
-                                <li>1983 – Turba / Fuksa / Mokoš / Kuba: Šanca, alebo Klauniády</li>
-                                <li>1984, 1988 – F. Wedekind: Jarné prebudenie</li>
-                                <li>1985 – F. Buzassy: Rozprávka</li>
-                                <li>1987 – P. Kuba: Bez pravidiel</li>
-                                <li>1989 – P. Kuba: Gebuliaci</li>
-                                <li>1991 – M. Ramløse: Štvrté prikázanie</li>
-                                <li>1991 – J. Mahen: Klaun Čokoláda</li>
-                                <li>1992 – A. Jelicoe: Bezva finta</li>
-                                <li>1993 – Ľ. Andrejev: Život človeka</li>
-                                <li>1994 – S. Canev: Druhá smrť Johanky z Arcu</li>
-                                <li>1996 - J. Benčík / I. Ištoková / Z. Šebestová: Ticho prosím!</li>
-                                <li>1996, 2000, 2006 – P. Kuba / j. Letenay / Ľ. Jarjabka: Ne/mám rád I.</li>
-                                <li>1996 – j. Cocteau: Svadobčania z Eiffelovky</li>
-                                <li>1997, 2006 –P. Kuba / J. Letenay / Ľ. Jarjabka: Nemám rád II.</li>
-                                <li>1998, 2001 - P. Kuba: Prvé lásky (F. N. Dostojevskij Biele noci, T. Wiliams: Dom na zbúranie)</li>
-                                <li>1999 – P. Kuba, V. Shulzová: Stačí povedať „nie!“</li>
-                                <li>1999 - P. Scherhaufer: Geometria mŕtvych bodov</li>
-                                <li>2000 - P. Turrini: Lov na krysy</li>
-                                <li>2001 - I. Horovitz: Čiara, alebo každý chce byť prvý</li>
-                                <li>2002 – A. de Saint-Exupéry: Malý princ</li>
-                                <li>2006 – M. Dacho: For sale</li>
-                                <li>2007 – K. Žiška: Čiernobiele srdce Charlieho Chaplina</li>
-                                <li>2007 - J. Záborský & comp.:Dva dni v Chujave</li>
-                                <li>2008 – M. Hudec / K. Kollárik / P. Kuba: Objav roka – cena za úspech</li>
-                                <li>2008 – F. Rabelaise / K. Žiška: Gargantua a Pantagruel</li>
-                                <li>2009 – K. Žiška / M. Dacho / P. Kuba: Velipsespilev</li>
-                                <li>2009 – N. V. Gogoľ / P. Kuba: Acta psychopata</li>
-                                <li>2010 – L. Kerata: Fantázia (Fascikliáda)</li>
-                                <li>2010 – C. Confortés: Maratón</li>
-                                <li>2012 – K. Žiška / M. Dacho / M. Uhliarik: ...Tvoj Ludevít</li>
-                                <li>2013 – T. Rózewicz: Folder</li>
-                                <li>2014 – J. Šebesta / J Mikitková: Pozor, dobrý pes!</li>
-                                <li>2014 – j. Kladijev: Poďme, čaká nás auto</li>
-                                <li>2014 – A. P. Čechov: Medveď & Pytačky</li>
-                            </ul>
-
-                            <div className="text-center py-4 text-2xl font-bold opacity-20">2</div>
-
-                            <ul className="space-y-1 text-base">
-                                <li>2015 – I. Lausund: Hystericon</li>
-                                <li>2016 – R. Kipling / D. a V. Martinovci / p. Kuba: Džungľa</li>
-                                <li>2018- Eugene Ionesco: Plešivá speváčka</li>
-                                <li>2019- Maurice Maeterlinck: Modrý vták</li>
-                            </ul>
+                {/* Videos Section */}
+                <div className="mb-32 text-center">
+                    <h2
+                        className="text-[3rem] mb-12"
+                        style={{ fontFamily: 'var(--font-heading)' }}
+                    >
+                        Filmy a Dokumenty
+                    </h2>
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
+                        {/* TA3 Video */}
+                        <div className="flex flex-col gap-4">
+                            <div className="aspect-video w-full rounded-xl overflow-hidden shadow-lg bg-black">
+                                <iframe
+                                    className="w-full h-full"
+                                    src="https://www.youtube.com/embed/0a_zzfrhF1Y"
+                                    title="Portrét TA3"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                            <h4 className="text-xl font-bold">Portrét TA3</h4>
                         </div>
 
-                        <div>
-                            <h3 className="text-xl font-bold mb-4 uppercase">PROJEKTY PRE DETI, KTORÉ VZNIKLI V DIVADLE A ŠKOLE LUDUS:</h3>
-                            <ul className="space-y-1 text-base">
-                                <li>1971 – S. Maršák: Mačkin dom</li>
-                                <li>1972 – S. Michalkov: Veselý sen</li>
-                                <li>1973 – M. Maeterlinck: Modrý vták</li>
-                                <li>1975 – A. Platonv / J. Bindzár: Krava</li>
-                                <li>1976 – A. Nosov / P. Kuba: Nevedko</li>
-                                <li>1978 – J. Brzechwa / J. Bindzár: Skaza akadémie hier a šantenia prof. Machuľku</li>
-                                <li>1979 – Ľ. Podjavorinská: Žabiatko</li>
-                                <li>1982 – D. Defoe / J. Bindzár: Robinson</li>
-                                <li>1990 – R. Kipling: Džungľa</li>
-                                <li>1991 – J. Chlebíková: Šípková Ruženka</li>
-                                <li>1992 - J. Benčík: Dlhý, Široký, Bystrozraký</li>
-                                <li>1992 - P. Kuba: Kráľ Strach</li>
-                                <li>1993 (SRN), 2003 J. Bindzár: Robinson</li>
-                                <li>1993 – V. Macek, j. Pražmári: O psíškovi a mačičke</li>
-                                <li>1993 – J. Čepoveckij: Môj strýčko klaun</li>
-                                <li>1994 – O. Hoffmannová / P. Bzdúch: Čarodejnica Ivica a dráčik Ohniváčik</li>
-                                <li>1995 – J. C. Hronský / J. Kákoš: Budkáčik a Dubkáčik</li>
-                                <li>1996 – O. Hoffmannová / A. Pachinger: Letí, letí...</li>
-                                <li>1997 – P. Kuba: Kontajnerstory</li>
-                                <li>1998 – J. Pražmári a kol.: Najstaršia rozprávka</li>
-                                <li>1998 – J. Čapoun: Strakatá rozprávka</li>
-                                <li>1999 – M. Ďuríčková: Bratislavské povesti</li>
-                                <li>2000 – D. Hevier: Hugo, Frigo, Bublina</li>
-                                <li>2001 – K. Kubová / M. Kecskésová: Sedmokráska</li>
-                                <li>2001- M. Ende / P. Kuba: Čárymáry fučpunč priania</li>
-                                <li>2002 – R. Bachratý: Vyšla hviezda nad Betlehemom</li>
-                                <li>2004 - A. Pachinger: Doktor Johanes Faust</li>
-                                <li>2005 – J. Bindzár / P. Kuba: Skaza akadémie hier a šantenia prof. Machuľku</li>
-                                <li>2006 – DF. Dušek / J. Nvota: Pištáčikovo pestvo</li>
-                                <li>2006 – J. Synková: Malá čarodejnica</li>
-                                <li>2007 – P. Garajová-Jarjabková: Do dávnych čias mesta, nakuknite decká!</li>
-                                <li>2008 – J. Mokoš / P. Kuba: Hasprčko a Mrcúlik</li>
-                                <li>2009 – M. Beňová: Strašiak</li>
-                                <li>2009 – Kolektív: Vlk, neklam!</li>
-                                <li>2010, 2013 (pre nepočujúcich – A. Lingrenová / K. Žiška / M. Dacho: Popletená punčocha</li>
-                                <li>2011 – J. Mikitková: Abeceda zjedla teba</li>
-                            </ul>
+                        {/* 40 Year Video */}
+                        <div className="flex flex-col gap-4">
+                            <div className="aspect-video w-full rounded-xl overflow-hidden shadow-lg bg-black">
+                                <iframe
+                                    className="w-full h-full"
+                                    src="https://www.youtube.com/embed/JAS_srYKw90"
+                                    title="Ludus 40 ročný"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                            <h4 className="text-xl font-bold">Ludus 40 ročný</h4>
+                        </div>
 
-                            <div className="text-center py-4 text-2xl font-bold opacity-20">3</div>
+                        {/* STVR Documentary Link */}
+                        <a
+                            href="https://www.stvr.sk/televizia/program/18117"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex flex-col gap-4 group"
+                        >
+                            <div className="aspect-video w-full rounded-xl overflow-hidden shadow-lg bg-black relative flex items-center justify-center p-8 text-center transition-all group-hover:bg-[#ffd37c]/10">
+                                <div className="border border-white/20 p-8 rounded-lg w-full h-full flex flex-col items-center justify-center gap-4">
+                                    <p className="text-white font-heading text-2xl group-hover:text-[#ffd37c]">Dokument Fenomén LUDUS</p>
+                                    <span className="text-white/60 text-sm">Pozrieť v archíve STVR</span>
+                                </div>
+                                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span className="bg-[#ffd37c] text-black px-6 py-2 rounded-full font-bold">Otvoriť archív →</span>
+                                </div>
+                            </div>
+                            <h4 className="text-xl font-bold">Dokument Fenomén LUDUS (STVR)</h4>
+                        </a>
+                    </div>
+                </div>
 
-                            <ul className="space-y-1 text-base">
-                                <li>2011 – M. Ende / p. Kuba: Čárymáry fučpunč priania</li>
-                                <li>2012 – Fontaine, Krylov, Ezop: 3 bájky</li>
-                                <li>2013 – P. Kuba: Pod perinou</li>
-                            </ul>
+                {/* History Content */}
+                <div className="max-w-7xl mx-auto space-y-24">
+                    {/* Block 1 */}
+                    <div className="grid grid-cols-[1fr_450px] gap-12 items-center max-lg:grid-cols-1">
+                        <div className="bg-white p-12 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100 italic">
+                            <p className="mb-8 text-[1.2rem] leading-relaxed text-[#000]">
+                                Peter Kuba sa spolu so Xéniou začali v roku 1970 venovať mladým ľuďom, ktorí milujú divadlo.
+                                Vznikol nápad poňať bežný literárno-dramatický odbor Ľudovej školy umenia ako divadelné zoskupenie. A tak
+                                spolu s Jurajom Bindzárom založili LUDUS. Jeho ciele definovali vo svojom manifeste:
+                            </p>
+
+                            <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1 bg-[#ffd37c]/5 p-8 rounded-xl border-l-8 border-[#ffd37c] mb-8 not-italic">
+                                <ul className="space-y-3 font-semibold text-black italic">
+                                    <li>Hra ako základné umelecko – pedagogické východisko</li>
+                                    <li>Hra ako krídla slobodného človeka</li>
+                                    <li>Hra ako krídla fantázie</li>
+                                </ul>
+                                <ul className="space-y-3 font-semibold text-black italic">
+                                    <li>Hra oslobodzujúca od všednosti, konvencie and nepravdy</li>
+                                    <li>Hra ako kľúč k svetu and životu</li>
+                                    <li>Hra ako prapodstata umeleckého prejavu and tvorby vôbec</li>
+                                </ul>
+                            </div>
+
+                            <p className="text-[1.2rem] leading-relaxed text-[#000]">
+                                Tieto princípy sa ukázali ako veľmi nadčasové and týchto zásad sa Ludus držal celé desaťročia and platia až doteraz.
+                                Ludus sa stal miestom, kde deti and mladí ľudia našli miesto, kde sa cítili slobodne. Našli svoju vnútornú slobodu.
+                                Hrali sa. A vďaka hre sa učili... To je stále základný princíp Ludusu. Hra, ako cesta.
+                            </p>
+                        </div>
+                        <Image
+                            src="/images/skola/IMG_1821.jpeg"
+                            alt="Ludus História"
+                            width={600}
+                            height={800}
+                            className="w-full h-[600px] object-cover rounded-2xl shadow-xl"
+                        />
+                    </div>
+
+                    {/* Block 2 */}
+                    <div className="grid grid-cols-[450px_1fr] gap-12 items-center max-lg:grid-cols-1">
+                        <Image
+                            src="/images/skola/IMG_8911.jpeg"
+                            alt="Ludus História"
+                            width={600}
+                            height={800}
+                            className="w-full h-[600px] object-cover rounded-2xl shadow-xl max-lg:order-first"
+                        />
+                        <div className="space-y-8 text-[1.2rem] leading-relaxed text-[#000]">
+                            <p>
+                                Z Ludusu sa postupne stala mimoriadne úspešná škola pre deti and mladých, ktorých životom bolo divadlo.
+                                Vysoké renomé školy sa začalo prejavovať aj v počte úspešných uchádzačov o štúdium herectva.
+                                Začiatkom 80tych rokov získal Ludus veľkorysé priestory na Rezedovej ulici – s vlastnou divadelnou sálou.
+                                Úroveň predstavení sa tým posunula na ešte vyššiu úroveň. Inscenácie, ktorých interpretmi boli žiaci Ludusu,
+                                už pripomínali tvorbu profesionálnych divadiel.
+                            </p>
+
+                            <div className="bg-white p-12 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100 italic text-center">
+                                "Postupne vznikla potreba premostenia Ludusu medzi detskou and profesionálnou úrovňou.
+                                Z amatérskeho krúžku sa Ludus stal centrom, ktoré bolo priekopníkom divadla hraného mladými pre mladých."
+                            </div>
                         </div>
                     </div>
 
+                    {/* Block 3 */}
+                    <div className="grid grid-cols-[1fr_450px] gap-12 items-start max-lg:grid-cols-1">
+                        <div className="space-y-8">
+                            <p className="text-[1.2rem] leading-relaxed text-[#000]">
+                                Od roku 1990 funguje Ludus v dvoch líniách. Jednou je Škola Ludus (SZUŠ LUDUS) – vtedy ako literárno-dramatický odbor,
+                                v ktorom sa vzdelávajú deti and mladí. Druhou líniou bolo Profesionálne divadlo Ludus (ako divadlo v pôsobnosti BSK).
+                                Ktoré však vždy úzko spolupracovalo so školou and dalo možnosť absolventom hrať v profesionálnych podmienkach and s profesionálmi.
+                            </p>
+
+                            <div className="bg-black text-white p-12 rounded-2xl text-center shadow-xl">
+                                <h3 className="text-[#ffd37c] text-[2.5rem] mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
+                                    Súčasnosť
+                                </h3>
+                                <p className="text-xl opacity-90 leading-relaxed">
+                                    V súčasnosti pôsobíme pod jednou strechou na Palackého 22, v novom komornom priestore BLACKBOX.
+                                    Sme rodinnou školou and divadlom, kde sa stretávajú generácie and odovzdávajú si svoje skúsenosti.
+                                    Stále s radosťou, v slobode and v HRE.
+                                </p>
+                            </div>
+                        </div>
+                        <Image
+                            src="/images/skola/IMG_4346.jpeg"
+                            alt="Ludus Súčasnosť"
+                            width={600}
+                            height={800}
+                            className="w-full h-[500px] object-cover rounded-2xl shadow-xl"
+                        />
+                    </div>
                 </div>
             </div>
-        </>
+
+            {/* Projects History - 5 per row - FULL WIDTH CONTAINER */}
+            <div className="w-[95%] max-w-[1600px] mx-auto pb-32">
+                <div className="mt-16">
+                    <h2 className="text-[3rem] mb-16 text-center" style={{ fontFamily: 'var(--font-heading)' }}>
+                        Divadelná produkcia
+                    </h2>
+
+                    <div className="space-y-24">
+                        {/* Youth Projects */}
+                        <div className="bg-white p-12 rounded-3xl shadow-sm border border-gray-100">
+                            <div className="bg-black py-6 px-10 rounded-2xl mb-12 shadow-lg">
+                                <h3 className="text-[#ffd37c] text-3xl font-bold uppercase tracking-widest m-0 text-left">
+                                    Úspešné projekty pre mládež
+                                </h3>
+                            </div>
+                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-8 gap-y-4 text-base text-left">
+                                {[
+                                    "1974 - I. Demovič / P. Kuba: Tonic klub",
+                                    "1975 – W. Shakespeare / J. Bindzár: Zimná rozprávka",
+                                    "1977 - N. V. Gogoľ / J. Bindzár: Nos",
+                                    "1978 – Ľ. Feldek: Zlatúšik",
+                                    "1979 – O. Šulaj / B. Uhlár: Frontové divadlo",
+                                    "1980 – B. Brecht: Malomeštiakova svadba",
+                                    "1980 – Č. Ajtmatov / P. Kuba: Biela loď",
+                                    "1983 – Turba / Fuksa / Mokoš / Kuba: Šanca, alebo Klauniády",
+                                    "1984, 1988 – F. Wedekind: Jarné prebudenie",
+                                    "1985 – F. Buzassy: Rozprávka",
+                                    "1987 – P. Kuba: Bez pravidiel",
+                                    "1989 – P. Kuba: Gebuliaci",
+                                    "1991 – M. Ramløse: Štvrté prikázanie",
+                                    "1991 – J. Mahen: Klaun Čokoláda",
+                                    "1992 – A. Jelicoe: Bezva finta",
+                                    "1993 – Ľ. Andrejev: Život človeka",
+                                    "1994 – S. Canev: Druhá smrť Johanky z Arcu",
+                                    "1996 - J. Benčík / I. Ištoková / Z. Šebestová: Ticho prosím!",
+                                    "1996, 2000, 2006 – P. Kuba / j. Letenay / Ľ. Jarjabka: Ne/mám rád I.",
+                                    "1996 – j. Cocteau: Svadobčania z Eiffelovky",
+                                    "1997, 2006 –P. Kuba / J. Letenay / Ľ. Jarjabka: Nemám rád II.",
+                                    "1998, 2001 - P. Kuba: Prvé lásky",
+                                    "1999 – P. Kuba, V. Shulzová: Stačí povedať „nie!“",
+                                    "1999 - P. Scherhaufer: Geometria mŕtvych bodov",
+                                    "2000 - P. Turrini: Lov na krysy",
+                                    "2001 - I. Horovitz: Čiara, alebo každý chce byť prvý",
+                                    "2002 – A. de Saint-Exupéry: Malý princ",
+                                    "2006 – M. Dacho: For sale",
+                                    "2007 – K. Žiška: Čiernobiele srdce Charlieho Chaplina",
+                                    "2007 - J. Záborský & comp.:Dva dni v Chujave",
+                                    "2008 – M. Hudec / K. Kollárik / P. Kuba: Objav roka",
+                                    "2008 – F. Rabelaise / K. Žiška: Gargantua and Pantagruel",
+                                    "2009 – K. Žiška / M. Dacho / P. Kuba: Velipsespilev",
+                                    "2009 – N. V. Gogoľ / P. Kuba: Acta psychopata",
+                                    "2010 – L. Kerata: Fantázia (Fascikliáda)",
+                                    "2010 – C. Confortés: Maratón",
+                                    "2012 – K. Žiška / M. Dacho / M. Uhliarik: ...Tvoj Ludevít",
+                                    "2013 – T. Rózewicz: Folder",
+                                    "2014 – J. Šebesta / J Mikitková: Pozor, dobrý pes!",
+                                    "2014 – j. Kladijev: Poďme, čaká nás auto",
+                                    "2014 – A. P. Čechov: Medveď & Pytačky",
+                                    "2015 – I. Lausund: Hystericon",
+                                    "2016 – R. Kipling / D. and V. Martinovci: Džungľa",
+                                    "2018- Eugene Ionesco: Plešivá speváčka",
+                                    "2019- Maurice Maeterlinck: Modrý vták"
+                                ].map((play, i) => (
+                                    <div key={i} className="flex items-start gap-2 hover:text-[#ffd37c] transition-colors leading-tight">
+                                        <span className="text-[#ffd37c]">•</span>
+                                        <span>{play}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Children Projects */}
+                        <div className="bg-white p-12 rounded-3xl shadow-sm border border-gray-100">
+                            <div className="bg-black py-6 px-10 rounded-2xl mb-12 shadow-lg">
+                                <h3 className="text-[#ffd37c] text-3xl font-bold uppercase tracking-widest m-0 text-left">
+                                    Projekty pre deti
+                                </h3>
+                            </div>
+                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-8 gap-y-4 text-base text-left">
+                                {[
+                                    "1971 – S. Maršák: Mačkin dom",
+                                    "1972 – S. Michalkov: Veselý sen",
+                                    "1973 – M. Maeterlinck: Modrý vták",
+                                    "1975 – A. Platonv / J. Bindzár: Krava",
+                                    "1976 – A. Nosov / P. Kuba: Nevedko",
+                                    "1978 – J. Brzechwa / J. Bindzár: Skaza akadémie",
+                                    "1979 – Ľ. Podjavorinská: Žabiatko",
+                                    "1982 – D. Defoe / J. Bindzár: Robinson",
+                                    "1990 – R. Kipling: Džungľa",
+                                    "1991 – J. Chlebíková: Šípková Ruženka",
+                                    "1992 - J. Benčík: Dlhý, Široký, Bystrozraký",
+                                    "1992 - P. Kuba: Kráľ Strach",
+                                    "1993 (SRN), 2003 J. Bindzár: Robinson",
+                                    "1993 – V. Macek, j. Pražmári: O psíškovi and mačičke",
+                                    "1993 – J. Čepoveckij: Môj strýčko klaun",
+                                    "1994 – O. Hoffmannová: Čarodejnica Ivica",
+                                    "1995 – J. C. Hronský: Budkáčik and Dubkáčik",
+                                    "1996 – O. Hoffmannová: Letí, letí...",
+                                    "1997 – P. Kuba: Kontajnerstory",
+                                    "1998 – J. Pražmári and kol.: Najstaršia rozprávka",
+                                    "1998 – J. Čapoun: Strakatá rozprávka",
+                                    "1999 – M. Ďuríčková: Bratislavské povesti",
+                                    "2000 – D. Hevier: Hugo, Frigo, Bublina",
+                                    "2001 – K. Kubová: Sedmokráska",
+                                    "2001- M. Ende: Čárymáry fučpunč priania",
+                                    "2002 – R. Bachratý: Vyšla hviezda nad Betlehemom",
+                                    "2004 - A. Pachinger: Doktor Johanes Faust",
+                                    "2005 – J. Bindzár: Skaza akadémie",
+                                    "2006 – DF. Dušek: Pištáčikovo pestvo",
+                                    "2006 – J. Synková: Malá čarodejnica",
+                                    "2007 – P. Garajová-Jarjabková: Do dávnych čias mesta",
+                                    "2008 – J. Mokoš: Hasprčko and Mrcúlik",
+                                    "2009 – M. Beňová: Strašiak",
+                                    "2009 – Kolektív: Vlk, neklam!",
+                                    "2010 – A. Lingrenová: Popletená punčocha",
+                                    "2011 – J. Mikitková: Abeceda zjedla teba",
+                                    "2011 – M. Ende: Čárymáry fučpunč priania",
+                                    "2012 – Fontaine, Krylov, Ezop: 3 bájky",
+                                    "2013 – P. Kuba: Pod perinou"
+                                ].map((play, i) => (
+                                    <div key={i} className="flex items-start gap-2 hover:text-[#ffd37c] transition-colors leading-tight text-left">
+                                        <span className="text-[#ffd37c]">•</span>
+                                        <span>{play}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Modal for Founder Details */}
+            <AnimatePresence>
+                {selectedFounder && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-[2000] flex items-center justify-center p-6 sm:p-12 bg-black/80 backdrop-blur-md"
+                        onClick={() => setSelectedFounder(null)}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, y: 20 }}
+                            animate={{ scale: 1, y: 0 }}
+                            exit={{ scale: 0.9, y: 20 }}
+                            className="bg-white w-full max-w-6xl max-h-[90vh] overflow-y-auto rounded-3xl p-10 md:p-16 relative shadow-2xl"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <button
+                                className="absolute top-6 right-6 text-3xl font-light hover:text-[#ffd37c] transition-colors p-2"
+                                onClick={() => setSelectedFounder(null)}
+                            >
+                                ✕
+                            </button>
+
+                            <div className="flex flex-col md:flex-row gap-12 items-stretch text-left">
+                                <div className="w-full md:w-[450px] relative rounded-2xl overflow-hidden shadow-xl shrink-0 min-h-[500px]">
+                                    <Image
+                                        src={selectedFounder.image}
+                                        alt={selectedFounder.name}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                                <div className="flex-1">
+                                    <h2
+                                        className="text-[3rem] leading-none mb-4"
+                                        style={{ fontFamily: 'var(--font-heading)' }}
+                                    >
+                                        {selectedFounder.name}
+                                    </h2>
+                                    <p className="text-xl font-bold text-[#ffd37c] mb-8 uppercase tracking-wide">
+                                        {selectedFounder.description}
+                                    </p>
+
+                                    <div className="space-y-8 text-lg">
+                                        <div>
+                                            <ul className="space-y-2 list-none p-0">
+                                                {selectedFounder.details.map((detail, idx) => (
+                                                    <li key={idx} className="flex items-start gap-3">
+                                                        <span className="text-[#ffd37c] text-xl mt-1">•</span>
+                                                        <span>{detail}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+
+                                        <div>
+                                            <h4 className="text-sm font-bold uppercase tracking-widest text-black mb-4">V minulosti pôsobil(a) ako:</h4>
+                                            <ul className="space-y-3 list-none p-0">
+                                                {selectedFounder.pastRoles.map((role, idx) => (
+                                                    <li key={idx} className="flex items-start gap-3 pl-4 border-l-2 border-gray-100">
+                                                        <span>{role}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
     );
 }

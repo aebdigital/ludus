@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Button from '@/components/Button';
-import Link from 'next/link';
 import Sidebar from '@/components/Sidebar';
+import Link from 'next/link';
 
 const programItems = [
   { date: '20. 12.', title: 'Snehová kráľovná', time: '18:00', venue: 'BlackBox' },
@@ -35,26 +35,40 @@ export default function DivadloLudusPage() {
           {/* Main Content Column */}
           <main className="flex-1 min-w-0 flex flex-col gap-16">
 
-            {/* Intro Section */}
-            <div className="grid grid-cols-2 gap-16 items-center max-md:grid-cols-1">
-              <div>
+            {/* Intro Section - O NÁS */}
+            <div className="grid grid-cols-2 gap-12 items-start max-md:grid-cols-1">
+              <div className="flex flex-col justify-center">
                 <h2 className="leading-tight mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-                  O divadle
+                  O nás
                 </h2>
-                <p className="text-[#444]">
-                  Divadlo Ludus je profesionálna divadelná scéna zameraná na autorské a experimentálne divadlo.
-                  Naše predstavenia kombinujú tradičné divadelné postupy s modernými formami. Ponúkame
-                  priestory na prenájom pre kultúrne podujatia, workshopy a firemné akcie.
-                </p>
+                <div className="text-[#000] text-left space-y-4">
+                  <p>
+                    V roku 2025 zaniklo profesionálne divadlo LUDUS v pôsobnosti BSK a spolu s ním aj názov "Divadlo LUDUS".
+                  </p>
+                  <p>
+                    V roku 2026 vzniká občianske združenie Divadlo LUDUS, ktoré je v úzkom prepojení so školou Ludus.
+                    Jeho prvým cieľom je obnoviť činnosť divadla pod zaužívaným názvom. Vraciame sa tým k pôvodnej
+                    myšlienke zakladateľov, že divadlo a škola tvoria jeden živý celok, v ktorom mladí tvoria pre mladých.
+                  </p>
+                  <p>
+                    Sú v spojené nádoby, kde sa mladí ľudia inšpirujú od profesionálov a naopak. Prichádza tak k iniciačnému
+                    momentu, ktorý vždy bol a stále je pre LUDUS dôležitý.
+                  </p>
+                </div>
               </div>
               <Image
                 src="/images/divadlo-main.jpg"
                 alt="Divadlo Ludus"
                 width={600}
                 height={400}
-                className="w-full h-[400px] object-cover rounded-xl shadow-lg max-md:order-first"
+                className="w-full h-[450px] object-cover rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.1)] max-md:order-first"
               />
             </div>
+
+            <div className="bg-white p-8 rounded-xl border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.05)] font-bold text-center text-xl text-black">
+              História Ludusu sa nekončí. Naopak - pokračuje ďalej v novej podobe.
+            </div>
+
 
             {/* Program Section */}
             <div className="bg-black text-white rounded-xl p-12">
@@ -135,44 +149,11 @@ export default function DivadloLudusPage() {
                   >
                     {item.title}
                   </h3>
-                  <p className="text-base text-[#666] m-0">{item.description}</p>
+                  <p className="text-base text-[#000] m-0">{item.description}</p>
                 </Link>
               ))}
             </div>
 
-            {/* Reservation Info */}
-            <div className="bg-white p-12 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
-              <h2
-                className="text-[2.5rem] mb-8 text-center"
-                style={{ fontFamily: 'var(--font-heading)' }}
-              >
-                Rezervácia vstupeniek
-              </h2>
-              <div className="grid grid-cols-2 gap-12 items-center max-md:grid-cols-1">
-                <div>
-                  <p className="text-[1.1rem] text-[#444] mb-6">
-                    Vstupenky si môžete rezervovať telefonicky, emailom alebo osobne v pokladni divadla.
-                    Online rezervácie sú k dispozícii pre vybrané predstavenia.
-                  </p>
-                  <ul className="list-none p-0">
-                    {[
-                      { label: 'Email', value: 'rezervacie@skolaludus.sk' },
-                      { label: 'Telefón', value: '0905 543 282' },
-                      { label: 'Pokladňa', value: 'Po-Pi: 14:00 - 18:00' }
-                    ].map((item) => (
-                      <li key={item.label} className="mb-3 text-[1.1rem]">
-                        <strong>{item.label}:</strong> {item.value}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="text-center">
-                  <Button href="/kontakt" className="text-xl px-12 py-4">
-                    Rezervovať
-                  </Button>
-                </div>
-              </div>
-            </div>
 
             {/* Gallery Preview */}
             <div className="mt-16">
@@ -188,14 +169,15 @@ export default function DivadloLudusPage() {
                   '/images/sculpture.jpg',
                   '/images/painting.jpg'
                 ].map((img, i) => (
-                  <Image
-                    key={i}
-                    src={img}
-                    alt={`Galéria ${i + 1}`}
-                    width={400}
-                    height={300}
-                    className="w-full h-[300px] object-cover rounded-xl transition-transform duration-300 hover:scale-[1.02]"
-                  />
+                  <Link key={i} href="/divadlo-ludus/galeria" className="group">
+                    <Image
+                      src={img}
+                      alt={`Galéria ${i + 1} `}
+                      width={400}
+                      height={300}
+                      className="w-full h-[300px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
+                    />
+                  </Link>
                 ))}
               </div>
               <div className="text-center mt-8">
@@ -205,11 +187,25 @@ export default function DivadloLudusPage() {
 
           </main>
 
+
           {/* Sidebar */}
           <Sidebar category="divadlo-ludus" />
 
         </div>
       </div>
+
+      {/* Bottom CTA */}
+      <section className="bg-black p-10 text-center rounded-t-xl">
+        <h2 className="text-center mb-4 !text-white" style={{ fontFamily: 'var(--font-heading)' }}>
+          Máte záujem?
+        </h2>
+        <p className="mb-8 opacity-80 text-white">
+          Kontaktujte nás pre viac informácií o kurzoch a termínoch.
+        </p>
+        <Button href="/divadlo-ludus/kontakt" className="bg-white text-black hover:bg-gray-100">
+          Kontaktovať
+        </Button>
+      </section>
     </>
   );
 }

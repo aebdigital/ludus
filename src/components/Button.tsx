@@ -9,6 +9,9 @@ interface ButtonProps {
   type?: 'button' | 'submit';
   variant?: 'primary' | 'secondary';
   className?: string;
+  disabled?: boolean;
+  target?: string;
+  rel?: string;
 }
 
 export default function Button({
@@ -17,7 +20,10 @@ export default function Button({
   onClick,
   type = 'button',
   variant = 'primary',
-  className = ''
+  className = '',
+  disabled = false,
+  target,
+  rel
 }: ButtonProps) {
   const baseClasses = variant === 'primary'
     ? 'btn-cta'
@@ -34,7 +40,7 @@ export default function Button({
 
   if (href) {
     return (
-      <Link href={href} className={`${baseClasses} ${className}`}>
+      <Link href={href} className={`${baseClasses} ${className}`} target={target} rel={rel}>
         {content}
       </Link>
     );
@@ -44,7 +50,8 @@ export default function Button({
     <button
       type={type}
       onClick={onClick}
-      className={`${baseClasses} ${className}`}
+      disabled={disabled}
+      className={`${baseClasses} ${className} ${disabled ? 'opacity-50 cursor-not-allowed pointer-events-none' : ''}`}
     >
       {content}
     </button>

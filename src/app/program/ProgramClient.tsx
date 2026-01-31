@@ -22,8 +22,8 @@ const months = [
 
 const categories: { [key: string]: string } = {
     'skola-ludus': 'Škola Ludus',
-    'ludus-academy': 'Ludus Academy',
-    'divadlo-ludus': 'Divadlo Ludus'
+    'divadlo-ludus': 'Divadlo Ludus',
+    'ludus-academy': 'Ludus Academy'
 };
 
 // Helper to normalized months to keys
@@ -49,15 +49,17 @@ export default function ProgramClient({ events, initialCategory }: ProgramClient
 
     const [activeMonth, setActiveMonth] = useState(currentMonthValue);
 
-    // Filter events by month
+    // Determine current category
+    const category = searchParams.get('category') || 'skola-ludus'; // Default to skola-ludus if none
+
+    // Filter events by month and category
     const filteredEvents = events.filter(e => {
         // e.month might be full slovak name like "január", need to normalize
         const eventMonth = normalizeMonth(e.month);
-        return eventMonth === activeMonth;
-    });
+        const eventCategory = e.category;
 
-    // Determine current category
-    const category = searchParams.get('category') || 'divadlo-ludus'; // Default to divadlo if none
+        return eventMonth === activeMonth && eventCategory === category;
+    });
 
     return (
         <>
@@ -70,7 +72,7 @@ export default function ProgramClient({ events, initialCategory }: ProgramClient
                             href={`/program?category=${key}`}
                             className={`px-8 py-4 text-sm font-bold uppercase tracking-widest transition-colors ${category === key
                                 ? 'bg-black text-white'
-                                : 'bg-white text-gray-500 hover:text-black'
+                                : 'bg-white text-black hover:text-black'
                                 }`}
                         >
                             {label}
@@ -94,7 +96,7 @@ export default function ProgramClient({ events, initialCategory }: ProgramClient
                                 onClick={() => setActiveMonth(m.value)}
                                 className={`whitespace-nowrap transition-all ${activeMonth === m.value
                                     ? 'text-black font-bold text-2xl scale-110'
-                                    : 'text-gray-400 hover:text-black text-lg'
+                                    : 'text-black hover:text-black text-lg'
                                     }`}
                                 style={{ fontFamily: 'var(--font-heading)' }}
                             >
@@ -163,7 +165,7 @@ export default function ProgramClient({ events, initialCategory }: ProgramClient
                                                 {event.price.match(/€|Eur/i) ? event.price : `${event.price} €`}
                                             </span>
                                         ) : event.status === 'available' ? (
-                                            <span className="text-green-600 uppercase tracking-wider text-sm">Dostupné</span>
+                                            <span className="text-black uppercase tracking-wider text-sm">Dostupné</span>
                                         ) : null}
                                     </div>
 
@@ -205,7 +207,7 @@ export default function ProgramClient({ events, initialCategory }: ProgramClient
 
                                         {/* Info button if nothing else */}
                                         {!event.buy_ticket_link && !event.has_school_reservation && !event.has_ticket_reservation && event.status !== 'available' && (
-                                            <span className="text-xs font-bold uppercase text-gray-500 text-center tracking-widest">
+                                            <span className="text-xs font-bold uppercase text-black text-center tracking-widest">
                                                 Viac info
                                             </span>
                                         )}
@@ -219,7 +221,7 @@ export default function ProgramClient({ events, initialCategory }: ProgramClient
                 ))}
 
                 {filteredEvents.length === 0 && (
-                    <div className="py-20 text-center text-gray-400">
+                    <div className="py-20 text-center text-black">
                         <p className="text-xl">Pre mesiac {activeMonth} nie sú naplánované žiadne predstavenia v tejto kategórii.</p>
                         <p className="mt-2 text-sm">Skúste vybrať iný mesiac alebo kategóriu.</p>
                     </div>

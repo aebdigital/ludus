@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 interface CourseCardProps {
   title: string;
-  description: string;
+  description: string | React.ReactNode;
   href: string;
   backgroundImage: string;
 }
@@ -20,18 +20,18 @@ export default function CourseCard({ title, description, href, backgroundImage }
       {/* Content */}
       <div className="relative z-[2] text-center w-full">
         <h3
-          className="mb-4 text-white text-[2rem] uppercase leading-tight text-center drop-shadow-md"
+          className="mb-4 text-white text-[2.5rem] uppercase leading-tight text-center drop-shadow-md"
           style={{
             fontFamily: 'var(--font-heading)',
           }}
         >
           {title}
         </h3>
-        <p
-          className="text-gray-200 text-[1.1rem] font-medium drop-shadow-sm px-4"
+        <div
+          className="text-gray-100 text-[1.4rem] font-medium drop-shadow-sm px-4"
         >
           {description}
-        </p>
+        </div>
       </div>
     </Link>
   );

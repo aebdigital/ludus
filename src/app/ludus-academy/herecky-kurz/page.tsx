@@ -1,177 +1,321 @@
-import Image from 'next/image';
+import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
+import Image from 'next/image';
 
 export default function HereckyKurzPage() {
-  return (
-    <>
-      {/* Hero */}
-      <section
-        className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-        style={{ backgroundImage: "url('/images/academy/IMG_1128.jpeg')" }}
-      >
-        <div className="absolute inset-0 bg-black/40" />
-        <h1
-          className="relative text-white text-[6rem] z-10 text-center max-md:text-[3rem]"
-          style={{ fontFamily: 'var(--font-heading)' }}
-        >
-          Herecký kurz
-        </h1>
-      </section>
-
-      <div className="w-[95%] mx-auto py-8">
-        <div className="grid grid-cols-[1fr_350px] gap-12 items-start max-lg:grid-cols-1">
-          {/* Main Content */}
-          <div>
-            {/* Intro */}
-            <div className="grid grid-cols-2 gap-16 items-center mb-16 max-md:grid-cols-1">
-              <div>
-                <h2 className="leading-tight mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-                  O kurze
-                </h2>
-                <p className="text-[#444]">
-                  Herecký kurz je určený pre začiatočníkov aj mierne pokročilých záujemcov o herectvo.
-                  Počas kurzu sa naučíte základy hereckého umenia, prácu s telom, hlasom a emóciami.
-                  Kurz vedie skúsený pedagóg s dlhoročnou praxou v profesionálnom divadle.
-                </p>
-              </div>
-              <Image
-                src="/images/academy/IMG_1323.jpeg"
-                alt="Herecký kurz"
-                width={500}
-                height={350}
-                className="w-full h-[350px] object-cover rounded-xl shadow-lg max-md:order-first"
-              />
-            </div>
-
-            {/* Course Details */}
-            <div className="bg-white p-12 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] mb-12">
-              <h3
-                className="text-[2rem] mb-6 border-b-2 border-[#ffd37c] pb-2 inline-block"
-                style={{ fontFamily: 'var(--font-heading)' }}
-              >
-                Čo sa naučíte
-              </h3>
-              <ul className="list-none p-0 grid grid-cols-2 gap-4 max-md:grid-cols-1">
-                {[
-                  'Základy herecký techniky',
-                  'Práca s hlasom a dikciou',
-                  'Pohybové a fyzické divadlo',
-                  'Improvizačné techniky',
-                  'Práca s textom',
-                  'Budovanie postavy',
-                  'Práca s emóciami',
-                  'Javiskový prejav'
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="relative pl-8 text-[1.1rem] text-[#444] before:content-['•'] before:text-[#ffd37c] before:font-bold before:text-xl before:absolute before:left-0"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Info Grid */}
-            <div className="grid grid-cols-2 gap-8 max-md:grid-cols-1">
-              <div className="bg-white p-8 rounded-xl shadow-[0_5px_20px_rgba(0,0,0,0.05)]">
-                <h3
-                  className="text-[2rem] mb-4 border-b-2 border-[#ffd37c] pb-2 inline-block"
-                  style={{ fontFamily: 'var(--font-heading)' }}
-                >
-                  Termíny
-                </h3>
-                <p className="text-[1.1rem] text-[#555] mb-2">
-                  <strong>Deň:</strong> Každý utorok
-                </p>
-                <p className="text-[1.1rem] text-[#555] mb-2">
-                  <strong>Čas:</strong> 18:00 - 20:30
-                </p>
-                <p className="text-[1.1rem] text-[#555]">
-                  <strong>Trvanie:</strong> 10 týždňov
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-[0_5px_20px_rgba(0,0,0,0.05)]">
-                <h3
-                  className="text-[2rem] mb-4 border-b-2 border-[#ffd37c] pb-2 inline-block"
-                  style={{ fontFamily: 'var(--font-heading)' }}
-                >
-                  Cena
-                </h3>
-                <span
-                  className="text-[2.5rem] text-[#ffd37c] font-extrabold block my-4"
-                  style={{ fontFamily: 'var(--font-heading)' }}
-                >
-                  250€
-                </span>
-                <p className="text-[1.1rem] text-[#555]">
-                  Cena zahŕňa všetky materiály a prístup na záverečné predstavenie.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Sidebar */}
-          <aside className="sticky top-[100px] bg-white rounded-xl p-6 shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
-            <h3
-              className="text-[1.5rem] mb-4 pb-3 border-b-2 border-[#ffd37c]"
-              style={{ fontFamily: 'var(--font-heading)' }}
+    return (
+        <div className="bg-white">
+            <section
+                className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+                style={{ backgroundImage: "url('/images/academy/IMG_1128.jpeg')" }}
             >
-              Kurzy
-            </h3>
-            <nav className="flex flex-col gap-2">
-              {[
-                { name: 'Herecký kurz', href: '/ludus-academy/herecky-kurz', active: true },
-                { name: 'Herecký kurz - Pokročilí', href: '/ludus-academy/herecky-kurz-pokrocili', active: false },
-                { name: 'Improvizácia', href: '/ludus-academy/improvizacia', active: false },
-                { name: 'Divadelné laboratórium', href: '/ludus-academy/divadelne-laboratorium', active: false },
-                { name: 'Tvorivé písanie', href: '/ludus-academy/tvorive-pisanie', active: false },
-                { name: 'Prezentačný tréning', href: '/ludus-academy/prezentacny-trening', active: false },
-                { name: 'Audio kurz', href: '/ludus-academy/audio-kurz', active: false }
-              ].map((course) => (
-                <a
-                  key={course.name}
-                  href={course.href}
-                  className={`py-2 px-3 rounded-lg transition-colors ${
-                    course.active
-                      ? 'bg-[#ffd37c] text-black font-bold'
-                      : 'hover:bg-gray-100'
-                  }`}
+                <div className="absolute inset-0 bg-black/40" />
+                <h1
+                    className="relative text-white text-[5rem] z-10 text-center max-md:text-[3rem] px-4"
+                    style={{ fontFamily: 'var(--font-heading)' }}
                 >
-                  {course.name}
-                </a>
-              ))}
-            </nav>
+                    Herecký kurz
+                </h1>
+            </section>
 
-            <h3
-              className="text-[1.5rem] mt-8 mb-4 pb-3 border-b-2 border-[#ffd37c]"
-              style={{ fontFamily: 'var(--font-heading)' }}
-            >
-              Workshopy
-            </h3>
-            <nav className="flex flex-col gap-2">
-              {[
-                { name: 'Workshopy pre školy', href: '/ludus-academy/workshopy-skoly' },
-                { name: 'Workshop pre učiteľov', href: '/ludus-academy/workshop-ucitelia' },
-                { name: 'Workshop kreativita', href: '/ludus-academy/workshop-kreativita' }
-              ].map((workshop) => (
-                <a
-                  key={workshop.name}
-                  href={workshop.href}
-                  className="py-2 px-3 rounded-lg transition-colors hover:bg-gray-100"
-                >
-                  {workshop.name}
-                </a>
-              ))}
-            </nav>
+            <div className="w-[95%] mx-auto py-16">
+                <div className="flex gap-16 items-start max-xl:flex-col">
+                    <AcademySubpageSidebar />
 
-            <Button href="/kontakt" className="w-full mt-8">
-              Prihlásiť sa
-            </Button>
-          </aside>
+                    <main className="flex-1 min-w-0">
+                        {/* Basic Course Section */}
+                        <div className="mb-24">
+                            <h2 className="text-[3rem] mb-2 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
+                                Herecký kurz: RADOSŤ SA HRAŤ
+                            </h2>
+                            <div className="flex flex-wrap gap-x-4 gap-y-1 text-[#ffd37c] font-bold text-[1.2rem] mb-8 uppercase tracking-widest">
+                                <span>CEZ HRANIE</span>
+                                <span>•</span>
+                                <span>K RADOSTI</span>
+                                <span>•</span>
+                                <span>CEZ RADOSŤ</span>
+                                <span>•</span>
+                                <span>K ZRUČNOSTIAM</span>
+                            </div>
+
+                            <div className="flex gap-12 max-lg:flex-col mb-12">
+                                <div className="flex-[0.7] text-[1.1rem] text-[#000] space-y-6 leading-relaxed">
+                                    <p className="italic font-medium text-black">
+                                        Mávate niekedy pocit, že by ste radi viac spoznali sami seba? Keď vidíte hercov vo filmoch, seriáloch alebo reklamách, rozmyšlate ako by ste to zvládli na ich mieste? Stáva sa Vám, že keď sa počúvate pri komunikácii, rozmýšľate ako by ste ju mohli vylepšit? Mávate niekedy strach z vystupovania na verejnosti, alebo práve naopak radi ste stredobodom pozornosti? Túžite niekedy tráviť svoje voľné chvíle v divadelnom prostredí s príjemnými ľudmi? Chcete sa hrať a cítiť sa pri tom slobodne?
+                                    </p>
+                                    <p>
+                                        To všetko a ešte oveľa viac si viete splniť s hereckým kurzom pod vedením profesionálnych pedagógov a hercov. Uvedú Vás do tajov divadla, odkryjú vaše emócie o ktorých ste možno ani netušili, naučia Vás ako pracovať na svojich hereckých zručnostiach a poodkryjú vám cestu ako pôsobíť prirodzene a presvedčivo. Prostredníctvom divadelných techník, bude rásť aj vaša osobnosť.
+                                    </p>
+                                    <p className="text-[1.3rem] font-bold text-black border-l-4 border-[#ffd37c] pl-6 py-2">
+                                        Sny sa plnia ľudom, ktorí idu do AKCIE. Staneš sa jeden z nich?
+                                    </p>
+                                </div>
+                                <div className="flex-[0.3] min-w-[300px]">
+                                    <div className="aspect-video w-full rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                                        <iframe
+                                            width="100%"
+                                            height="100%"
+                                            src="https://www.youtube.com/embed/C4M9udb7C8c?start=32"
+                                            title="YouTube video player"
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowFullScreen
+                                        ></iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100 mb-12">
+                                <h3 className="text-[1.8rem] mb-8 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
+                                    Aké zmeny prinesie KURZ do vášho života?
+                                </h3>
+                                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {[
+                                        'Preniknete do divadelného prostredia.',
+                                        'Stanete sa súčasťou umeleckej komunity.',
+                                        'Načerpáte skúsenosti od profesionálnych hercov.',
+                                        'Budú Vás učiť profesionálni dlhoroční lektori zo SZUŠ LUDUS.',
+                                        'Strávite svoj čas zmysluplne a netradične.',
+                                        'Spoznáte viac sám seba.',
+                                        'Naučíte sa pracovať so svojími emóciami na javisku.',
+                                        'Stanete sa uveriteľným v hereckom prejave.',
+                                        'Zistíte, ako sa pohybovať na javisku prirodzene a s ľahkosťou.'
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex gap-3 items-start text-[#000]">
+                                            <span className="text-[#ffd37c] mt-1 font-bold">✓</span>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            {/* Rest of the section... (skipping for brevity but keeping logic) */}
+                            {/* I will keep the existing content here */}
+
+                            <div className="bg-black text-white p-10 rounded-2xl mb-12 shadow-xl">
+                                <div className="text-[#ffd37c] font-bold uppercase tracking-widest mb-2 text-sm">Investícia</div>
+                                <h3 className="text-[2rem] mb-6 leading-tight">
+                                    NEKUPUJETE SI KURZ, INVESTUJETE DO SVOJHO ROZVOJA: <span className="text-[#ffd37c]">348 EUR</span>
+                                </h3>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-gray-300">
+                                    <ul className="space-y-3">
+                                        <li className="flex justify-between border-b border-white/10 pb-2">
+                                            <span>Trvanie kurzu:</span>
+                                            <span className="text-white font-bold">11 týždňov</span>
+                                        </li>
+                                        <li className="flex justify-between border-b border-white/10 pb-2">
+                                            <span>Počet hodín:</span>
+                                            <span className="text-white font-bold">27,5 hodín</span>
+                                        </li>
+                                        <li className="flex justify-between border-b border-white/10 pb-2">
+                                            <span>Dĺžka lekcie:</span>
+                                            <span className="text-white font-bold">2,5 hodiny</span>
+                                        </li>
+                                    </ul>
+                                    <ul className="space-y-2">
+                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> 27,5 hodín intenzívnej výučby + záverečné vystúpenie</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Individuálny prístup</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Herecké cvičenia a techniky</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Profesionálni lektori</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Záverečné vystúpenie v divadelnom štúdiu</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Certifikát</li>
+                                    </ul>
+                                </div>
+                                <div className="mt-8 pt-6 border-t border-white/10 text-sm italic opacity-70">
+                                    PODMIENKA ÚČASTI: vek minimálne 18 rokov a ukončené stredoškolské vzdelanie
+                                </div>
+                            </div>
+
+                            <div className="space-y-6">
+                                <div className="bg-white border-2 border-[#ffd37c] p-8 rounded-2xl relative overflow-hidden">
+                                    <div className="absolute top-0 right-0 bg-[#ffd37c] text-black px-4 py-1 font-bold text-xs">TERMÍN 1</div>
+                                    <h4 className="text-[1.5rem] font-bold text-black mb-2">21.1. - 8.4.2026</h4>
+                                    <p className="text-black mb-4">(hodina nebude: 18.2.2026)</p>
+                                    <p className="font-bold text-black text-lg mb-4 uppercase tracking-tighter">každú STREDU od 18:00 do 20:30</p>
+                                    <div className="flex flex-col gap-1">
+                                        <span className="text-sm uppercase text-black font-bold">Lektori</span>
+                                        <p className="text-black font-medium">Mgr. art Norman Šáro, Mgr. art Jakub Rek</p>
+                                        <p className="text-xs text-black italic">(viac o lektoroch v sekcii O NÁS)</p>
+                                    </div>
+                                </div>
+
+                                <div className="bg-white border-2 border-gray-100 p-8 rounded-2xl relative overflow-hidden">
+                                    <div className="absolute top-0 right-0 bg-gray-100 text-black px-4 py-1 font-bold text-xs">TERMÍN 2</div>
+                                    <h4 className="text-[1.5rem] font-bold text-black mb-2">12.4. - 28.6.2026</h4>
+                                    <p className="text-black mb-4">(hodina nebude: 14.6.2026)</p>
+                                    <p className="font-bold text-black text-lg mb-4 uppercase tracking-tighter">každú NEDEĽU od 18:00 do 20:30</p>
+                                    <div className="flex flex-col gap-1 mb-4">
+                                        <span className="text-sm uppercase text-black font-bold">Lektor</span>
+                                        <p className="text-black font-medium">Mgr. art Jozef Jurčišin-Kukľa</p>
+                                        <p className="text-xs text-black italic">(viac o lektoroch v sekcii O NÁS)</p>
+                                    </div>
+                                    <Button
+                                        href="https://form.fapi.cz/?id=84c249ad-4bcc-4b91-92e1-93837f500d59"
+                                        className="w-full justify-center"
+                                        target="_blank"
+                                    >
+                                        PRIHLÁSIŤ SA NA KURZ
+                                    </Button>
+                                </div>
+
+                                <div className="bg-[#ffd37c]/10 border border-[#ffd37c] p-10 rounded-2xl text-center">
+                                    <h4 className="text-[1.8rem] font-bold text-black mb-4 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>
+                                        ĎALŠÍ CYKLUS KURZOV SPUSTÍME V SEPTEMBRI 2026
+                                    </h4>
+                                    <p className="text-[#000] mb-8 max-w-2xl mx-auto">
+                                        V prípade, že máte o tento kurz záujem, tak nám pokojne napíšte a my Vás zaradíme na "WAITING LIST". Akonáhle budeme mať naplánované termíny kurzov, tak Vás budeme medzi prvými informovať aby ste sa mohli prihlásiť.
+                                    </p>
+                                    <Button href="/ludus-academy/kontakt">Mám záujem o waiting list</Button>
+                                </div>
+
+                                {/* Reviews Section */}
+                                <div className="py-16">
+                                    <h3 className="text-[2.5rem] mb-12 text-center" style={{ fontFamily: 'var(--font-heading)' }}>
+                                        Čo o nás hovoria účastníci
+                                    </h3>
+                                    <div className="columns-1 md:columns-2 gap-8 space-y-8">
+                                        {[
+                                            'Snímka obrazovky 2026-01-30 o 11.10.04.png',
+                                            'Snímka obrazovky 2026-01-30 o 11.10.38.png',
+                                            'Snímka obrazovky 2026-01-30 o 11.13.23.png',
+                                            'Snímka obrazovky 2026-01-30 o 11.14.04.png',
+                                            'Snímka obrazovky 2026-01-30 o 11.15.25.png',
+                                            'Snímka obrazovky 2026-01-30 o 11.16.32.png',
+                                            'Snímka obrazovky 2026-01-30 o 11.18.42.png',
+                                            'Snímka obrazovky 2026-01-30 o 11.19.11.png'
+                                        ].map((img, i) => (
+                                            <div key={i} className="break-inside-avoid">
+                                                <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
+                                                    <img
+                                                        src={`/images/reviews/${img}`}
+                                                        alt={`Recenzia ${i + 1}`}
+                                                        className="w-full h-auto block"
+                                                    />
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr className="my-24 border-gray-100" />
+
+                        {/* Advanced Course Section */}
+                        <div>
+                            <h2 className="text-[3rem] mb-2 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
+                                Herecký kurz pre pokročilých: RADOSŤ SA HRAŤ
+                            </h2>
+                            <div className="text-[#ffd37c] font-bold text-[1.2rem] mb-8 uppercase tracking-widest leading-tight">
+                                ŽIVOT, V KTOROM (sa) HRÁTE, JE FASCINUJÚCI.
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+                                {[
+                                    'Máte už za sebou nejakú divadelnú skúsenosť?',
+                                    'Absolvovali ste v minulosti už nejaký herecký kurz pre dospelých?',
+                                    'Prešli ste hereckým kurzom u nás v LUDUS ACADEMY?',
+                                    'Navštevovali ste ako deti alebo tínedžeri dramatický krúžok?',
+                                    'Chodili ste v minulosti do divadelného súboru?',
+                                    'Máte za sebou už nejakú menšiu hereckú skúsenosť v divadle alebo v televízii?'
+                                ].map((question, i) => (
+                                    <div key={i} className="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center gap-4 group hover:bg-white hover:shadow-md transition-all">
+                                        <div className="w-8 h-8 rounded-full bg-[#ffd37c]/20 flex items-center justify-center font-bold text-[#ffd37c]">?</div>
+                                        <p className="text-[0.95rem] font-medium text-[#000]">{question}</p>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="flex gap-12 max-lg:flex-col mb-12">
+                                <div className="flex-[0.7] text-[1.1rem] text-[#000] space-y-6 leading-relaxed">
+                                    <p className="text-[1.3rem] font-bold text-black">
+                                        Ak ste odpovedali aspoň na jednu otázku ÁNO, tento kurz je práve pre vás.
+                                    </p>
+                                    <p>
+                                        Pridajte sa k nám do pokročilejšej skupiny Level 2 a vnorte sa s nami hlbšie do divadelného umenia, hereckých cvičení a hier a zažite 10 týždňov tvorivej atmosféry spolu s nami.
+                                    </p>
+                                </div>
+                                <div className="flex-[0.3] min-w-[300px]">
+                                    <div className="aspect-video w-full rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                                        <iframe
+                                            width="100%"
+                                            height="100%"
+                                            src="https://www.youtube.com/embed/UXHlIWBnUpE"
+                                            title="YouTube video player"
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowFullScreen
+                                        ></iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100 mb-12">
+                                <h3 className="text-[1.8rem] mb-8 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
+                                    AKÉ ZMENY PRINESIE KURZ DO VÁŠHO ŽIVOTA?
+                                </h3>
+                                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {[
+                                        'Budete mať kontakt s divadelným prostredím.',
+                                        'Stanete sa súčasťou umeleckej komunity.',
+                                        'Načerpáte ďalšie skúsenosti od profesionálnych hercov.',
+                                        'Budú Vás učiť profesionálni dlhoroční lektori zo SZUŠ LUDUS.',
+                                        'Strávite svoj čas zmysluplne a netradične.',
+                                        'Spoznáte viac sám seba.',
+                                        'Zlepšíte prácu so svojími emóciami na javisku.',
+                                        'Stanete sa uveriteľným v hereckom prejave.',
+                                        'Zdokonalíte pohyb na javisku.',
+                                        'Prehĺbite svoje zručnosti.'
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex gap-3 items-start text-[#000]">
+                                            <span className="text-[#ffd37c] mt-1 font-bold">✓</span>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <div className="bg-black text-white p-10 rounded-2xl mb-12 shadow-xl">
+                                <div className="text-[#ffd37c] font-bold uppercase tracking-widest mb-2 text-sm">Investícia</div>
+                                <h3 className="text-[2rem] mb-6 leading-tight">
+                                    NEKUPUJETE SI KURZ, INVESTUJETE DO SVOJHO ROZVOJA: <span className="text-[#ffd37c]">348 EUR</span>
+                                </h3>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-gray-300">
+                                    <ul className="space-y-3">
+                                        <li className="flex justify-between border-b border-white/10 pb-2">
+                                            <span>Trvanie kurzu:</span>
+                                            <span className="text-white font-bold">11 týždňov</span>
+                                        </li>
+                                        <li className="flex justify-between border-b border-white/10 pb-2">
+                                            <span>Počet hodín:</span>
+                                            <span className="text-white font-bold">27,5 hodín</span>
+                                        </li>
+                                        <li className="flex justify-between border-b border-white/10 pb-2">
+                                            <span>Dĺžka lekcie:</span>
+                                            <span className="text-white font-bold">2,5 hodiny</span>
+                                        </li>
+                                    </ul>
+                                    <ul className="space-y-2">
+                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> 27,5 hodín intenzívnej výučby + záverečné vystúpenie</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Individuálny prístup</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Herecké cvičenia a techniky, práca na dialógoch</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Profesionálni lektori</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Záverečné vystúpenie v divadelnom štúdiu</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Certifikát</li>
+                                    </ul>
+                                </div>
+                                <div className="mt-8 pt-6 border-t border-white/10 text-sm italic opacity-70">
+                                    PODMIENKA ÚČASTI: vek minimálne 18 rokov a ukončené stredoškolské vzdelanie
+                                </div>
+                            </div>
+
+                            <Button href="/ludus-academy/kontakt">Mám záujem o kurz pre pokročilých</Button>
+                        </div>
+                    </main>
+                </div>
+            </div>
         </div>
-      </div>
-    </>
-  );
+    );
 }

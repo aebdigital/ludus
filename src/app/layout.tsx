@@ -9,6 +9,9 @@ import CookieConsent from "@/components/CookieConsent";
 export const metadata: Metadata = {
   title: "LUDUS - Divadelná škola",
   description: "LUDUS - Divadelná škola v Bratislave. Herecké kurzy, workshopy, tábory a profesionálne divadelné predstavenia.",
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default function RootLayout({

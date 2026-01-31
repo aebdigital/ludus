@@ -79,10 +79,10 @@ export default function LudusAcademyPedagogoviaPage() {
       >
         <div className="absolute inset-0 bg-black/40" />
         <h1
-          className="relative text-white text-[5rem] z-10 text-center max-md:text-[3rem] uppercase font-bold"
+          className="relative text-white text-[6rem] z-10 text-center max-md:text-[3rem] uppercase font-bold"
           style={{ fontFamily: 'var(--font-heading)' }}
         >
-          Pedagógovia Ludus Academy
+          Lektori Ludus Academy
         </h1>
       </section>
 
@@ -91,7 +91,7 @@ export default function LudusAcademyPedagogoviaPage() {
 
           {/* Main Content Column */}
           <main className="flex-1 min-w-0">
-            <p className="text-[1.2rem] text-[#444] mb-12 max-w-[800px]">
+            <p className="text-[1.2rem] text-[#000] mb-12 max-w-[800px]">
               Náš tím tvoria profesionálni herci, režiséri a pedagógovia s bohatými skúsenosťami v oblasti divadla a vzdelávania.
               Každý z nich prináša jedinečný pohľad a prístup k výučbe dramatického umenia.
             </p>

@@ -1,10 +1,16 @@
-import Image from 'next/image';
 import { getGalleryImages, getImageUrl } from '@/lib/api';
+import GalleryGrid from '@/components/GalleryGrid';
 
 export const revalidate = 60; // Revalidate every 60 seconds
 
-export default async function DivadloGaleriaPage() {
+export default async function DivadloGalériaPage() {
   const images = await getGalleryImages('divadlo-ludus');
+
+  const processedImages = images.map(img => ({
+    id: img.id,
+    url: getImageUrl(img.image_path),
+    alt_text: img.alt_text
+  }));
 
   return (
     <>
@@ -18,33 +24,18 @@ export default async function DivadloGaleriaPage() {
           className="relative text-white text-[6rem] z-10 text-center max-md:text-[3rem]"
           style={{ fontFamily: 'var(--font-heading)' }}
         >
-          Galeria
+          Galéria
         </h1>
       </section>
 
       <div className="w-[95%] mx-auto py-12">
         <h2
-          className="text-center text-[3rem] mb-8"
+          className="text-center text-[3rem] mb-12"
           style={{ fontFamily: 'var(--font-heading)' }}
         >
           Divadlo Ludus
         </h2>
-        <div className="photo-gallery">
-          {images.length > 0 ? (
-            images.map((img) => (
-              <Image
-                key={img.id}
-                src={getImageUrl(img.image_path)}
-                alt={img.alt_text || 'Divadlo galeria'}
-                width={400}
-                height={300}
-                className="w-full h-[300px] object-cover rounded-xl transition-transform duration-300 hover:scale-[1.02]"
-              />
-            ))
-          ) : (
-            <p className="text-center text-gray-500 col-span-full py-12">Ziadne fotografie v galerii</p>
-          )}
-        </div>
+        <GalleryGrid images={processedImages} />
       </div>
     </>
   );
