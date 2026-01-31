@@ -57,7 +57,7 @@ export default async function Home() {
 
         <IntroSection
           href="/ludus-tabor"
-          title="Ludus Tabor"
+          title="Ludus Tábor"
           description="Denný letný divadelný tábor pre deti a tínedžerov"
           backgroundImage="/images/tabor/IMG_5438.jpeg"
           logo="/images/loga-4/logo-tabor.png"

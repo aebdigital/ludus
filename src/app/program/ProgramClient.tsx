@@ -134,7 +134,7 @@ export default function ProgramClient({ events, initialCategory }: ProgramClient
                                 {/* Event Details */}
                                 <div className="flex-1 min-w-[250px]">
                                     <div className="flex items-center gap-3 mb-2">
-                                        <h3 className="text-3xl font-bold m-0 leading-tight group-hover:underline" style={{ fontFamily: 'var(--font-heading)' }}>
+                                        <h3 className="text-3xl font-bold m-0 leading-tight group-hover:underline line-clamp-2 overflow-hidden" style={{ fontFamily: 'var(--font-heading)' }}>
                                             {event.title}
                                         </h3>
                                         {event.age_badge && (
@@ -144,7 +144,7 @@ export default function ProgramClient({ events, initialCategory }: ProgramClient
                                         )}
                                     </div>
                                     {event.subtitle && (
-                                        <p className="text-base font-semibold opacity-80 mb-1">{event.subtitle}</p>
+                                        <p className="text-base font-semibold opacity-80 mb-1 line-clamp-2 overflow-hidden">{event.subtitle}</p>
                                     )}
                                     <p className="text-sm opacity-70 font-semibold uppercase tracking-wide">{event.venue}</p>
                                 </div>

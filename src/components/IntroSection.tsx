@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 interface IntroSectionProps {
   href: string;
-  title: string;
+  title: React.ReactNode;
   description: string;
   backgroundImage: string;
   logo: string;

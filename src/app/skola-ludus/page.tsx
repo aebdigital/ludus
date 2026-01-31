@@ -56,12 +56,12 @@ export default function SkolaLudusPage() {
             </div>
 
             {/* Premium HTML Manifest */}
-            <section className="mb-24 py-20 px-8 bg-[#0a0a0a] rounded-[2.5rem] text-center shadow-3xl relative overflow-hidden group border border-white/5">
+            <section className="mb-24 py-12 px-8 bg-[#0a0a0a] rounded-[2.5rem] text-center shadow-3xl relative overflow-hidden group border border-white/5">
               {/* Decorative background glows */}
               <div className="absolute top-0 right-0 w-96 h-96 bg-[#ffd37c]/10 rounded-full -mr-48 -mt-48 blur-[100px] group-hover:bg-[#ffd37c]/20 transition-colors duration-1000" />
               <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#ffd37c]/5 rounded-full -ml-48 -mb-48 blur-[100px] group-hover:bg-[#ffd37c]/15 transition-colors duration-1000" />
 
-              <div className="relative z-10 space-y-12 max-w-5xl mx-auto">
+              <div className="relative z-10 space-y-6 max-w-5xl mx-auto">
                 {[
                   "ako základné umelecko – pedagogické východisko.",
                   "ako krídla slobodného človeka.",
@@ -81,7 +81,7 @@ export default function SkolaLudusPage() {
                       <span className="inline-block">{text}</span>
                     </p>
                     {index < 5 && (
-                      <div className="flex justify-center mt-12">
+                      <div className="flex justify-center mt-6">
                         <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-[#ffd37c]/40 to-transparent" />
                       </div>
                     )}
