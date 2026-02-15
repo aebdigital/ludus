@@ -100,6 +100,10 @@ export async function getCategoryAktuality(category: GalleryCategory): Promise<A
 }
 
 export function getImageUrl(path: string): string {
+  if (!path) return '';
+  if (path.startsWith('/') || path.startsWith('http')) {
+    return path;
+  }
   const { data } = supabase.storage
     .from('site-uploads')
     .getPublicUrl(path)
