@@ -5,7 +5,7 @@ export default function Divadlo2PercentaPage() {
         <>
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/images/divadlo-main.jpg')" }}
+                style={{ backgroundImage: "url('/images/divadlo-main.webp')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1
@@ -16,7 +16,7 @@ export default function Divadlo2PercentaPage() {
                 </h1>
             </section>
 
-            <div className="w-[95%] max-w-6xl mx-auto py-16">
+            <div className="w-[95%] max-w-[1600px] mx-auto py-16">
                 <div className="grid grid-cols-[1.5fr_1fr] gap-12 items-start max-lg:grid-cols-1 mb-16">
                     {/* Left Column: Text */}
                     <div className="bg-white p-12 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-gray-100 h-full">
@@ -30,6 +30,15 @@ export default function Divadlo2PercentaPage() {
                             <p>
                                 Váš príspevok investujeme priamo do umeleckej tvorby - do kostýmov, scény, osvetlenia a do všetkých tých detailov, ktoré robia divadlo magickým miestom. Vďaka vašej podpore môžeme pokračovať v tradícii autorského divadla, ktoré má v Bratislave svoje nezastupiteľné miesto.
                             </p>
+                            <div className="mt-8 pt-8 border-t border-gray-100">
+                                <h4 className="font-bold text-black mb-4 uppercase tracking-wider text-sm">Údaje o prijímateľovi:</h4>
+                                <div className="space-y-1 text-black font-medium">
+                                    <p>Občianske združenie „ Škola hrou“</p>
+                                    <p>Nábr.arm.gen.L.Svobodu 3 81102 Bratislava - mestská časť Staré Mesto</p>
+                                    <p>IČO: 31795188</p>
+                                    <p>DIČ: 2021627036</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

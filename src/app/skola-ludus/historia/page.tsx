@@ -17,7 +17,7 @@ const founders: Founder[] = [
   {
     name: "Mgr. art PETER KUBA",
     description: "Spoluzakladateľ divadla a školy LUDUS, zriaďovateľ SZUŠ LUDUS",
-    image: "/images/skola/eb61223e-a3d6-4b29-990e-8cc94452d20f.jpg",
+    image: "/images/skola/eb61223e-a3d6-4b29-990e-8cc94452d20f.webp",
     details: [
       "Štúdium na VŠMU odbor herectvo",
       "Dlhoročný umelecký šéf a režisér Divadla Ludus kreatívneho centra mladých"
@@ -33,7 +33,7 @@ const founders: Founder[] = [
   {
     name: "XÉNIA KUBOVÁ - GRACOVÁ",
     description: "Spoluzakladateľka školy LUDUS, bývalý dlhoročný pedagóg",
-    image: "/images/skola/IMG_9980.jpeg",
+    image: "/images/skola/IMG_9980.webp",
     details: [
       "Štúdium na štátnom konzervatórium v Bratlavě",
       "Dlhoročný pedagóg v škole LUDUS a autorka učebných osnov a metodiky pre ĽŠU – literárno dramatický odbor"
@@ -50,13 +50,15 @@ const founders: Founder[] = [
 
 export default function HistoriaPage() {
   const [selectedFounder, setSelectedFounder] = useState<Founder | null>(null);
+  const [showAllYouth, setShowAllYouth] = useState(false);
+  const [showAllChildren, setShowAllChildren] = useState(false);
 
   return (
     <div className="bg-[#fcfcfc] min-h-screen">
       {/* Hero */}
       <section
         className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-        style={{ backgroundImage: "url('/images/skola/IMG_3491.jpeg')" }}
+        style={{ backgroundImage: "url('/images/skola/IMG_3491.webp')" }}
       >
         <div className="absolute inset-0 bg-black/40" />
         <h1
@@ -191,7 +193,7 @@ export default function HistoriaPage() {
               </p>
             </div>
             <Image
-              src="/images/skola/IMG_1821.jpeg"
+              src="/images/skola/IMG_1821.webp"
               alt="Ludus História"
               width={600}
               height={800}
@@ -202,7 +204,7 @@ export default function HistoriaPage() {
           {/* Block 2 */}
           <div className="grid grid-cols-[450px_1fr] gap-12 items-center max-lg:grid-cols-1">
             <Image
-              src="/images/skola/IMG_8911.jpeg"
+              src="/images/skola/IMG_8911.webp"
               alt="Ludus História"
               width={600}
               height={800}
@@ -240,12 +242,12 @@ export default function HistoriaPage() {
                 <p className="text-xl opacity-90 leading-relaxed">
                   V súčasnosti pôsobíme pod jednou strechou na Palackého 22, v novom komornom priestore BLACKBOX.
                   Sme rodinnou školou a divadlom, kde sa stretávajú generácie a odovzdávajú si svoje skúsenosti.
-                  Stále s radosťou, v slobode a v HRE.
+                  Formou hry sa navzájom učia. Pretože v každom z nás je Homo ludens –&thinsp;„&thinsp;Človek hravý&thinsp;".
                 </p>
               </div>
             </div>
             <Image
-              src="/images/skola/IMG_4346.jpeg"
+              src="/images/skola/IMG_4346.webp"
               alt="Ludus Súčasnosť"
               width={600}
               height={800}
@@ -264,124 +266,184 @@ export default function HistoriaPage() {
 
           <div className="space-y-24">
             {/* Youth Projects */}
-            <div className="bg-white p-12 rounded-3xl shadow-sm border border-gray-100">
-              <div className="bg-black py-6 px-10 rounded-2xl mb-12 shadow-lg">
-                <h3 className="text-[#ffd37c] text-3xl font-bold uppercase tracking-widest m-0 text-left">
-                  Úspešné projekty pre mládež
-                </h3>
-              </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-8 gap-y-4 text-base text-left">
-                {[
-                  "1974 - I. Demovič / P. Kuba: Tonic klub",
-                  "1975 – W. Shakespeare / J. Bindzár: Zimná rozprávka",
-                  "1977 - N. V. Gogoľ / J. Bindzár: Nos",
-                  "1978 – Ľ. Feldek: Zlatúšik",
-                  "1979 – O. Šulaj / B. Uhlár: Frontové divadlo",
-                  "1980 – B. Brecht: Malomeštiakova svadba",
-                  "1980 – Č. Ajtmatov / P. Kuba: Biela loď",
-                  "1983 – Turba / Fuksa / Mokoš / Kuba: Šanca, alebo Klauniády",
-                  "1984, 1988 – F. Wedekind: Jarné prebudenie",
-                  "1985 – F. Buzassy: Rozprávka",
-                  "1987 – P. Kuba: Bez pravidiel",
-                  "1989 – P. Kuba: Gebuliaci",
-                  "1991 – M. Ramløse: Štvrté prikázanie",
-                  "1991 – J. Mahen: Klaun Čokoláda",
-                  "1992 – A. Jelicoe: Bezva finta",
-                  "1993 – Ľ. Andrejev: Život človeka",
-                  "1994 – S. Canev: Druhá smrť Johanky z Arcu",
-                  "1996 - J. Benčík / I. Ištoková / Z. Šebestová: Ticho prosím!",
-                  "1996, 2000, 2006 – P. Kuba / j. Letenay / Ľ. Jarjabka: Ne/mám rád I.",
-                  "1996 – j. Cocteau: Svadobčania z Eiffelovky",
-                  "1997, 2006 –P. Kuba / J. Letenay / Ľ. Jarjabka: Nemám rád II.",
-                  "1998, 2001 - P. Kuba: Prvé lásky",
-                  "1999 – P. Kuba, V. Shulzová: Stačí povedať „nie!“",
-                  "1999 - P. Scherhaufer: Geometria mŕtvych bodov",
-                  "2000 - P. Turrini: Lov na krysy",
-                  "2001 - I. Horovitz: Čiara, alebo každý chce byť prvý",
-                  "2002 – A. de Saint-Exupéry: Malý princ",
-                  "2006 – M. Dacho: For sale",
-                  "2007 – K. Žiška: Čiernobiele srdce Charlieho Chaplina",
-                  "2007 - J. Záborský & comp.:Dva dni v Chujave",
-                  "2008 – M. Hudec / K. Kollárik / P. Kuba: Objav roka",
-                  "2008 – F. Rabelaise / K. Žiška: Gargantua a Pantagruel",
-                  "2009 – K. Žiška / M. Dacho / P. Kuba: Velipsespilev",
-                  "2009 – N. V. Gogoľ / P. Kuba: Acta psychopata",
-                  "2010 – L. Kerata: Fantázia (Fascikliáda)",
-                  "2010 – C. Confortés: Maratón",
-                  "2012 – K. Žiška / M. Dacho / M. Uhliarik: ...Tvoj Ludevít",
-                  "2013 – T. Rózewicz: Folder",
-                  "2014 – J. Šebesta / J Mikitková: Pozor, dobrý pes!",
-                  "2014 – j. Kladijev: Poďme, čaká nás auto",
-                  "2014 – A. P. Čechov: Medveď & Pytačky",
-                  "2015 – I. Lausund: Hystericon",
-                  "2016 – R. Kipling / D. a V. Martinovci: Džungľa",
-                  "2018- Eugene Ionesco: Plešivá speváčka",
-                  "2019- Maurice Maeterlinck: Modrý vták"
-                ].map((play, i) => (
-                  <div key={i} className="flex items-start gap-2 hover:text-[#ffd37c] transition-colors leading-tight">
-                    <span className="text-[#ffd37c]">•</span>
-                    <span>{play}</span>
+            {(() => {
+              const youthPlays = [
+                "1974 - I. Demovič / P. Kuba: Tonic klub",
+                "1975 – W. Shakespeare / J. Bindzár: Zimná rozprávka",
+                "1977 - N. V. Gogoľ / J. Bindzár: Nos",
+                "1978 – Ľ. Feldek: Zlatúšik",
+                "1979 – O. Šulaj / B. Uhlár: Frontové divadlo",
+                "1980 – B. Brecht: Malomeštiakova svadba",
+                "1980 – Č. Ajtmatov / P. Kuba: Biela loď",
+                "1983 – Turba / Fuksa / Mokoš / Kuba: Šanca, alebo Klauniády",
+                "1984, 1988 – F. Wedekind: Jarné prebudenie",
+                "1985 – F. Buzassy: Rozprávka",
+                "1987 – P. Kuba: Bez pravidiel",
+                "1989 – P. Kuba: Gebuliaci",
+                "1991 – M. Ramløse: Štvrté prikázanie",
+                "1991 – J. Mahen: Klaun Čokoláda",
+                "1992 – A. Jelicoe: Bezva finta",
+                "1993 – Ľ. Andrejev: Život človeka",
+                "1994 – S. Canev: Druhá smrť Johanky z Arcu",
+                "1996 - J. Benčík / I. Ištoková / Z. Šebestová: Ticho prosím!",
+                "1996, 2000, 2006 – P. Kuba / j. Letenay / Ľ. Jarjabka: Ne/mám rád I.",
+                "1996 – j. Cocteau: Svadobčania z Eiffelovky",
+                "1997, 2006 –P. Kuba / J. Letenay / Ľ. Jarjabka: Nemám rád II.",
+                "1998, 2001 - P. Kuba: Prvé lásky",
+                `1999 – P. Kuba, V. Shulzová: Stačí povedať \u201Enie!\u201C`,
+                "1999 - P. Scherhaufer: Geometria mŕtvych bodov",
+                "2000 - P. Turrini: Lov na krysy",
+                "2001 - I. Horovitz: Čiara, alebo každý chce byť prvý",
+                "2002 – A. de Saint-Exupéry: Malý princ",
+                "2006 – M. Dacho: For sale",
+                "2007 – K. Žiška: Čiernobiele srdce Charlieho Chaplina",
+                "2007 - J. Záborský & comp.:Dva dni v Chujave",
+                "2008 – M. Hudec / K. Kollárik / P. Kuba: Objav roka",
+                "2008 – F. Rabelaise / K. Žiška: Gargantua a Pantagruel",
+                "2009 – K. Žiška / M. Dacho / P. Kuba: Velipsespilev",
+                "2009 – N. V. Gogoľ / P. Kuba: Acta psychopata",
+                "2010 – L. Kerata: Fantázia (Fascikliáda)",
+                "2010 – C. Confortés: Maratón",
+                "2012 – K. Žiška / M. Dacho / M. Uhliarik: ...Tvoj Ludevít",
+                "2013 – T. Rózewicz: Folder",
+                "2014 – J. Šebesta / J Mikitková: Pozor, dobrý pes!",
+                "2014 – j. Kladijev: Poďme, čaká nás auto",
+                "2014 – A. P. Čechov: Medveď & Pytačky",
+                "2015 – I. Lausund: Hystericon",
+                "2016 – R. Kipling / D. a V. Martinovci: Džungľa",
+                "2018- Eugene Ionesco: Plešivá speváčka",
+                "2019- Maurice Maeterlinck: Modrý vták"
+              ];
+              const visibleYouth = showAllYouth ? youthPlays : youthPlays.slice(0, 10);
+              return (
+                <div className="bg-white p-12 rounded-3xl shadow-sm border border-gray-100">
+                  <div className="bg-black py-6 px-10 rounded-2xl mb-12 shadow-lg">
+                    <h3 className="text-[#ffd37c] text-3xl font-bold uppercase tracking-widest m-0 text-left">
+                      Úspešné projekty pre mládež
+                    </h3>
                   </div>
-                ))}
-              </div>
-            </div>
+                  <div className="relative">
+                    <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-8 gap-y-4 text-base text-left ${!showAllYouth ? 'overflow-hidden' : ''}`}>
+                      {visibleYouth.map((play, i) => (
+                        <div key={i} className="flex items-start gap-2 hover:text-[#ffd37c] transition-colors leading-tight">
+                          <span className="text-[#ffd37c]">•</span>
+                          <span>{play}</span>
+                        </div>
+                      ))}
+                    </div>
+                    {!showAllYouth && (
+                      <div className="flex justify-center mt-8">
+                        <button
+                          onClick={() => setShowAllYouth(true)}
+                          className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-full hover:bg-[#ffd37c] hover:text-black transition-all duration-300 font-bold text-sm uppercase tracking-wider"
+                        >
+                          <span>Zobraziť všetky ({youthPlays.length})</span>
+                          <span className="text-xl leading-none">+</span>
+                        </button>
+                      </div>
+                    )}
+                    {showAllYouth && (
+                      <div className="flex justify-center mt-8">
+                        <button
+                          onClick={() => setShowAllYouth(false)}
+                          className="flex items-center gap-2 px-6 py-3 bg-gray-200 text-black rounded-full hover:bg-gray-300 transition-all duration-300 font-bold text-sm uppercase tracking-wider"
+                        >
+                          <span>Skryť</span>
+                          <span className="text-xl leading-none">−</span>
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })()}
 
             {/* Children Projects */}
-            <div className="bg-white p-12 rounded-3xl shadow-sm border border-gray-100">
-              <div className="bg-black py-6 px-10 rounded-2xl mb-12 shadow-lg">
-                <h3 className="text-[#ffd37c] text-3xl font-bold uppercase tracking-widest m-0 text-left">
-                  Projekty pre deti
-                </h3>
-              </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-8 gap-y-4 text-base text-left">
-                {[
-                  "1971 – S. Maršák: Mačkin dom",
-                  "1972 – S. Michalkov: Veselý sen",
-                  "1973 – M. Maeterlinck: Modrý vták",
-                  "1975 – A. Platonv / J. Bindzár: Krava",
-                  "1976 – A. Nosov / P. Kuba: Nevedko",
-                  "1978 – J. Brzechwa / J. Bindzár: Skaza akadémie",
-                  "1979 – Ľ. Podjavorinská: Žabiatko",
-                  "1982 – D. Defoe / J. Bindzár: Robinson",
-                  "1990 – R. Kipling: Džungľa",
-                  "1991 – J. Chlebíková: Šípková Ruženka",
-                  "1992 - J. Benčík: Dlhý, Široký, Bystrozraký",
-                  "1992 - P. Kuba: Kráľ Strach",
-                  "1993 (SRN), 2003 J. Bindzár: Robinson",
-                  "1993 – V. Macek, j. Pražmári: O psíškovi a mačičke",
-                  "1993 – J. Čepoveckij: Môj strýčko klaun",
-                  "1994 – O. Hoffmannová: Čarodejnica Ivica",
-                  "1995 – J. C. Hronský: Budkáčik a Dubkáčik",
-                  "1996 – O. Hoffmannová: Letí, letí...",
-                  "1997 – P. Kuba: Kontajnerstory",
-                  "1998 – J. Pražmári a kol.: Najstaršia rozprávka",
-                  "1998 – J. Čapoun: Strakatá rozprávka",
-                  "1999 – M. Ďuríčková: Bratislavské povesti",
-                  "2000 – D. Hevier: Hugo, Frigo, Bublina",
-                  "2001 – K. Kubová: Sedmokráska",
-                  "2001- M. Ende: Čárymáry fučpunč priania",
-                  "2002 – R. Bachratý: Vyšla hviezda nad Betlehemom",
-                  "2004 - A. Pachinger: Doktor Johanes Faust",
-                  "2005 – J. Bindzár: Skaza akadémie",
-                  "2006 – DF. Dušek: Pištáčikovo pestvo",
-                  "2006 – J. Synková: Malá čarodejnica",
-                  "2007 – P. Garajová-Jarjabková: Do dávnych čias mesta",
-                  "2008 – J. Mokoš: Hasprčko a Mrcúlik",
-                  "2009 – M. Beňová: Strašiak",
-                  "2009 – Kolektív: Vlk, neklam!",
-                  "2010 – A. Lingrenová: Popletená punčocha",
-                  "2011 – J. Mikitková: Abeceda zjedla teba",
-                  "2011 – M. Ende: Čárymáry fučpunč priania",
-                  "2012 – Fontaine, Krylov, Ezop: 3 bájky",
-                  "2013 – P. Kuba: Pod perinou"
-                ].map((play, i) => (
-                  <div key={i} className="flex items-start gap-2 hover:text-[#ffd37c] transition-colors leading-tight text-left">
-                    <span className="text-[#ffd37c]">•</span>
-                    <span>{play}</span>
+            {(() => {
+              const childrenPlays = [
+                "1971 – S. Maršák: Mačkin dom",
+                "1972 – S. Michalkov: Veselý sen",
+                "1973 – M. Maeterlinck: Modrý vták",
+                "1975 – A. Platonv / J. Bindzár: Krava",
+                "1976 – A. Nosov / P. Kuba: Nevedko",
+                "1978 – J. Brzechwa / J. Bindzár: Skaza akadémie",
+                "1979 – Ľ. Podjavorinská: Žabiatko",
+                "1982 – D. Defoe / J. Bindzár: Robinson",
+                "1990 – R. Kipling: Džungľa",
+                "1991 – J. Chlebíková: Šípková Ruženka",
+                "1992 - J. Benčík: Dlhý, Široký, Bystrozraký",
+                "1992 - P. Kuba: Kráľ Strach",
+                "1993 (SRN), 2003 J. Bindzár: Robinson",
+                "1993 – V. Macek, j. Pražmári: O psíškovi a mačičke",
+                "1993 – J. Čepoveckij: Môj strýčko klaun",
+                "1994 – O. Hoffmannová: Čarodejnica Ivica",
+                "1995 – J. C. Hronský: Budkáčik a Dubkáčik",
+                "1996 – O. Hoffmannová: Letí, letí...",
+                "1997 – P. Kuba: Kontajnerstory",
+                "1998 – J. Pražmári a kol.: Najstaršia rozprávka",
+                "1998 – J. Čapoun: Strakatá rozprávka",
+                "1999 – M. Ďuríčková: Bratislavské povesti",
+                "2000 – D. Hevier: Hugo, Frigo, Bublina",
+                "2001 – K. Kubová: Sedmokráska",
+                "2001- M. Ende: Čárymáry fučpunč priania",
+                "2002 – R. Bachratý: Vyšla hviezda nad Betlehemom",
+                "2004 - A. Pachinger: Doktor Johanes Faust",
+                "2005 – J. Bindzár: Skaza akadémie",
+                "2006 – DF. Dušek: Pištáčikovo pestvo",
+                "2006 – J. Synková: Malá čarodejnica",
+                "2007 – P. Garajová-Jarjabková: Do dávnych čias mesta",
+                "2008 – J. Mokoš: Hasprčko a Mrcúlik",
+                "2009 – M. Beňová: Strašiak",
+                "2009 – Kolektív: Vlk, neklam!",
+                "2010 – A. Lingrenová: Popletená punčocha",
+                "2011 – J. Mikitková: Abeceda zjedla teba",
+                "2011 – M. Ende: Čárymáry fučpunč priania",
+                "2012 – Fontaine, Krylov, Ezop: 3 bájky",
+                "2013 – P. Kuba: Pod perinou"
+              ];
+              const visibleChildren = showAllChildren ? childrenPlays : childrenPlays.slice(0, 10);
+              return (
+                <div className="bg-white p-12 rounded-3xl shadow-sm border border-gray-100">
+                  <div className="bg-black py-6 px-10 rounded-2xl mb-12 shadow-lg">
+                    <h3 className="text-[#ffd37c] text-3xl font-bold uppercase tracking-widest m-0 text-left">
+                      Projekty pre deti
+                    </h3>
                   </div>
-                ))}
-              </div>
-            </div>
+                  <div className="relative">
+                    <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-8 gap-y-4 text-base text-left ${!showAllChildren ? 'overflow-hidden' : ''}`}>
+                      {visibleChildren.map((play, i) => (
+                        <div key={i} className="flex items-start gap-2 hover:text-[#ffd37c] transition-colors leading-tight text-left">
+                          <span className="text-[#ffd37c]">•</span>
+                          <span>{play}</span>
+                        </div>
+                      ))}
+                    </div>
+                    {!showAllChildren && (
+                      <div className="flex justify-center mt-8">
+                        <button
+                          onClick={() => setShowAllChildren(true)}
+                          className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-full hover:bg-[#ffd37c] hover:text-black transition-all duration-300 font-bold text-sm uppercase tracking-wider"
+                        >
+                          <span>Zobraziť všetky ({childrenPlays.length})</span>
+                          <span className="text-xl leading-none">+</span>
+                        </button>
+                      </div>
+                    )}
+                    {showAllChildren && (
+                      <div className="flex justify-center mt-8">
+                        <button
+                          onClick={() => setShowAllChildren(false)}
+                          className="flex items-center gap-2 px-6 py-3 bg-gray-200 text-black rounded-full hover:bg-gray-300 transition-all duration-300 font-bold text-sm uppercase tracking-wider"
+                        >
+                          <span>Skryť</span>
+                          <span className="text-xl leading-none">−</span>
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })()}
           </div>
         </div>
       </div>

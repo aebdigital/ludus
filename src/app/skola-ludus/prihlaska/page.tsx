@@ -7,7 +7,7 @@ export default function PrihlaskaPage() {
     <>
       <section
         className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-        style={{ backgroundImage: "url('/images/skola/IMG_4742.jpeg')" }}
+        style={{ backgroundImage: "url('/images/skola/IMG_4742.webp')" }}
       >
         <div className="absolute inset-0 bg-black/40" />
         <h1
@@ -33,7 +33,6 @@ export default function PrihlaskaPage() {
               <ul className="space-y-4 list-disc pl-5">
                 {[
                   "Prihlášku si nemusíte tlačiť, ani nám posielať, my všetko pripravíme a nachystáme.",
-                  "Ak vyplňate prihlášku v mobile- otočte si telefón naležato a v pravom rohu hore sa prepnite na SR a zadajte SZUŠ Ludus. Systém je centrálny pre ČR aj SR. Po výške telefónu sa vám ikonka krajiny totiž neukáže.",
                   "Podľa veku vášho dieťaťa vyplňate štúdium buď do 15 rokov alebo nad 15 rokov. ( Info nájdete pri prihláške)",
                   "Konkurz prebieha v malých skupinkách, hravou formou, takže nie je potrebné si nič chystať a ani sa špeciálne pripravovať.",
                   "Ďalší konkurz pravdepodobne nebude, pretože zo skúseností minulých rokov naplníme kapacity. Ak, tak v septembri bude iba dodatočný konkurz pre určité veky, ktoré budeme potrebovať ešte doplniť.",
@@ -53,7 +52,7 @@ export default function PrihlaskaPage() {
                 Prihláška prebieha cez externý systém iZUŠ. Budete presmerovaní.
               </p>
               <Button
-                href="https://www.izus.cz/prihlaska_do_zus/"
+                href="https://www.prihlaskadozus.cz/?zus=502"
                 className="inline-block"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -71,12 +70,12 @@ export default function PrihlaskaPage() {
                 className="text-[2rem] mb-6"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
-                Konkurz 2024/2025
+                Konkurz 2026/2027
               </h2>
               <div className="space-y-4">
                 <div>
                   <p className="font-bold uppercase text-sm opacity-70">Termín</p>
-                  <p className="text-lg">Prvá polovica júna (termín upresníme v apríli)</p>
+                  <p className="text-lg">5. júna 2026 (piatok)</p>
                 </div>
                 <div>
                   <p className="font-bold uppercase text-sm opacity-70">Vek žiakov</p>
@@ -88,11 +87,11 @@ export default function PrihlaskaPage() {
                 </div>
                 <div>
                   <p className="font-bold uppercase text-sm opacity-70">Čas</p>
-                  <p className="text-lg">14:30 - 19:00<br /><span className="text-sm">(konkrétny čas vám pošleme)</span></p>
+                  <p className="text-lg">14:30 - 19:00</p>
                 </div>
               </div>
               <div className="mt-8 pt-6 border-t border-black/10">
-                <p className="text-sm">Vyplňte prihlášku and budeme vás informovať emailom, aby vám termín neunikol.</p>
+                <p className="text-sm">Po prihlásení vás budeme kontaktovať s presným časom konkurzu, aby sme sa vyhli dlhému čakaniu.</p>
               </div>
             </div>
           </div>

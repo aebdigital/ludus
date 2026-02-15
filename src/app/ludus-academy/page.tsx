@@ -9,25 +9,25 @@ const courses = [
     title: "HERECKÝ KURZ",
     description: <>Radosť <span className="text-[#ffd37c]">sa</span> hrať.</>,
     href: "/ludus-academy/herecky-kurz",
-    backgroundImage: "/images/academy/IMG_1128.jpeg"
+    backgroundImage: "/images/academy/IMG_1128.webp"
   },
   {
     title: "IMPROVIZAČNÝ KURZ",
     description: <>Radosť <span className="text-[#ffd37c]">si</span> improvizovať</>,
     href: "/ludus-academy/improvizacia",
-    backgroundImage: "/images/academy/IMG_3649.jpeg"
+    backgroundImage: "/images/academy/IMG_3649.webp"
   },
   {
     title: "DIVADELNÉ LABORATÓRIUM",
     description: <>Radosť <span className="text-[#ffd37c]">sa</span> umelecky realizovať</>,
     href: "/ludus-academy/divadelne-laboratorium",
-    backgroundImage: "/images/academy/IMG_4194.jpeg"
+    backgroundImage: "/images/academy/IMG_4194.webp"
   },
   {
     title: "KURZ TVORIVÉHO PÍSANIA",
     description: <>Radosť <span className="text-[#ffd37c]">vedieť</span> písať</>,
     href: "/ludus-academy/tvorive-pisanie",
-    backgroundImage: "/images/academy/IMG_4766.jpeg"
+    backgroundImage: "/images/academy/IMG_4766.webp"
   }
 ];
 
@@ -36,41 +36,41 @@ const workshops = [
     title: "WORKSHOPY PRE ŠKOLY",
     description: <>Radosť <span className="text-[#ffd37c]">sa</span> spoznávať</>,
     href: "/ludus-academy/workshopy-skoly",
-    backgroundImage: "/images/academy/IMG_9005.jpeg"
+    backgroundImage: "/images/academy/IMG_9005.webp"
   },
   {
     title: "WORKSHOP PRE UČITEĽOV",
     description: <>Radosť <span className="text-[#ffd37c]">sa</span> učiť</>,
     href: "/ludus-academy/workshop-ucitelia",
-    backgroundImage: "/images/academy/IMG_9026.jpeg"
+    backgroundImage: "/images/academy/IMG_9026.webp"
   },
   {
     title: "WORKSHOP KREATÍVNEHO MYSLENIA",
     description: <>Radosť <span className="text-[#ffd37c]">si</span> tvoriť</>,
     href: "/ludus-academy/workshop-kreativita",
-    backgroundImage: "/images/academy/IMG_9087.jpeg"
+    backgroundImage: "/images/academy/IMG_9087.webp"
   }
 ];
 
 // Placeholder content for new workshops - using generic images for now
 const corporateWorkshops = [
   {
-    title: "FIREMNÝ TÍMBILDING",
+    title: "KREATÍVNY TÍMBILDING",
     description: <>Radosť <span className="text-[#ffd37c]">spolu</span> pracovať</>,
     href: "/ludus-academy/firemny-timbilding",
-    backgroundImage: "/images/academy/IMG_4216.jpeg"
+    backgroundImage: "/images/academy/IMG_4216.webp"
   },
   {
     title: "INDIVIDUÁLNE TRÉNINGY",
     description: <>Radosť <span className="text-[#ffd37c]">sa</span> rozvíjať</>,
     href: "/ludus-academy/individualne-treningy",
-    backgroundImage: "/images/academy/IMG_9073.jpeg"
+    backgroundImage: "/images/academy/IMG_9073.webp"
   },
   {
-    title: "FIREMNÝ WORKSHOP",
+    title: "FIREMNÉ WORKSHOPY",
     description: <>Radosť <span className="text-[#ffd37c]">spolu</span> objavovať</>,
     href: "/ludus-academy/firemny-workshop",
-    backgroundImage: "/images/academy/IMG_3649.jpeg"
+    backgroundImage: "/images/academy/IMG_3649.webp"
   }
 ];
 
@@ -80,7 +80,7 @@ export default function LudusAcademyPage() {
       {/* Hero */}
       <section
         className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-        style={{ backgroundImage: "url('/images/academy-main-new.jpeg')" }}
+        style={{ backgroundImage: "url('/images/academy-main-new.webp')" }}
       >
         <div className="absolute inset-0 bg-black/40" />
         <h1
@@ -114,7 +114,7 @@ export default function LudusAcademyPage() {
                 </div>
               </div>
               <Image
-                src="/images/academy/IMG_1318.jpeg"
+                src="/images/academy/IMG_1318.webp"
                 alt="Ludus Academy"
                 width={600}
                 height={400}
@@ -223,9 +223,9 @@ export default function LudusAcademyPage() {
               </h2>
               <div className="grid grid-cols-3 gap-6 max-md:grid-cols-2 max-sm:grid-cols-1">
                 {[
-                  '/images/academy/IMG_3649.jpeg',
-                  '/images/academy/IMG_4216.jpeg',
-                  '/images/academy/IMG_9073.jpeg'
+                  '/images/academy/IMG_3649.webp',
+                  '/images/academy/IMG_4216.webp',
+                  '/images/academy/IMG_9073.webp'
                 ].map((img, i) => (
                   <Link key={i} href="/ludus-academy/galeria" className="group">
                     <Image

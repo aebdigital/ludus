@@ -6,7 +6,7 @@ export default function Skola2PercentaPage() {
         <>
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/images/skola/IMG_2915.jpeg')" }}
+                style={{ backgroundImage: "url('/images/skola/IMG_2915.webp')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1
@@ -17,7 +17,7 @@ export default function Skola2PercentaPage() {
                 </h1>
             </section>
 
-            <div className="w-[95%] max-w-6xl mx-auto py-16">
+            <div className="w-[95%] max-w-[1600px] mx-auto py-16">
                 <div className="grid grid-cols-[1.5fr_1fr] gap-12 items-start max-lg:grid-cols-1 mb-16">
                     {/* Left Column: Text */}
                     <div className="bg-white p-12 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-gray-100 h-full">
@@ -31,6 +31,15 @@ export default function Skola2PercentaPage() {
                             <p>
                                 Pre nás má každý príspevok veľký význam a vďaka nemu môžeme vytvárať pre našich žiakov inšpiratívne prostredie, kde sa môžu slobodne prejavovať a rásť.
                             </p>
+                            <div className="mt-8 pt-8 border-t border-gray-100">
+                                <h4 className="font-bold text-black mb-4 uppercase tracking-wider text-sm">Údaje o prijímateľovi:</h4>
+                                <div className="space-y-1 text-black font-medium">
+                                    <p>Občianske združenie „ Škola hrou“</p>
+                                    <p>Nábr.arm.gen.L.Svobodu 3 81102 Bratislava - mestská časť Staré Mesto</p>
+                                    <p>IČO: 31795188</p>
+                                    <p>DIČ: 2021627036</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -96,7 +105,7 @@ export default function Skola2PercentaPage() {
 
                 <div className="text-center">
                     <p className="text-black italic text-[1.1rem]">
-                        Ďakujeme, že nám pomáhate tvoriť budúcnosť mladých umelcov!
+                        Ďakujeme, že nám pomáhate zmeniť budúcnosť a rozvoj kreativity mladých ľudí.
                     </p>
                 </div>
             </div>

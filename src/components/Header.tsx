@@ -36,7 +36,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center cursor-pointer">
           <Image
-            src="/images/loga-4/logo-main.png"
+            src="/images/loga-4/logo-main.webp"
             alt="LUDUS Logo"
             width={120}
             height={60}

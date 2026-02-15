@@ -6,7 +6,7 @@ export default function WorkshopUciteliaPage() {
         <div className="bg-white">
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/images/academy/IMG_9026.jpeg')" }}
+                style={{ backgroundImage: "url('/images/academy/IMG_9026.webp')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1
@@ -22,9 +22,9 @@ export default function WorkshopUciteliaPage() {
                     <AcademySubpageSidebar />
 
                     <main className="flex-1 min-w-0">
-                        <div className="max-w-3xl">
+                        <div>
                             <h2 className="text-[3rem] mb-2 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-                                WORKSHOP pre učiteľov AJ: RADOSŤ SA UČIŤ
+                                RADOSŤ <span className="text-[#ffd37c]">SA</span> UČIŤ
                             </h2>
                             <div className="text-[#ffd37c] font-bold text-[1.2rem] mb-12 uppercase tracking-widest leading-tight">
                                 HROU KU KREATÍVNEJ VÝUČBE

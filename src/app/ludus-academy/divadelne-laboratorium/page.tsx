@@ -7,7 +7,7 @@ export default function DivadelneLaboratoriumPage() {
         <div className="bg-white">
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/images/academy/IMG_4194.jpeg')" }}
+                style={{ backgroundImage: "url('/images/academy/IMG_4194.webp')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1
@@ -25,7 +25,7 @@ export default function DivadelneLaboratoriumPage() {
                     <main className="flex-1 min-w-0">
                         <div className="mb-24">
                             <h2 className="text-[3rem] mb-2 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-                                RADOSŤ sa umelecky REALIZOVAŤ
+                                RADOSŤ <span className="text-[#ffd37c]">sa</span> umelecky REALIZOVAŤ
                             </h2>
                             <div className="text-[#ffd37c] font-bold text-[1.2rem] mb-8 uppercase tracking-widest leading-tight">
                                 TVORÍM AUTENTICKY, ŽIJEM SLOBODNE
@@ -112,37 +112,50 @@ export default function DivadelneLaboratoriumPage() {
                                 </ul>
                             </div>
 
-                            <div className="bg-black text-white p-10 rounded-2xl mb-12 shadow-xl">
-                                <div className="text-[#ffd37c] font-bold uppercase tracking-widest mb-2 text-sm">Investícia</div>
-                                <h3 className="text-[2rem] mb-6 leading-tight">
-                                    NEKUPUJETE SI KURZ, INVESTUJETE DO SVOJHO ROZVOJA: <span className="text-[#ffd37c]">378 EUR</span>
-                                </h3>
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+                                <div className="bg-black text-white p-10 rounded-2xl shadow-xl h-full flex flex-col justify-between">
+                                    <div>
+                                        <div className="text-[#ffd37c] font-bold uppercase tracking-widest mb-2 text-sm">Investícia</div>
+                                        <h3 className="text-[2rem] mb-6 leading-tight">
+                                            NEKUPUJETE SI KURZ, INVESTUJETE DO SVOJHO ROZVOJA: <span className="text-[#ffd37c]">378 EUR</span>
+                                        </h3>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-gray-300">
-                                    <ul className="space-y-3">
-                                        <li className="flex justify-between border-b border-white/10 pb-2">
-                                            <span>Počet hodín:</span>
-                                            <span className="text-white font-bold">30 hodín</span>
-                                        </li>
-                                        <li className="flex justify-between border-b border-white/10 pb-2">
-                                            <span>Počet modulov:</span>
-                                            <span className="text-white font-bold">4 moduly</span>
-                                        </li>
-                                        <li className="flex justify-between border-b border-white/10 pb-2">
-                                            <span>Skupina:</span>
-                                            <span className="text-white font-bold">max. 10 ľudí</span>
-                                        </li>
-                                    </ul>
-                                    <ul className="space-y-2 text-sm">
-                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Herecké a improvizačné cvičenia</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Praktický tréning</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Malé občerstvenie</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Záverečné vystúpenie pre divákov</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Certifikát</li>
-                                    </ul>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-gray-300">
+                                            <ul className="space-y-3">
+                                                <li className="flex justify-between border-b border-white/10 pb-2">
+                                                    <span>Počet hodín:</span>
+                                                    <span className="text-white font-bold">30 hodín</span>
+                                                </li>
+                                                <li className="flex justify-between border-b border-white/10 pb-2">
+                                                    <span>Počet modulov:</span>
+                                                    <span className="text-white font-bold">4 moduly</span>
+                                                </li>
+                                                <li className="flex justify-between border-b border-white/10 pb-2">
+                                                    <span>Skupina:</span>
+                                                    <span className="text-white font-bold">max. 10 ľudí</span>
+                                                </li>
+                                            </ul>
+                                            <ul className="space-y-2 text-sm">
+                                                <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Herecké a improvizačné cvičenia</li>
+                                                <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Praktický tréning</li>
+                                                <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Malé občerstvenie</li>
+                                                <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Záverečné vystúpenie pre divákov</li>
+                                                <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Certifikát</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className="mt-8 pt-6 border-t border-white/10 text-sm italic opacity-70">
+                                        PODMIENKA ÚČASTI: vek od 18 rokov a ukončené stredoškolské vzdelanie
+                                    </div>
                                 </div>
-                                <div className="mt-8 pt-6 border-t border-white/10 text-sm italic opacity-70">
-                                    PODMIENKA ÚČASTI: vek od 18 rokov a ukončené stredoškolské vzdelanie
+
+                                <div className="bg-white p-10 rounded-2xl border border-gray-100 shadow-sm h-full flex flex-col">
+                                    <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>Slovami účastníkov</h3>
+                                    <div className="rounded-xl overflow-hidden shadow-lg border-4 border-black flex-grow relative">
+                                        <div className="absolute inset-0">
+                                            <video src="/videos/divadelne-laboratorium.mp4" controls className="w-full h-full object-cover" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -152,7 +165,7 @@ export default function DivadelneLaboratoriumPage() {
                                 <div className="flex gap-8 items-start max-md:flex-col">
                                     <div className="w-[180px] h-[180px] rounded-full overflow-hidden flex-shrink-0 border-4 border-[#ffd37c] relative">
                                         <Image
-                                            src="/jan-mikus.png"
+                                            src="/pedagogovia/JANKO MIKUŠ.webp"
                                             alt="MgA. Ján Mikuš"
                                             fill
                                             className="object-cover"
@@ -170,44 +183,10 @@ export default function DivadelneLaboratoriumPage() {
                                 </div>
                             </div>
 
-                            <div className="bg-white border-2 border-black p-10 rounded-2xl mb-12">
-                                <h3 className="text-[1.8rem] mb-8 text-black uppercase" style={{ fontFamily: 'var(--font-heading)' }}>TERMÍNY KURZU (4 moduly):</h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                    <div className="space-y-6">
-                                        <div className="border-l-4 border-[#ffd37c] pl-4">
-                                            <h5 className="font-bold text-black uppercase text-sm mb-1">1. MODUL:</h5>
-                                            <p className="text-black">26. 9. (piatok) – 17:00–20:00</p>
-                                            <p className="text-black">27. 9. (sobota) – 10:00–14:00</p>
-                                        </div>
-                                        <div className="border-l-4 border-[#ffd37c] pl-4">
-                                            <h5 className="font-bold text-black uppercase text-sm mb-1">2. MODUL:</h5>
-                                            <p className="text-black">3. 10. (piatok) – 17:00–20:00</p>
-                                            <p className="text-black">4. 10. (sobota) – 10:00–14:00</p>
-                                        </div>
-                                    </div>
-                                    <div className="space-y-6">
-                                        <div className="border-l-4 border-[#ffd37c] pl-4">
-                                            <h5 className="font-bold text-black uppercase text-sm mb-1">3. MODUL:</h5>
-                                            <p className="text-black">17. 10. (piatok) – 17:00–20:00</p>
-                                            <p className="text-black">18. 10. (sobota) – 10:00–14:00</p>
-                                        </div>
-                                        <div className="border-l-4 border-black pl-4">
-                                            <h5 className="font-bold text-black uppercase text-sm mb-1">4. MODUL:</h5>
-                                            <p className="text-black">24. 10. (piatok) – 17:00–20:00</p>
-                                            <p className="text-black">25. 10. (sobota) – 10:00–14:00</p>
-                                            <p className="text-[#ffd37c] font-bold mt-2">Záverečné vystúpenie: 25.10.2025 o 18:00 hod.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between max-md:flex-col gap-4">
-                                    <p className="text-black font-medium text-lg">Lektor: MgA. Ján Mikuš</p>
-                                    <p className="text-xs text-black italic">(viac o lektoroch v sekcii O NÁS)</p>
-                                </div>
-                            </div>
 
                             <div className="bg-[#ffd37c]/10 border border-[#ffd37c] p-10 rounded-2xl text-center">
                                 <h4 className="text-[1.8rem] font-bold text-black mb-4 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>
-                                    ĎALŠÍ CYKLUS KURZOV SPUSTÍME V APRÍLI 2026
+                                    ĎALŠÍ CYKLUS KURZOV SPUSTÍME V SEPTEMBRI 2026
                                 </h4>
                                 <p className="text-[#000] mb-8 max-w-2xl mx-auto">
                                     V prípade, že máte o tento kurz záujem, tak nám pokojne napíšte a my Vás zaradíme na "WAITING LIST". Akonáhle budeme mať naplánované termíny kurzov, tak Vás budeme medzi prvými informovať aby ste sa mohli prihlásiť.

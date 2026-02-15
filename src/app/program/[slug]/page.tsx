@@ -26,7 +26,7 @@ export default async function ProgramDetailPage({ params }: { params: Promise<{ 
 
     const relatedEvents = await getProgramEventsByTitle(event.title);
 
-    const bgImage = event.image_path ? getImageUrl(event.image_path) : '/images/painting.jpg';
+    const bgImage = event.image_path ? getImageUrl(event.image_path) : '/images/painting.webp';
 
     // Prepare gallery images
     const galleryImages: string[] = [];
@@ -44,7 +44,7 @@ export default async function ProgramDetailPage({ params }: { params: Promise<{ 
 
     // Fallback if empty
     if (galleryImages.length === 0) {
-        galleryImages.push('/images/painting.jpg');
+        galleryImages.push('/images/painting.webp');
     }
 
     return (

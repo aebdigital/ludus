@@ -6,9 +6,9 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const previewImages = [
-    '/images/kniha/ukazka1.png',
-    '/images/kniha/ukazka2.png',
-    '/images/kniha/ukazka3.png'
+    '/images/kniha/ukazka1.webp',
+    '/images/kniha/ukazka2.webp',
+    '/images/kniha/ukazka3.webp'
 ];
 
 export default function KnihaPage() {
@@ -41,7 +41,7 @@ export default function KnihaPage() {
             {/* Hero */}
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/images/kniha/kniha-hero.jpeg')" }}
+                style={{ backgroundImage: "url('/images/kniha/kniha-hero.webp')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1
@@ -55,39 +55,41 @@ export default function KnihaPage() {
             <main className="w-[95%] mx-auto py-16">
 
                 {/* Book Intro */}
-                <div className="grid grid-cols-[500px_1fr] gap-20 items-stretch mb-24 max-lg:grid-cols-1">
-                    <div className="relative min-h-[700px]">
+                <div className="bg-black text-white p-12 rounded-3xl shadow-2xl mb-24 grid grid-cols-[500px_1fr] gap-20 items-stretch max-lg:grid-cols-1">
+                    <div className="relative min-h-[600px] rounded-xl overflow-hidden">
                         <Image
-                            src="/images/kniha/kto-som-section.jpeg"
+                            src="/images/kniha/kto-som-section.webp"
                             alt="Katarína Baranová"
                             fill
-                            className="object-cover rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.1)]"
+                            className="object-cover"
                             priority
                         />
                     </div>
                     <div className="flex flex-col justify-center h-full">
-                        <h2 className="text-[2.5rem] mb-2 font-light text-black" style={{ fontFamily: 'var(--font-body)' }}>
+                        <h2 className="text-[2.5rem] mb-2 font-light text-[#ffd37c]" style={{ fontFamily: 'var(--font-body)' }}>
                             Katarína Baranová
                         </h2>
-                        <h2 className="text-[4rem] font-bold leading-tight mb-4 text-black" style={{ fontFamily: 'var(--font-body)', fontWeight: 900 }}>
+                        <h2 className="text-[4rem] font-bold leading-tight mb-4 text-white" style={{ fontFamily: 'var(--font-body)', fontWeight: 900 }}>
                             Tvorím, teda som
                         </h2>
-                        <p className="text-[1.5rem] mb-8 text-[#000] italic font-medium">
+                        <p className="text-[1.5rem] mb-8 text-white/80 italic font-medium">
                             200 hier a cvičení na rozvoj kreatívneho potenciálu
                         </p>
 
-                        <p className="text-[1.15rem] leading-relaxed mb-6 text-[#000]">
-                            Kniha <strong>Tvorím, teda som</strong> je praktickou príručkou pre pedagógov a lektorov, ktorých zaujímajú kreatívne metódy učenia.
-                        </p>
-                        <p className="text-[1.15rem] leading-relaxed mb-6 text-[#000]">
-                            Kniha je zároveň určená aj pre rodičov, ktorí chcú so svojimi deťmi a tínedžermi kreatívne využiť spoločne strávený čas.
-                        </p>
-                        <p className="text-[1.15rem] leading-relaxed mb-8 text-[#000]">
-                            Inšpiráciu tu nájdu aj všetci ktorí, radi skúšavy nové a nevyšliapané cesty, spoznávajú radi nové kreatívne hry a chcú sa učiť prostredníctvom zážitku.
-                        </p>
+                        <div className="space-y-6 text-lg leading-relaxed mb-12">
+                            <p>
+                                Kniha <strong>Tvorím, teda som</strong> je praktickou príručkou pre pedagógov a lektorov, ktorých zaujímajú kreatívne metódy učenia.
+                            </p>
+                            <p>
+                                Kniha je zároveň určená aj pre rodičov, ktorí chcú so svojimi deťmi a tínedžermi kreatívne využiť spoločne strávený čas.
+                            </p>
+                            <p>
+                                Inšpiráciu tu nájdu aj všetci ktorí, radi skúšavy nové a nevyšliapané cesty, spoznávajú radi nové kreatívne hry a chcú sa učiť prostredníctvom zážitku.
+                            </p>
+                        </div>
 
                         <div className="mt-4">
-                            <Button href="/kontakt" className="bg-[#ffd37c] text-black px-10 py-4 text-xl">
+                            <Button href="/kontakt" className="bg-[#ffd37c] text-black px-10 py-4 text-xl border-none hover:bg-white transition-colors">
                                 Objednať knihu
                             </Button>
                         </div>
@@ -116,7 +118,7 @@ export default function KnihaPage() {
                     <div className="flex flex-col gap-6 items-center">
                         <div className="relative w-[50%] aspect-square overflow-hidden">
                             <Image
-                                src="/images/1.png"
+                                src="/images/1.webp"
                                 alt="Katarína Baranová pri práci"
                                 fill
                                 className="object-contain p-4"
@@ -124,7 +126,7 @@ export default function KnihaPage() {
                         </div>
                         <div className="relative w-[50%] aspect-square overflow-hidden">
                             <Image
-                                src="/images/2.png"
+                                src="/images/2.webp"
                                 alt="Workshop s knihou"
                                 fill
                                 className="object-contain p-4"
@@ -218,7 +220,7 @@ export default function KnihaPage() {
 
                     <div className="relative aspect-[3/4] max-xl:w-[300px] max-xl:mx-auto">
                         <Image
-                            src="/ebook.jpeg"
+                            src="/ebook.webp"
                             alt="E-book Cover"
                             fill
                             className="object-cover rounded-lg shadow-xl"

@@ -7,7 +7,7 @@ export default function WorkshopySkolyPage() {
         <div className="bg-white">
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/images/academy/IMG_9005.jpeg')" }}
+                style={{ backgroundImage: "url('/images/academy/IMG_9005.webp')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1
@@ -25,7 +25,7 @@ export default function WorkshopySkolyPage() {
                     <main className="flex-1 min-w-0">
                         <div className="mb-24">
                             <h2 className="text-[3rem] mb-2 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-                                WORKSHOPY pre školy: RADOSŤ SA SPOZNÁVAŤ
+                                RADOSŤ <span className="text-[#ffd37c]">SA</span> SPOZNÁVAŤ
                             </h2>
                             <div className="text-[#ffd37c] font-bold text-[1.2rem] mb-8 uppercase tracking-widest leading-tight">
                                 SPOZNAŤ SA A SPLOUPRACOVAŤ JE RADOSŤ
@@ -79,6 +79,15 @@ export default function WorkshopySkolyPage() {
                                             <p className="font-medium text-black">V LUDUSe alebo priamo u vás v škole</p>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                                <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                                    <video src="/videos/workshopy-skoly-1.mp4" controls className="w-full h-auto" />
+                                </div>
+                                <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                                    <video src="/videos/workshopy-skoly-2.mp4" controls className="w-full h-auto" />
                                 </div>
                             </div>
 
@@ -160,9 +169,9 @@ export default function WorkshopySkolyPage() {
                                 </h3>
                                 <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
                                     {[
-                                        'Snímka obrazovky 2026-01-30 o 11.11.23.png',
-                                        'Snímka obrazovky 2026-01-30 o 11.12.39.png',
-                                        'Snímka obrazovky 2026-01-30 o 11.18.05.png'
+                                        'Snímka obrazovky 2026-01-30 o 11.11.23.webp',
+                                        'Snímka obrazovky 2026-01-30 o 11.12.39.webp',
+                                        'Snímka obrazovky 2026-01-30 o 11.18.05.webp'
                                     ].map((img, i) => (
                                         <div key={i} className="break-inside-avoid">
                                             <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">

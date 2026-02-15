@@ -1,3 +1,4 @@
+import GalleryNav from '@/components/GalleryNav';
 import { getGalleryImages, getImageUrl } from '@/lib/api';
 import GalleryGrid from '@/components/GalleryGrid';
 
@@ -17,7 +18,7 @@ export default async function DivadloGalériaPage() {
       {/* Hero */}
       <section
         className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-        style={{ backgroundImage: "url('/images/divadlo-main.jpg')" }}
+        style={{ backgroundImage: "url('/images/divadlo-main.webp')" }}
       >
         <div className="absolute inset-0 bg-black/40" />
         <h1
@@ -28,13 +29,11 @@ export default async function DivadloGalériaPage() {
         </h1>
       </section>
 
+      <div className="pt-8 pb-4">
+        <GalleryNav activeCategory="divadlo" />
+      </div>
+
       <div className="w-[95%] mx-auto py-12">
-        <h2
-          className="text-center text-[3rem] mb-12"
-          style={{ fontFamily: 'var(--font-heading)' }}
-        >
-          Divadlo Ludus
-        </h2>
         <GalleryGrid images={processedImages} />
       </div>
     </>

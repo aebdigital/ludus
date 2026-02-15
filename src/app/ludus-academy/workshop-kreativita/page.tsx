@@ -7,7 +7,7 @@ export default function WorkshopKreativitaPage() {
         <div className="bg-white">
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/images/academy/IMG_9087.jpeg')" }}
+                style={{ backgroundImage: "url('/images/academy/IMG_9087.webp')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1
@@ -25,7 +25,7 @@ export default function WorkshopKreativitaPage() {
                     <main className="flex-1 min-w-0">
                         <div className="mb-24">
                             <h2 className="text-[3rem] mb-2 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-                                WORKSHOP kreatívneho myslenia: RADOSŤ si TVORIŤ
+                                RADOSŤ <span className="text-[#ffd37c]">si</span> TVORIŤ
                             </h2>
                             <div className="text-[#ffd37c] font-bold text-[1.2rem] mb-8 uppercase tracking-widest leading-tight">
                                 KAŽDÝ Z NÁS VIE A MÔŽE BYŤ KREATÍVNY
@@ -146,7 +146,7 @@ export default function WorkshopKreativitaPage() {
                                 <div className="flex gap-10 items-start max-md:flex-col">
                                     <div className="w-[220px] h-[220px] rounded-full overflow-hidden flex-shrink-0 border-4 border-[#ffd37c] relative">
                                         <Image
-                                            src="/images/o-nas/katarina-baranova.jpg"
+                                            src="/pedagogovia/KATARÍNA BARANOVA.webp"
                                             alt="Katarína Baranová"
                                             fill
                                             className="object-cover"
@@ -180,7 +180,7 @@ export default function WorkshopKreativitaPage() {
                                 <div className="flex gap-12 items-center max-md:flex-col">
                                     <div className="w-[200px] h-auto rounded shadow-2xl relative overflow-hidden flex-shrink-0">
                                         <Image
-                                            src="/images/kniha/kniha-main left.jpeg"
+                                            src="/images/kniha/kniha-main left.webp"
                                             alt="Kniha Tvorím, teda som"
                                             width={200}
                                             height={267}
@@ -191,7 +191,7 @@ export default function WorkshopKreativitaPage() {
                                         <div className="text-[#ffd37c] font-bold uppercase tracking-widest text-sm mb-2">Katarína Baranová</div>
                                         <h3 className="text-[2.5rem] mb-4 leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>Tvorím, teda som</h3>
                                         <p className="text-lg text-gray-300 mb-6">200 hier a cvičení na rozvoj kreatívneho potenciálu</p>
-                                        <div className="space-y-4 text-black mb-8 max-w-xl">
+                                        <div className="space-y-4 text-white mb-8 max-w-xl">
                                             <p>Kniha je praktickou príručkou pre pedagógov a lektorov, ktorých zaujímajú kreatívne metódy učenia.</p>
                                             <p>Je zároveň určená pre rodičov a inšpiráciu tu nájdu aj všetci, ktorí chcú sa učiť prostredníctvom zážitku.</p>
                                         </div>

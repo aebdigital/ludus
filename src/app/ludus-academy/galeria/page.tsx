@@ -1,3 +1,4 @@
+import GalleryNav from '@/components/GalleryNav';
 import { getGalleryImages, getImageUrl } from '@/lib/api';
 import GalleryGrid from '@/components/GalleryGrid';
 
@@ -17,7 +18,7 @@ export default async function AcademyGalériaPage() {
       {/* Hero */}
       <section
         className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-        style={{ backgroundImage: "url('/images/academy/IMG_1318.jpeg')" }}
+        style={{ backgroundImage: "url('/images/academy/IMG_1318.webp')" }}
       >
         <div className="absolute inset-0 bg-black/40" />
         <h1
@@ -28,13 +29,11 @@ export default async function AcademyGalériaPage() {
         </h1>
       </section>
 
+      <div className="pt-8 pb-4">
+        <GalleryNav activeCategory="academy" />
+      </div>
+
       <div className="w-[95%] mx-auto py-12">
-        <h2
-          className="text-center text-[3rem] mb-12"
-          style={{ fontFamily: 'var(--font-heading)' }}
-        >
-          Ludus Academy
-        </h2>
         <GalleryGrid images={processedImages} />
       </div>
     </>

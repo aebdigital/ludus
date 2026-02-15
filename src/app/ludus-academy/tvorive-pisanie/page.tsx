@@ -7,7 +7,7 @@ export default function TvorivePisaniePage() {
         <div className="bg-white">
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/images/academy/IMG_4766.jpeg')" }}
+                style={{ backgroundImage: "url('/images/academy/IMG_4766.webp')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1
@@ -25,7 +25,7 @@ export default function TvorivePisaniePage() {
                     <main className="flex-1 min-w-0">
                         <div className="mb-24">
                             <h2 className="text-[3rem] mb-2 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-                                Kurz tvorivého písania: RADOSŤ vedieť PÍSAŤ
+                                RADOSŤ <span className="text-[#ffd37c]">vedieť</span> PÍSAŤ
                             </h2>
                             <div className="text-[#ffd37c] font-bold text-[1.2rem] mb-8 uppercase tracking-widest leading-tight">
                                 NIEKEDY JE LEPŠIE PÍSAŤ. IBA PÍSAŤ.
@@ -109,7 +109,7 @@ export default function TvorivePisaniePage() {
                                 <div className="flex gap-8 items-start max-md:flex-col mb-16">
                                     <div className="w-[180px] h-[180px] rounded-full overflow-hidden flex-shrink-0 border-4 border-[#ffd37c] relative">
                                         <Image
-                                            src="/michal.png"
+                                            src="/pedagogovia/MICHAL ROVŇÁK.webp"
                                             alt="Mgr. art. Michal Rovňák"
                                             fill
                                             className="object-cover"
@@ -129,7 +129,7 @@ export default function TvorivePisaniePage() {
                                 <div className="flex gap-8 items-start max-md:flex-col pt-8 border-t border-gray-50">
                                     <div className="w-[180px] h-[180px] rounded-full overflow-hidden flex-shrink-0 border-4 border-gray-100 relative">
                                         <Image
-                                            src="/jan-mikus.png"
+                                            src="/pedagogovia/JANKO MIKUŠ.webp"
                                             alt="MgA. Ján Mikuš"
                                             fill
                                             className="object-cover"
@@ -166,7 +166,7 @@ export default function TvorivePisaniePage() {
                                             </p>
                                             <div className="relative h-[250px] w-2/3 max-md:w-full">
                                                 <Image
-                                                    src="/images/reviews/writing-ivetka-2.jpg"
+                                                    src="/images/reviews/writing-ivetka-2.webp"
                                                     alt="Ivetkina kniha"
                                                     fill
                                                     className="object-cover rounded-xl shadow-lg rotate-[2deg]"
@@ -176,7 +176,7 @@ export default function TvorivePisaniePage() {
                                         <div className="w-1/3 max-md:w-full">
                                             <div className="relative h-[550px] w-full">
                                                 <Image
-                                                    src="/images/reviews/writing-ivetka-1.jpg"
+                                                    src="/images/reviews/writing-ivetka-1.webp"
                                                     alt="Ivetka - autorka"
                                                     fill
                                                     className="object-cover rounded-2xl shadow-2xl rotate-[-1deg]"
@@ -193,7 +193,7 @@ export default function TvorivePisaniePage() {
                                         <div className="grid grid-cols-2 gap-8 max-md:grid-cols-1">
                                             <div className="relative h-[450px] bg-gray-50 rounded-xl overflow-hidden group border border-gray-100 p-2">
                                                 <Image
-                                                    src="/images/reviews/poem-1.jpg"
+                                                    src="/images/reviews/poem-1.webp"
                                                     alt="Báseň absolventa 1"
                                                     fill
                                                     className="object-contain transition-transform group-hover:scale-[1.05]"
@@ -201,7 +201,7 @@ export default function TvorivePisaniePage() {
                                             </div>
                                             <div className="relative h-[450px] bg-gray-50 rounded-xl overflow-hidden group border border-gray-100 p-2">
                                                 <Image
-                                                    src="/images/reviews/poem-2.jpg"
+                                                    src="/images/reviews/poem-2.webp"
                                                     alt="Báseň absolventa 2"
                                                     fill
                                                     className="object-contain transition-transform group-hover:scale-[1.05]"
@@ -217,9 +217,9 @@ export default function TvorivePisaniePage() {
                                         </h4>
                                         <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
                                             {[
-                                                'Snímka obrazovky 2026-01-30 o 11.08.54.png',
-                                                'Snímka obrazovky 2026-01-30 o 11.10.04.png',
-                                                'Snímka obrazovky 2026-01-30 o 11.10.38.png'
+                                                'Snímka obrazovky 2026-01-30 o 11.08.54.webp',
+                                                'Snímka obrazovky 2026-01-30 o 11.10.04.webp',
+                                                'Snímka obrazovky 2026-01-30 o 11.10.38.webp'
                                             ].map((img, i) => (
                                                 <div key={i} className="break-inside-avoid">
                                                     <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
@@ -235,34 +235,36 @@ export default function TvorivePisaniePage() {
                                     </div>
                                 </div>
 
-                                <div className="bg-white border-2 border-[#ffd37c] p-10 rounded-2xl mb-12 relative overflow-hidden">
-                                    <div className="absolute top-0 right-0 bg-[#ffd37c] text-black px-6 py-2 font-bold uppercase tracking-widest">TERMÍN</div>
-                                    <h4 className="text-[1.8rem] font-bold text-black mb-2 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>14.4 - 9.6.2026</h4>
-                                    <p className="font-bold text-black text-[1.5rem] mb-6 uppercase tracking-tight">Každý UTOROK od 18:00 - 20:30</p>
-                                    <div className="flex flex-col gap-2 p-6 bg-gray-50 rounded-xl">
-                                        <span className="text-xs uppercase text-black font-bold tracking-widest">Váš Lektor</span>
-                                        <p className="text-black font-bold text-xl">Mgr. art. Michal Rovňák</p>
-                                        <p className="text-sm text-black italic">(viac o lektoroch v sekcii O NÁS alebo vyššie)</p>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                                    <div className="bg-white border-2 border-[#ffd37c] p-10 rounded-2xl relative overflow-hidden flex flex-col">
+                                        <div className="absolute top-0 right-0 bg-[#ffd37c] text-black px-6 py-2 font-bold uppercase tracking-widest">TERMÍN</div>
+                                        <h4 className="text-[1.8rem] font-bold text-black mb-2 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>14.4 - 9.6.2026</h4>
+                                        <p className="font-bold text-black text-[1.5rem] mb-6 uppercase tracking-tight">Každý UTOROK od 18:00 - 20:30</p>
+                                        <div className="flex flex-col gap-2 p-6 bg-gray-50 rounded-xl mb-8">
+                                            <span className="text-xs uppercase text-black font-bold tracking-widest">Váš Lektor</span>
+                                            <p className="text-black font-bold text-xl">Mgr. art. Michal Rovňák</p>
+                                            <p className="text-sm text-black italic">(viac o lektoroch v sekcii O NÁS alebo vyššie)</p>
+                                        </div>
+                                        <div className="mt-auto">
+                                            <Button
+                                                href="https://form.fapi.cz/?id=a1d7c8a7-ff33-48e8-8ac1-4eb1c6a8019b"
+                                                className="w-full justify-center py-4 text-xl"
+                                                target="_blank"
+                                            >
+                                                PRIHLÁSIŤ SA NA KURZ
+                                            </Button>
+                                        </div>
                                     </div>
-                                    <div className="mt-8">
-                                        <Button
-                                            href="https://form.fapi.cz/?id=a1d7c8a7-ff33-48e8-8ac1-4eb1c6a8019b"
-                                            className="w-full justify-center py-4 text-xl"
-                                            target="_blank"
-                                        >
-                                            PRIHLÁSIŤ SA NA KURZ
-                                        </Button>
-                                    </div>
-                                </div>
 
-                                <div className="bg-[#ffd37c]/10 border border-[#ffd37c] p-10 rounded-2xl text-center">
-                                    <h4 className="text-[1.8rem] font-bold text-black mb-4 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>
-                                        ĎALŠÍ CYKLUS KURZOV SPUSTÍME V SEPTEMBRI 2026
-                                    </h4>
-                                    <p className="text-[#000] mb-8 max-w-2xl mx-auto">
-                                        V prípade, že máte o tento kurz záujem, tak nám pokojne napíšte a my Vás zaradémie na "WAITING LIST". Akonáhle budeme mať naplánované termíny kurzov, tak Vás budeme medzi prvými informovať aby ste sa mohli prihlásiť.
-                                    </p>
-                                    <Button href="/ludus-academy/kontakt">Mám záujem o waiting list</Button>
+                                    <div className="bg-[#ffd37c]/10 border border-[#ffd37c] p-10 rounded-2xl text-center flex flex-col justify-center">
+                                        <h4 className="text-[1.8rem] font-bold text-black mb-4 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>
+                                            ĎALŠÍ CYKLUS KURZOV SPUSTÍME V SEPTEMBRI 2026
+                                        </h4>
+                                        <p className="text-[#000] mb-8 max-w-2xl mx-auto">
+                                            V prípade, že máte o tento kurz záujem, tak nám pokojne napíšte a my Vás zaradíme na "WAITING LIST". Akonáhle budeme mať naplánované termíny kurzov, tak Vás budeme medzi prvými informovať aby ste sa mohli prihlásiť.
+                                        </p>
+                                        <Button href="/ludus-academy/kontakt" className="w-full justify-center">Mám záujem o waiting list</Button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

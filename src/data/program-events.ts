@@ -38,7 +38,7 @@ export const programEvents: ProgramEvent[] = [
         color: '#ffffff', // White
         price: null,
         month: 'január',
-        image: '/images/divadlo-main.jpg', // Placeholder
+        image: '/images/divadlo-main.webp', // Placeholder
         description: `
       <p>Kultové dielo, ktoré oslovilo milióny čitateľov po celom svete, v divadelnom spracovaní. Adrian Mole má 13 a 3/4 roka a cíti sa byť intelektuálom. Jeho život je však plný nepochopenia, rodičia majú manželskú krízu, pes pije brandy a on sa zamiloval do Pandory. Navyše má problémy s pleťou a nikto nechápe jeho básnické črevo.</p>
       <br/>
@@ -68,7 +68,7 @@ export const programEvents: ProgramEvent[] = [
         color: '#9f9df0', // Purple
         price: null,
         month: 'január',
-        image: '/images/divadlo-main.jpg',
+        image: '/images/divadlo-main.webp',
         description: `
       <p>Kultové dielo, ktoré oslovilo milióny čitateľov po celom svete, v divadelnom spracovaní. Adrian Mole má 13 a 3/4 roka a cíti sa byť intelektuálom. Jeho život je však plný nepochopenia, rodičia majú manželskú krízu, pes pije brandy a on sa zamiloval do Pandory.</p>
     `,
@@ -93,7 +93,7 @@ export const programEvents: ProgramEvent[] = [
         color: '#9f9df0', // Purple
         price: null,
         month: 'január',
-        image: '/images/divadlo-main.jpg',
+        image: '/images/divadlo-main.webp',
         description: `Same description...`,
         details: {
             duration: '90 minút',
@@ -116,7 +116,7 @@ export const programEvents: ProgramEvent[] = [
         color: '#9fd0f0', // Blue
         price: '10,00 €',
         month: 'január',
-        image: '/images/painting.jpg',
+        image: '/images/painting.webp',
         description: `
       <p>Hlboká sonda do duše súčasného mladého človeka. Čo sa skrýva pod povrchom? Čo nás trápi, čo nás teší, čoho sa bojíme? Inscenácia vznikla metódou kolektívnej tvorby a prináša autentické výpovede hercov.</p>
     `,
@@ -146,7 +146,7 @@ export const programEvents: ProgramEvent[] = [
         color: '#b0ea86', // Green
         price: null,
         month: 'január',
-        image: '/images/sculpture.jpg',
+        image: '/images/sculpture.webp',
         description: `
       <p>Experimentálne predstavenie v spolupráci s Univerzitou Komenského. Skúmanie obyčajnosti, každodennosti a krásy v maličkostiach. Multimediálny projekt spájajúci divadlo, pohyb a vizuálne umenie.</p>
     `,
@@ -173,7 +173,7 @@ export const programEvents: ProgramEvent[] = [
         color: '#93f0e0', // Teal
         price: '10,00 €',
         month: 'január',
-        image: '/images/divadlo-main.jpg',
+        image: '/images/divadlo-main.webp',
         description: `
       <p>Veľkolepý príbeh antického hrdinu Odysea prerozprávaný moderným jazykom. Cesta plná nástrah, mytologických bytostí a hľadania domova. Je Ithaka skutočným cieľom, alebo je cieľom samotná cesta?</p>
     `,
@@ -201,7 +201,7 @@ export const programEvents: ProgramEvent[] = [
         color: '#ffffff',
         price: '8,00 €',
         month: 'február',
-        image: '/images/divadlo-main.jpg',
+        image: '/images/divadlo-main.webp',
         description: `
       <p>Klasická rozprávka o sile priateľstva, ktorá dokáže roztopiť aj to najľadovejšie srdce. Gerda sa vydáva na nebezpečnú cestu, aby zachránila svojho kamaráta Kaya zo zajatia Snehovej kráľovnej.</p>
     `,
@@ -228,7 +228,7 @@ export const programEvents: ProgramEvent[] = [
         color: '#9fd0f0',
         price: '8,00 €',
         month: 'február',
-        image: '/images/academy/IMG_3649.jpeg',
+        image: '/images/academy/IMG_3649.webp',
         description: `
       <p>Zábavné popoludnie plné smiechu, gagov a klaunských kúskov. Interaktívne predstavenie, kde sa deti stávajú súčasťou deja.</p>
     `,

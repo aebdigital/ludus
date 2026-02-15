@@ -11,7 +11,7 @@ export default function Footer() {
         {/* Logo & Contact Info */}
         <div>
           <Image
-            src="/images/loga-4/logo-main.png"
+            src="/images/loga-4/logo-main.webp"
             alt="LUDUS Logo"
             width={100}
             height={50}

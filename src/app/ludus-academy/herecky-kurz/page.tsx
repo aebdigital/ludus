@@ -7,7 +7,7 @@ export default function HereckyKurzPage() {
         <div className="bg-white">
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/images/academy/IMG_1128.jpeg')" }}
+                style={{ backgroundImage: "url('/images/academy/IMG_1128.webp')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1
@@ -26,7 +26,7 @@ export default function HereckyKurzPage() {
                         {/* Basic Course Section */}
                         <div className="mb-24">
                             <h2 className="text-[3rem] mb-2 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-                                Herecký kurz: RADOSŤ SA HRAŤ
+                                RADOSŤ <span className="text-[#ffd37c]">SA</span> HRAŤ
                             </h2>
                             <div className="flex flex-wrap gap-x-4 gap-y-1 text-[#ffd37c] font-bold text-[1.2rem] mb-8 uppercase tracking-widest">
                                 <span>CEZ HRANIE</span>
@@ -127,75 +127,86 @@ export default function HereckyKurzPage() {
                                 </div>
                             </div>
 
-                            <div className="space-y-6">
-                                <div className="bg-white border-2 border-[#ffd37c] p-8 rounded-2xl relative overflow-hidden">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                                <div className="bg-white border-2 border-[#ffd37c] p-8 rounded-2xl relative overflow-hidden flex flex-col">
                                     <div className="absolute top-0 right-0 bg-[#ffd37c] text-black px-4 py-1 font-bold text-xs">TERMÍN 1</div>
                                     <h4 className="text-[1.5rem] font-bold text-black mb-2">21.1. - 8.4.2026</h4>
                                     <p className="text-black mb-4">(hodina nebude: 18.2.2026)</p>
                                     <p className="font-bold text-black text-lg mb-4 uppercase tracking-tighter">každú STREDU od 18:00 do 20:30</p>
-                                    <div className="flex flex-col gap-1">
+                                    <div className="flex flex-col gap-1 mb-8">
                                         <span className="text-sm uppercase text-black font-bold">Lektori</span>
                                         <p className="text-black font-medium">Mgr. art Norman Šáro, Mgr. art Jakub Rek</p>
                                         <p className="text-xs text-black italic">(viac o lektoroch v sekcii O NÁS)</p>
                                     </div>
+                                    <div className="mt-auto">
+                                        <Button
+                                            href="https://form.fapi.cz/?id=84c249ad-4bcc-4b91-92e1-93837f500d59"
+                                            className="w-full justify-center"
+                                            target="_blank"
+                                        >
+                                            PRIHLÁSIŤ SA NA KURZ
+                                        </Button>
+                                    </div>
                                 </div>
 
-                                <div className="bg-white border-2 border-gray-100 p-8 rounded-2xl relative overflow-hidden">
+                                <div className="bg-white border-2 border-gray-100 p-8 rounded-2xl relative overflow-hidden flex flex-col">
                                     <div className="absolute top-0 right-0 bg-gray-100 text-black px-4 py-1 font-bold text-xs">TERMÍN 2</div>
                                     <h4 className="text-[1.5rem] font-bold text-black mb-2">12.4. - 28.6.2026</h4>
                                     <p className="text-black mb-4">(hodina nebude: 14.6.2026)</p>
                                     <p className="font-bold text-black text-lg mb-4 uppercase tracking-tighter">každú NEDEĽU od 18:00 do 20:30</p>
-                                    <div className="flex flex-col gap-1 mb-4">
+                                    <div className="flex flex-col gap-1 mb-8">
                                         <span className="text-sm uppercase text-black font-bold">Lektor</span>
                                         <p className="text-black font-medium">Mgr. art Jozef Jurčišin-Kukľa</p>
                                         <p className="text-xs text-black italic">(viac o lektoroch v sekcii O NÁS)</p>
                                     </div>
-                                    <Button
-                                        href="https://form.fapi.cz/?id=84c249ad-4bcc-4b91-92e1-93837f500d59"
-                                        className="w-full justify-center"
-                                        target="_blank"
-                                    >
-                                        PRIHLÁSIŤ SA NA KURZ
-                                    </Button>
-                                </div>
-
-                                <div className="bg-[#ffd37c]/10 border border-[#ffd37c] p-10 rounded-2xl text-center">
-                                    <h4 className="text-[1.8rem] font-bold text-black mb-4 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>
-                                        ĎALŠÍ CYKLUS KURZOV SPUSTÍME V SEPTEMBRI 2026
-                                    </h4>
-                                    <p className="text-[#000] mb-8 max-w-2xl mx-auto">
-                                        V prípade, že máte o tento kurz záujem, tak nám pokojne napíšte a my Vás zaradíme na "WAITING LIST". Akonáhle budeme mať naplánované termíny kurzov, tak Vás budeme medzi prvými informovať aby ste sa mohli prihlásiť.
-                                    </p>
-                                    <Button href="/ludus-academy/kontakt">Mám záujem o waiting list</Button>
-                                </div>
-
-                                {/* Reviews Section */}
-                                <div className="py-16">
-                                    <h3 className="text-[2.5rem] mb-12 text-center" style={{ fontFamily: 'var(--font-heading)' }}>
-                                        Čo o nás hovoria účastníci
-                                    </h3>
-                                    <div className="columns-1 md:columns-2 gap-8 space-y-8">
-                                        {[
-                                            'Snímka obrazovky 2026-01-30 o 11.10.04.png',
-                                            'Snímka obrazovky 2026-01-30 o 11.10.38.png',
-                                            'Snímka obrazovky 2026-01-30 o 11.13.23.png',
-                                            'Snímka obrazovky 2026-01-30 o 11.14.04.png',
-                                            'Snímka obrazovky 2026-01-30 o 11.15.25.png',
-                                            'Snímka obrazovky 2026-01-30 o 11.16.32.png',
-                                            'Snímka obrazovky 2026-01-30 o 11.18.42.png',
-                                            'Snímka obrazovky 2026-01-30 o 11.19.11.png'
-                                        ].map((img, i) => (
-                                            <div key={i} className="break-inside-avoid">
-                                                <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
-                                                    <img
-                                                        src={`/images/reviews/${img}`}
-                                                        alt={`Recenzia ${i + 1}`}
-                                                        className="w-full h-auto block"
-                                                    />
-                                                </div>
-                                            </div>
-                                        ))}
+                                    <div className="mt-auto">
+                                        <Button
+                                            href="https://form.fapi.cz/?id=84c249ad-4bcc-4b91-92e1-93837f500d59"
+                                            className="w-full justify-center"
+                                            target="_blank"
+                                        >
+                                            PRIHLÁSIŤ SA NA KURZ
+                                        </Button>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div className="bg-[#ffd37c]/10 border border-[#ffd37c] p-10 rounded-2xl text-center">
+                                <h4 className="text-[1.8rem] font-bold text-black mb-4 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>
+                                    ĎALŠÍ CYKLUS KURZOV SPUSTÍME V SEPTEMBRI 2026
+                                </h4>
+                                <p className="text-[#000] mb-8 max-w-2xl mx-auto">
+                                    V prípade, že máte o tento kurz záujem, tak nám pokojne napíšte a my Vás zaradíme na "WAITING LIST". Akonáhle budeme mať naplánované termíny kurzov, tak Vás budeme medzi prvými informovať aby ste sa mohli prihlásiť.
+                                </p>
+                                <Button href="/ludus-academy/kontakt">Mám záujem o waiting list</Button>
+                            </div>
+
+                            {/* Reviews Section */}
+                            <div className="py-16">
+                                <h3 className="text-[2.5rem] mb-12 text-center" style={{ fontFamily: 'var(--font-heading)' }}>
+                                    Čo o nás hovoria účastníci
+                                </h3>
+                                <div className="columns-1 md:columns-2 gap-8 space-y-8">
+                                    {[
+                                        'Snímka obrazovky 2026-01-30 o 11.10.04.webp',
+                                        'Snímka obrazovky 2026-01-30 o 11.10.38.webp',
+                                        'Snímka obrazovky 2026-01-30 o 11.13.23.webp',
+                                        'Snímka obrazovky 2026-01-30 o 11.14.04.webp',
+                                        'Snímka obrazovky 2026-01-30 o 11.15.25.webp',
+                                        'Snímka obrazovky 2026-01-30 o 11.16.32.webp',
+                                        'Snímka obrazovky 2026-01-30 o 11.18.42.webp',
+                                        'Snímka obrazovky 2026-01-30 o 11.19.11.webp'
+                                    ].map((img, i) => (
+                                        <div key={i} className="break-inside-avoid">
+                                            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
+                                                <img
+                                                    src={`/images/reviews/${img}`}
+                                                    alt={`Recenzia ${i + 1}`}
+                                                    className="w-full h-auto block"
+                                                />
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -205,7 +216,7 @@ export default function HereckyKurzPage() {
                         {/* Advanced Course Section */}
                         <div>
                             <h2 className="text-[3rem] mb-2 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-                                Herecký kurz pre pokročilých: RADOSŤ SA HRAŤ
+                                Herecký kurz pre pokročilých: RADOSŤ <span className="text-[#ffd37c]">SA</span> HRAŤ
                             </h2>
                             <div className="text-[#ffd37c] font-bold text-[1.2rem] mb-8 uppercase tracking-widest leading-tight">
                                 ŽIVOT, V KTOROM (sa) HRÁTE, JE FASCINUJÚCI.
@@ -221,7 +232,7 @@ export default function HereckyKurzPage() {
                                     'Máte za sebou už nejakú menšiu hereckú skúsenosť v divadle alebo v televízii?'
                                 ].map((question, i) => (
                                     <div key={i} className="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center gap-4 group hover:bg-white hover:shadow-md transition-all">
-                                        <div className="w-8 h-8 rounded-full bg-[#ffd37c]/20 flex items-center justify-center font-bold text-[#ffd37c]">?</div>
+                                        <div className="w-8 h-8 rounded-full bg-black flex items-center justify-center font-bold text-[#ffd37c] shrink-0">?</div>
                                         <p className="text-[0.95rem] font-medium text-[#000]">{question}</p>
                                     </div>
                                 ))}
@@ -306,16 +317,17 @@ export default function HereckyKurzPage() {
                                         <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Certifikát</li>
                                     </ul>
                                 </div>
-                                <div className="mt-8 pt-6 border-t border-white/10 text-sm italic opacity-70">
+                                <div className="mt-8 pt-6 border-t border-white/10 text-sm italic opacity-70 mb-10">
                                     PODMIENKA ÚČASTI: vek minimálne 18 rokov a ukončené stredoškolské vzdelanie
                                 </div>
+                                <div className="flex justify-center">
+                                    <Button href="/ludus-academy/kontakt">Mám záujem o kurz pre pokročilých</Button>
+                                </div>
                             </div>
-
-                            <Button href="/ludus-academy/kontakt">Mám záujem o kurz pre pokročilých</Button>
                         </div>
                     </main>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }

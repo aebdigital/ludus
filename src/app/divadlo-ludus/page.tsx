@@ -18,7 +18,7 @@ export default function DivadloLudusPage() {
       {/* Hero */}
       <section
         className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-        style={{ backgroundImage: "url('/images/divadlo-main.jpg')" }}
+        style={{ backgroundImage: "url('/images/divadlo-main.webp')" }}
       >
         <div className="absolute inset-0 bg-black/40" />
         <h1
@@ -57,7 +57,7 @@ export default function DivadloLudusPage() {
                 </div>
               </div>
               <Image
-                src="/images/divadlo-main.jpg"
+                src="/images/divadlo-main.webp"
                 alt="Divadlo Ludus"
                 width={600}
                 height={400}
@@ -165,9 +165,9 @@ export default function DivadloLudusPage() {
               </h2>
               <div className="grid grid-cols-3 gap-6 max-md:grid-cols-2 max-sm:grid-cols-1">
                 {[
-                  '/images/divadlo-main.jpg',
-                  '/images/sculpture.jpg',
-                  '/images/painting.jpg'
+                  '/images/divadlo-main.webp',
+                  '/images/sculpture.webp',
+                  '/images/painting.webp'
                 ].map((img, i) => (
                   <Link key={i} href="/divadlo-ludus/galeria" className="group">
                     <Image

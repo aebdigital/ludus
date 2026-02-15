@@ -13,9 +13,18 @@ const workshops = [
 ];
 
 const staff = [
-  'Jakub Ružička', 'Mišo Rovňák', 'Lenka Libjaková', 'Mirka Durná',
-  'Viki Šuplatova', 'Kaťuša Gurová', 'Rišo Labuda', 'Naďa Gášeková', 'Laura Jankurová',
-  'Ada Juhasová', 'Jožko Jurčišin Kukľa', 'Edita Koprivčevič Borsová'
+  { name: 'Jakub Ružička', image: '/pedagogovia/JAKUB RUŽIČKA.webp' },
+  { name: 'Mišo Rovňák', image: '/pedagogovia/MICHAL ROVŇÁK.webp' },
+  { name: 'Lenka Libjaková', image: '/pedagogovia/LENKA LIBJAKOVÁ.webp' },
+  { name: 'Mirka Durná', image: '/pedagogovia/MIRKA DURNÁ.webp' },
+  { name: 'Viki Šuplatová', image: '/pedagogovia/VIKTÓRIA ŠUPLATOVÁ.webp' },
+  { name: 'Kaťuša Gurová', image: '/pedagogovia/KATARÍNA GUROVÁ.webp' },
+  { name: 'Rišo Labuda', image: '/pedagogovia/RICHARD LABUDA.webp' },
+  { name: 'Naďa Gášeková', image: '/pedagogovia/NAĎA GÁŠEKOVÁ.webp' },
+  { name: 'Laura Jankurová', image: null },
+  { name: 'Ada Juhasová', image: '/pedagogovia/ADA JUHASOVÁ.webp' },
+  { name: 'Jožko Jurčišin Kukľa', image: '/pedagogovia/JOŽKO JURČIŠIN KUKLA.webp' },
+  { name: 'Edita Koprivčevič Borsová', image: '/pedagogovia/EDITA BORSOVÁ.webp' }
 ];
 
 export default function LudusTaborPage() {
@@ -24,7 +33,7 @@ export default function LudusTaborPage() {
       {/* Hero */}
       <section
         className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-        style={{ backgroundImage: "url('/images/tabor-main.jpg')" }}
+        style={{ backgroundImage: "url('/images/tabor-main.webp')" }}
       >
         <div className="absolute inset-0 bg-black/40" />
         <h1
@@ -61,7 +70,7 @@ export default function LudusTaborPage() {
                 </div>
               </div>
               <Image
-                src="/images/tabor/IMG_5330.jpeg"
+                src="/images/tabor/IMG_5330.webp"
                 alt="Ludus Tábor"
                 width={600}
                 height={400}
@@ -69,74 +78,77 @@ export default function LudusTaborPage() {
               />
             </div>
 
-            {/* Price section */}
-            <div className="bg-white p-10 rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.05)] border-l-4 border-[#ffd37c]">
-              <h3 className="text-[2rem] mb-6 inline-block" style={{ fontFamily: 'var(--font-heading)' }}>
-                Cena a platba
-              </h3>
-              <div className="flex items-center gap-6 mb-6">
-                <span className="text-[3rem] text-[#ffd37c] font-black leading-none" style={{ fontFamily: 'var(--font-heading)' }}>
-                  250 EUR
-                </span>
-                <span className="text-black uppercase tracking-wide font-bold text-sm bg-gray-100 px-3 py-1 rounded-full">
-                  / turnus
-                </span>
-              </div>
-
-              <div className="mb-6">
-                <strong className="block mb-2 text-lg">V cene je zahrnuté:</strong>
-                <p className="text-[#555]">
-                  všetky aktivity, rekvizity, desiata, obed, olovrant, zdravotník, darček a záverečné vystúpenie v divadelnom štúdiu BlackBox.
-                </p>
-              </div>
-
-              <div className="bg-[#f9f9f9] p-6 rounded-lg">
-                <strong className="block mb-3 text-lg">Platby sú rozložené na dve čiastky:</strong>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-[#ffd37c]"></span>
-                    <span>Zálohová faktúra: <strong>70,- €</strong></span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-[#ffd37c]"></span>
-                    <span>Doplatková faktúra: <strong>175,- €</strong> <span className="text-sm text-black">(budeme posielať v priebehu mája a je splatná najneskôr 30 dní pred táborom)</span></span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Turnusy - Moved to Main from Sidebar */}
-            <div className="bg-black text-white p-10 rounded-xl shadow-xl">
-              <h3 className="text-[2rem] mb-6 text-[#ffd37c]" style={{ fontFamily: 'var(--font-heading)' }}>
-                Termíny 2026
-              </h3>
-
-              <div className="grid grid-cols-2 gap-8 max-md:grid-cols-1">
-                <div className="bg-white/10 p-6 rounded-lg border border-white/10">
-                  <div className="flex flex-col gap-2 mb-4">
-                    <span className="text-2xl font-bold text-[#ffd37c]">1. Turnus</span>
-                    <span className="text-lg font-medium">6.7. - 10.7. 2026</span>
-                  </div>
-                  <Button href="/kontakt" className="w-full text-center justify-center py-3 bg-white text-black hover:bg-[#ffd37c] mt-2 text-sm uppercase font-bold">
-                    Prihláška na 1. turnus
-                  </Button>
+            {/* Price and Dates Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              {/* Price section */}
+              <div className="bg-white p-10 rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.05)] border-l-4 border-[#ffd37c] h-full flex flex-col">
+                <h3 className="text-[2rem] mb-6 inline-block" style={{ fontFamily: 'var(--font-heading)' }}>
+                  Cena a platba
+                </h3>
+                <div className="flex items-center gap-6 mb-6">
+                  <span className="text-[3rem] text-[#ffd37c] font-black leading-none" style={{ fontFamily: 'var(--font-heading)' }}>
+                    250 EUR
+                  </span>
+                  <span className="text-black uppercase tracking-wide font-bold text-sm bg-gray-100 px-3 py-1 rounded-full">
+                    / turnus
+                  </span>
                 </div>
 
-                <div className="bg-white/10 p-6 rounded-lg border border-white/10">
-                  <div className="flex flex-col gap-2 mb-4">
-                    <span className="text-2xl font-bold text-[#ffd37c]">2. Turnus</span>
-                    <span className="text-lg font-medium">13.7. - 17.7. 2026</span>
-                  </div>
-                  <Button href="/kontakt" className="w-full text-center justify-center py-3 bg-white text-black hover:bg-[#ffd37c] mt-2 text-sm uppercase font-bold">
-                    Prihláška na 2. turnus
-                  </Button>
+                <div className="mb-6">
+                  <strong className="block mb-2 text-lg">V cene je zahrnuté:</strong>
+                  <p className="text-[#555] text-base">
+                    všetky aktivity, rekvizity, desiata, obed, olovrant, zdravotník, darček a záverečné vystúpenie v divadelnom štúdiu BlackBox.
+                  </p>
+                </div>
+
+                <div className="bg-[#f9f9f9] p-6 rounded-lg">
+                  <strong className="block mb-3 text-lg leading-tight text-black">Platby sú rozložené na dve čiastky:</strong>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-3">
+                      <span className="w-2 h-2 rounded-full bg-[#ffd37c] mt-2 shrink-0"></span>
+                      <span className="text-black">Zálohová faktúra: <strong>70,- €</strong></span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-2 h-2 rounded-full bg-[#ffd37c] mt-2 shrink-0"></span>
+                      <span className="text-black">Doplatková faktúra: <strong>175,- €</strong> <br /><span className="text-sm opacity-70">(budeme posielať v priebehu mája a je splatná najneskôr 30 dní pred táborom)</span></span>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
-              <div className="mt-8 text-center">
-                <p className="text-black text-sm">
-                  Prihlasovanie spúšťame v druhej polovici februára 2026. Ak máte predbežný záujem kontaktujte nás na ludustabor@gmail.com
-                </p>
+              {/* Turnusy */}
+              <div className="bg-black text-white p-10 rounded-xl shadow-xl h-full flex flex-col">
+                <h3 className="text-[2rem] mb-6 text-[#ffd37c]" style={{ fontFamily: 'var(--font-heading)' }}>
+                  Termíny 2026
+                </h3>
+
+                <div className="space-y-6 flex-1">
+                  <div className="bg-white/10 p-6 rounded-lg border border-white/10">
+                    <div className="flex flex-col gap-1 mb-4">
+                      <span className="text-2xl font-bold text-[#ffd37c]">1. Turnus</span>
+                      <span className="text-lg font-medium">6.7. - 10.7. 2026</span>
+                    </div>
+                    <Button href="/kontakt" className="w-full text-center justify-center py-3 bg-white text-black hover:bg-[#ffd37c] text-sm uppercase font-bold">
+                      Prihláška na 1. turnus
+                    </Button>
+                  </div>
+
+                  <div className="bg-white/10 p-6 rounded-lg border border-white/10">
+                    <div className="flex flex-col gap-1 mb-4">
+                      <span className="text-2xl font-bold text-[#ffd37c]">2. Turnus</span>
+                      <span className="text-lg font-medium">13.7. - 17.7. 2026</span>
+                    </div>
+                    <Button href="/kontakt" className="w-full text-center justify-center py-3 bg-white text-black hover:bg-[#ffd37c] text-sm uppercase font-bold">
+                      Prihláška na 2. turnus
+                    </Button>
+                  </div>
+                </div>
+
+                <div className="mt-8 text-center bg-[#ffd37c] p-4 rounded-lg">
+                  <p className="text-black text-sm font-bold leading-tight">
+                    Prihlasovanie spúšťame v druhej polovici februára 2026. Ak máte predbežný záujem kontaktujte nás na ludustabor@gmail.com
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -182,11 +194,24 @@ export default function LudusTaborPage() {
               <p className="text-lg text-black mb-6">
                 Venovať sa vám budú profesionálni herci a pedagógovia:
               </p>
-              <div className="grid grid-cols-3 gap-4 max-md:grid-cols-2 max-sm:grid-cols-1">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
                 {staff.map(person => (
-                  <div key={person} className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm">
-                    <span className="w-2 h-2 bg-[#ffd37c] rounded-full"></span>
-                    <span className="font-bold">{person}</span>
+                  <div key={person.name} className="relative aspect-square rounded-xl overflow-hidden shadow-sm group">
+                    {person.image ? (
+                      <Image
+                        src={person.image}
+                        alt={person.name}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                        <span className="text-4xl text-gray-400 font-bold opacity-50">{person.name.charAt(0)}</span>
+                      </div>
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4">
+                      <span className="text-white font-bold text-center leading-tight drop-shadow-md">{person.name}</span>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -195,7 +220,7 @@ export default function LudusTaborPage() {
             {/* Tabor Poster Image */}
             <div className="my-16 flex justify-center">
               <Image
-                src="/tabor-poster-2026.jpg"
+                src="/tabor-poster-2026.webp"
                 alt="Ludus Tábor 2026 Plagát"
                 width={1200}
                 height={1600}
@@ -211,9 +236,9 @@ export default function LudusTaborPage() {
             </h2>
             <div className="grid grid-cols-3 gap-6 max-md:grid-cols-2 max-sm:grid-cols-1">
               {[
-                '/images/tabor/IMG_5327.JPG',
-                '/images/tabor/IMG_5330.jpeg',
-                '/images/tabor/IMG_5416.jpeg'
+                '/images/tabor/IMG_5327.webp',
+                '/images/tabor/IMG_5330.webp',
+                '/images/tabor/IMG_5416.webp'
               ].map((img, i) => (
                 <Link key={i} href="/ludus-tabor/galeria" className="group">
                   <Image

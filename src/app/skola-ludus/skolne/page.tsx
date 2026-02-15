@@ -6,7 +6,7 @@ export default function SkolnePage() {
     <>
       <section
         className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-        style={{ backgroundImage: "url('/images/skola/IMG_2915.jpeg')" }}
+        style={{ backgroundImage: "url('/images/skola/IMG_2915.webp')" }}
       >
         <div className="absolute inset-0 bg-black/40" />
         <h1
@@ -49,10 +49,10 @@ export default function SkolnePage() {
             href="/skola-ludus/prihlaska"
           />
           <PriceCard
-            title="Príprava na konzervatórium/VŠMU"
+            title="Príprava na VŠMU/ konzervatórium"
             price="100€"
-            period=""
-            href="#"
+            period="Študenti LUDUSU"
+            note="Verejnosť: podľa dohody"
           />
         </div>
 

@@ -10,7 +10,7 @@ export default function TaborKontaktPage() {
         <>
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/images/tabor-main.jpg')" }} // Using tabor image
+                style={{ backgroundImage: "url('/images/tabor-main.webp')" }} // Using tabor image
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1
@@ -61,14 +61,14 @@ export default function TaborKontaktPage() {
                                     </div>
                                     <div className="mt-8 grid grid-cols-2 gap-4">
                                         <Image
-                                            src="/fotky priestorov/vchod do školy/vchod_1.jpg"
+                                            src="/fotky priestorov/vchod do školy/vchod_1.webp"
                                             alt="Vchod do školy 1"
                                             width={400}
                                             height={300}
                                             className="w-full h-[200px] object-cover rounded-xl shadow-sm"
                                         />
                                         <Image
-                                            src="/fotky priestorov/vchod do školy/vchod_2.jpg"
+                                            src="/fotky priestorov/vchod do školy/vchod_2.webp"
                                             alt="Vchod do školy 2"
                                             width={400}
                                             height={300}

@@ -4,6 +4,7 @@ interface PriceCardProps {
   title: string;
   price: string;
   period?: string;
+  note?: string;
   href?: string;
   buttonText?: string;
 }
@@ -12,6 +13,7 @@ export default function PriceCard({
   title,
   price,
   period,
+  note,
   href,
   buttonText = 'Prihlásiť sa'
 }: PriceCardProps) {
@@ -32,6 +34,9 @@ export default function PriceCard({
         </span>
         {period && (
           <span className="text-[1.2rem] text-gray-400 font-normal">{period}</span>
+        )}
+        {note && (
+          <p className="text-sm text-gray-500 mt-3">{note}</p>
         )}
       </div>
       {href && (
