@@ -171,7 +171,14 @@ export default function WorkshopKreativitaPage() {
                                     <div className="flex justify-between border-b pb-2"><span>Čas:</span> <strong>09:30 - 16:30</strong></div>
                                     <div className="flex justify-between border-b pb-2"><span>Obedná pauza:</span> <strong>12:30 - 13:30</strong></div>
                                 </div>
-                                <Button href="/ludus-academy/kontakt">Mám záujem o waiting list</Button>
+                                <div className="flex gap-4 justify-center max-sm:flex-col max-sm:items-center">
+                                    <Button href="mailto:info@ludusacademy.sk">
+                                        info@ludusacademy.sk
+                                    </Button>
+                                    <Button href="tel:+421947942125" className="bg-transparent border-2 border-black text-black hover:bg-black hover:text-white">
+                                        0947 942 125
+                                    </Button>
+                                </div>
                             </div>
 
                             {/* Book Section */}

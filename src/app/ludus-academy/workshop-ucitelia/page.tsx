@@ -45,13 +45,24 @@ export default function WorkshopUciteliaPage() {
                                     <p className="italic border-l-4 border-[#ffd37c] pl-6 py-2 text-black font-bold">
                                         Prostredníctvom hry - k lepšej konverzácii.
                                     </p>
-                                    <p>
-                                        Vypíšte kontaktný formulár nižšie a my vám dáme info hneď, ako bude workshop pripravený.
-                                    </p>
                                 </div>
 
-                                <div className="mt-12 pt-12 border-t border-gray-200">
-                                    <Button href="/ludus-academy/kontakt">Mám záujem o viac info</Button>
+                                <div className="mt-12 bg-black text-white p-12 rounded-2xl text-center shadow-2xl relative overflow-hidden group">
+                                    <div className="absolute inset-0 bg-gradient-to-r from-[#ffd37c]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                    <h3 className="text-[2.2rem] mb-6 leading-tight relative z-10">
+                                        Máte záujem?
+                                    </h3>
+                                    <p className="text-gray-300 mb-8 max-w-2xl mx-auto relative z-10 text-[1.1rem]">
+                                        Kontaktujte nás emailom alebo telefonicky.
+                                    </p>
+                                    <div className="flex gap-4 justify-center relative z-10 max-sm:flex-col max-sm:items-center">
+                                        <Button href="mailto:info@ludusacademy.sk" className="px-10 py-4 text-lg">
+                                            info@ludusacademy.sk
+                                        </Button>
+                                        <Button href="tel:+421947942125" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-10 py-4 text-lg">
+                                            0947 942 125
+                                        </Button>
+                                    </div>
                                 </div>
                             </div>
 

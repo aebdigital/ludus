@@ -154,17 +154,17 @@ export default function FiremnyWorkshopPage() {
                                 <div className="bg-black text-white p-10 rounded-2xl text-center shadow-2xl relative overflow-hidden group">
                                     <div className="absolute inset-0 bg-gradient-to-r from-[#ffd37c]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                                     <h3 className="text-[2.2rem] mb-6 leading-tight relative z-10">
-                                        Máte záujem o workshop pre váš tím?
+                                        Máte záujem?
                                     </h3>
                                     <p className="text-gray-300 mb-8 max-w-2xl mx-auto relative z-10 text-[1.1rem]">
-                                        Napíšte alebo zavolajte nám čo by ste potrebovali a my vám zašleme cenovú ponuku.
+                                        Kontaktujte nás emailom alebo telefonicky.
                                     </p>
                                     <div className="flex gap-4 justify-center relative z-10 max-xl:flex-col max-xl:items-center">
-                                        <Button href="/ludus-academy/kontakt" className="px-8 py-3 text-base w-fit justify-center min-w-[200px]">
-                                            VYŽIADAŤ PONUKU
+                                        <Button href="mailto:info@ludusacademy.sk" className="px-8 py-3 text-base w-fit justify-center min-w-[200px]">
+                                            info@ludusacademy.sk
                                         </Button>
-                                        <Button href="tel:+421903424174" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-8 py-3 text-base w-fit justify-center min-w-[200px]">
-                                            ZAVOLAŤ NÁM
+                                        <Button href="tel:+421947942125" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-8 py-3 text-base w-fit justify-center min-w-[200px]">
+                                            0947 942 125
                                         </Button>
                                     </div>
                                 </div>

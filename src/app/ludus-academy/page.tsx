@@ -3,6 +3,7 @@ import CourseCard from '@/components/CourseCard';
 import Button from '@/components/Button';
 import Sidebar from '@/components/Sidebar';
 import Link from 'next/link';
+import GalleryPreview from '@/components/GalleryPreview';
 
 const courses = [
   {
@@ -214,34 +215,7 @@ export default function LudusAcademyPage() {
             </div>
 
             {/* Gallery Preview */}
-            <div className="mt-16">
-              <h2
-                className="text-center text-[3.5rem] mb-8"
-                style={{ fontFamily: 'var(--font-heading)' }}
-              >
-                Galéria
-              </h2>
-              <div className="grid grid-cols-3 gap-6 max-md:grid-cols-2 max-sm:grid-cols-1">
-                {[
-                  '/images/academy/IMG_3649.webp',
-                  '/images/academy/IMG_4216.webp',
-                  '/images/academy/IMG_9073.webp'
-                ].map((img, i) => (
-                  <Link key={i} href="/ludus-academy/galeria" className="group">
-                    <Image
-                      src={img}
-                      alt={`Galéria ${i + 1}`}
-                      width={400}
-                      height={300}
-                      className="w-full h-[300px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
-                    />
-                  </Link>
-                ))}
-              </div>
-              <div className="text-center mt-8">
-                <Button href="/ludus-academy/galeria">Zobraziť celú galériu</Button>
-              </div>
-            </div>
+            <GalleryPreview category="ludus-academy" href="/ludus-academy/galeria" />
 
           </main>
 

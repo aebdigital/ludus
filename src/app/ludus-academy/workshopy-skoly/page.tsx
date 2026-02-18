@@ -186,10 +186,22 @@ export default function WorkshopySkolyPage() {
                                 </div>
                             </div>
 
-                            <div className="mt-24 text-center p-12 bg-gray-50 rounded-3xl border border-gray-100">
-                                <h3 className="text-[2rem] mb-4 text-black" style={{ fontFamily: 'var(--font-heading)' }}>Chcete zorganizovať workshop?</h3>
-                                <p className="text-black mb-8 max-w-xl mx-auto">Deň a čas workshopu si dohodneme telefonicky alebo emailom. Sme pripravení prísť k vám alebo vás privítať u nás.</p>
-                                <Button href="/ludus-academy/kontakt">Kontaktujte nás pre termín</Button>
+                            <div className="mt-24 bg-black text-white p-12 rounded-2xl text-center shadow-2xl relative overflow-hidden group">
+                                <div className="absolute inset-0 bg-gradient-to-r from-[#ffd37c]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                <h3 className="text-[2.2rem] mb-6 leading-tight relative z-10">
+                                    Máte záujem?
+                                </h3>
+                                <p className="text-gray-300 mb-8 max-w-2xl mx-auto relative z-10 text-[1.1rem]">
+                                    Kontaktujte nás emailom alebo telefonicky.
+                                </p>
+                                <div className="flex gap-4 justify-center relative z-10 max-sm:flex-col max-sm:items-center">
+                                    <Button href="mailto:info@ludusacademy.sk" className="px-10 py-4 text-lg">
+                                        info@ludusacademy.sk
+                                    </Button>
+                                    <Button href="tel:+421947942125" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-10 py-4 text-lg">
+                                        0947 942 125
+                                    </Button>
+                                </div>
                             </div>
                         </div>
                     </main>

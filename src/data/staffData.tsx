@@ -65,7 +65,7 @@ export const staffData: Record<string, StaffMember> = {
         bio: (
             <>
                 <p>Jožko vyštudoval VŠMU odbor herectvo a študoval aj Doplňujúce pedagogické minimum na VŠMU. Okrem divadla a TV projektov sa venuje aj pedagogickej činnosti a učí v SZUŠ LUDUS tvorivú dramatiku. Je zdravotným klaunom Červený nos Clowndoctors. V LUDUS ACADEMY rieši komunikáciu s klientami a koordináciu všetkých termínov a lektorov.</p>
-                <p>Ako lektora Ludus Academy ho môžete stretnúť na hereckých kurzoch pre dospelých a workshopoch pre ZŠ A SŠ.</p>
+                <p>Ako lektora Ludus Academy ho môžete stretnúť na hereckých kurzoch, improvizačných kurzoch pre dospelých a workshopoch pre ZŠ A SŠ.</p>
             </>
         )
     },
@@ -80,10 +80,10 @@ export const staffData: Record<string, StaffMember> = {
     },
     "Ladislav Ladomirjak": {
         name: "Mgr. art Ladislav Ladomirjak",
-        image: "/pedagogovia/LADISLAV LADOMIRJAK.webp",
+        image: "/pedagogovia/Laci Ladomirjak.jpeg",
         bio: (
             <>
-                <p>Laci je rusínsky divadelný herec, ktorého môžete poznať aj z televízneho seriálu Hranica. Ako člen činohry jedenásť rokov pôsobil v Divadle Alexandra Duchnoviča v Prešove. Momentálne žije a pracuje na západnom Slovensku. Okrem herectva sa venuje spevu, hudbe, učí v SZUŠ LUDUS tvorivú dramatiku. Je zdravotným klaunom Červený nos Clowndoctors a tiež aj lektor hereckých kurzov pre dospelých v Ludus Academy.</p>
+                <p>Laci je herec, muzikant a zdravotný klaun, ktorý sa vyprofiloval najmä vďaka pôsobeniu v Divadle Alexandra Duchnoviča v Prešove, kde strávil viac než dekádu. Študoval hru na gitare na Konzervatóriu v Žiline, neskôr absolvoval herectvo na Akadémii umenia v Banskej Bystrici a po škole zakotvil v rusínskom divadle. Od roku 2015 vedie kapelu Rusnack's, ktorá originálne interpretuje rusínske ľudové piesne vo funky šate. Popri profesionálnej hereckej dráhe pôsobí aj ako zdravotný klaun v organizácii Červený Nos – Clowndoctors.</p>
             </>
         )
     },
@@ -130,7 +130,7 @@ export const staffData: Record<string, StaffMember> = {
     },
     "Edita Koprivčevič Borsová": {
         name: "Mgr. art Edita Koprivčevič Borsová",
-        image: "/pedagogovia/EDITA BORSOVÁ.webp",
+        image: "/pedagogovia/edita Koprivčevič Borsová.webp",
         bio: (
             <>
                 <p>Editka odmalička chodila do školy LUDUS. Neskôr išla študovať na VŠMU bábkoherectvo, kde pôsobila niekoľko rokov aj ako pedagóg. Spolupracuje s rôznymi divadelnými zoskupeniami a účinkovala v rôznych TV projektoch či filmoch. Editka je aj zdravotným klaunom v OZ Červený nos Clowndoctors</p>
@@ -179,6 +179,33 @@ export const staffData: Record<string, StaffMember> = {
                 <p>Bol členom umeleckého súboru Bratislavského bábkového divadla.</p>
                 <p>Hosťovanie: divadlo Ludus, Mestské divadlo P.O. Hviezdoslava, divadelná formácia UŽ, BD Nitra.</p>
                 <p>Účinkovanie v seriáloch, TV projektoch a filmoch. Aktívne sa venuje aj dabingu.</p>
+            </>
+        )
+    },
+    "Richard Labuda": {
+        name: "Bc. Rišo Labuda",
+        image: "/pedagogovia/RICHARD LABUDA.webp",
+        bio: (
+            <>
+                <p>Rišo sa odmalička venoval herectvu. Ako tínedžer navštevoval aj SZUŠ LUDUS a rozvíjal tu svoje umelecké schopnosti a neskôr pokračoval na VŠMU. Má za sebou mnoho skúseností pred kamerou a aj v divadle. Účinkoval v rôznych TV seriáloch a filmoch. Na detskom filmovom a televíznom festivale Otu Hofmana v Ostrove získal cenu Zlatý dudok za najlepší chlapčenský výkon vo filme Rukojemník. V súčasnosti ho môžete vidieť na doskách SND a v divadle DPM.</p>
+            </>
+        )
+    },
+    "Ria Benkovská": {
+        name: "Mgr. art Ria Benkovská",
+        image: "/pedagogovia/RIA BENKOVSKÁ.webp",
+        bio: (
+            <>
+                <p>Ria vyštudovala na VŠMU odbor bábkoherectvo a neskôr študovala Doplňujúce pedagogické minimum na VŠMU. Založila Divadlo Babena, kde písala a tvorila detské inscenácie. Má mnoho divadelných skúseností z oblasti detského divadla. Dlhé roky pôsobí aj ako Zdravotný klaun v OZ Červený nos.</p>
+            </>
+        )
+    },
+    "Soňa Borušovičová": {
+        name: "Mgr. art Soňa Borušovičová",
+        image: "/pedagogovia/SOŇA BORUŠOVIČOVÁ.webp",
+        bio: (
+            <>
+                <p>Písaniu sa venuje už 27 rokov. Vyštudovala filmovú a televíznu dramaturgiu a scenáristiku na FTF VŠMU. Písala scenáre pre deti a mládež aj pre dospelých, príbehy na pokračovanie, aj komiksový príbeh s veľmi sexi názvom, ktorý bol v skutočnosti o myšiach. Dva roky bola kmeňovou autorkou seriálu Ordinácia v ružovej záhrade. Napísala a vydala knihu pre deti Gregor – rozprávka o veľkom putovaní. Ako redaktorka legendárneho internetového magazínu inzine.sk sa naučila, ako komunikovať s autormi a baví ju to dodnes. Redigovala aj knihy pre vydavateľstvo Slovart.</p>
             </>
         )
     }

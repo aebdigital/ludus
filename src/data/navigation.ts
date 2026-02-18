@@ -18,7 +18,7 @@ export const menuData: NavCategory[] = [
     image: "/images/skola-main.webp",
     links: [
       { name: "O nás", url: "/skola-ludus", image: "/images/skola-main.webp" },
-      { name: "História", url: "/skola-ludus/historia", image: "/images/skola/IMG_2993.webp" },
+      { name: "História", url: "/historia", image: "/images/skola/IMG_2993.webp" },
       { name: "Program", url: "/program?category=skola-ludus", image: "/images/skola/IMG_1821.webp" },
       { name: "Prihláška", url: "/skola-ludus/prihlaska", image: "/images/skola/IMG_9976.webp" },
       { name: "Školné", url: "/skola-ludus/skolne", image: "/images/skola/IMG_1875.webp" },
@@ -34,7 +34,7 @@ export const menuData: NavCategory[] = [
     image: "/images/divadlo-main.webp",
     links: [
       { name: "O nás", url: "/divadlo-ludus", image: "/images/divadlo-main.webp" },
-      { name: "História", url: "/divadlo-ludus/historia", image: "/images/divadlo-main.webp" },
+      { name: "História", url: "/historia", image: "/images/divadlo-main.webp" },
       { name: "Program", url: "/program?category=divadlo-ludus", image: "/images/divadlo-main.webp" },
       { name: "Repertoár", url: "/divadlo-ludus/repertoar", image: "/images/divadlo-main.webp" },
       { name: "Aktivity", url: "/divadlo-ludus/aktivity", image: "/images/divadlo-main.webp" },
@@ -65,7 +65,6 @@ export const menuData: NavCategory[] = [
     image: "/images/tabor/IMG_5438.webp",
     links: [
       { name: "O tábore", url: "/ludus-tabor", image: "/images/tabor/IMG_5438.webp" },
-      { name: "Cena a prihlásanie", url: "/ludus-tabor", image: "/images/tabor-main.webp" },
       { name: "Galéria", url: "/ludus-tabor/galeria", image: "/images/tabor/IMG_5330.webp" }
     ]
   },
@@ -95,7 +94,7 @@ export const academyLinks = [
 
 export const schoolLinks = [
   { name: "O nás", url: "/skola-ludus" },
-  { name: "História", url: "/skola-ludus/historia" },
+  { name: "História", url: "/historia" },
   { name: "Program", url: "/program?category=skola-ludus" },
   { name: "Prihláška", url: "/skola-ludus/prihlaska" },
   { name: "Školné", url: "/skola-ludus/skolne" },
@@ -108,7 +107,7 @@ export const schoolLinks = [
 
 export const theaterLinks = [
   { name: "O nás", url: "/divadlo-ludus" },
-  { name: "História", url: "/divadlo-ludus/historia" },
+  { name: "História", url: "/historia" },
   { name: "Program", url: "/program?category=divadlo-ludus" },
   { name: "Repertoár", url: "/divadlo-ludus/repertoar" },
   { name: "Aktivity", url: "/divadlo-ludus/aktivity" },
@@ -119,7 +118,6 @@ export const theaterLinks = [
 
 export const campLinks = [
   { name: "O tábore", url: "/ludus-tabor" },
-  { name: "Cena a prihlásanie", url: "/ludus-tabor" },
   { name: "Galéria", url: "/ludus-tabor/galeria" }
 ];
 

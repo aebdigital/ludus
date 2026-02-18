@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import Button from '@/components/Button';
 import Sidebar from '@/components/Sidebar';
-import Link from 'next/link';
+import TaborStaffSection from '@/components/TaborStaffSection';
+import GalleryPreview from '@/components/GalleryPreview';
+
+export const revalidate = 60;
 
 const workshops = [
   'Herecký',
@@ -10,21 +13,6 @@ const workshops = [
   'Hudobný',
   'Improvizačný',
   'Tvorivé písanie'
-];
-
-const staff = [
-  { name: 'Jakub Ružička', image: '/pedagogovia/JAKUB RUŽIČKA.webp' },
-  { name: 'Mišo Rovňák', image: '/pedagogovia/MICHAL ROVŇÁK.webp' },
-  { name: 'Lenka Libjaková', image: '/pedagogovia/LENKA LIBJAKOVÁ.webp' },
-  { name: 'Mirka Durná', image: '/pedagogovia/MIRKA DURNÁ.webp' },
-  { name: 'Viki Šuplatová', image: '/pedagogovia/VIKTÓRIA ŠUPLATOVÁ.webp' },
-  { name: 'Kaťuša Gurová', image: '/pedagogovia/KATARÍNA GUROVÁ.webp' },
-  { name: 'Rišo Labuda', image: '/pedagogovia/RICHARD LABUDA.webp' },
-  { name: 'Naďa Gášeková', image: '/pedagogovia/NAĎA GÁŠEKOVÁ.webp' },
-  { name: 'Laura Jankurová', image: null },
-  { name: 'Ada Juhasová', image: '/pedagogovia/ADA JUHASOVÁ.webp' },
-  { name: 'Jožko Jurčišin Kukľa', image: '/pedagogovia/JOŽKO JURČIŠIN KUKLA.webp' },
-  { name: 'Edita Koprivčevič Borsová', image: '/pedagogovia/EDITA BORSOVÁ.webp' }
 ];
 
 export default function LudusTaborPage() {
@@ -87,7 +75,7 @@ export default function LudusTaborPage() {
                 </h3>
                 <div className="flex items-center gap-6 mb-6">
                   <span className="text-[3rem] text-[#ffd37c] font-black leading-none" style={{ fontFamily: 'var(--font-heading)' }}>
-                    250 EUR
+                    255 EUR
                   </span>
                   <span className="text-black uppercase tracking-wide font-bold text-sm bg-gray-100 px-3 py-1 rounded-full">
                     / turnus
@@ -106,11 +94,11 @@ export default function LudusTaborPage() {
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
                       <span className="w-2 h-2 rounded-full bg-[#ffd37c] mt-2 shrink-0"></span>
-                      <span className="text-black">Zálohová faktúra: <strong>70,- €</strong></span>
+                      <span className="text-black">Záloha: <strong>70,- €</strong></span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="w-2 h-2 rounded-full bg-[#ffd37c] mt-2 shrink-0"></span>
-                      <span className="text-black">Doplatková faktúra: <strong>175,- €</strong> <br /><span className="text-sm opacity-70">(budeme posielať v priebehu mája a je splatná najneskôr 30 dní pred táborom)</span></span>
+                      <span className="text-black">Doplatok: <strong>185,- €</strong> <br /><span className="text-sm opacity-70">(budeme posielať v priebehu mája a je splatná najneskôr 30 dní pred táborom)</span></span>
                     </li>
                   </ul>
                 </div>
@@ -127,9 +115,10 @@ export default function LudusTaborPage() {
                     <div className="flex flex-col gap-1 mb-4">
                       <span className="text-2xl font-bold text-[#ffd37c]">1. Turnus</span>
                       <span className="text-lg font-medium">6.7. - 10.7. 2026</span>
+                      <span className="text-sm text-gray-300">255 € / turnus</span>
                     </div>
-                    <Button href="/kontakt" className="w-full text-center justify-center py-3 bg-white text-black hover:bg-[#ffd37c] text-sm uppercase font-bold">
-                      Prihláška na 1. turnus
+                    <Button href="https://form.fapi.cz/?id=6d899098-ce0d-4184-82de-90b29d27b099" className="w-full text-center justify-center py-3 bg-white text-black hover:bg-[#ffd37c] text-sm uppercase font-bold">
+                      Prihlásiť sa na 1. turnus
                     </Button>
                   </div>
 
@@ -137,17 +126,12 @@ export default function LudusTaborPage() {
                     <div className="flex flex-col gap-1 mb-4">
                       <span className="text-2xl font-bold text-[#ffd37c]">2. Turnus</span>
                       <span className="text-lg font-medium">13.7. - 17.7. 2026</span>
+                      <span className="text-sm text-gray-300">255 € / turnus</span>
                     </div>
-                    <Button href="/kontakt" className="w-full text-center justify-center py-3 bg-white text-black hover:bg-[#ffd37c] text-sm uppercase font-bold">
-                      Prihláška na 2. turnus
+                    <Button href="https://form.fapi.cz/?id=96498f09-72d0-4039-a918-96343e26cf0d" className="w-full text-center justify-center py-3 bg-white text-black hover:bg-[#ffd37c] text-sm uppercase font-bold">
+                      Prihlásiť sa na 2. turnus
                     </Button>
                   </div>
-                </div>
-
-                <div className="mt-8 text-center bg-[#ffd37c] p-4 rounded-lg">
-                  <p className="text-black text-sm font-bold leading-tight">
-                    Prihlasovanie spúšťame v druhej polovici februára 2026. Ak máte predbežný záujem kontaktujte nás na ludustabor@gmail.com
-                  </p>
                 </div>
               </div>
             </div>
@@ -186,41 +170,13 @@ export default function LudusTaborPage() {
               </div>
             </div>
 
-            {/* Staff - Moved to Main from Sidebar */}
-            <div className="bg-[#f1f8e9] p-10 rounded-xl">
-              <h3 className="text-[2rem] mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-                Náš tím
-              </h3>
-              <p className="text-lg text-black mb-6">
-                Venovať sa vám budú profesionálni herci a pedagógovia:
-              </p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                {staff.map(person => (
-                  <div key={person.name} className="relative aspect-square rounded-xl overflow-hidden shadow-sm group">
-                    {person.image ? (
-                      <Image
-                        src={person.image}
-                        alt={person.name}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                        <span className="text-4xl text-gray-400 font-bold opacity-50">{person.name.charAt(0)}</span>
-                      </div>
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4">
-                      <span className="text-white font-bold text-center leading-tight drop-shadow-md">{person.name}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            {/* Staff */}
+            <TaborStaffSection />
 
             {/* Tabor Poster Image */}
             <div className="my-16 flex justify-center">
               <Image
-                src="/tabor-poster-2026.webp"
+                src="/plagat2.jpg"
                 alt="Ludus Tábor 2026 Plagát"
                 width={1200}
                 height={1600}
@@ -228,35 +184,11 @@ export default function LudusTaborPage() {
                 priority
               />
             </div>
-            <h2
-              className="text-center text-[3rem] mb-8"
-              style={{ fontFamily: 'var(--font-heading)' }}
-            >
-              Galéria
-            </h2>
-            <div className="grid grid-cols-3 gap-6 max-md:grid-cols-2 max-sm:grid-cols-1">
-              {[
-                '/images/tabor/IMG_5327.webp',
-                '/images/tabor/IMG_5330.webp',
-                '/images/tabor/IMG_5416.webp'
-              ].map((img, i) => (
-                <Link key={i} href="/ludus-tabor/galeria" className="group">
-                  <Image
-                    src={img}
-                    alt={`Tábor galéria ${i + 1}`}
-                    width={400}
-                    height={300}
-                    className="w-full h-[300px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
-                  />
-                </Link>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <Button href="/ludus-tabor/galeria">Zobraziť celú galériu</Button>
-            </div>
+
+            {/* Gallery Preview */}
+            <GalleryPreview category="ludus-tabor" href="/ludus-tabor/galeria" />
 
           </main>
-
 
           <Sidebar category="ludus-tabor" />
         </div>

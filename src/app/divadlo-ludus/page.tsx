@@ -2,17 +2,20 @@ import Image from 'next/image';
 import Button from '@/components/Button';
 import Sidebar from '@/components/Sidebar';
 import Link from 'next/link';
+import { getProgramEvents } from '@/lib/api';
+import GalleryPreview from '@/components/GalleryPreview';
 
-const programItems = [
-  { date: '20. 12.', title: 'Snehová kráľovná', time: '18:00', venue: 'BlackBox' },
-  { date: '22. 12.', title: 'Vianočná rozprávka', time: '17:00', venue: 'BlackBox' },
-  { date: '10. 01.', title: 'Improvizačný večer', time: '19:00', venue: 'BlackBox' },
-  { date: '15. 01.', title: 'Absolventské predstavenie', time: '18:00', venue: 'BlackBox' },
-  { date: '25. 01.', title: 'Hosťujúce divadlo', time: '19:00', venue: 'BlackBox' },
-  { date: '05. 02.', title: 'Detské predstavenie', time: '10:00', venue: 'BlackBox' }
-];
+export const revalidate = 60;
 
-export default function DivadloLudusPage() {
+function formatEventDate(dateStr: string): string {
+  const date = new Date(dateStr);
+  const day = date.getDate().toString().padStart(2, '0');
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  return `${day}. ${month}.`;
+}
+
+export default async function DivadloLudusPage() {
+  const events = await getProgramEvents('divadlo-ludus', true);
   return (
     <>
       {/* Hero */}
@@ -71,37 +74,45 @@ export default function DivadloLudusPage() {
 
 
             {/* Program Section */}
-            <div className="bg-black text-white rounded-xl p-12">
-              <h2
-                className="text-[3rem] mb-8 text-white text-center"
-                style={{ fontFamily: 'var(--font-heading)' }}
-              >
-                Divadelný Program
-              </h2>
-              <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1">
-                {programItems.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-6 p-6 bg-white/10 rounded-xl transition-colors duration-300 hover:bg-white/15"
-                  >
-                    <span
-                      className="text-[2rem] font-bold min-w-[80px] text-[#ffd37c]"
-                      style={{ fontFamily: 'var(--font-heading)' }}
+            {events.length > 0 && (
+              <div className="bg-black text-white rounded-xl p-12">
+                <h2
+                  className="text-[3rem] mb-8 text-white text-center"
+                  style={{ fontFamily: 'var(--font-heading)' }}
+                >
+                  Divadelný Program
+                </h2>
+                <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1">
+                  {events.map((event) => (
+                    <Link
+                      key={event.id}
+                      href={`/program/${event.slug}`}
+                      className="flex items-center gap-6 p-6 bg-white/10 rounded-xl transition-colors duration-300 hover:bg-white/15 no-underline"
                     >
-                      {item.date}
-                    </span>
-                    <div>
-                      <h4 className="text-[1.3rem] text-white m-0" style={{ fontFamily: 'var(--font-body)' }}>
-                        {item.title}
-                      </h4>
-                      <p className="text-base mt-1 mb-0 opacity-70 text-white">
-                        {item.time} | {item.venue}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+                      <span
+                        className="text-[2rem] font-bold min-w-[80px] text-[#ffd37c]"
+                        style={{ fontFamily: 'var(--font-heading)' }}
+                      >
+                        {formatEventDate(event.event_date)}
+                      </span>
+                      <div>
+                        <h4 className="text-[1.3rem] text-white m-0" style={{ fontFamily: 'var(--font-body)' }}>
+                          {event.title}
+                        </h4>
+                        <p className="text-base mt-1 mb-0 opacity-70 text-white">
+                          {event.time} | {event.venue}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+                <div className="text-center mt-8">
+                  <Link href="/program?category=divadlo-ludus" className="text-[#ffd37c] font-bold hover:underline no-underline">
+                    Zobraziť celý program →
+                  </Link>
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Quick Links */}
             <div className="grid grid-cols-3 gap-8 max-md:grid-cols-2 max-sm:grid-cols-1">
@@ -109,7 +120,7 @@ export default function DivadloLudusPage() {
                 {
                   title: 'História',
                   description: 'História divadla Ludus',
-                  href: '/divadlo-ludus/historia',
+                  href: '/historia',
                   icon: '📜'
                 },
                 {
@@ -156,34 +167,7 @@ export default function DivadloLudusPage() {
 
 
             {/* Gallery Preview */}
-            <div className="mt-16">
-              <h2
-                className="text-center text-[3.5rem] mb-8"
-                style={{ fontFamily: 'var(--font-heading)' }}
-              >
-                Galéria
-              </h2>
-              <div className="grid grid-cols-3 gap-6 max-md:grid-cols-2 max-sm:grid-cols-1">
-                {[
-                  '/images/divadlo-main.webp',
-                  '/images/sculpture.webp',
-                  '/images/painting.webp'
-                ].map((img, i) => (
-                  <Link key={i} href="/divadlo-ludus/galeria" className="group">
-                    <Image
-                      src={img}
-                      alt={`Galéria ${i + 1} `}
-                      width={400}
-                      height={300}
-                      className="w-full h-[300px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
-                    />
-                  </Link>
-                ))}
-              </div>
-              <div className="text-center mt-8">
-                <Button href="/divadlo-ludus/galeria">Zobraziť celú galériu</Button>
-              </div>
-            </div>
+            <GalleryPreview category="divadlo-ludus" href="/divadlo-ludus/galeria" />
 
           </main>
 

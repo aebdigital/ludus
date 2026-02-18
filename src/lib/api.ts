@@ -110,7 +110,7 @@ export function getImageUrl(path: string): string {
   return data.publicUrl
 }
 
-export async function getProgramEvents(category?: ProgramCategory): Promise<ProgramEvent[]> {
+export async function getProgramEvents(category?: ProgramCategory, upcomingOnly = false): Promise<ProgramEvent[]> {
   let query = supabase
     .from('program_events')
     .select('*')
@@ -120,6 +120,10 @@ export async function getProgramEvents(category?: ProgramCategory): Promise<Prog
 
   if (category) {
     query = query.eq('category', category);
+  }
+
+  if (upcomingOnly) {
+    query = query.gte('event_date', new Date().toISOString().split('T')[0]);
   }
 
   const { data, error } = await query;
@@ -144,6 +148,35 @@ export async function getProgramEventBySlug(slug: string): Promise<ProgramEvent 
     return null;
   }
   return data;
+}
+
+export interface RepertoarItem {
+  title: string
+  slug: string
+  image_path?: string
+  subtitle?: string
+  category: ProgramCategory
+  age_badge?: string
+  gallery_paths?: string[]
+}
+
+export async function getRepertoar(category?: ProgramCategory): Promise<RepertoarItem[]> {
+  const events = await getProgramEvents(category)
+  const seen = new Map<string, RepertoarItem>()
+  for (const event of events) {
+    if (!seen.has(event.title)) {
+      seen.set(event.title, {
+        title: event.title,
+        slug: event.slug,
+        image_path: event.image_path,
+        subtitle: event.subtitle,
+        category: event.category,
+        age_badge: event.age_badge,
+        gallery_paths: event.gallery_paths,
+      })
+    }
+  }
+  return Array.from(seen.values())
 }
 
 export async function getProgramEventsByTitle(title: string): Promise<ProgramEvent[]> {

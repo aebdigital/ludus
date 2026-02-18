@@ -38,7 +38,7 @@ const staff = [
     image: '/pedagogovia/NORO ŠARO.webp'
   },
   {
-    name: 'Mgr. art Mirka Durná ArtD',
+    name: 'Mgr. art Mirka Durná ArtD.',
     role: 'Lektor',
     image: '/pedagogovia/MIRKA DURNÁ.webp'
   },
@@ -50,7 +50,7 @@ const staff = [
   {
     name: 'Mgr. art Edita Koprivčevič Borsová',
     role: 'Lektor',
-    image: '/pedagogovia/EDITA BORSOVÁ.webp'
+    image: '/pedagogovia/edita Koprivčevič Borsová.webp'
   },
   {
     name: 'Mgr. art Jozef Jurčišin Kukľa',
@@ -63,14 +63,14 @@ const staff = [
     image: '/pedagogovia/RICHARD LABUDA.webp'
   },
   {
-    name: 'Mgr. art Jakub Ružička',
+    name: 'Jakub Ružička',
     role: 'Lektor',
     image: '/pedagogovia/JAKUB RUŽIČKA.webp'
   },
   {
     name: 'Mgr. art Laco Ladomirjak',
     role: 'Lektor',
-    image: '/pedagogovia/LADISLAV LADOMIRJAK.webp'
+    image: '/pedagogovia/Laci Ladomirjak.jpeg'
   }
 ];
 

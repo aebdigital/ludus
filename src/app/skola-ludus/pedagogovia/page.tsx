@@ -13,12 +13,12 @@ const staff = [
     image: '/pedagogovia/KATARÍNA BARANOVA.webp'
   },
   {
-    name: 'Katarína Gurová',
+    name: 'Mgr. art Katarína Gurová',
     role: 'Pedagóg',
     image: '/pedagogovia/KATARÍNA GUROVÁ.webp'
   },
   {
-    name: 'Mgr. art Mirka Durná',
+    name: 'Mgr. art Mirka Durná ArtD.',
     role: 'Pedagóg',
     image: '/pedagogovia/MIRKA DURNÁ.webp'
   },
@@ -38,7 +38,7 @@ const staff = [
     image: '/pedagogovia/JAKUB REK.webp'
   },
   {
-    name: 'Mgr. art Jakub Ružička',
+    name: 'Jakub Ružička',
     role: 'Pedagóg',
     image: '/pedagogovia/JAKUB RUŽIČKA.webp'
   },
@@ -48,7 +48,7 @@ const staff = [
     image: '/pedagogovia/JANKO MIKUŠ.webp'
   },
   {
-    name: 'Noro Šáro',
+    name: 'Mgr. art Noro Šáro',
     role: 'Pedagóg',
     image: '/pedagogovia/NORO ŠARO.webp'
   },
@@ -63,12 +63,12 @@ const staff = [
     image: '/pedagogovia/JOŽKO JURČIŠIN KUKLA.webp'
   },
   {
-    name: 'Richard Labuda',
+    name: 'Bc. Rišo Labuda',
     role: 'Pedagóg',
     image: '/pedagogovia/RICHARD LABUDA.webp'
   },
   {
-    name: 'Daniel Zwach',
+    name: 'Bc. Dano Zwach',
     role: 'Pedagóg',
     image: '/pedagogovia/DANIEL ZWACH.webp'
   },
@@ -78,22 +78,22 @@ const staff = [
     image: '/pedagogovia/SIMON FICO.webp'
   },
   {
-    name: 'Ada Juhásová',
+    name: 'Mgr. art Ada Juhásová',
     role: 'Pedagóg',
     image: '/pedagogovia/ADA JUHASOVÁ.webp'
   },
   {
-    name: 'Naďa Gášeková',
+    name: 'Bc. Naďa Gášeková',
     role: 'Pedagóg',
     image: '/pedagogovia/NAĎA GÁŠEKOVÁ.webp'
   },
   {
-    name: 'Ria Benkovská',
+    name: 'Mgr. art Ria Benkovská',
     role: 'Pedagóg',
     image: '/pedagogovia/RIA BENKOVSKÁ.webp'
   },
   {
-    name: 'Viktória Šuplatová',
+    name: 'Mgr. art Viktória Šuplatová',
     role: 'Pedagóg',
     image: '/pedagogovia/VIKTÓRIA ŠUPLATOVÁ.webp'
   },
@@ -103,17 +103,17 @@ const staff = [
     image: '/pedagogovia/DAVID KAKAŠ.webp'
   },
   {
-    name: 'Soňa Borušovičová',
+    name: 'Mgr. art Soňa Borušovičová',
     role: 'Pedagóg',
     image: '/pedagogovia/SOŇA BORUŠOVIČOVÁ.webp'
   },
   {
     name: 'Mgr. art Edita Koprivčevič Borsová',
     role: 'Pedagóg',
-    image: '/pedagogovia/EDITA BORSOVÁ.webp'
+    image: '/pedagogovia/edita Koprivčevič Borsová.webp'
   },
   {
-    name: 'Laura Jankurová',
+    name: 'Mgr. art Laura Jankurová',
     role: 'Pedagóg',
     image: '/pedagogovia/LAURA JANKUROVÁ.webp'
   }
@@ -132,8 +132,10 @@ const getStaffData = (name: string) => {
   const variations: Record<string, string> = {
     "Noro Šáro": "Norman Šáro",
     "Jožko Jurčišin Kukľa": "Jozef Jurčišin-Kukľa",
+    "Jozef Jurčišin Kukľa": "Jozef Jurčišin-Kukľa",
     "Laco Ladomirjak": "Ladislav Ladomirjak",
-    "Rišo Labuda": "Richard Labuda"
+    "Rišo Labuda": "Richard Labuda",
+    "Dano Zwach": "Daniel Zwach"
   };
 
   if (variations[cleanName] && staffData[variations[cleanName]]) {
