@@ -202,7 +202,7 @@ export const staffData: Record<string, StaffMember> = {
     },
     "Soňa Borušovičová": {
         name: "Mgr. art Soňa Borušovičová",
-        image: "/pedagogovia/SOŇA BORUŠOVIČOVÁ.webp",
+        image: "/pedagogovia/Sona-borusovicova.png",
         bio: (
             <>
                 <p>Písaniu sa venuje už 27 rokov. Vyštudovala filmovú a televíznu dramaturgiu a scenáristiku na FTF VŠMU. Písala scenáre pre deti a mládež aj pre dospelých, príbehy na pokračovanie, aj komiksový príbeh s veľmi sexi názvom, ktorý bol v skutočnosti o myšiach. Dva roky bola kmeňovou autorkou seriálu Ordinácia v ružovej záhrade. Napísala a vydala knihu pre deti Gregor – rozprávka o veľkom putovaní. Ako redaktorka legendárneho internetového magazínu inzine.sk sa naučila, ako komunikovať s autormi a baví ju to dodnes. Redigovala aj knihy pre vydavateľstvo Slovart.</p>

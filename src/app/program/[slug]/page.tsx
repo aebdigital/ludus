@@ -210,7 +210,19 @@ export default async function ProgramDetailPage({ params }: { params: Promise<{ 
                             <p className="text-black italic">Bez popisu</p>
                         )}
 
-
+                        {event.description_images && event.description_images.length > 0 && (
+                            <div className="mt-8 space-y-4 not-prose">
+                                {event.description_images.map((path: string, i: number) => (
+                                    <div key={i} className="rounded-xl overflow-hidden shadow-md">
+                                        <img
+                                            src={getImageUrl(path)}
+                                            alt={`${event.title} - foto ${i + 1}`}
+                                            className="w-full h-auto max-h-[600px] object-contain"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        )}
                     </div>
 
                     {/* Middle Column: Teams (Cast & Crew) */}

@@ -24,25 +24,42 @@ export default function StaffMemberModal({ member, onClose }: StaffMemberModalPr
         };
 
         if (member) {
+            const scrollY = window.scrollY;
             document.addEventListener('keydown', handleEscape);
             document.addEventListener('mousedown', handleClickOutside);
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
-        }
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.left = '0';
+            document.body.style.right = '0';
+            document.body.style.overflow = 'hidden';
 
-        return () => {
-            document.removeEventListener('keydown', handleEscape);
-            document.removeEventListener('mousedown', handleClickOutside);
-            document.body.style.overflow = 'unset';
-        };
+            return () => {
+                document.removeEventListener('keydown', handleEscape);
+                document.removeEventListener('mousedown', handleClickOutside);
+                document.body.style.position = '';
+                document.body.style.top = '';
+                document.body.style.left = '';
+                document.body.style.right = '';
+                document.body.style.overflow = '';
+                window.scrollTo(0, scrollY);
+            };
+        }
     }, [member, onClose]);
 
     if (!member) return null;
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity duration-300">
+        <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity duration-300 overscroll-none"
+            onTouchMove={e => {
+                if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
+                    e.preventDefault();
+                }
+            }}
+        >
             <div
                 ref={modalRef}
-                className="bg-white rounded-2xl w-full max-w-6xl max-h-[90vh] overflow-y-auto shadow-2xl flex flex-col md:flex-row relative animate-in fade-in zoom-in-95 duration-200"
+                className="bg-white rounded-2xl w-full max-w-6xl h-[70vh] overflow-hidden shadow-2xl flex flex-col md:flex-row relative animate-in fade-in zoom-in-95 duration-200"
             >
                 <button
                     onClick={onClose}
@@ -54,7 +71,7 @@ export default function StaffMemberModal({ member, onClose }: StaffMemberModalPr
                     </svg>
                 </button>
 
-                <div className="w-full md:w-1/2 relative min-h-[300px] md:min-h-[500px]">
+                <div className="w-full md:w-1/2 relative h-[250px] md:h-auto shrink-0">
                     <Image
                         src={member.image}
                         alt={member.name}
@@ -64,17 +81,17 @@ export default function StaffMemberModal({ member, onClose }: StaffMemberModalPr
                     />
                 </div>
 
-                <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-white">
-                    <h2 className="text-[2rem] leading-tight mb-2 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
+                <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col bg-white min-h-0">
+                    <h2 className="text-[2rem] leading-tight mb-2 text-black shrink-0" style={{ fontFamily: 'var(--font-heading)' }}>
                         {member.name}
                     </h2>
                     {member.role && (
-                        <p className="text-[#ffd37c] font-bold text-sm uppercase tracking-wider mb-8">
+                        <p className="text-[#ffd37c] font-bold text-sm uppercase tracking-wider mb-8 shrink-0">
                             {member.role}
                         </p>
                     )}
 
-                    <div className="text-gray-700 leading-relaxed text-[0.9rem] space-y-4 overflow-y-auto max-h-[60vh] pr-2 custom-scrollbar">
+                    <div className="text-gray-700 leading-relaxed text-[0.8rem] space-y-3 pr-2 custom-scrollbar overflow-y-auto overscroll-contain min-h-0 flex-1">
                         {member.bio}
                     </div>
                 </div>
