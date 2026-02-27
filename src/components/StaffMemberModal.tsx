@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import { StaffMember } from '@/data/staffData';
 
@@ -11,6 +11,26 @@ interface StaffMemberModalProps {
 
 export default function StaffMemberModal({ member, onClose }: StaffMemberModalProps) {
     const modalRef = useRef<HTMLDivElement>(null);
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+    // Intercept wheel events at the document level
+    const handleWheel = useCallback((e: WheelEvent) => {
+        const scrollEl = scrollContainerRef.current;
+        if (!scrollEl) return;
+
+        // Check if the wheel event target is inside the scroll container
+        if (scrollEl.contains(e.target as Node)) {
+            // Allow native scroll inside, but prevent it from propagating to Lenis
+            e.stopPropagation();
+            // Manually scroll the container
+            scrollEl.scrollTop += e.deltaY;
+            e.preventDefault();
+        } else {
+            // Block scroll on backdrop/outside
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    }, []);
 
     useEffect(() => {
         const handleEscape = (e: KeyboardEvent) => {
@@ -24,42 +44,28 @@ export default function StaffMemberModal({ member, onClose }: StaffMemberModalPr
         };
 
         if (member) {
-            const scrollY = window.scrollY;
             document.addEventListener('keydown', handleEscape);
             document.addEventListener('mousedown', handleClickOutside);
-            document.body.style.position = 'fixed';
-            document.body.style.top = `-${scrollY}px`;
-            document.body.style.left = '0';
-            document.body.style.right = '0';
-            document.body.style.overflow = 'hidden';
+            // Capture phase to intercept before Lenis gets it
+            document.addEventListener('wheel', handleWheel, { capture: true, passive: false });
 
             return () => {
                 document.removeEventListener('keydown', handleEscape);
                 document.removeEventListener('mousedown', handleClickOutside);
-                document.body.style.position = '';
-                document.body.style.top = '';
-                document.body.style.left = '';
-                document.body.style.right = '';
-                document.body.style.overflow = '';
-                window.scrollTo(0, scrollY);
+                document.removeEventListener('wheel', handleWheel, { capture: true } as EventListenerOptions);
             };
         }
-    }, [member, onClose]);
+    }, [member, onClose, handleWheel]);
 
     if (!member) return null;
 
     return (
         <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity duration-300 overscroll-none"
-            onTouchMove={e => {
-                if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
-                    e.preventDefault();
-                }
-            }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity duration-300"
         >
             <div
                 ref={modalRef}
-                className="bg-white rounded-2xl w-full max-w-6xl h-[70vh] overflow-hidden shadow-2xl flex flex-col md:flex-row relative animate-in fade-in zoom-in-95 duration-200"
+                className="bg-white rounded-2xl w-full max-w-7xl max-h-[70vh] shadow-2xl flex flex-col md:flex-row relative animate-in fade-in zoom-in-95 duration-200"
             >
                 <button
                     onClick={onClose}
@@ -71,27 +77,31 @@ export default function StaffMemberModal({ member, onClose }: StaffMemberModalPr
                     </svg>
                 </button>
 
-                <div className="w-full md:w-1/2 relative h-[250px] md:h-auto shrink-0">
+                <div className="w-full md:w-1/3 relative h-[250px] md:min-h-[70vh] shrink-0 overflow-hidden rounded-tl-2xl rounded-bl-2xl">
                     <Image
                         src={member.image}
                         alt={member.name}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 50vw"
+                        sizes="(max-width: 768px) 100vw, 33vw"
                     />
                 </div>
 
-                <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col bg-white min-h-0">
-                    <h2 className="text-[2rem] leading-tight mb-2 text-black shrink-0" style={{ fontFamily: 'var(--font-heading)' }}>
+                <div
+                    ref={scrollContainerRef}
+                    className="w-full md:w-2/3 p-8 md:p-12 bg-white rounded-r-2xl overflow-y-auto overscroll-contain"
+                    style={{ maxHeight: '70vh' }}
+                >
+                    <h2 className="text-[2rem] leading-tight mb-2 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
                         {member.name}
                     </h2>
                     {member.role && (
-                        <p className="text-[#ffd37c] font-bold text-sm uppercase tracking-wider mb-8 shrink-0">
+                        <p className="text-[#ffd37c] font-bold text-sm uppercase tracking-wider mb-8">
                             {member.role}
                         </p>
                     )}
 
-                    <div className="text-gray-700 leading-relaxed text-[0.8rem] space-y-3 pr-2 custom-scrollbar overflow-y-auto overscroll-contain min-h-0 flex-1">
+                    <div className="text-gray-700 leading-relaxed text-[0.7rem] space-y-3">
                         {member.bio}
                     </div>
                 </div>

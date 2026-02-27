@@ -100,7 +100,7 @@ const staff = [
   {
     name: 'Bc. David Kakaš',
     role: 'Pedagóg',
-    image: '/pedagogovia/DAVID KAKAŠ.webp'
+    image: '/pedagogovia/kakas.webp'
   },
   {
     name: 'Mgr. art Soňa Borušovičová',
@@ -115,7 +115,7 @@ const staff = [
   {
     name: 'Mgr. art Laura Jankurová',
     role: 'Pedagóg',
-    image: '/pedagogovia/LAURA JANKUROVÁ.webp'
+    image: '/pedagogovia/jankurova.webp'
   }
 ];
 

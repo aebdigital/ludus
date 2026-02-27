@@ -14,7 +14,7 @@ const staff = [
   { name: 'Mgr. art Katarína Gurová', role: 'Pedagóg', image: '/pedagogovia/KATARÍNA GUROVÁ.webp' },
   { name: 'Bc. Rišo Labuda', role: 'Pedagóg', image: '/pedagogovia/RICHARD LABUDA.webp' },
   { name: 'Bc. Naďa Gášeková', role: 'Pedagóg', image: '/pedagogovia/NAĎA GÁŠEKOVÁ.webp' },
-  { name: 'Mgr. art Laura Jankurová', role: 'Pedagóg', image: '/pedagogovia/LAURA JANKUROVÁ.webp' },
+  { name: 'Mgr. art Laura Jankurová', role: 'Pedagóg', image: '/pedagogovia/jankurova.webp' },
   { name: 'Mgr. art Ada Juhásová', role: 'Pedagóg', image: '/pedagogovia/ADA JUHASOVÁ.webp' },
   { name: 'Mgr. art Jozef Jurčišin Kukľa', role: 'Pedagóg', image: '/pedagogovia/JOŽKO JURČIŠIN KUKLA.webp' },
   { name: 'Mgr. art Edita Koprivčevič Borsová', role: 'Pedagóg', image: '/pedagogovia/edita Koprivčevič Borsová.webp' }

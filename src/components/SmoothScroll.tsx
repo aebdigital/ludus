@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 declare global {
   interface Window {
     Lenis: any;
+    __lenis: any;
   }
 }
 
@@ -34,6 +35,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
 
         requestAnimationFrame(raf);
 
+        window.__lenis = lenis;
         return lenis;
       }
     };
@@ -42,6 +44,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
 
     return () => {
       lenisInstance?.destroy();
+      window.__lenis = null;
     };
   }, [pathname]);
 
