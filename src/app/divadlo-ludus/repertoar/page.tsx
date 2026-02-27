@@ -1,11 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { getRepertoar, getImageUrl } from '@/lib/api';
-import type { ProgramCategory } from '@/lib/api';
 
 export const revalidate = 60;
 
-const categoryLabels: Record<ProgramCategory, string> = {
+const categoryLabels: Record<string, string> = {
   'divadlo-ludus': 'Divadlo Ludus',
   'skola-ludus': 'Škola Ludus',
   'ludus-academy': 'Ludus Academy',
@@ -38,45 +37,49 @@ export default async function RepertoarPage() {
           <div className="space-y-20">
             {items.map((item) => {
               const photos = item.gallery_paths && item.gallery_paths.length > 0
-                ? item.gallery_paths.slice(0, 4)
+                ? item.gallery_paths
                 : [item.image_path || ''];
 
               return (
                 <Link
-                  key={item.slug}
+                  key={item.id}
                   href={`/program/${item.slug}`}
                   className="block no-underline"
                 >
                   <div className="mb-6">
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-4 flex-wrap">
                       <h2
                         className="text-[2.5rem] md:text-[3.5rem] text-black m-0 leading-tight"
                         style={{ fontFamily: 'var(--font-heading)' }}
                       >
-                        {item.title}
+                        {item.program_title}
                       </h2>
-                      {item.age_badge && (
-                        <span className="bg-[#ffd37c] text-black text-sm font-bold px-3 py-1 rounded-full">
-                          {item.age_badge}
+                      {item.category && (
+                        <span className="bg-white text-gray-600 text-xs uppercase tracking-wide font-semibold px-3 py-1 rounded-full border border-gray-200 shadow-sm">
+                          {categoryLabels[item.category] || item.category}
                         </span>
                       )}
-                      <span className="bg-white text-gray-600 text-xs uppercase tracking-wide font-semibold px-3 py-1 rounded-full border border-gray-200 shadow-sm">
-                        {categoryLabels[item.category]}
-                      </span>
                     </div>
-                    {item.subtitle && (
-                      <p className="text-gray-500 text-lg mt-2 mb-0">{item.subtitle}</p>
-                    )}
+                    <div className="flex items-center gap-4 mt-2 flex-wrap">
+                      {item.subtitle && (
+                        <p className="text-gray-500 text-lg m-0">{item.subtitle}</p>
+                      )}
+                      {(item.year || item.venue) && (
+                        <p className="text-gray-400 text-sm m-0">
+                          {[item.year, item.venue].filter(Boolean).join(' · ')}
+                        </p>
+                      )}
+                    </div>
                   </div>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                     {photos.map((photo, i) => (
                       <div key={i} className="group/photo relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer">
                         <Image
                           src={photo ? getImageUrl(photo) : '/images/divadlo-main.webp'}
-                          alt={`${item.title} ${i + 1}`}
+                          alt={`${item.program_title} ${i + 1}`}
                           fill
                           className="object-cover transition-transform duration-300 group-hover/photo:scale-105"
-                          sizes="(max-width: 768px) 50vw, 25vw"
+                          sizes="(max-width: 768px) 50vw, 20vw"
                         />
                         <div className="absolute inset-0 bg-black/0 group-hover/photo:bg-black/40 transition-colors duration-300 flex items-center justify-center">
                           <span className="text-white font-semibold opacity-0 group-hover/photo:opacity-100 transition-opacity duration-300">

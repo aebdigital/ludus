@@ -87,8 +87,8 @@ export default async function Home() {
                   };
                   const badge = getCategoryStyle(item.category);
 
-                  return (
-                    <article key={item.id} className={index < aktuality.length - 1 ? "pb-6 border-b border-gray-100" : "pb-0"}>
+                  const content = (
+                    <article key={item.id} className={`${index < aktuality.length - 1 ? "pb-6 border-b border-gray-100" : "pb-0"} ${item.link ? "group/aktualita" : ""}`}>
                       <div className="flex items-center gap-3 mb-2">
                         <span className={`text-[0.7rem] font-bold px-2 py-1 rounded ${badge.className}`}>
                           {badge.label}
@@ -97,14 +97,24 @@ export default async function Home() {
                           {formatDate(item.date)}
                         </span>
                       </div>
-                      <h3 className="text-[1.4rem] font-bold mt-0 mb-2" style={{ fontFamily: 'var(--font-body)' }}>
+                      <h3 className={`text-[1.4rem] font-bold mt-0 mb-2 ${item.link ? "group-hover/aktualita:text-purple-700 transition-colors duration-200" : ""}`} style={{ fontFamily: 'var(--font-body)' }}>
                         {item.title}
+                        {item.link && <span className="inline-block ml-2 text-[0.9rem] opacity-0 group-hover/aktualita:opacity-100 transition-opacity duration-200">→</span>}
                       </h3>
                       <p className="text-base text-black m-0">
                         {item.description}
                       </p>
                     </article>
                   );
+
+                  if (item.link) {
+                    return (
+                      <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer" className="block no-underline text-inherit cursor-pointer">
+                        {content}
+                      </a>
+                    );
+                  }
+                  return content;
                 })
               ) : (
                 <p className="text-black">Ziadne aktuality</p>

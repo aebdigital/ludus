@@ -14,6 +14,7 @@ export interface Aktualita {
   id: string
   title: string
   description: string | null
+  link: string | null
   date: string
   category: string
   show_on_homepage: boolean
@@ -69,7 +70,7 @@ export async function getGalleryImages(category: GalleryCategory): Promise<Galle
 export async function getHomepageAktuality(): Promise<Aktualita[]> {
   const { data, error } = await supabase
     .from('aktuality')
-    .select('id, title, description, date, category, show_on_homepage')
+    .select('id, title, description, link, date, category, show_on_homepage')
     .eq('site_id', SITE_ID)
     .eq('show_on_homepage', true)
     .eq('published', true)
@@ -86,7 +87,7 @@ export async function getHomepageAktuality(): Promise<Aktualita[]> {
 export async function getCategoryAktuality(category: GalleryCategory): Promise<Aktualita[]> {
   const { data, error } = await supabase
     .from('aktuality')
-    .select('id, title, description, date, category, show_on_homepage')
+    .select('id, title, description, link, date, category, show_on_homepage')
     .eq('site_id', SITE_ID)
     .eq('category', category)
     .eq('published', true)
@@ -152,32 +153,29 @@ export async function getProgramEventBySlug(slug: string): Promise<ProgramEvent 
 }
 
 export interface RepertoarItem {
-  title: string
+  id: string
+  program_title: string
   slug: string
-  image_path?: string
   subtitle?: string
-  category: ProgramCategory
-  age_badge?: string
+  category?: string
+  year?: string
+  venue?: string
+  image_path?: string
   gallery_paths?: string[]
 }
 
-export async function getRepertoar(category?: ProgramCategory): Promise<RepertoarItem[]> {
-  const events = await getProgramEvents(category)
-  const seen = new Map<string, RepertoarItem>()
-  for (const event of events) {
-    if (!seen.has(event.title)) {
-      seen.set(event.title, {
-        title: event.title,
-        slug: event.slug,
-        image_path: event.image_path,
-        subtitle: event.subtitle,
-        category: event.category,
-        age_badge: event.age_badge,
-        gallery_paths: event.gallery_paths,
-      })
-    }
+export async function getRepertoar(): Promise<RepertoarItem[]> {
+  const { data, error } = await supabase
+    .from('repertoar')
+    .select('*')
+    .eq('site_id', SITE_ID)
+    .order('display_order', { ascending: true })
+
+  if (error) {
+    console.error('Error fetching repertoar:', error)
+    return []
   }
-  return Array.from(seen.values())
+  return data || []
 }
 
 export async function getProgramEventsByTitle(title: string): Promise<ProgramEvent[]> {

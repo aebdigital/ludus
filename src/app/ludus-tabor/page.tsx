@@ -105,7 +105,7 @@ export default function LudusTaborPage() {
               </div>
 
               {/* Turnusy */}
-              <div className="bg-black text-white p-10 rounded-xl shadow-xl h-full flex flex-col">
+              <div id="terminy" className="bg-black text-white p-10 rounded-xl shadow-xl h-full flex flex-col scroll-mt-28">
                 <h3 className="text-[2rem] mb-6 text-[#ffd37c]" style={{ fontFamily: 'var(--font-heading)' }}>
                   Termíny 2026
                 </h3>
