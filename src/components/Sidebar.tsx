@@ -61,7 +61,7 @@ export default function Sidebar({ category }: SidebarProps) {
 
                         if (item.link) {
                             return (
-                                <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer" className="block no-underline text-inherit">
+                                <a key={item.id} href={item.link} className="block no-underline text-inherit">
                                     {inner}
                                 </a>
                             );

@@ -109,7 +109,7 @@ export default async function Home() {
 
                   if (item.link) {
                     return (
-                      <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer" className="block no-underline text-inherit cursor-pointer">
+                      <a key={item.id} href={item.link} className="block no-underline text-inherit cursor-pointer">
                         {content}
                       </a>
                     );
