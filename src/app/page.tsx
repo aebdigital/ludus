@@ -25,9 +25,9 @@ export default async function Home() {
   };
 
   return (
-    <>
+    <div className="flex flex-col">
       {/* Intro Container - 4 Main Sections */}
-      <main className="flex h-[50vh] w-[calc(100%-2rem)] mx-auto mt-20 p-4 gap-4 max-md:flex-col max-md:h-auto">
+      <main className="flex h-[50vh] w-[calc(100%-2rem)] mx-auto p-4 gap-4 max-md:flex-col max-md:h-auto order-2 md:order-1 mt-4 md:mt-20">
         <IntroSection
           href="/skola-ludus"
           title="Škola Ludus"
@@ -66,7 +66,7 @@ export default async function Home() {
       </main>
 
       {/* Aktuality & Program Section */}
-      <section className="p-4 w-[calc(100%-2rem)] mx-auto">
+      <section className="p-4 w-[calc(100%-2rem)] mx-auto order-1 md:order-2 mt-20 md:mt-0">
         <div className="grid grid-cols-[60%_calc(40%-1rem)] gap-4 max-lg:grid-cols-1">
           {/* Aktuality Box */}
           <div className="bg-white rounded-xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
@@ -159,6 +159,6 @@ export default async function Home() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

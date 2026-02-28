@@ -58,7 +58,7 @@ export default function DivadloKontaktPage() {
                                     <div>
                                         <h3 className="text-xl font-bold mb-2">Kontakt</h3>
                                         <p className="text-[1.1rem] text-[#000]">
-                                            <a href="mailto:info@skolaludus.sk" className="hover:text-[#f47f44]">info@skolaludus.sk</a>
+                                            <a href="mailto:info@divadloludus.sk" className="hover:text-[#f47f44]">info@divadloludus.sk</a>
                                         </p>
                                     </div>
                                     <div className="mt-8 grid grid-cols-2 gap-4">

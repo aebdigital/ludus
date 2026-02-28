@@ -104,7 +104,7 @@ export default function KontaktPage() {
                 {/* Right column: Divadlo + Academy + Tábor stacked */}
                 <div className="flex flex-col gap-4">
                   {/* Divadlo LUDUS */}
-                  <div className="bg-[#fce4ec] rounded-xl p-6">
+                  <div className="bg-[#fff9c4] rounded-xl p-6">
                     <h3
                       className="text-[1.5rem] mb-4 text-black"
                       style={{ fontFamily: 'var(--font-heading)' }}
@@ -112,12 +112,12 @@ export default function KontaktPage() {
                       Divadlo LUDUS
                     </h3>
                     <p className="text-[1.1rem] text-[#000]">
-                      <strong>Kontakt:</strong> <a href="mailto:info@skolaludus.sk" className="hover:text-[#f47f44]">info@skolaludus.sk</a>
+                      <strong>Kontakt:</strong> <a href="mailto:info@divadloludus.sk" className="hover:text-[#f47f44]">info@divadloludus.sk</a>
                     </p>
                   </div>
 
                   {/* LUDUS ACADEMY */}
-                  <div className="bg-[#e3f2fd] rounded-xl p-6">
+                  <div className="bg-[#ffe0b2] rounded-xl p-6">
                     <h3
                       className="text-[1.5rem] mb-4 text-black"
                       style={{ fontFamily: 'var(--font-heading)' }}
@@ -132,7 +132,7 @@ export default function KontaktPage() {
                   </div>
 
                   {/* LUDUS TÁBOR */}
-                  <div className="bg-[#fff3e0] rounded-xl p-6">
+                  <div className="bg-[#e3f2fd] rounded-xl p-6">
                     <h3
                       className="text-[1.5rem] mb-4 text-black"
                       style={{ fontFamily: 'var(--font-heading)' }}

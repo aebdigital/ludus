@@ -28,7 +28,7 @@ export default async function WorkshopUciteliaPage() {
                     <main className="flex-1 min-w-0">
                         <div className="mb-24">
                             <h2 className="text-[3rem] mb-2 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-                                RADOSŤ <span className="text-[#f47f44]">sa</span> UČIŤ zážitkom
+                                RADOSŤ <span className="text-[#f47f44]">sa</span> UČIŤ
                             </h2>
                             <div className="text-[#f47f44] font-bold text-[1.2rem] mb-12 uppercase tracking-widest leading-tight">
                                 PRIPRAVUJEME PRE VÁS NOVÉ OBSAHY

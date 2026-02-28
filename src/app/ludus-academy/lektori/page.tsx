@@ -50,7 +50,7 @@ const staff = [
   {
     name: 'Mgr. art Edita Koprivčevič Borsová',
     role: 'Lektor',
-    image: '/pedagogovia/edita Koprivčevič Borsová.webp'
+    image: '/pedagogovia/EDITA BORSOVÁ.webp'
   },
   {
     name: 'Mgr. art Jozef Jurčišin Kukľa',
