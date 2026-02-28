@@ -90,7 +90,7 @@ export default async function DivadloLudusPage() {
                       className="flex items-center gap-6 p-6 bg-white/10 rounded-xl transition-colors duration-300 hover:bg-white/15 no-underline"
                     >
                       <span
-                        className="text-[2rem] font-bold min-w-[80px] text-[#ffd37c]"
+                        className="text-[2rem] font-bold min-w-[80px] text-[#f47f44]"
                         style={{ fontFamily: 'var(--font-heading)' }}
                       >
                         {formatEventDate(event.event_date)}
@@ -107,7 +107,7 @@ export default async function DivadloLudusPage() {
                   ))}
                 </div>
                 <div className="text-center mt-8">
-                  <Link href="/program?category=divadlo-ludus" className="text-[#ffd37c] font-bold hover:underline no-underline">
+                  <Link href="/program?category=divadlo-ludus" className="text-[#f47f44] font-bold hover:underline no-underline">
                     Zobraziť celý program →
                   </Link>
                 </div>
@@ -151,7 +151,7 @@ export default async function DivadloLudusPage() {
                 <Link
                   key={item.title}
                   href={item.href}
-                  className="bg-white p-10 rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.05)] text-center transition-all duration-300 border border-transparent hover:-translate-y-1 hover:border-[#ffd37c] no-underline"
+                  className="bg-white p-10 rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.05)] text-center transition-all duration-300 border border-transparent hover:-translate-y-1 hover:border-[#f47f44] no-underline"
                 >
                   <span className="text-5xl mb-4 block">{item.icon}</span>
                   <h3
@@ -179,14 +179,14 @@ export default async function DivadloLudusPage() {
       </div>
 
       {/* Bottom CTA */}
-      <section className="bg-black p-10 text-center rounded-t-xl">
+      <section className="bg-[#07793f] p-10 text-center rounded-t-xl">
         <h2 className="text-center mb-4 !text-white" style={{ fontFamily: 'var(--font-heading)' }}>
           Máte záujem?
         </h2>
         <p className="mb-8 opacity-80 text-white">
           Kontaktujte nás pre viac informácií o kurzoch a termínoch.
         </p>
-        <Button href="/divadlo-ludus/kontakt" className="bg-white text-black hover:bg-gray-100">
+        <Button href="/divadlo-ludus/kontakt" className="!bg-black !text-white hover:!bg-gray-800">
           Kontaktovať
         </Button>
       </section>

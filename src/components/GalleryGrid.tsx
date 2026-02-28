@@ -49,6 +49,8 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
                             src={img.url}
                             alt={img.alt_text || 'Galéria'}
                             fill
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 25vw"
+                            quality={70}
                             className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -78,7 +80,7 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
                         >
                             {/* Close Button */}
                             <button
-                                className="absolute top-0 right-0 sm:-top-12 sm:-right-12 text-white text-5xl font-extralight hover:text-[#ffd37c] transition-colors p-4 z-[3100]"
+                                className="absolute top-0 right-0 sm:-top-12 sm:-right-12 text-white text-5xl font-extralight hover:text-[#f47f44] transition-colors p-4 z-[3100]"
                                 onClick={() => setSelectedIdx(null)}
                             >
                                 ✕
@@ -103,6 +105,8 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
                                     src={images[selectedIdx].url}
                                     alt={images[selectedIdx].alt_text || 'Galéria'}
                                     fill
+                                    sizes="100vw"
+                                    quality={85}
                                     className="object-contain"
                                     priority
                                 />

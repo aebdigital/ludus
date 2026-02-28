@@ -21,7 +21,7 @@ export default function StaffCard({ name, role, bio, photo, featured = false }: 
           >
             {name}
           </h3>
-          <p className="text-[#ffd37c] text-[1.1rem] font-bold uppercase mb-6 tracking-wider">
+          <p className="text-[#f47f44] text-[1.1rem] font-bold uppercase mb-6 tracking-wider">
             {role}
           </p>
           <p className="text-[1.1rem] text-gray-600">{bio}</p>
@@ -43,7 +43,7 @@ export default function StaffCard({ name, role, bio, photo, featured = false }: 
         >
           {name}
         </h3>
-        <p className="text-[#ffd37c] text-[0.9rem] font-bold uppercase mb-4 tracking-wider">
+        <p className="text-[#f47f44] text-[0.9rem] font-bold uppercase mb-4 tracking-wider">
           {role}
         </p>
         <p className="text-[0.95rem] text-gray-600">{bio}</p>

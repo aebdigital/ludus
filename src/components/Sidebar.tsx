@@ -27,33 +27,33 @@ export default function Sidebar({ category }: SidebarProps) {
     };
 
     return (
-        <aside className="sticky top-[100px] w-full max-w-[320px] bg-white p-8 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-gray-100 h-fit max-lg:max-w-none max-lg:static max-lg:mb-8">
+        <aside className="sticky top-[100px] w-full max-w-[320px] bg-[#1eabb0] p-8 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] h-fit max-lg:max-w-none max-lg:static max-lg:mb-8">
             <h3
-                className="text-[1.5rem] mb-6 pb-3 border-b-2 border-[#ffd37c] text-black"
+                className="text-[1.5rem] mb-6 pb-3 border-b-2 border-white/30 text-white"
                 style={{ fontFamily: 'var(--font-heading)' }}
             >
                 Aktuality
             </h3>
             <div className="flex flex-col gap-4">
                 {loading ? (
-                    <p className="text-gray-500 text-sm">Nacitavam...</p>
+                    <p className="text-white/70 text-sm">Nacitavam...</p>
                 ) : aktuality.length > 0 ? (
                     aktuality.map((item) => {
                         const inner = (
                             <div
-                                className={`pb-4 border-b border-gray-100 last:border-b-0 last:pb-0 ${item.link ? 'group/sidebar-item' : ''}`}
+                                className={`pb-4 border-b border-white/20 last:border-b-0 last:pb-0 ${item.link ? 'group/sidebar-item' : ''}`}
                             >
-                                <span className="text-[0.8rem] text-gray-500 font-bold uppercase tracking-wider block mb-1">
+                                <span className="text-[0.8rem] text-white/70 font-bold uppercase tracking-wider block mb-1">
                                     {formatDate(item.date)}
                                 </span>
                                 <h4
-                                    className={`text-[1.1rem] font-bold uppercase text-black mb-1 leading-tight ${item.link ? 'group-hover/sidebar-item:text-purple-700 transition-colors duration-200' : ''}`}
+                                    className={`text-[1.1rem] font-bold uppercase text-white mb-1 leading-tight ${item.link ? 'group-hover/sidebar-item:text-white/80 transition-colors duration-200' : ''}`}
                                     style={{ fontFamily: 'var(--font-body)' }}
                                 >
                                     {item.title}
                                     {item.link && <span className="inline-block ml-1 text-[0.8rem] opacity-0 group-hover/sidebar-item:opacity-100 transition-opacity duration-200">→</span>}
                                 </h4>
-                                <p className="text-[0.9rem] text-gray-600 m-0">
+                                <p className="text-[0.9rem] text-white/80 m-0">
                                     {item.description}
                                 </p>
                             </div>
@@ -69,7 +69,7 @@ export default function Sidebar({ category }: SidebarProps) {
                         return <div key={item.id}>{inner}</div>;
                     })
                 ) : (
-                    <p className="text-gray-500 text-sm">Ziadne aktuality</p>
+                    <p className="text-white/70 text-sm">Ziadne aktuality</p>
                 )}
             </div>
         </aside>

@@ -98,7 +98,7 @@ const staff = [
     image: '/pedagogovia/VIKTÓRIA ŠUPLATOVÁ.webp'
   },
   {
-    name: 'Bc. David Kakaš',
+    name: 'Mgr. Art David Kakaš',
     role: 'Pedagóg',
     image: '/pedagogovia/kakas.webp'
   },
@@ -110,7 +110,7 @@ const staff = [
   {
     name: 'Mgr. art Edita Koprivčevič Borsová',
     role: 'Pedagóg',
-    image: '/pedagogovia/edita Koprivčevič Borsová.webp'
+    image: '/pedagogovia/EDITA BORSOVÁ.webp'
   },
   {
     name: 'Mgr. art Laura Jankurová',
@@ -196,7 +196,7 @@ export default function SkolaLudusPedagogoviaPage() {
                 return (
                   <div
                     key={member.name}
-                    className={`bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 ${canOpen ? 'cursor-pointer hover:shadow-xl ring-2 ring-transparent hover:ring-[#ffd37c]/50 group' : ''}`}
+                    className={`bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 ${canOpen ? 'cursor-pointer hover:shadow-xl ring-2 ring-transparent hover:ring-[#f47f44]/50 group' : ''}`}
                     onClick={() => canOpen && handleMemberClick(member)}
                   >
                     <div className="aspect-[3/4] relative bg-gray-100 overflow-hidden">
@@ -208,14 +208,11 @@ export default function SkolaLudusPedagogoviaPage() {
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
 
-                      {/* Status Indicator */}
-                      {canOpen && (
-                        <div className="absolute top-3 right-3 z-10 bg-green-500 text-white rounded-full p-1 shadow-md" title="Obsah k dispozícii">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                            <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                      )}
+                      {/* Name bubble overlay */}
+                      <div className="absolute bottom-0 left-0 right-0 z-10 p-4 bg-gradient-to-t from-black/70 to-transparent">
+                        <h3 className="text-white text-[1.1rem] mb-0.5 leading-tight drop-shadow-lg" style={{ fontFamily: 'var(--font-heading)' }}>{member.name}</h3>
+                        <p className="text-[#f47f44] font-bold text-xs uppercase tracking-wider drop-shadow-lg">{member.role}</p>
+                      </div>
 
                       {/* Overlay indicator */}
                       {canOpen && (
@@ -225,10 +222,6 @@ export default function SkolaLudusPedagogoviaPage() {
                           </span>
                         </div>
                       )}
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-[1.2rem] mb-1 leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>{member.name}</h3>
-                      <p className="text-[#ffd37c] font-bold text-sm uppercase tracking-wider">{member.role}</p>
                     </div>
                   </div>
                 );

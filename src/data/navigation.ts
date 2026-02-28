@@ -54,7 +54,7 @@ export const menuData: NavCategory[] = [
       { name: "Kurzy", url: "/ludus-academy/herecky-kurz", image: "/images/academy/IMG_3649.webp" },
       { name: "Workshopy", url: "/ludus-academy/workshopy-skoly", image: "/images/academy/IMG_9005.webp" },
       { name: "Workshopy pre firmy", url: "/ludus-academy/firemny-timbilding", image: "/images/academy/IMG_4216.webp" },
-      { name: "Lektori", url: "/ludus-academy/pedagogovia", image: "/images/academy/IMG_1128.webp" },
+      { name: "Lektori", url: "/ludus-academy/lektori", image: "/images/academy/IMG_1128.webp" },
       { name: "Blog", url: "/ludus-academy/blog", image: "/images/academy/IMG_9026.webp" },
       { name: "Galéria", url: "/ludus-academy/galeria", image: "/images/academy/IMG_1318.webp" }
     ]
@@ -87,7 +87,7 @@ export const academyLinks = [
   { name: "Kurzy", url: "/ludus-academy/herecky-kurz" },
   { name: "Workshopy", url: "/ludus-academy/workshopy-skoly" },
   { name: "Workshopy pre firmy", url: "/ludus-academy/firemny-timbilding" },
-  { name: "Lektori", url: "/ludus-academy/pedagogovia" },
+  { name: "Lektori", url: "/ludus-academy/lektori" },
   { name: "Blog", url: "/ludus-academy/blog" },
   { name: "Galéria", url: "/ludus-academy/galeria" }
 ];

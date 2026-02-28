@@ -23,7 +23,7 @@ export default async function ProgramPage({
             {/* Hero */}
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative mt-20"
-                style={{ backgroundImage: "url('/images/painting.webp')" }}
+                style={{ backgroundImage: "url('/images/program/program-hero.webp')", backgroundPosition: 'center 35%' }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1

@@ -66,7 +66,7 @@ export default function KnihaPage() {
                         />
                     </div>
                     <div className="flex flex-col justify-center h-full">
-                        <h2 className="text-[2.5rem] mb-2 font-light text-[#ffd37c]" style={{ fontFamily: 'var(--font-body)' }}>
+                        <h2 className="text-[2.5rem] mb-2 font-light text-[#f47f44]" style={{ fontFamily: 'var(--font-body)' }}>
                             Katarína Baranová
                         </h2>
                         <h2 className="text-[4rem] font-bold leading-tight mb-4 text-white" style={{ fontFamily: 'var(--font-body)', fontWeight: 900 }}>
@@ -89,7 +89,7 @@ export default function KnihaPage() {
                         </div>
 
                         <div className="mt-4">
-                            <Button href="/kontakt" className="bg-[#ffd37c] text-black px-10 py-4 text-xl border-none hover:bg-white transition-colors">
+                            <Button href="/kontakt" className="bg-[#f47f44] text-black px-10 py-4 text-xl border-none hover:bg-white transition-colors">
                                 Objednať knihu
                             </Button>
                         </div>
@@ -99,7 +99,7 @@ export default function KnihaPage() {
                 {/* Why the book was created */}
                 <div className="grid grid-cols-2 gap-16 items-center mb-24 max-lg:grid-cols-1">
                     <div>
-                        <h3 className="text-[2.5rem] mb-6 text-black border-b-4 border-[#ffd37c] pb-2 inline-block" style={{ fontFamily: 'var(--font-heading)' }}>
+                        <h3 className="text-[2.5rem] mb-6 text-black border-b-4 border-[#f47f44] pb-2 inline-block" style={{ fontFamily: 'var(--font-heading)' }}>
                             Prečo vznikla kniha?
                         </h3>
                         <p className="text-[1.1rem] leading-relaxed mb-6 text-[#000]">
@@ -111,7 +111,7 @@ export default function KnihaPage() {
                         <p className="text-[1.1rem] leading-relaxed mb-6 text-[#000]">
                             Chcem vám na jednom mieste ponúknuť 200 praktických hier a cvičení, ktoré považujem za kreatívne, podnetné, zábavné, efektívne a dôležité pri formovaní kreativity a predstavivosti.
                         </p>
-                        <p className="text-[1.1rem] leading-relaxed italic text-[#000] border-l-4 border-[#ffd37c] pl-6 py-2 bg-gray-50 rounded-r-lg">
+                        <p className="text-[1.1rem] leading-relaxed italic text-[#000] border-l-4 border-[#f47f44] pl-6 py-2 bg-gray-50 rounded-r-lg">
                             "Milujem rôznorodosť, slobodu, herectvo, humor, tvorivosť a vzdelávanie sa v nových oblastiach, ktoré ma bavia. Rada vymýšľam nové veci. Práve preto vznikla aj táto kniha a ja sa v nej rada s vami podelím o skúsenosti a praktické tipy, ktoré mi pomáhajú v tom, aby som stále bola v takzvanom KREATÍVNOM FLOW."
                         </p>
                     </div>
@@ -150,7 +150,7 @@ export default function KnihaPage() {
                         ></iframe>
                     </div>
                     <div className="max-lg:order-1">
-                        <h3 className="text-[2.5rem] mb-6 text-black border-b-4 border-[#ffd37c] pb-2 inline-block" style={{ fontFamily: 'var(--font-heading)' }}>
+                        <h3 className="text-[2.5rem] mb-6 text-black border-b-4 border-[#f47f44] pb-2 inline-block" style={{ fontFamily: 'var(--font-heading)' }}>
                             KTO SOM?
                         </h3>
                         <p className="text-[1.1rem] leading-relaxed mb-6 text-[#000]">
@@ -163,7 +163,7 @@ export default function KnihaPage() {
                 </div>
 
                 {/* Quote Box */}
-                <div className="bg-[#ffd37c] p-12 rounded-xl text-center mb-24 shadow-lg transform rotate-[-1deg] hover:rotate-0 transition-transform duration-300">
+                <div className="bg-[#f47f44] p-12 rounded-xl text-center mb-24 shadow-lg transform rotate-[-1deg] hover:rotate-0 transition-transform duration-300">
                     <p className="text-[1.5rem] font-bold uppercase tracking-wide text-black leading-relaxed" style={{ fontFamily: 'var(--font-heading)' }}>
                         POVEDZ MI TO A JA TO ZABUDNEM. UKÁŽ MI TO A JA SI TO ZAPAMÄTÁM. DOVOĽ MI TO UROBIŤ A JA TO POCHOPÍM NA ZVYŠOK SVOJHO ŽIVOTA.
                     </p>
@@ -288,7 +288,7 @@ export default function KnihaPage() {
                         >
                             {/* Close Button */}
                             <button
-                                className="absolute -top-12 right-0 text-white text-4xl font-light hover:text-[#ffd37c] transition-colors p-2 z-[3100]"
+                                className="absolute -top-12 right-0 text-white text-4xl font-light hover:text-[#f47f44] transition-colors p-2 z-[3100]"
                                 onClick={() => setPreviewIndex(null)}
                             >
                                 ✕

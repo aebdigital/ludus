@@ -96,7 +96,7 @@ export default function StaffMemberModal({ member, onClose }: StaffMemberModalPr
                         {member.name}
                     </h2>
                     {member.role && (
-                        <p className="text-[#ffd37c] font-bold text-sm uppercase tracking-wider mb-8">
+                        <p className="text-[#f47f44] font-bold text-sm uppercase tracking-wider mb-8">
                             {member.role}
                         </p>
                     )}

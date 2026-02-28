@@ -13,7 +13,7 @@ export default function AcademySubpageSidebar() {
                 {academyCategories.map((category) => (
                     <div key={category.title}>
                         <h3
-                            className="text-[1.2rem] mb-4 pb-2 border-b-2 border-[#ffd37c] text-black font-bold uppercase tracking-wider"
+                            className="text-[1.2rem] mb-4 pb-2 border-b-2 border-[#f47f44] text-black font-bold uppercase tracking-wider"
                             style={{ fontFamily: 'var(--font-heading)' }}
                         >
                             {category.title}
@@ -25,7 +25,7 @@ export default function AcademySubpageSidebar() {
                                     <Link
                                         key={link.name}
                                         href={link.url}
-                                        className={`text-[0.95rem] font-medium transition-all duration-200 hover:text-[#ffd37c] ${isActive ? 'text-[#ffd37c] font-bold underline decoration-2 underline-offset-4' : 'text-gray-600'
+                                        className={`text-[0.95rem] font-medium transition-all duration-200 hover:text-[#f47f44] ${isActive ? 'text-[#f47f44] font-bold underline decoration-2 underline-offset-4' : 'text-gray-600'
                                             }`}
                                     >
                                         {link.name}

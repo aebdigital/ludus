@@ -176,7 +176,7 @@ export default function ProgramClient({ events, initialCategory }: ProgramClient
                                                 onClick={(e) => { e.stopPropagation(); window.open(event.buy_ticket_link, '_blank'); }}
                                                 className="px-4 py-2 bg-black text-white text-xs font-bold uppercase tracking-widest hover:bg-gray-800 transition-colors rounded text-center"
                                             >
-                                                Kúpiť lístok
+                                                Rezervovať lístky
                                             </button>
                                         )}
 

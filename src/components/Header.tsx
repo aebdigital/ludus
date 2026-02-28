@@ -59,7 +59,7 @@ export default function Header() {
               >
                 <Link
                   href={item.url}
-                  className={`relative text-black uppercase font-heading text-[1.4rem] tracking-wider transition-all duration-300 inline-block hover:text-gray-600 hover:scale-105 ${currentCategory === index ? 'before:absolute before:-top-2 before:-left-4 before:-right-4 before:-bottom-2 before:bg-[#ffd37c] before:rounded-[45%_55%_60%_40%/55%_45%_55%_45%] before:-z-10 before:-rotate-2' : ''
+                  className={`relative text-black uppercase font-heading text-[1.4rem] tracking-wider transition-all duration-300 inline-block hover:text-gray-600 hover:scale-105 ${currentCategory === index ? 'before:absolute before:-top-2 before:-left-4 before:-right-4 before:-bottom-2 before:bg-[#f47f44] before:rounded-[45%_55%_60%_40%/55%_45%_55%_45%] before:-z-10 before:-rotate-2' : ''
                     }`}
                   style={{ fontFamily: 'var(--font-heading)' }}
                 >
@@ -107,7 +107,7 @@ export default function Header() {
         {/* Right Group - Social + Contact */}
         <div className="flex items-center gap-4">
 
-          <Link href="/kontakt" className="btn-cta">
+          <Link href="/kontakt" className="btn-cta !bg-black !text-white hover:!bg-gray-800">
             <span className="btn-text-container">
               <span className="btn-text btn-text-visible">Kontakt</span>
               <span className="btn-text btn-text-hidden">Kontakt</span>

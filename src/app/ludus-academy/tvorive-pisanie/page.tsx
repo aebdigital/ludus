@@ -25,14 +25,14 @@ export default function TvorivePisaniePage() {
                     <main className="flex-1 min-w-0">
                         <div className="mb-24">
                             <h2 className="text-[3rem] mb-2 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-                                RADOSŤ <span className="text-[#ffd37c]">vedieť</span> PÍSAŤ
+                                RADOSŤ <span className="text-[#f47f44]">vedieť</span> PÍSAŤ
                             </h2>
-                            <div className="text-[#ffd37c] font-bold text-[1.2rem] mb-8 uppercase tracking-widest leading-tight">
+                            <div className="text-[#f47f44] font-bold text-[1.2rem] mb-8 uppercase tracking-widest leading-tight">
                                 NIEKEDY JE LEPŠIE PÍSAŤ. IBA PÍSAŤ.
                             </div>
 
                             <div className="text-[1.1rem] text-[#000] space-y-6 mb-12 leading-relaxed">
-                                <p className="italic font-medium text-black border-l-4 border-[#ffd37c] pl-6 py-2">
+                                <p className="italic font-medium text-black border-l-4 border-[#f47f44] pl-6 py-2">
                                     Nie všetko sa dá povedať nahlas. Niekedy je lepšie písať. Písanie umožňuje človeku usporiadať si myšlienky a vyjadriť oveľa viac emócii zo zákutí vlastného ja, než rozprávanie.
                                 </p>
                                 <p>
@@ -60,7 +60,7 @@ export default function TvorivePisaniePage() {
                                         'Zlepšíte sa v slovnej zásobe.'
                                     ].map((item, i) => (
                                         <li key={i} className="flex gap-3 items-start text-[#000]">
-                                            <span className="text-[#ffd37c] mt-1 font-bold">✓</span>
+                                            <span className="text-[#f47f44] mt-1 font-bold">✓</span>
                                             {item}
                                         </li>
                                     ))}
@@ -68,9 +68,9 @@ export default function TvorivePisaniePage() {
                             </div>
 
                             <div className="bg-black text-white p-10 rounded-2xl mb-12 shadow-xl">
-                                <div className="text-[#ffd37c] font-bold uppercase tracking-widest mb-2 text-sm">Investícia</div>
+                                <div className="text-[#f47f44] font-bold uppercase tracking-widest mb-2 text-sm">Investícia</div>
                                 <h3 className="text-[2rem] mb-6 leading-tight">
-                                    NEKUPUJETE SI KURZ, INVESTUJETE DO SVOJHO ROZVOJA: <span className="text-[#ffd37c]">308 EUR</span>
+                                    NEKUPUJETE SI KURZ, INVESTUJETE DO SVOJHO ROZVOJA: <span className="text-[#f47f44]">308 EUR</span>
                                 </h3>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-gray-300">
@@ -89,11 +89,11 @@ export default function TvorivePisaniePage() {
                                         </li>
                                     </ul>
                                     <ul className="space-y-2 text-sm">
-                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Profesionálny lektor so skúsenosťami</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Individuálny prístup</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Rôzne tvorivé metódy písania</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Káva a čaj počas kurzu</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Certifikát</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Profesionálny lektor so skúsenosťami</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Individuálny prístup</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Rôzne tvorivé metódy písania</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Káva a čaj počas kurzu</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Certifikát</li>
                                     </ul>
                                 </div>
                                 <div className="mt-8 pt-6 border-t border-white/10 text-sm italic opacity-70">
@@ -107,7 +107,7 @@ export default function TvorivePisaniePage() {
 
                                 {/* Michal Rovňák */}
                                 <div className="flex gap-8 items-start max-md:flex-col mb-16">
-                                    <div className="w-[180px] h-[180px] rounded-full overflow-hidden flex-shrink-0 border-4 border-[#ffd37c] relative">
+                                    <div className="w-[180px] h-[180px] rounded-full overflow-hidden flex-shrink-0 border-4 border-[#f47f44] relative">
                                         <Image
                                             src="/pedagogovia/MICHAL ROVŇÁK.webp"
                                             alt="Mgr. art. Michal Rovňák"
@@ -155,7 +155,7 @@ export default function TvorivePisaniePage() {
 
                             <div className="space-y-12 mb-12">
                                 {/* Success Story Section */}
-                                <div className="bg-[#ffd37c]/5 p-12 rounded-3xl border border-[#ffd37c]/20">
+                                <div className="bg-[#f47f44]/5 p-12 rounded-3xl border border-[#f47f44]/20">
                                     <div className="flex gap-12 items-center max-md:flex-col mb-12">
                                         <div className="flex-1">
                                             <h3 className="text-[2.5rem] mb-6 leading-tight font-bold" style={{ fontFamily: 'var(--font-heading)' }}>
@@ -236,8 +236,8 @@ export default function TvorivePisaniePage() {
                                 </div>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                                    <div className="bg-white border-2 border-[#ffd37c] p-10 rounded-2xl relative overflow-hidden flex flex-col">
-                                        <div className="absolute top-0 right-0 bg-[#ffd37c] text-black px-6 py-2 font-bold uppercase tracking-widest">TERMÍN</div>
+                                    <div className="bg-white border-2 border-[#f47f44] p-10 rounded-2xl relative overflow-hidden flex flex-col">
+                                        <div className="absolute top-0 right-0 bg-[#f47f44] text-black px-6 py-2 font-bold uppercase tracking-widest">TERMÍN</div>
                                         <h4 className="text-[1.8rem] font-bold text-black mb-2 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>14.4 - 9.6.2026</h4>
                                         <p className="font-bold text-black text-[1.5rem] mb-6 uppercase tracking-tight">Každý UTOROK od 18:00 - 20:30</p>
                                         <div className="flex flex-col gap-2 p-6 bg-gray-50 rounded-xl mb-8">
@@ -256,7 +256,7 @@ export default function TvorivePisaniePage() {
                                         </div>
                                     </div>
 
-                                    <div className="bg-[#ffd37c]/10 border border-[#ffd37c] p-10 rounded-2xl text-center flex flex-col justify-center">
+                                    <div className="bg-[#f47f44]/10 border border-[#f47f44] p-10 rounded-2xl text-center flex flex-col justify-center">
                                         <h4 className="text-[1.8rem] font-bold text-black mb-4 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>
                                             ĎALŠÍ CYKLUS KURZOV SPUSTÍME V SEPTEMBRI 2026
                                         </h4>

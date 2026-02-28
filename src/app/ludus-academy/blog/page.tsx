@@ -6,8 +6,8 @@ export default function BlogPage() {
     <>
       {/* Hero */}
       <section
-        className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-        style={{ backgroundImage: "url('/images/academy/IMG_9026.webp')" }}
+        className="h-[40vh] bg-cover flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+        style={{ backgroundImage: "url('/images/academy/IMG_9026.webp')", backgroundPosition: 'center 35%' }}
       >
         <div className="absolute inset-0 bg-black/40" />
         <h1

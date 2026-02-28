@@ -25,16 +25,16 @@ export default function FiremnyWorkshopPage() {
                     <main className="flex-1 min-w-0">
                         <div className="mb-24">
                             <h2 className="text-[3rem] mb-8 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-                                Radosť <span className="text-[#ffd37c]">spolu</span> objavovať
+                                Radosť <span className="text-[#f47f44]">spolu</span> objavovať
                             </h2>
 
                             <div className="bg-black text-white p-12 rounded-2xl mb-12 shadow-xl relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-[#ffd37c]/10 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-[#f47f44]/10 rounded-full -mr-16 -mt-16 blur-3xl"></div>
                                 <div className="relative z-10 space-y-4 text-[1.4rem] md:text-[1.8rem] leading-tight font-medium italic">
                                     <p>Každá organizácia komunikuje.</p>
                                     <p>Otázka je, či pôsobí presvedčivo, zrozumiteľne a jednotne.</p>
                                     <p>Dobré nápady nestačia, ak sa stratia v podaní.</p>
-                                    <p className="text-[#ffd37c] not-italic font-bold">Pripravíme váš tím na situácie, v ktorých na slovách záleží.</p>
+                                    <p className="text-[#f47f44] not-italic font-bold">Pripravíme váš tím na situácie, v ktorých na slovách záleží.</p>
                                 </div>
                             </div>
 
@@ -43,7 +43,7 @@ export default function FiremnyWorkshopPage() {
                                     <p>
                                         Skupinové workshopy v Ludus Academy sú prakticky orientované tréningy pre tímy, ktoré chcú zlepšiť vystupovanie, spoluprácu a komunikáciu navonok aj vo vnútri organizácie. Program pripravujeme na mieru podľa potrieb klienta – od prezentácií a mediálnych výstupov až po moderovanie či vystupovanie pred kamerou.
                                     </p>
-                                    <p className="font-bold border-l-4 border-[#ffd37c] pl-6 py-2">
+                                    <p className="font-bold border-l-4 border-[#f47f44] pl-6 py-2">
                                         Workshopy môžu mať formu poldňového alebo celodenného tréningu.
                                     </p>
                                 </div>
@@ -81,7 +81,7 @@ export default function FiremnyWorkshopPage() {
                                             'Odborníkov, ktorí potrebujú zrozumiteľne vysvetľovať svoju prácu'
                                         ].map((item, i) => (
                                             <li key={i} className="flex gap-3 items-start text-[#000]">
-                                                <span className="text-[#ffd37c] mt-1 font-bold">•</span>
+                                                <span className="text-[#f47f44] mt-1 font-bold">•</span>
                                                 {item}
                                             </li>
                                         ))}
@@ -92,7 +92,7 @@ export default function FiremnyWorkshopPage() {
                                 </div>
                             </div>
 
-                            <div className="bg-[#ffd37c]/5 border border-[#ffd37c]/20 p-10 rounded-2xl mb-16">
+                            <div className="bg-[#f47f44]/5 border border-[#f47f44]/20 p-10 rounded-2xl mb-16">
                                 <h3 className="text-[2rem] mb-6 text-black text-center" style={{ fontFamily: 'var(--font-heading)' }}>
                                     Čo účastníci získajú
                                 </h3>
@@ -111,8 +111,8 @@ export default function FiremnyWorkshopPage() {
                                         'Zvládanie trémy a stresových situácií',
                                         'Schopnosť viesť rozhovor alebo moderovať stretnutie'
                                     ].map((benefit, i) => (
-                                        <div key={i} className="flex gap-3 items-center bg-white p-4 rounded-xl shadow-sm border border-[#ffd37c]/10">
-                                            <span className="w-6 h-6 rounded-full bg-[#ffd37c] flex items-center justify-center text-black text-xs font-bold">✓</span>
+                                        <div key={i} className="flex gap-3 items-center bg-white p-4 rounded-xl shadow-sm border border-[#f47f44]/10">
+                                            <span className="w-6 h-6 rounded-full bg-[#f47f44] flex items-center justify-center text-black text-xs font-bold">✓</span>
                                             <span className="text-[1rem] font-medium text-black">{benefit}</span>
                                         </div>
                                     ))}
@@ -152,7 +152,7 @@ export default function FiremnyWorkshopPage() {
                                 </div>
 
                                 <div className="bg-black text-white p-10 rounded-2xl text-center shadow-2xl relative overflow-hidden group">
-                                    <div className="absolute inset-0 bg-gradient-to-r from-[#ffd37c]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-r from-[#f47f44]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                                     <h3 className="text-[2.2rem] mb-6 leading-tight relative z-10">
                                         Máte záujem?
                                     </h3>

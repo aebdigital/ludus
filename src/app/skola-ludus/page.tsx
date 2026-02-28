@@ -10,8 +10,8 @@ export default function SkolaLudusPage() {
     <>
       {/* Hero */}
       <section
-        className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-        style={{ backgroundImage: "url('/images/skola-main.webp')" }}
+        className="h-[40vh] bg-cover flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+        style={{ backgroundImage: "url('/images/skola-main.webp')", backgroundPosition: 'center 35%' }}
       >
         <div className="absolute inset-0 bg-black/40" />
         <h1
@@ -62,8 +62,8 @@ export default function SkolaLudusPage() {
               {/* Premium HTML Manifest */}
               <section className="p-8 md:p-12 bg-[#0a0a0a] rounded-[2.5rem] text-center shadow-3xl relative overflow-hidden group border border-white/5 flex flex-col justify-center min-h-[500px]">
                 {/* Decorative background glows */}
-                <div className="absolute top-0 right-0 w-80 h-80 bg-[#ffd37c]/10 rounded-full -mr-40 -mt-40 blur-[80px] group-hover:bg-[#ffd37c]/20 transition-colors duration-1000" />
-                <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#ffd37c]/5 rounded-full -ml-40 -mb-40 blur-[80px] group-hover:bg-[#ffd37c]/15 transition-colors duration-1000" />
+                <div className="absolute top-0 right-0 w-80 h-80 bg-[#f47f44]/10 rounded-full -mr-40 -mt-40 blur-[80px] group-hover:bg-[#f47f44]/20 transition-colors duration-1000" />
+                <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#f47f44]/5 rounded-full -ml-40 -mb-40 blur-[80px] group-hover:bg-[#f47f44]/15 transition-colors duration-1000" />
 
                 <div className="relative z-10 space-y-2 max-w-2xl mx-auto w-full">
                   {[
@@ -77,7 +77,7 @@ export default function SkolaLudusPage() {
                     <div key={index} className="group/item">
                       <p className="text-white/90 text-xl md:text-2xl font-medium tracking-tight leading-snug">
                         <span
-                          className="text-[#ffd37c] font-black uppercase tracking-[0.2em] mr-3 inline-block transform transition-transform duration-500 group-hover/item:scale-110 text-lg md:text-xl"
+                          className="text-[#f47f44] font-black uppercase tracking-[0.2em] mr-3 inline-block transform transition-transform duration-500 group-hover/item:scale-110 text-lg md:text-xl"
                           style={{ fontFamily: 'var(--font-heading)' }}
                         >
                           HRA
@@ -86,7 +86,7 @@ export default function SkolaLudusPage() {
                       </p>
                       {index < 5 && (
                         <div className="flex justify-center mt-3">
-                          <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-[#ffd37c]/30 to-transparent" />
+                          <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-[#f47f44]/30 to-transparent" />
                         </div>
                       )}
                     </div>
@@ -94,8 +94,8 @@ export default function SkolaLudusPage() {
                 </div>
 
                 {/* Corner Accents */}
-                <div className="absolute top-6 left-6 w-8 h-8 border-t-2 border-l-2 border-[#ffd37c]/30 rounded-tl-xl" />
-                <div className="absolute bottom-6 right-6 w-8 h-8 border-b-2 border-r-2 border-[#ffd37c]/30 rounded-br-xl" />
+                <div className="absolute top-6 left-6 w-8 h-8 border-t-2 border-l-2 border-[#f47f44]/30 rounded-tl-xl" />
+                <div className="absolute bottom-6 right-6 w-8 h-8 border-b-2 border-r-2 border-[#f47f44]/30 rounded-br-xl" />
               </section>
 
               {/* Warning Box */}
@@ -104,13 +104,13 @@ export default function SkolaLudusPage() {
                 <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #000 0, #000 10px, transparent 10px, transparent 20px)' }}></div>
 
                 <div className="relative z-10 text-center transform transition-transform duration-500 hover:scale-105">
-                  <div className="inline-block border-4 border-black rounded-full p-4 mb-6 bg-[#ffd37c]">
+                  <div className="inline-block border-4 border-black rounded-full p-4 mb-6 bg-[#f47f44]">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                   </div>
                   <h3 className="text-[2.5rem] md:text-[3.5rem] leading-[1.1] font-black uppercase text-black max-w-lg mx-auto" style={{ fontFamily: 'var(--font-heading)' }}>
-                    Hra spôsobuje <span className="text-[#ffd37c] bg-black px-2 py-1 mx-1 transform -rotate-2 inline-block shadow-lg">závislosť</span>
+                    Hra spôsobuje <span className="text-[#f47f44] bg-black px-2 py-1 mx-1 transform -rotate-2 inline-block shadow-lg">závislosť</span>
                     <br />a vážne ohrozuje tvoju priemernosť.
                   </h3>
                 </div>
@@ -162,7 +162,7 @@ export default function SkolaLudusPage() {
                 <Link
                   key={item.title}
                   href={item.href}
-                  className="bg-white p-8 rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.05)] text-center transition-all duration-300 border border-transparent hover:-translate-y-1 hover:border-[#ffd37c] no-underline"
+                  className="bg-white p-8 rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.05)] text-center transition-all duration-300 border border-transparent hover:-translate-y-1 hover:border-[#f47f44] no-underline"
                 >
                   <span className="text-4xl mb-4 block">{item.icon}</span>
                   <h3
@@ -179,7 +179,7 @@ export default function SkolaLudusPage() {
             <div className="grid grid-cols-2 gap-16 max-md:grid-cols-1">
               <div className="bg-white p-12 rounded-xl shadow-[0_5px_20px_rgba(0,0,0,0.05)]">
                 <h3
-                  className="text-[2rem] mb-6 border-b-2 border-[#ffd37c] pb-2 inline-block"
+                  className="text-[2rem] mb-6 border-b-2 border-[#f47f44] pb-2 inline-block"
                   style={{ fontFamily: 'var(--font-heading)' }}
                 >
                   Čo ponúkame
@@ -196,7 +196,7 @@ export default function SkolaLudusPage() {
                   ].map((item) => (
                     <li
                       key={item}
-                      className="relative pl-8 mb-4 text-[1.1rem] text-[#000] before:content-['•'] before:text-[#ffd37c] before:font-bold before:text-xl before:absolute before:left-0"
+                      className="relative pl-8 mb-4 text-[1.1rem] text-[#000] before:content-['•'] before:text-[#f47f44] before:font-bold before:text-xl before:absolute before:left-0"
                     >
                       {item}
                     </li>
@@ -206,7 +206,7 @@ export default function SkolaLudusPage() {
 
               <div className="bg-white p-12 rounded-xl shadow-[0_5px_20px_rgba(0,0,0,0.05)]">
                 <h3
-                  className="text-[2rem] mb-6 border-b-2 border-[#ffd37c] pb-2 inline-block"
+                  className="text-[2rem] mb-6 border-b-2 border-[#f47f44] pb-2 inline-block"
                   style={{ fontFamily: 'var(--font-heading)' }}
                 >
                   Pre koho je škola určená
@@ -224,7 +224,7 @@ export default function SkolaLudusPage() {
                   ].map((item) => (
                     <li
                       key={item}
-                      className="relative pl-8 mb-4 text-[1.1rem] text-[#000] before:content-['•'] before:text-[#ffd37c] before:font-bold before:text-xl before:absolute before:left-0"
+                      className="relative pl-8 mb-4 text-[1.1rem] text-[#000] before:content-['•'] before:text-[#f47f44] before:font-bold before:text-xl before:absolute before:left-0"
                     >
                       {item}
                     </li>
@@ -232,7 +232,7 @@ export default function SkolaLudusPage() {
                 </ul>
                 <p className="text-[1rem] text-[#555] italic">
                   Ak máte záujem iba o tvorivé písanie kontaktujte nás emailom na{' '}
-                  <a href="mailto:jakubludus@gmail.com" className="text-black font-bold underline hover:text-[#ffd37c] transition-colors">
+                  <a href="mailto:jakubludus@gmail.com" className="text-black font-bold underline hover:text-[#f47f44] transition-colors">
                     jakubludus@gmail.com
                   </a>
                 </p>

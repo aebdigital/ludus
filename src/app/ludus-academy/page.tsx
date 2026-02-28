@@ -8,25 +8,25 @@ import GalleryPreview from '@/components/GalleryPreview';
 const courses = [
   {
     title: "HERECKÝ KURZ",
-    description: <>Radosť <span className="text-[#ffd37c]">sa</span> hrať.</>,
+    description: <>Radosť <span className="text-[#f47f44]">sa</span> hrať.</>,
     href: "/ludus-academy/herecky-kurz",
     backgroundImage: "/images/academy/IMG_1128.webp"
   },
   {
     title: "IMPROVIZAČNÝ KURZ",
-    description: <>Radosť <span className="text-[#ffd37c]">si</span> improvizovať</>,
+    description: <>Radosť <span className="text-[#f47f44]">si</span> improvizovať</>,
     href: "/ludus-academy/improvizacia",
     backgroundImage: "/images/academy/IMG_3649.webp"
   },
   {
     title: "DIVADELNÉ LABORATÓRIUM",
-    description: <>Radosť <span className="text-[#ffd37c]">sa</span> umelecky realizovať</>,
+    description: <>Radosť <span className="text-[#f47f44]">sa</span> umelecky realizovať</>,
     href: "/ludus-academy/divadelne-laboratorium",
     backgroundImage: "/images/academy/IMG_4194.webp"
   },
   {
     title: "KURZ TVORIVÉHO PÍSANIA",
-    description: <>Radosť <span className="text-[#ffd37c]">vedieť</span> písať</>,
+    description: <>Radosť <span className="text-[#f47f44]">vedieť</span> písať</>,
     href: "/ludus-academy/tvorive-pisanie",
     backgroundImage: "/images/academy/IMG_4766.webp"
   }
@@ -35,19 +35,19 @@ const courses = [
 const workshops = [
   {
     title: "WORKSHOPY PRE ŠKOLY",
-    description: <>Radosť <span className="text-[#ffd37c]">sa</span> spoznávať</>,
+    description: <>Radosť <span className="text-[#f47f44]">sa</span> spoznávať</>,
     href: "/ludus-academy/workshopy-skoly",
     backgroundImage: "/images/academy/IMG_9005.webp"
   },
   {
     title: "WORKSHOP PRE UČITEĽOV",
-    description: <>Radosť <span className="text-[#ffd37c]">sa</span> učiť</>,
+    description: <>Radosť <span className="text-[#f47f44]">sa</span> učiť</>,
     href: "/ludus-academy/workshop-ucitelia",
     backgroundImage: "/images/academy/IMG_9026.webp"
   },
   {
     title: "WORKSHOP KREATÍVNEHO MYSLENIA",
-    description: <>Radosť <span className="text-[#ffd37c]">si</span> tvoriť</>,
+    description: <>Radosť <span className="text-[#f47f44]">si</span> tvoriť</>,
     href: "/ludus-academy/workshop-kreativita",
     backgroundImage: "/images/academy/IMG_9087.webp"
   }
@@ -57,19 +57,19 @@ const workshops = [
 const corporateWorkshops = [
   {
     title: "KREATÍVNY TÍMBILDING",
-    description: <>Radosť <span className="text-[#ffd37c]">spolu</span> pracovať</>,
+    description: <>Radosť <span className="text-[#f47f44]">spolu</span> pracovať</>,
     href: "/ludus-academy/firemny-timbilding",
     backgroundImage: "/images/academy/IMG_4216.webp"
   },
   {
     title: "INDIVIDUÁLNE TRÉNINGY",
-    description: <>Radosť <span className="text-[#ffd37c]">sa</span> rozvíjať</>,
+    description: <>Radosť <span className="text-[#f47f44]">sa</span> rozvíjať</>,
     href: "/ludus-academy/individualne-treningy",
     backgroundImage: "/images/academy/IMG_9073.webp"
   },
   {
     title: "FIREMNÉ WORKSHOPY",
-    description: <>Radosť <span className="text-[#ffd37c]">spolu</span> objavovať</>,
+    description: <>Radosť <span className="text-[#f47f44]">spolu</span> objavovať</>,
     href: "/ludus-academy/firemny-workshop",
     backgroundImage: "/images/academy/IMG_3649.webp"
   }
@@ -174,7 +174,7 @@ export default function LudusAcademyPage() {
               <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-16">
                 <div>
                   <h3
-                    className="text-[2.5rem] mb-6 text-black relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[60px] after:h-1 after:bg-[#ffd37c]"
+                    className="text-[2.5rem] mb-6 text-black relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[60px] after:h-1 after:bg-[#f47f44]"
                     style={{ fontFamily: 'var(--font-heading)' }}
                   >
                     NAŠA VÍZIA
@@ -188,7 +188,7 @@ export default function LudusAcademyPage() {
                 </div>
                 <div>
                   <h3
-                    className="text-[2.5rem] mb-6 text-black relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[60px] after:h-1 after:bg-[#ffd37c]"
+                    className="text-[2.5rem] mb-6 text-black relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[60px] after:h-1 after:bg-[#f47f44]"
                     style={{ fontFamily: 'var(--font-heading)' }}
                   >
                     NAŠE HODNOTY
@@ -204,7 +204,7 @@ export default function LudusAcademyPage() {
                     ].map((value, i) => (
                       <li
                         key={i}
-                        className="relative pl-8 mb-4 text-[1.1rem] text-[#000] before:content-['•'] before:text-[#ffd37c] before:font-bold before:text-[1.5rem] before:absolute before:left-0 before:-top-1"
+                        className="relative pl-8 mb-4 text-[1.1rem] text-[#000] before:content-['•'] before:text-[#f47f44] before:font-bold before:text-[1.5rem] before:absolute before:left-0 before:-top-1"
                       >
                         {value}
                       </li>
@@ -226,14 +226,14 @@ export default function LudusAcademyPage() {
       </div>
 
       {/* Bottom CTA */}
-      <section className="bg-black p-10 text-center rounded-t-xl">
+      <section className="bg-[#07793f] p-10 text-center rounded-t-xl">
         <h2 className="text-center mb-4 !text-white" style={{ fontFamily: 'var(--font-heading)' }}>
           Máte záujem?
         </h2>
         <p className="mb-8 opacity-80 text-white">
           Kontaktujte nás pre viac informácií o kurzoch a termínoch.
         </p>
-        <Button href="/ludus-academy/kontakt" className="bg-white text-black hover:bg-gray-100">
+        <Button href="/ludus-academy/kontakt" className="!bg-black !text-white hover:!bg-gray-800">
           Kontaktovať
         </Button>
       </section>

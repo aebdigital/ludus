@@ -39,8 +39,8 @@ export default function Footer() {
             </Link>
           ))}
           <div className="flex gap-4 mt-4">
-            <a href="#" className="hover:scale-110 transition-transform"><Image src="/images/icons/instagram.svg" alt="IG" width={24} height={24} /></a>
-            <a href="#" className="hover:scale-110 transition-transform"><Image src="/images/icons/facebook.svg" alt="FB" width={24} height={24} /></a>
+            <a href="https://www.instagram.com/skolaludus" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform"><Image src="/images/icons/instagram.svg" alt="IG" width={24} height={24} /></a>
+            <a href="https://www.facebook.com/skolaludus/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform"><Image src="/images/icons/facebook.svg" alt="FB" width={24} height={24} /></a>
           </div>
         </div>
 
@@ -58,9 +58,9 @@ export default function Footer() {
               {link.name}
             </Link>
           ))}
-          <div className="flex gap-4 mt-4">
-            <a href="#" className="hover:scale-110 transition-transform"><Image src="/images/icons/instagram.svg" alt="IG" width={24} height={24} /></a>
-            <a href="#" className="hover:scale-110 transition-transform"><Image src="/images/icons/facebook.svg" alt="FB" width={24} height={24} /></a>
+          <div className="flex gap-4 mt-4 opacity-30 pointer-events-none">
+            <span><Image src="/images/icons/instagram.svg" alt="IG" width={24} height={24} /></span>
+            <span><Image src="/images/icons/facebook.svg" alt="FB" width={24} height={24} /></span>
           </div>
         </div>
 
@@ -79,8 +79,8 @@ export default function Footer() {
             </Link>
           ))}
           <div className="flex gap-4 mt-4">
-            <a href="#" className="hover:scale-110 transition-transform"><Image src="/images/icons/instagram.svg" alt="IG" width={24} height={24} /></a>
-            <a href="#" className="hover:scale-110 transition-transform"><Image src="/images/icons/facebook.svg" alt="FB" width={24} height={24} /></a>
+            <a href="https://www.instagram.com/ludusacademy.sk/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform"><Image src="/images/icons/instagram.svg" alt="IG" width={24} height={24} /></a>
+            <a href="https://www.facebook.com/ludusacademy.sk/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform"><Image src="/images/icons/facebook.svg" alt="FB" width={24} height={24} /></a>
           </div>
         </div>
 
@@ -98,6 +98,10 @@ export default function Footer() {
               {link.name}
             </Link>
           ))}
+          <div className="flex gap-4 mt-4">
+            <a href="https://www.instagram.com/skolaludus" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform"><Image src="/images/icons/instagram.svg" alt="IG" width={24} height={24} /></a>
+            <a href="https://www.facebook.com/skolaludus/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform"><Image src="/images/icons/facebook.svg" alt="FB" width={24} height={24} /></a>
+          </div>
         </div>
       </div>
 

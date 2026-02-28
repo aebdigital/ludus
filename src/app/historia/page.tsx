@@ -62,8 +62,8 @@ export default function HistoriaPage() {
         <div className="bg-[#fcfcfc] min-h-screen">
             {/* Hero */}
             <section
-                className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/images/divadlo-main.webp')" }}
+                className="h-[40vh] bg-cover flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+                style={{ backgroundImage: "url('/images/divadlo-main.webp')", backgroundPosition: 'center 30%' }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1
@@ -74,7 +74,7 @@ export default function HistoriaPage() {
                 </h1>
             </section>
 
-            <div className="w-[95%] max-w-7xl mx-auto py-20">
+            <div className="w-[95%] max-w-7xl mx-auto pt-20 pb-0">
                 {/* Founders Section */}
                 <div className="space-y-24 mb-32">
                     {/* Founders Section */}
@@ -89,7 +89,7 @@ export default function HistoriaPage() {
                             {founders.map((founder, index) => (
                                 <div key={index} className="flex flex-col sm:flex-row gap-8 items-start text-left">
                                     {/* Founder Image Bubble */}
-                                    <div className="w-[200px] h-[200px] rounded-full overflow-hidden shrink-0 border-4 border-[#ffd37c] shadow-xl relative mx-auto sm:mx-0">
+                                    <div className="w-[200px] h-[200px] rounded-full overflow-hidden shrink-0 border-4 border-[#f47f44] shadow-xl relative mx-auto sm:mx-0">
                                         <Image
                                             src={founder.image}
                                             alt={founder.name}
@@ -108,7 +108,7 @@ export default function HistoriaPage() {
                                             <ul className="space-y-2 list-none p-0">
                                                 {founder.details.map((detail, idx) => (
                                                     <li key={idx} className="flex items-start gap-3">
-                                                        <span className="text-[#ffd37c] text-lg mt-1">•</span>
+                                                        <span className="text-[#f47f44] text-lg mt-1">•</span>
                                                         <span>{detail}</span>
                                                     </li>
                                                 ))}
@@ -120,7 +120,7 @@ export default function HistoriaPage() {
                                                 </h4>
                                                 <ul className="space-y-1 list-none p-0">
                                                     {founder.pastRoles.map((role, idx) => (
-                                                        <li key={idx} className="flex items-start gap-3 pl-4 border-l-2 border-[#ffd37c]/30">
+                                                        <li key={idx} className="flex items-start gap-3 pl-4 border-l-2 border-[#f47f44]/30">
                                                             <span className="text-[#555] text-sm">{role}</span>
                                                         </li>
                                                     ))}
@@ -172,18 +172,18 @@ export default function HistoriaPage() {
 
                             {/* STVR Documentary Link */}
                             <a
-                                href="https://www.stvr.sk/televizia/program/18117"
+                                href="https://www.stvr.sk/televizia/archiv/18829/317948"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex flex-col gap-4 group"
                             >
-                                <div className="aspect-video w-full rounded-xl overflow-hidden shadow-lg bg-black relative flex items-center justify-center p-8 text-center transition-all group-hover:bg-[#ffd37c]/10">
+                                <div className="aspect-video w-full rounded-xl overflow-hidden shadow-lg bg-black relative flex items-center justify-center p-8 text-center transition-all group-hover:bg-[#f47f44]/10">
                                     <div className="border border-white/20 p-8 rounded-lg w-full h-full flex flex-col items-center justify-center gap-4">
-                                        <p className="text-white font-heading text-2xl group-hover:text-[#ffd37c]">Dokument Fenomén LUDUS</p>
+                                        <p className="text-white font-heading text-2xl group-hover:text-[#f47f44]">Dokument Fenomén LUDUS</p>
                                         <span className="text-white/60 text-sm">Pozrieť v archíve STVR</span>
                                     </div>
                                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                        <span className="bg-[#ffd37c] text-black px-6 py-2 rounded-full font-bold">Otvoriť archív →</span>
+                                        <span className="bg-[#f47f44] text-black px-6 py-2 rounded-full font-bold">Otvoriť archív →</span>
                                     </div>
                                 </div>
                                 <h4 className="text-xl font-bold">Dokument Fenomén LUDUS (STVR)</h4>
@@ -202,7 +202,7 @@ export default function HistoriaPage() {
                                     spolu s Jurajom Bindzárom založili LUDUS. Jeho ciele definovali vo svojom manifeste:
                                 </p>
 
-                                <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1 bg-[#ffd37c]/5 p-8 rounded-xl border-l-8 border-[#ffd37c] mb-8 not-italic">
+                                <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1 bg-[#f47f44]/5 p-8 rounded-xl border-l-8 border-[#f47f44] mb-8 not-italic">
                                     <ul className="space-y-3 font-semibold text-black italic">
                                         <li>Hra ako základné umelecko – pedagogické východisko</li>
                                         <li>Hra ako krídla slobodného človeka</li>
@@ -265,7 +265,7 @@ export default function HistoriaPage() {
                                 </p>
 
                                 <div className="bg-black text-white p-12 rounded-2xl text-center shadow-xl">
-                                    <h3 className="text-[#ffd37c] text-[2.5rem] mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
+                                    <h3 className="text-[#f47f44] text-[2.5rem] mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
                                         Súčasnosť
                                     </h3>
                                     <p className="text-xl opacity-90 leading-relaxed">
@@ -289,7 +289,7 @@ export default function HistoriaPage() {
 
             {/* Projects History - 5 per row - FULL WIDTH CONTAINER */}
             <div className="w-[95%] max-w-[1600px] mx-auto pb-32">
-                <div className="mt-16">
+                <div className="mt-0">
                     <h2 className="text-[3rem] mb-16 text-center" style={{ fontFamily: 'var(--font-heading)' }}>
                         Divadelná produkcia
                     </h2>
@@ -298,7 +298,7 @@ export default function HistoriaPage() {
                         {/* Youth Projects */}
                         <div className="bg-white p-12 rounded-3xl shadow-sm border border-gray-100">
                             <div className="bg-black py-6 px-10 rounded-2xl mb-12 shadow-lg">
-                                <h3 className="text-[#ffd37c] text-3xl font-bold uppercase tracking-widest m-0 text-left">
+                                <h3 className="text-[#f47f44] text-3xl font-bold uppercase tracking-widest m-0 text-left">
                                     Úspešné projekty pre mládež
                                 </h3>
                             </div>
@@ -358,7 +358,7 @@ export default function HistoriaPage() {
                         {/* Children Projects */}
                         <div className="bg-white p-12 rounded-3xl shadow-sm border border-gray-100 mt-16">
                             <div className="bg-black py-6 px-10 rounded-2xl mb-12 shadow-lg">
-                                <h3 className="text-[#ffd37c] text-3xl font-bold uppercase tracking-widest m-0 text-left">
+                                <h3 className="text-[#f47f44] text-3xl font-bold uppercase tracking-widest m-0 text-left">
                                     Projekty pre deti
                                 </h3>
                             </div>

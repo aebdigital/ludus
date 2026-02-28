@@ -13,14 +13,14 @@ export default function SkolaLayout({ children }: { children: React.ReactNode })
 
             {/* Unified CTA for Skola Ludus - Hidden on Contact Page */}
             {!isContactPage && (
-                <section className="bg-black p-10 text-center mt-auto">
+                <section className="bg-[#07793f] p-10 text-center mt-auto">
                     <h2 className="text-center mb-4 text-white" style={{ fontFamily: 'var(--font-heading)' }}>
                         Máte záujem?
                     </h2>
                     <p className="mb-8 opacity-80 text-white">
                         Kontaktujte nás pre viac informácií o štúdiu.
                     </p>
-                    <Button href="/skola-ludus/kontakt" className="bg-white text-black hover:bg-gray-100">
+                    <Button href="/skola-ludus/kontakt" className="!bg-black !text-white hover:!bg-gray-800">
                         Kontaktovať
                     </Button>
                 </section>

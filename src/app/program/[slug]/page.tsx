@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import ProgramGallery from '@/components/ProgramGallery';
+import ProgramScrollButton from '@/components/ProgramScrollButton';
 
 export const revalidate = 0;
 
@@ -24,7 +25,10 @@ export default async function ProgramDetailPage({ params }: { params: Promise<{ 
         );
     }
 
-    const relatedEvents = await getProgramEventsByTitle(event.title);
+    const allRelatedEvents = await getProgramEventsByTitle(event.title);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const relatedEvents = allRelatedEvents.filter(evt => new Date(evt.event_date) >= today);
 
     const bgImage = event.image_path ? getImageUrl(event.image_path) : '/images/painting.webp';
 
@@ -129,61 +133,26 @@ export default async function ProgramDetailPage({ params }: { params: Promise<{ 
                                 </div>
                             )}
 
-                            {event.premiere && (
-                                <div>
-                                    <span className="block text-xs opacity-50 uppercase tracking-widest mb-1">Premiéra</span>
-                                    <div className="text-xl font-medium">
-                                        {event.premiere}
-                                    </div>
-                                </div>
-                            )}
+
                         </div>
 
                         {/* CTA */}
                         <div className="pt-4 flex flex-col gap-3 items-start">
                             {/* Buy Ticket Link (External) */}
-                            {event.buy_ticket_link && (
-                                <a
-                                    href={event.buy_ticket_link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                            {event.buy_ticket_link || event.has_school_reservation || event.has_ticket_reservation ? (
+                                <ProgramScrollButton
                                     className="px-8 py-4 bg-black text-white font-bold uppercase tracking-widest hover:bg-gray-800 transition-colors rounded-lg w-full md:w-auto text-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                                 >
-                                    Kúpiť lístky
-                                </a>
-                            )}
-
-                            {/* School Reservation */}
-                            {event.has_school_reservation && (
-                                <Link
-                                    href={`/rezervacia-skoly/${event.slug}`}
-                                    className="px-8 py-4 bg-white text-black border-2 border-black font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-colors rounded-lg w-full md:w-auto text-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                                >
-                                    Rezervácia pre školy
-                                </Link>
-                            )}
-
-                            {/* Ticket Reservation Form */}
-                            {event.has_ticket_reservation && (
-                                <Link
-                                    href={`/rezervacia-listka/${event.slug}`}
-                                    className="px-8 py-4 bg-white text-black border-2 border-black font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-colors rounded-lg w-full md:w-auto text-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                                >
-                                    Rezervácia lístka
-                                </Link>
-                            )}
-
-                            {/* Fallback */}
-                            {!event.buy_ticket_link && !event.has_school_reservation && !event.has_ticket_reservation && (
-                                event.status === 'available' ? (
-                                    <button disabled className="px-8 py-4 bg-black/50 text-white font-bold uppercase tracking-widest rounded-lg w-full md:w-auto text-center cursor-not-allowed">
-                                        Lístky
-                                    </button>
-                                ) : (
-                                    <span className="inline-block text-xl font-bold uppercase px-6 py-3 border-2 border-black rounded bg-transparent">
-                                        {event.status === 'vypredane' ? 'Vypredané' : event.info_text || 'Info'}
-                                    </span>
-                                )
+                                    Rezervovať lístky
+                                </ProgramScrollButton>
+                            ) : event.status !== 'available' ? (
+                                <span className="inline-block text-xl font-bold uppercase px-6 py-3 border-2 border-black rounded bg-transparent">
+                                    {event.status === 'vypredane' ? 'Vypredané' : event.info_text || 'Info'}
+                                </span>
+                            ) : (
+                                <button disabled className="px-8 py-4 bg-black/50 text-white font-bold uppercase tracking-widest rounded-lg w-full md:w-auto text-center cursor-not-allowed">
+                                    Lístky nedostupné
+                                </button>
                             )}
                         </div>
                     </div>
@@ -257,10 +226,26 @@ export default async function ProgramDetailPage({ params }: { params: Promise<{ 
                                 </ul>
                             </div>
                         )}
+
+                        {/* Premiere */}
+                        {event.premiere && (
+                            <div className="pt-4">
+                                <h3 className="text-2xl font-bold font-heading mb-4 border-b border-black pb-2" style={{ fontFamily: 'var(--font-heading)' }}>
+                                    Premiéra
+                                </h3>
+                                <div className="text-xl font-medium">
+                                    {event.premiere}
+                                </div>
+                            </div>
+                        )}
                     </div>
 
                     {/* Right Column: Program Schedule */}
-                    <div className="space-y-12">
+                    <div
+                        className="space-y-12 p-8 md:p-12 rounded-[3.5rem] shadow-sm"
+                        id="schedule"
+                        style={{ backgroundColor: event.color || '#f3f4f6' }}
+                    >
                         {relatedEvents.length > 0 && (
                             <div>
                                 <h3 className="text-4xl font-bold font-heading mb-8 border-b border-black pb-2" style={{ fontFamily: 'var(--font-heading)' }}>
@@ -290,7 +275,7 @@ export default async function ProgramDetailPage({ params }: { params: Promise<{ 
                                                 )}
                                                 {evt.buy_ticket_link ? (
                                                     <a href={evt.buy_ticket_link} target="_blank" rel="noreferrer" className="py-3 px-4 border-2 border-black bg-white text-black text-center text-xs font-bold uppercase tracking-wider hover:bg-black hover:text-white transition-colors">
-                                                        Kúpiť lístok
+                                                        Rezervovať lístky
                                                     </a>
                                                 ) : evt.has_ticket_reservation ? (
                                                     <Link href={`/rezervacia-listka/${evt.slug}`} className="py-3 px-4 border-2 border-black text-center text-xs font-bold uppercase tracking-wider hover:bg-black hover:text-white transition-colors">

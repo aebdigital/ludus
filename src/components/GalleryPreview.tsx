@@ -38,7 +38,7 @@ export default async function GalleryPreview({ category, href, limit = 6 }: Gall
         ))}
       </div>
       <div className="text-center mt-8">
-        <Button href={href}>Zobraziť celú galériu</Button>
+        <Button href={href} className="!bg-black !text-white hover:!bg-gray-800">Zobraziť celú galériu</Button>
       </div>
     </div>
   );

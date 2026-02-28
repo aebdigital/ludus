@@ -25,7 +25,7 @@ export default function PrihlaskaPage() {
             {/* Info Section */}
             <div className="bg-white p-12 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.1)] mb-12">
               <h2
-                className="text-[2rem] mb-8 border-b-2 border-[#ffd37c] pb-2 inline-block"
+                className="text-[2rem] mb-8 border-b-2 border-[#f47f44] pb-2 inline-block"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
                 Často kladené otázky!
@@ -65,7 +65,7 @@ export default function PrihlaskaPage() {
           {/* Sidebar Info */}
           <div className="space-y-8">
             {/* Konkurz Info */}
-            <div className="bg-[#ffd37c] p-8 rounded-xl text-black">
+            <div className="bg-[#f47f44] p-8 rounded-xl text-black">
               <h2
                 className="text-[2rem] mb-6"
                 style={{ fontFamily: 'var(--font-heading)' }}

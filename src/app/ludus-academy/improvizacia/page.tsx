@@ -25,9 +25,9 @@ export default function ImprovizaciaPage() {
                     <main className="flex-1 min-w-0">
                         <div className="mb-24">
                             <h2 className="text-[3rem] mb-2 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-                                RADOSŤ <span className="text-[#ffd37c]">SI</span> IMPROVIZOVAŤ
+                                RADOSŤ <span className="text-[#f47f44]">SI</span> IMPROVIZOVAŤ
                             </h2>
-                            <div className="flex flex-wrap gap-x-4 gap-y-1 text-[#ffd37c] font-bold text-[1.2rem] mb-8 uppercase tracking-widest">
+                            <div className="flex flex-wrap gap-x-4 gap-y-1 text-[#f47f44] font-bold text-[1.2rem] mb-8 uppercase tracking-widest">
                                 <span>IMPROVIZÁCIA</span>
                                 <span>•</span>
                                 <span>PRINÁŠA RADOSŤ</span>
@@ -37,7 +37,7 @@ export default function ImprovizaciaPage() {
 
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
                                 <div className="lg:col-span-2 text-[1.1rem] text-[#000] space-y-6 leading-relaxed">
-                                    <div className="space-y-4 italic font-medium text-black border-l-4 border-[#ffd37c] pl-6 py-2">
+                                    <div className="space-y-4 italic font-medium text-black border-l-4 border-[#f47f44] pl-6 py-2">
                                         <p>Stáva sa Vám, že sa v určitých situáciach cítite zatlačený do kúta?</p>
                                         <p>Príde na vás neistota a jednoducho Vám začínajú dochádzať slová?</p>
                                         <p>Potrebujete z daného momentu alebo komunikácie rýchlo vykorčulovať a neviete ako na to?</p>
@@ -95,7 +95,7 @@ export default function ImprovizaciaPage() {
                                             'Budete mať radosť z komunikácie.'
                                         ].map((item, i) => (
                                             <li key={i} className="flex gap-3 items-start text-[#000]">
-                                                <span className="text-[#ffd37c] mt-1 font-bold">✓</span>
+                                                <span className="text-[#f47f44] mt-1 font-bold">✓</span>
                                                 {item}
                                             </li>
                                         ))}
@@ -115,9 +115,9 @@ export default function ImprovizaciaPage() {
                             </div>
 
                             <div className="bg-black text-white p-10 rounded-2xl mb-12 shadow-xl">
-                                <div className="text-[#ffd37c] font-bold uppercase tracking-widest mb-2 text-sm">Investícia</div>
+                                <div className="text-[#f47f44] font-bold uppercase tracking-widest mb-2 text-sm">Investícia</div>
                                 <h3 className="text-[2rem] mb-6 leading-tight">
-                                    NEKUPUJETE SI KURZ, INVESTUJETE DO SVOJHO ROZVOJA: <span className="text-[#ffd37c]">308 EUR</span>
+                                    NEKUPUJETE SI KURZ, INVESTUJETE DO SVOJHO ROZVOJA: <span className="text-[#f47f44]">308 EUR</span>
                                 </h3>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-gray-300">
@@ -136,17 +136,17 @@ export default function ImprovizaciaPage() {
                                         </li>
                                     </ul>
                                     <ul className="space-y-2 text-sm">
-                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> 22,5 hodín intenzívnej výučby + divadelná impro show</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Improvizačné cvičenia a techniky</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Praktický tréning</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Profesionálni lektori</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Záverečná impro show pre divákov</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#ffd37c]">•</span> Certifikát</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> 22,5 hodín intenzívnej výučby + divadelná impro show</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Improvizačné cvičenia a techniky</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Praktický tréning</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Profesionálni lektori</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Záverečná impro show pre divákov</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Certifikát</li>
                                     </ul>
                                 </div>
                                 <div className="mt-8 pt-6 border-t border-white/10 text-sm italic">
                                     <p className="opacity-70">PODMIENKA ÚČASTI: vek minimálne 18 rokov a ukončené stredoškolské vzdelanie</p>
-                                    <p className="text-[#ffd37c] font-bold mt-2 uppercase tracking-widest">Každý SA VIE NAUČIŤ</p>
+                                    <p className="text-[#f47f44] font-bold mt-2 uppercase tracking-widest">Každý SA VIE NAUČIŤ</p>
                                 </div>
                             </div>
 
@@ -198,8 +198,8 @@ export default function ImprovizaciaPage() {
                                 </div>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div className="bg-white border-2 border-[#ffd37c] p-8 rounded-2xl relative overflow-hidden flex flex-col">
-                                        <div className="absolute top-0 right-0 bg-[#ffd37c] text-black px-4 py-1 font-bold text-xs uppercase">1 VOĽNÉ MIESTO</div>
+                                    <div className="bg-white border-2 border-[#f47f44] p-8 rounded-2xl relative overflow-hidden flex flex-col">
+                                        <div className="absolute top-0 right-0 bg-[#f47f44] text-black px-4 py-1 font-bold text-xs uppercase">1 VOĽNÉ MIESTO</div>
                                         <h4 className="text-[1.5rem] font-bold text-black mb-2">23.1. - 27.3.2026</h4>
                                         <p className="text-black mb-4">(hodina nebude: 20.2.2026)</p>
                                         <p className="font-bold text-black text-lg mb-4 uppercase tracking-tighter">každý PIATOK od 17:30 do 20:00</p>
@@ -247,7 +247,7 @@ export default function ImprovizaciaPage() {
                                             <p className="text-black font-medium">Mgr. art Ladislav Ladomirjak, Mgr. art Jozef Jurčišin-Kukľa</p>
                                             <p className="text-xs text-black italic">(viac o lektoroch v sekcii O NÁS)</p>
                                         </div>
-                                        <p className="text-sm text-[#ffd37c] font-bold italic mb-8">Ide o skupinu, ktorá už spolu absolvovala jeden Improvizačný kurz</p>
+                                        <p className="text-sm text-[#f47f44] font-bold italic mb-8">Ide o skupinu, ktorá už spolu absolvovala jeden Improvizačný kurz</p>
                                         <div className="mt-auto">
                                             <Button
                                                 href="https://form.fapi.cz/?id=379a5104-4a64-47a3-b0a1-f6969514e15b"
@@ -259,7 +259,7 @@ export default function ImprovizaciaPage() {
                                         </div>
                                     </div>
 
-                                    <div className="bg-[#ffd37c]/10 border border-[#ffd37c] p-8 rounded-2xl text-center flex flex-col justify-center">
+                                    <div className="bg-[#f47f44]/10 border border-[#f47f44] p-8 rounded-2xl text-center flex flex-col justify-center">
                                         <h4 className="text-[1.5rem] font-bold text-black mb-4 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>
                                             ĎALŠÍ CYKLUS KURZOV SPUSTÍME V SEPTEMBRI 2026
                                         </h4>

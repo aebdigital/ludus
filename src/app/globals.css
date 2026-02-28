@@ -13,11 +13,11 @@
 /* Tailwind theme tokens */
 @theme inline {
   --color-primary: #000000;
-  --color-accent: #ffd37c;
-  --color-accent-hover: #ffca5c;
-  --color-bg: #f1f8e9;
+  --color-accent: #f47f44;
+  --color-accent-hover: #e06d33;
+  --color-bg: #f8f7f1;
   --color-header-bg: rgba(255, 255, 255, 0.95);
-  --color-footer-bg: #ffd37c;
+  --color-footer-bg: #f47f44;
   --font-heading: 'Festivo LC', 'Antonio', sans-serif;
   --font-body: 'Raleway', sans-serif;
   --radius: 12px;

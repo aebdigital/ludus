@@ -29,8 +29,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     <>
       {/* Hero */}
       <section
-        className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-        style={{ backgroundImage: `url('${post.image}')` }}
+        className="h-[40vh] bg-cover flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+        style={{ backgroundImage: `url('${post.image}')`, backgroundPosition: 'center 35%' }}
       >
         <div className="absolute inset-0 bg-black/40" />
         <h1
@@ -67,7 +67,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <aside className="flex-1 sticky top-[100px] max-lg:static max-lg:w-full">
             <div className="bg-white p-8 rounded-xl shadow-[0_5px_20px_rgba(0,0,0,0.05)]">
               <h3
-                className="text-[1.5rem] mb-6 border-b-2 border-[#ffd37c] pb-2 inline-block"
+                className="text-[1.5rem] mb-6 border-b-2 border-[#f47f44] pb-2 inline-block"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
                 Odporúčané články

@@ -80,7 +80,7 @@ export default async function Home() {
                     switch (cat) {
                       case 'divadlo-ludus': return { label: 'DIVADLO', className: 'bg-black text-white' };
                       case 'skola-ludus': return { label: 'ŠKOLA', className: 'bg-blue-600 text-white' };
-                      case 'ludus-academy': return { label: 'ACADEMY', className: 'bg-[#ffd37c] text-black' };
+                      case 'ludus-academy': return { label: 'ACADEMY', className: 'bg-[#f47f44] text-black' };
                       case 'ludus-tabor': return { label: 'TÁBOR', className: 'bg-green-600 text-white' };
                       default: return { label: 'NOVINKA', className: 'bg-gray-200 text-gray-800' };
                     }
@@ -135,7 +135,7 @@ export default async function Home() {
                     href={`/program/${evt.slug}`}
                     className="flex items-center gap-4 p-4 bg-white/10 rounded-xl transition-all duration-300 hover:bg-white/15 hover:translate-x-1"
                   >
-                    <span className="text-[1.5rem] font-bold min-w-[70px] text-[#ffd37c]" style={{ fontFamily: 'var(--font-heading)' }}>
+                    <span className="text-[1.5rem] font-bold min-w-[70px] text-[#f47f44]" style={{ fontFamily: 'var(--font-heading)' }}>
                       {formatEventDate(evt.event_date)}
                     </span>
                     <div>
@@ -153,7 +153,7 @@ export default async function Home() {
               )}
             </div>
 
-            <Button href="/divadlo-ludus" className="mt-6">
+            <Button href="/program" className="mt-6 !bg-white !text-black hover:!bg-gray-100">
               Celý program
             </Button>
           </div>

@@ -51,7 +51,7 @@ export default function CookieSettingsModal({ isOpen, onClose, onSave }: CookieS
                         </div>
                         <button
                             onClick={() => setPreferences(prev => ({ ...prev, analytics: !prev.analytics }))}
-                            className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out ${preferences.analytics ? 'bg-[#ffd37c]' : 'bg-gray-200'}`}
+                            className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out ${preferences.analytics ? 'bg-[#f47f44]' : 'bg-gray-200'}`}
                         >
                             <span className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out ${preferences.analytics ? 'translate-x-5' : 'translate-x-0'}`} />
                         </button>
@@ -65,7 +65,7 @@ export default function CookieSettingsModal({ isOpen, onClose, onSave }: CookieS
                         </div>
                         <button
                             onClick={() => setPreferences(prev => ({ ...prev, marketing: !prev.marketing }))}
-                            className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out ${preferences.marketing ? 'bg-[#ffd37c]' : 'bg-gray-200'}`}
+                            className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out ${preferences.marketing ? 'bg-[#f47f44]' : 'bg-gray-200'}`}
                         >
                             <span className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out ${preferences.marketing ? 'translate-x-5' : 'translate-x-0'}`} />
                         </button>

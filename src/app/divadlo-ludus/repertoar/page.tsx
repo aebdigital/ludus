@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { getRepertoar, getImageUrl } from '@/lib/api';
+import Button from '@/components/Button';
+import RepertoarGallery from '@/components/RepertoarGallery';
+import { getRepertoar } from '@/lib/api';
 
 export const revalidate = 60;
 
@@ -16,8 +16,8 @@ export default async function RepertoarPage() {
   return (
     <>
       <section
-        className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-        style={{ backgroundImage: "url('/images/divadlo-main.webp')" }}
+        className="h-[40vh] bg-cover bg-[center_30%] flex items-center justify-center relative overflow-hidden mt-20"
+        style={{ backgroundImage: "url('/images/repertoar-hero.webp')" }}
       >
         <div className="absolute inset-0 bg-black/40" />
         <h1
@@ -41,11 +41,7 @@ export default async function RepertoarPage() {
                 : [item.image_path || ''];
 
               return (
-                <Link
-                  key={item.id}
-                  href={`/program/${item.slug}`}
-                  className="block no-underline"
-                >
+                <div key={item.id}>
                   <div className="mb-6">
                     <div className="flex items-center gap-4 flex-wrap">
                       <h2
@@ -71,25 +67,15 @@ export default async function RepertoarPage() {
                       )}
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                    {photos.map((photo, i) => (
-                      <div key={i} className="group/photo relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer">
-                        <Image
-                          src={photo ? getImageUrl(photo) : '/images/divadlo-main.webp'}
-                          alt={`${item.program_title} ${i + 1}`}
-                          fill
-                          className="object-cover transition-transform duration-300 group-hover/photo:scale-105"
-                          sizes="(max-width: 768px) 50vw, 20vw"
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover/photo:bg-black/40 transition-colors duration-300 flex items-center justify-center">
-                          <span className="text-white font-semibold opacity-0 group-hover/photo:opacity-100 transition-opacity duration-300">
-                            Viac o programe →
-                          </span>
-                        </div>
-                      </div>
-                    ))}
+
+                  <RepertoarGallery photos={photos} title={item.program_title} />
+
+                  <div className="mt-6 text-center">
+                    <Button href={`/program/${item.slug}`} className="!bg-black !text-white hover:!bg-gray-800">
+                      Najbližšie predstavenie
+                    </Button>
                   </div>
-                </Link>
+                </div>
               );
             })}
           </div>

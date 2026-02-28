@@ -143,7 +143,9 @@ export async function getProgramEventBySlug(slug: string): Promise<ProgramEvent 
     .eq('site_id', SITE_ID)
     .eq('slug', slug)
     .eq('published', true)
-    .single();
+    .order('event_date', { ascending: true })
+    .limit(1)
+    .maybeSingle();
 
   if (error) {
     console.error('Error fetching program event:', error);
