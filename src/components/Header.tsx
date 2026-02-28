@@ -132,7 +132,28 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 bg-white z-[1050] overflow-y-auto transition-transform duration-300 lg:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div className="pt-24 px-6 pb-12 flex flex-col gap-6">
+        {/* Overlay Header with Logo and Close Button */}
+        <div className="w-full py-3 flex justify-center mb-4">
+          <div className="w-[95%] flex justify-between items-center">
+            <Image
+              src="/images/loga-4/logo-main.webp"
+              alt="LUDUS Logo"
+              width={120}
+              height={60}
+              className="h-[60px] w-auto object-contain"
+            />
+            <button
+              className="flex flex-col justify-center items-center w-8 h-8 relative z-[1100]"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <span className="bg-black block transition-all duration-300 ease-out h-[2px] w-full rounded-sm rotate-45 translate-y-[10px]"></span>
+              <span className="bg-black block transition-all duration-300 ease-out h-[2px] w-full rounded-sm my-1 opacity-0"></span>
+              <span className="bg-black block transition-all duration-300 ease-out h-[2px] w-full rounded-sm -rotate-45 -translate-y-[10px]"></span>
+            </button>
+          </div>
+        </div>
+
+        <div className="px-6 pb-12 flex flex-col gap-6">
           <ul className="flex flex-col gap-4">
             {menuData.map((item, index) => (
               <li key={item.title} className="border-b border-gray-100 pb-4">
