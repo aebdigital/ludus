@@ -123,8 +123,8 @@ const getStaffData = (name: string) => {
   if (staffData[name]) return staffData[name];
 
   const cleanName = name
-    .replace(/^(Mgr\. art |Bc\. |MgA\. |Mgr\.art )/, '')
-    .replace(/ ArtD\.?$/, '')
+    .replace(/^(Mgr\. art |Bc\. |MgA\. |Mgr\.art )/i, '')
+    .replace(/ ArtD\.?$/i, '')
     .trim();
 
   if (staffData[cleanName]) return staffData[cleanName];
