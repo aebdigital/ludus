@@ -19,15 +19,7 @@ export default async function TvorivePisaniePage() {
                 </h1>
             </section>
 
-            <section className="w-[95%] mx-auto mt-12 mb-[-2rem]">
-                <Image
-                    src="/GRAFIKA NA WEB KURZOV/kurz-tvoriveho-pisania.jpg"
-                    alt="Kurz tvorivého písania program"
-                    width={1400}
-                    height={600}
-                    className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
-                />
-            </section>
+
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
@@ -42,13 +34,24 @@ export default async function TvorivePisaniePage() {
                                 NIEKEDY JE LEPŠIE PÍSAŤ. IBA PÍSAŤ.
                             </div>
 
-                            <div className="text-[1.1rem] text-[#000] space-y-6 mb-12 leading-relaxed">
-                                <p className="italic font-medium text-black border-l-4 border-[#f47f44] pl-6 py-2">
-                                    Nie všetko sa dá povedať nahlas. Niekedy je lepšie písať. Písanie umožňuje človeku usporiadať si myšlienky a vyjadriť oveľa viac emócii zo zákutí vlastného ja, než rozprávanie.
-                                </p>
-                                <p>
-                                    Pomáha vám, ak svoje pocity vyjadríte písaným slovom? Je papier a pero vašim priateľom v ťažkých chvíľach? Prináša vám písanie radosť a uspokojenie? Cítite radosť, ak sa vám podarí napísať niečo úprimné? Chcete objaviť nové možnosti, ako sa vyjadriť pomocou písaného slova? Máte chuť zistiť rozdiel medzi textom a "textom"? Chcete spoznať možnosti, ako váš text urobiť pôsobivejším? Chcete vedieť, ako sa vyhnúť klišé a objaviť spôsoby, ako byť originálny? Tento kurz prinesie do vášho života nové impulzy a nový uhol pohľadu na písaný text.
-                                </p>
+                            <div className="flex gap-12 max-lg:flex-col mb-12">
+                                <div className="flex-[0.7] text-[1.1rem] text-[#000] space-y-6 leading-relaxed">
+                                    <p className="italic font-medium text-black border-l-4 border-[#f47f44] pl-6 py-2">
+                                        Nie všetko sa dá povedať nahlas. Niekedy je lepšie písať. Písanie umožňuje človeku usporiadať si myšlienky a vyjadriť oveľa viac emócii zo zákutí vlastného ja, než rozprávanie.
+                                    </p>
+                                    <p>
+                                        Pomáha vám, ak svoje pocity vyjadríte písaným slovom? Je papier a pero vašim priateľom v ťažkých chvíľach? Prináša vám písanie radosť a uspokojenie? Cítite radosť, ak sa vám podarí napísať niečo úprimné? Chcete objaviť nové možnosti, ako sa vyjadriť pomocou písaného slova? Máte chuť zistiť rozdiel medzi textom a "textom"? Chcete spoznať možnosti, ako váš text urobiť pôsobivejším? Chcete vedieť, ako sa vyhnúť klišé a objaviť spôsoby, ako byť originálny? Tento kurz prinesie do vášho života nové impulzy a nový uhol pohľadu na písaný text.
+                                    </p>
+                                </div>
+                                <div className="flex-[0.3] min-w-[300px]">
+                                    <Image
+                                        src="/GRAFIKA NA WEB KURZOV/kurz-tvoriveho-pisania.jpg"
+                                        alt="Kurz tvorivého písania program"
+                                        width={600}
+                                        height={800}
+                                        className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                                    />
+                                </div>
                             </div>
 
                             <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100 mb-12 shadow-sm">

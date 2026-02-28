@@ -19,15 +19,7 @@ export default async function HereckyKurzPage() {
                 </h1>
             </section>
 
-            <section className="w-[95%] mx-auto mt-12 mb-[-2rem]">
-                <Image
-                    src="/GRAFIKA NA WEB KURZOV/herecky-kurz.jpg"
-                    alt="Herecký kurz program"
-                    width={1400}
-                    height={600}
-                    className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
-                />
-            </section>
+
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
@@ -72,6 +64,15 @@ export default async function HereckyKurzPage() {
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             allowFullScreen
                                         ></iframe>
+                                    </div>
+                                    <div className="mt-8">
+                                        <Image
+                                            src="/GRAFIKA NA WEB KURZOV/herecky-kurz.jpg"
+                                            alt="Herecký kurz program"
+                                            width={600}
+                                            height={800}
+                                            className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                                        />
                                     </div>
                                 </div>
                             </div>

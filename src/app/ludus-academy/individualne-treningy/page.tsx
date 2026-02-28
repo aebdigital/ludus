@@ -19,15 +19,7 @@ export default async function IndividualneTreningyPage() {
                 </h1>
             </section>
 
-            <section className="w-[95%] mx-auto mt-12 mb-[-2rem]">
-                <Image
-                    src="/GRAFIKA NA WEB KURZOV/individualny-trening.jpg"
-                    alt="Individuálne tréningy program"
-                    width={1400}
-                    height={600}
-                    className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
-                />
-            </section>
+
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
@@ -86,22 +78,33 @@ export default async function IndividualneTreningyPage() {
                                     </p>
                                 </div>
 
-                                <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100">
-                                    <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
-                                        Cieľ tréningu
-                                    </h3>
-                                    <div className="space-y-4 text-[#000]">
-                                        <p>
-                                            Cieľom je, aby ste vedeli komunikovať pokojne a zrozumiteľne aj pod tlakom.
-                                            Naučíte sa formulovať myšlienky, reagovať pohotovo a pôsobiť autenticky bez naučených fráz alebo strojenosti.
-                                        </p>
-                                        <p>
-                                            Pracujeme s hlasom, tempom reči, štruktúrou vyjadrovania aj s tým, čo robiť, keď vás niečo zaskočí.
-                                            Postupne si vytvoríte vlastný spôsob vystupovania, ktorý je funkčný a zároveň prirodzený.
-                                        </p>
-                                        <p className="font-bold text-black pt-2">
-                                            Je na vás koľko hodín sa rozhodnete trénovať.
-                                        </p>
+                                <div className="space-y-8">
+                                    <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100">
+                                        <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
+                                            Cieľ tréningu
+                                        </h3>
+                                        <div className="space-y-4 text-[#000]">
+                                            <p>
+                                                Cieľom je, aby ste vedeli komunikovať pokojne a zrozumiteľne aj pod tlakom.
+                                                Naučíte sa formulovať myšlienky, reagovať pohotovo a pôsobiť autenticky bez naučených fráz alebo strojenosti.
+                                            </p>
+                                            <p>
+                                                Pracujeme s hlasom, tempom reči, štruktúrou vyjadrovania aj s tým, čo robiť, keď vás niečo zaskočí.
+                                                Postupne si vytvoríte vlastný spôsob vystupovania, ktorý je funkčný a zároveň prirodzený.
+                                            </p>
+                                            <p className="font-bold text-black pt-2">
+                                                Je na vás koľko hodín sa rozhodnete trénovať.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="">
+                                        <Image
+                                            src="/GRAFIKA NA WEB KURZOV/individualny-trening.jpg"
+                                            alt="Individuálne tréningy program"
+                                            width={600}
+                                            height={800}
+                                            className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                                        />
                                     </div>
                                 </div>
                             </div>

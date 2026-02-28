@@ -19,15 +19,7 @@ export default async function FiremnyWorkshopPage() {
                 </h1>
             </section>
 
-            <section className="w-[95%] mx-auto mt-12 mb-[-2rem]">
-                <Image
-                    src="/GRAFIKA NA WEB KURZOV/firemny-workshop.jpg"
-                    alt="Firemné workshopy program"
-                    width={1400}
-                    height={600}
-                    className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
-                />
-            </section>
+
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
@@ -78,28 +70,39 @@ export default async function FiremnyWorkshopPage() {
                                     </div>
                                 </div>
 
-                                <div className="bg-white p-10 rounded-2xl border-2 border-gray-50 flex flex-col justify-center">
-                                    <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
-                                        Pre koho je určený
-                                    </h3>
-                                    <ul className="space-y-3">
-                                        {[
-                                            'Firmy komunikujúce s klientmi alebo partnermi',
-                                            'Tímy pripravujúce prezentácie a verejné vystúpenia',
-                                            'Organizácie poskytujúce rozhovory médiám',
-                                            'Manažérov a vedúcich pracovníkov',
-                                            'Hovorcov, projektových manažérov a obchodníkov',
-                                            'Odborníkov, ktorí potrebujú zrozumiteľne vysvetľovať svoju prácu'
-                                        ].map((item, i) => (
-                                            <li key={i} className="flex gap-3 items-start text-[#000]">
-                                                <span className="text-[#f47f44] mt-1 font-bold">•</span>
-                                                {item}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <p className="mt-6 text-sm italic text-gray-500">
-                                        Nie sú potrebné herecké skúsenosti. Tréning je praktický a prispôsobený konkrétnemu prostrediu organizácie.
-                                    </p>
+                                <div className="space-y-8">
+                                    <div className="bg-white p-10 rounded-2xl border-2 border-gray-50 flex flex-col justify-center">
+                                        <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
+                                            Pre koho je určený
+                                        </h3>
+                                        <ul className="space-y-3">
+                                            {[
+                                                'Firmy komunikujúce s klientmi alebo partnermi',
+                                                'Tímy pripravujúce prezentácie a verejné vystúpenia',
+                                                'Organizácie poskytujúce rozhovory médiám',
+                                                'Manažérov a vedúcich pracovníkov',
+                                                'Hovorcov, projektových manažérov a obchodníkov',
+                                                'Odborníkov, ktorí potrebujú zrozumiteľne vysvetľovať svoju prácu'
+                                            ].map((item, i) => (
+                                                <li key={i} className="flex gap-3 items-start text-[#000]">
+                                                    <span className="text-[#f47f44] mt-1 font-bold">•</span>
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        <p className="mt-6 text-sm italic text-gray-500">
+                                            Nie sú potrebné herecké skúsenosti. Tréning je praktický a prispôsobený konkrétnemu prostrediu organizácie.
+                                        </p>
+                                    </div>
+                                    <div className="">
+                                        <Image
+                                            src="/GRAFIKA NA WEB KURZOV/firemny-workshop.jpg"
+                                            alt="Firemné workshopy program"
+                                            width={600}
+                                            height={800}
+                                            className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                                        />
+                                    </div>
                                 </div>
                             </div>
 

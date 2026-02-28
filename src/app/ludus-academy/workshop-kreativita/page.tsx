@@ -19,15 +19,7 @@ export default async function WorkshopKreativitaPage() {
                 </h1>
             </section>
 
-            <section className="w-[95%] mx-auto mt-12 mb-[-2rem]">
-                <Image
-                    src="/GRAFIKA NA WEB KURZOV/workshop-kreativneho-myslenia.jpg"
-                    alt="Workshop kreatívneho myslenia program"
-                    width={1400}
-                    height={600}
-                    className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
-                />
-            </section>
+
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
@@ -60,11 +52,22 @@ export default async function WorkshopKreativitaPage() {
                                         <p className="font-bold text-white">Ak cítite, že by ste chceli do svojho života vniesť viac hravosti, tvorivosti a spontánnosti, tento kurz je pre vás.</p>
                                     </div>
                                 </div>
-                                <div className="p-8 bg-gray-50 border border-gray-100 rounded-2xl shadow-sm">
-                                    <h3 className="text-[1.5rem] mb-4 text-black font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Zámer workshopu</h3>
-                                    <div className="space-y-4 text-[#000]">
-                                        <p>Cieľom workshopu je rozvíjať kreatívne myslenie a naučiť sa pozerať na veci z nových uhlov. Kreativita nie je len pre umelcov – je prirodzenou súčasťou každého z nás.</p>
-                                        <p>Prostredníctvom rôznych techník and cvičení sa naučíme odbúravať bloky, ktoré nám bránia tvoriť, a posilníme schopnosť prichádzať s novými nápadmi a riešeniami.</p>
+                                <div className="space-y-8">
+                                    <div className="p-8 bg-gray-50 border border-gray-100 rounded-2xl shadow-sm">
+                                        <h3 className="text-[1.5rem] mb-4 text-black font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Zámer workshopu</h3>
+                                        <div className="space-y-4 text-[#000]">
+                                            <p>Cieľom workshopu je rozvíjať kreatívne myslenie a naučiť sa pozerať na veci z nových uhlov. Kreativita nie je len pre umelcov – je prirodzenou súčasťou každého z nás.</p>
+                                            <p>Prostredníctvom rôznych techník and cvičení sa naučíme odbúravať bloky, ktoré nám bránia tvoriť, a posilníme schopnosť prichádzať s novými nápadmi a riešeniami.</p>
+                                        </div>
+                                    </div>
+                                    <div className="">
+                                        <Image
+                                            src="/GRAFIKA NA WEB KURZOV/workshop-kreativneho-myslenia.jpg"
+                                            alt="Workshop kreatívneho myslenia program"
+                                            width={600}
+                                            height={800}
+                                            className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                                        />
                                     </div>
                                 </div>
                             </div>

@@ -19,15 +19,7 @@ export default async function WorkshopySkolyPage() {
                 </h1>
             </section>
 
-            <section className="w-[95%] mx-auto mt-12 mb-[-2rem]">
-                <Image
-                    src="/GRAFIKA NA WEB KURZOV/workshop-pre-skoly.jpg"
-                    alt="Workshopy pre školy program"
-                    width={1400}
-                    height={600}
-                    className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
-                />
-            </section>
+
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
@@ -42,17 +34,28 @@ export default async function WorkshopySkolyPage() {
                                 SPOZNAŤ SA A SPLOUPRACOVAŤ JE RADOSŤ
                             </div>
 
-                            <div className="text-[1.1rem] text-[#000] space-y-6 mb-12 leading-relaxed">
-                                <p>
-                                    Každý učiteľ bude azda súhlasiť s tým, že učiť triedu žiakov, kde funguje komunikácia, priateľské vzťahy a kde je medzi žiakmi a učiteľom vytvorená dôvera je úspech. Každý učiteľ chce mať v triede dobrú atmosféru. Nie vždy je to však jednoduché dosiahnuť.
-                                </p>
-                                <p className="italic font-medium text-black border-l-4 border-[#f47f44] pl-6 py-2">
-                                    Práve preto sme vytvorili workshopy pre žiakov a učiteľov, ktorých cieľom je lepšie sa navzájom spoznať, nájsť cestu ako spolupracovať, spoločne niečo vytvoriť, naučiť sa myslieť tímovo a rešpektovať sa navzájom.
-                                </p>
-                                <p>
-                                    Zároveň môžete spolu s vašou triedou zistiť ako funguje kreatívne a improvizačné myslenie.
-                                    Všetky workshopy sú postavené na učení prostredníctvom hry a vychádzajú z metód tvorivej dramatiky. Práve s týmito metódami máme viac ako 50 ročnú skúsenosť v škole LUDUS. Vy máte možnosť vybrať si, aký typ workshopu vám vyhovuje a čo práve vaša trieda potrebuje.
-                                </p>
+                            <div className="flex gap-12 max-lg:flex-col mb-12">
+                                <div className="flex-[0.7] text-[1.1rem] text-[#000] space-y-6 leading-relaxed">
+                                    <p>
+                                        Každý učiteľ bude azda súhlasiť s tým, že učiť triedu žiakov, kde funguje komunikácia, priateľské vzťahy a kde je medzi žiakmi a učiteľom vytvorená dôvera je úspech. Každý učiteľ chce mať v triede dobrú atmosféru. Nie vždy je to však jednoduché dosiahnuť.
+                                    </p>
+                                    <p className="italic font-medium text-black border-l-4 border-[#f47f44] pl-6 py-2">
+                                        Práve preto sme vytvorili workshopy pre žiakov a učiteľov, ktorých cieľom je lepšie sa navzájom spoznať, nájsť cestu ako spolupracovať, spoločne niečo vytvoriť, naučiť sa myslieť tímovo a rešpektovať sa navzájom.
+                                    </p>
+                                    <p>
+                                        Zároveň môžete spolu s vašou triedou zistiť ako funguje kreatívne a improvizačné myslenie.
+                                        Všetky workshopy sú postavené na učení prostredníctvom hry a vychádzajú z metód tvorivej dramatiky. Práve s týmito metódami máme viac ako 50 ročnú skúsenosť v škole LUDUS. Vy máte možnosť vybrať si, aký typ workshopu vám vyhovuje a čo práve vaša trieda potrebuje.
+                                    </p>
+                                </div>
+                                <div className="flex-[0.3] min-w-[300px]">
+                                    <Image
+                                        src="/GRAFIKA NA WEB KURZOV/workshop-pre-skoly.jpg"
+                                        alt="Workshopy pre školy program"
+                                        width={600}
+                                        height={800}
+                                        className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                                    />
+                                </div>
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">

@@ -19,15 +19,7 @@ export default async function DivadelneLaboratoriumPage() {
                 </h1>
             </section>
 
-            <section className="w-[95%] mx-auto mt-12 mb-[-2rem]">
-                <Image
-                    src="/GRAFIKA NA WEB KURZOV/divadelne-laboratorium.jpg"
-                    alt="Divadelné laboratórium program"
-                    width={1400}
-                    height={600}
-                    className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
-                />
-            </section>
+
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
@@ -65,13 +57,24 @@ export default async function DivadelneLaboratoriumPage() {
                                     <h3 className="text-[1.5rem] mb-4 text-black font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Aké skúsenosti sú potrebné?</h3>
                                     <p className="text-[#000]">Bez ohľadu na to, či máte skúsenosti s herectvom, tvorivým písaním alebo improvizáciou, ak máte chuť otvoriť sa novým podnetom a výzvam, ste na správnom mieste.</p>
                                 </div>
-                                <div className="p-8 bg-black text-white rounded-2xl shadow-xl">
-                                    <h3 className="text-[1.5rem] mb-4 text-[#f47f44] font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Pre koho je určený?</h3>
-                                    <ul className="space-y-4 text-gray-300">
-                                        <li className="flex gap-2"><span className="text-[#f47f44] font-bold">•</span> Záujemcom ktorých zaujíma tvorivé písanie a scenáristika.</li>
-                                        <li className="flex gap-2"><span className="text-[#f47f44] font-bold">•</span> Tým, ktorých zaujíma herectvo.</li>
-                                        <li className="flex gap-2"><span className="text-[#f47f44] font-bold">•</span> Záujemcom, ktorých láka improvizácia a improvizované divadlo.</li>
-                                    </ul>
+                                <div className="space-y-8">
+                                    <div className="p-8 bg-black text-white rounded-2xl shadow-xl">
+                                        <h3 className="text-[1.5rem] mb-4 text-[#f47f44] font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Pre koho je určený?</h3>
+                                        <ul className="space-y-4 text-gray-300">
+                                            <li className="flex gap-2"><span className="text-[#f47f44] font-bold">•</span> Záujemcom ktorých zaujíma tvorivé písanie and scenáristika.</li>
+                                            <li className="flex gap-2"><span className="text-[#f47f44] font-bold">•</span> Tým, ktorých zaujíma herectvo.</li>
+                                            <li className="flex gap-2"><span className="text-[#f47f44] font-bold">•</span> Záujemcom, ktorých láka improvizácia and improvizované divadlo.</li>
+                                        </ul>
+                                    </div>
+                                    <div className="">
+                                        <Image
+                                            src="/GRAFIKA NA WEB KURZOV/divadelne-laboratorium.jpg"
+                                            alt="Divadelné laboratórium program"
+                                            width={600}
+                                            height={800}
+                                            className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                                        />
+                                    </div>
                                 </div>
                             </div>
 

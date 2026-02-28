@@ -19,15 +19,7 @@ export default async function WorkshopUciteliaPage() {
                 </h1>
             </section>
 
-            <section className="w-[95%] mx-auto mt-12 mb-[-2rem]">
-                <Image
-                    src="/GRAFIKA NA WEB KURZOV/workshop-pre-ucitelov.jpg"
-                    alt="Workshop pre učiteľov program"
-                    width={1400}
-                    height={600}
-                    className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
-                />
-            </section>
+
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
@@ -71,11 +63,22 @@ export default async function WorkshopUciteliaPage() {
                                         <li className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Ako zaujať a udržať pozornosť</li>
                                     </ul>
                                 </div>
-                                <div className="p-10 bg-white rounded-2xl border-2 border-dashed border-gray-200 flex items-center justify-center text-center">
-                                    <p className="text-gray-400 italic">
-                                        Obsah priebežne dopĺňame. <br />
-                                        Sledujte nás pre aktualizácie.
-                                    </p>
+                                <div className="space-y-8">
+                                    <div className="p-10 bg-white rounded-2xl border-2 border-dashed border-gray-200 flex items-center justify-center text-center">
+                                        <p className="text-gray-400 italic">
+                                            Obsah priebežne dopĺňame. <br />
+                                            Sledujte nás pre aktualizácie.
+                                        </p>
+                                    </div>
+                                    <div className="">
+                                        <Image
+                                            src="/GRAFIKA NA WEB KURZOV/workshop-pre-ucitelov.jpg"
+                                            alt="Workshop pre učiteľov program"
+                                            width={600}
+                                            height={800}
+                                            className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>

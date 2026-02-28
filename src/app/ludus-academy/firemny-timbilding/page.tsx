@@ -19,15 +19,7 @@ export default async function FiremnyTimbildingPage() {
                 </h1>
             </section>
 
-            <section className="w-[95%] mx-auto mt-12 mb-[-2rem]">
-                <Image
-                    src="/GRAFIKA NA WEB KURZOV/kreativny-teambuilding.jpg"
-                    alt="Kreatívny tímbilding program"
-                    width={1400}
-                    height={600}
-                    className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
-                />
-            </section>
+
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
@@ -74,21 +66,32 @@ export default async function FiremnyTimbildingPage() {
                                     </p>
                                 </div>
 
-                                <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100 flex flex-col justify-center">
-                                    <h3 className="text-[1.8rem] mb-6 text-black font-bold uppercase tracking-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-                                        DĹŽKA TÍMBILDINGU
-                                    </h3>
-                                    <div className="space-y-4 text-[#000] text-[1.1rem]">
-                                        <p>
-                                            Navrhovaný čas workshopu je minimálne <span className="font-bold underline decoration-[#f47f44] decoration-2">3-4 hodiny</span>.
-                                        </p>
-                                        <p>
-                                            Podľa dohody vieme prispôsobiť dĺžku potrebám firmy.
-                                        </p>
-                                        <hr className="border-gray-200 my-4" />
-                                        <p className="font-medium">
-                                            Cenovú ponuku vám pošleme na základe vašich požiadaviek.
-                                        </p>
+                                <div className="space-y-8">
+                                    <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100 flex flex-col justify-center">
+                                        <h3 className="text-[1.8rem] mb-6 text-black font-bold uppercase tracking-tight" style={{ fontFamily: 'var(--font-heading)' }}>
+                                            DĹŽKA TÍMBILDINGU
+                                        </h3>
+                                        <div className="space-y-4 text-[#000] text-[1.1rem]">
+                                            <p>
+                                                Navrhovaný čas workshopu je minimálne <span className="font-bold underline decoration-[#f47f44] decoration-2">3-4 hodiny</span>.
+                                            </p>
+                                            <p>
+                                                Podľa dohody vieme prispôsobiť dĺžku potrebám firmy.
+                                            </p>
+                                            <hr className="border-gray-200 my-4" />
+                                            <p className="font-medium">
+                                                Cenovú ponuku vám pošleme na základe vašich požiadaviek.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="">
+                                        <Image
+                                            src="/GRAFIKA NA WEB KURZOV/kreativny-teambuilding.jpg"
+                                            alt="Kreatívny tímbilding program"
+                                            width={600}
+                                            height={800}
+                                            className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                                        />
                                     </div>
                                 </div>
                             </div>
