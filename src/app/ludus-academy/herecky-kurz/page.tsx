@@ -136,7 +136,9 @@ export default async function HereckyKurzPage() {
                                     <div className="flex flex-col gap-1 mb-8">
                                         <span className="text-sm uppercase text-black font-bold">Lektori</span>
                                         <p className="text-black font-medium">Mgr. art Michal Rovňák, Mgr. art Miroslava Durná ArtD.</p>
-                                        <p className="text-xs text-black italic">(viac o lektoroch v sekcii O NÁS)</p>
+                                        <p className="text-xs text-black italic">
+                                            <a href="/ludus-academy/lektori" className="hover:underline">(viac o lektoroch)</a>
+                                        </p>
                                     </div>
                                     <div className="mt-auto">
                                         <Button
@@ -160,7 +162,9 @@ export default async function HereckyKurzPage() {
                                     <div className="flex flex-col gap-1 mb-8">
                                         <span className="text-sm uppercase text-black font-bold">Lektori</span>
                                         <p className="text-black font-medium">Mgr. art Jozef Jurčišin-Kukľa, Bc. Richard Labuda</p>
-                                        <p className="text-xs text-black italic">(viac o lektoroch v sekcii O NÁS)</p>
+                                        <p className="text-xs text-black italic">
+                                            <a href="/ludus-academy/lektori" className="hover:underline">(viac o lektoroch)</a>
+                                        </p>
                                     </div>
                                     <div className="mt-auto">
                                         <Button

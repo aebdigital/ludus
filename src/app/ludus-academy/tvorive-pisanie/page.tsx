@@ -244,7 +244,9 @@ export default async function TvorivePisaniePage() {
                                         <div className="flex flex-col gap-2 p-6 bg-gray-50 rounded-xl mb-8">
                                             <span className="text-xs uppercase text-black font-bold tracking-widest">Váš Lektor</span>
                                             <p className="text-black font-bold text-xl">Mgr. art. Michal Rovňák</p>
-                                            <p className="text-sm text-black italic">(viac o lektoroch v sekcii O NÁS alebo vyššie)</p>
+                                            <p className="text-xs text-black italic">
+                                                <a href="/ludus-academy/lektori" className="hover:underline">(viac o lektoroch)</a>
+                                            </p>
                                         </div>
                                         <div className="mt-auto">
                                             <Button

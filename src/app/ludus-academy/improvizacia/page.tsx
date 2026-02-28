@@ -206,7 +206,9 @@ export default async function ImprovizaciaPage() {
                                         <div className="flex flex-col gap-1 mb-8">
                                             <span className="text-sm uppercase text-black font-bold">Lektor</span>
                                             <p className="text-black font-medium">Mgr. art Jozef Jurčišin-Kukľa</p>
-                                            <p className="text-xs text-black italic">(viac o lektoroch v sekcii O NÁS)</p>
+                                            <p className="text-xs text-black italic">
+                                                <a href="/ludus-academy/lektori" className="hover:underline">(viac o lektoroch)</a>
+                                            </p>
                                         </div>
                                         <div className="mt-auto">
                                             <Button
