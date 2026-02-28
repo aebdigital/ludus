@@ -190,15 +190,7 @@ export default async function HereckyKurzPage() {
                                 </div>
                             </div>
 
-                            <div className="bg-[#f47f44]/10 border border-[#f47f44] p-10 rounded-2xl text-center">
-                                <h4 className="text-[1.8rem] font-bold text-black mb-4 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>
-                                    ZAUJALI VÁS TIETO KURZY?
-                                </h4>
-                                <p className="text-[#000] mb-8 max-w-2xl mx-auto">
-                                    V prípade, že máte o tento kurz záujem, tak sa neváhajte prihlásiť. Ak máte akékoľvek otázky, tak nám pokojne napíšte.
-                                </p>
-                                <Button href="/ludus-academy/kontakt" className="!bg-black !text-white hover:!bg-gray-800">Mám otázku</Button>
-                            </div>
+
 
                             {/* Reviews Section */}
                             <div className="py-16">
