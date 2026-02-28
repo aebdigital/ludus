@@ -9,7 +9,7 @@ export default function TaborKontaktPage() {
     return (
         <>
             <section
-                className="h-[40vh] bg-[#f47f44] bg-contain bg-center bg-no-repeat flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+                className="h-[40vh] bg-[#fb7b44] bg-contain bg-center bg-no-repeat flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
                 style={{ backgroundImage: "url('/images/loga-4/logo-main.webp')" }}
             >
                 <h1
