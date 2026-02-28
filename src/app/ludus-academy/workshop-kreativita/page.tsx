@@ -44,15 +44,15 @@ export default async function WorkshopKreativitaPage() {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                                <div className="p-8 bg-black text-white rounded-2xl shadow-xl">
-                                    <h3 className="text-[1.5rem] mb-4 text-[#f47f44] font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Pre koho je workshop určený?</h3>
-                                    <div className="space-y-4 text-gray-300">
-                                        <p>Workshop kreatívneho myslenia je určený pre všetkých, ktorí chcú objaviť alebo rozvíjať svoju kreativitu – bez ohľadu na vek, profesiu či skúsenosti.</p>
-                                        <p>Je ideálny pre ľudí, ktorí sa chcú naučiť myslieť inak, hľadať nové riešenia, byť otvorenejší novým nápadom alebo prekonať obmedzujúce presvedčenia.</p>
-                                        <p className="font-bold text-white">Ak cítite, že by ste chceli do svojho života vniesť viac hravosti, tvorivosti a spontánnosti, tento kurz je pre vás.</p>
-                                    </div>
-                                </div>
                                 <div className="space-y-8">
+                                    <div className="p-8 bg-black text-white rounded-2xl shadow-xl">
+                                        <h3 className="text-[1.5rem] mb-4 text-[#f47f44] font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Pre koho je workshop určený?</h3>
+                                        <div className="space-y-4 text-gray-300">
+                                            <p>Workshop kreatívneho myslenia je určený pre všetkých, ktorí chcú objaviť alebo rozvíjať svoju kreativitu – bez ohľadu na vek, profesiu či skúsenosti.</p>
+                                            <p>Je ideálny pre ľudí, ktorí sa chcú naučiť myslieť inak, hľadať nové riešenia, byť otvorenejší novým nápadom alebo prekonať obmedzujúce presvedčenia.</p>
+                                            <p className="font-bold text-white">Ak cítite, že by ste chceli do svojho života vniesť viac hravosti, tvorivosti a spontánnosti, tento kurz je pre vás.</p>
+                                        </div>
+                                    </div>
                                     <div className="p-8 bg-gray-50 border border-gray-100 rounded-2xl shadow-sm">
                                         <h3 className="text-[1.5rem] mb-4 text-black font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Zámer workshopu</h3>
                                         <div className="space-y-4 text-[#000]">
@@ -60,15 +60,15 @@ export default async function WorkshopKreativitaPage() {
                                             <p>Prostredníctvom rôznych techník and cvičení sa naučíme odbúravať bloky, ktoré nám bránia tvoriť, a posilníme schopnosť prichádzať s novými nápadmi a riešeniami.</p>
                                         </div>
                                     </div>
-                                    <div className="">
-                                        <Image
-                                            src="/GRAFIKA NA WEB KURZOV/workshop-kreativneho-myslenia.jpg"
-                                            alt="Workshop kreatívneho myslenia program"
-                                            width={600}
-                                            height={800}
-                                            className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
-                                        />
-                                    </div>
+                                </div>
+                                <div className="">
+                                    <Image
+                                        src="/GRAFIKA NA WEB KURZOV/workshop-kreativneho-myslenia.jpg"
+                                        alt="Workshop kreatívneho myslenia program"
+                                        width={600}
+                                        height={800}
+                                        className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                                    />
                                 </div>
                             </div>
 

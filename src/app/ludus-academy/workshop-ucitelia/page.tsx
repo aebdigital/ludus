@@ -34,37 +34,27 @@ export default async function WorkshopUciteliaPage() {
                                 PRIPRAVUJEME PRE VÁS NOVÉ OBSAHY
                             </div>
 
-                            <div className="bg-black text-white p-20 rounded-3xl text-center shadow-2xl relative overflow-hidden">
-                                <div className="absolute top-0 left-0 w-64 h-64 bg-[#f47f44]/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
-                                <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#f47f44]/10 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                                <div className="bg-black text-white p-16 rounded-3xl text-center shadow-2xl relative overflow-hidden h-full flex flex-col justify-center">
+                                    <div className="absolute top-0 left-0 w-64 h-64 bg-[#f47f44]/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+                                    <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#f47f44]/10 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
 
-                                <div className="relative z-10">
-                                    <div className="text-[#f47f44] text-[4rem] font-bold mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
-                                        PRIPRAVUJEME
-                                    </div>
-                                    <p className="text-[1.5rem] text-gray-300 max-w-2xl mx-auto leading-relaxed italic">
-                                        "Tieto workshopy pre pedagógov a lektorov práve cizelujeme do finálnej podoby. Čoskoro tu nájdete kompletné info o termínoch, obsahu a lektoroch."
-                                    </p>
+                                    <div className="relative z-10">
+                                        <div className="text-[#f47f44] text-[3.5rem] font-bold mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
+                                            PRIPRAVUJEME
+                                        </div>
+                                        <p className="text-[1.3rem] text-gray-300 max-w-2xl mx-auto leading-relaxed italic">
+                                            "Tieto workshopy pre pedagógov a lektorov práve cizelujeme do finálnej podoby. Čoskoro tu nájdete kompletné info o termínoch, obsahu a lektoroch."
+                                        </p>
 
-                                    <div className="mt-12 flex flex-col items-center gap-6">
-                                        <div className="w-16 h-1 bg-[#f47f44]"></div>
-                                        <p className="text-gray-400 uppercase tracking-[0.3em] text-sm">Ludus Academy</p>
+                                        <div className="mt-12 flex flex-col items-center gap-6">
+                                            <div className="w-16 h-1 bg-[#f47f44]"></div>
+                                            <p className="text-gray-400 uppercase tracking-[0.3em] text-sm">Ludus Academy</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24">
-                                <div className="p-10 bg-gray-50 rounded-2xl border border-gray-100 opacity-60">
-                                    <h3 className="text-[1.5rem] mb-4 text-black font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Na čo sa môžete tešiť?</h3>
-                                    <ul className="space-y-4">
-                                        <li className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Kreatívne metódy učenia</li>
-                                        <li className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Práca s hlasom a prejavom pedagóga</li>
-                                        <li className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Zážitková pedagogika v praxi</li>
-                                        <li className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Ako zaujať a udržať pozornosť</li>
-                                    </ul>
-                                </div>
-                                <div className="space-y-8">
-                                    <div className="p-10 bg-white rounded-2xl border-2 border-dashed border-gray-200 flex items-center justify-center text-center">
+                                <div className="h-full flex flex-col space-y-8">
+                                    <div className="p-10 bg-white rounded-2xl border-2 border-dashed border-gray-200 flex items-center justify-center text-center flex-grow">
                                         <p className="text-gray-400 italic">
                                             Obsah priebežne dopĺňame. <br />
                                             Sledujte nás pre aktualizácie.
@@ -79,6 +69,18 @@ export default async function WorkshopUciteliaPage() {
                                             className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
                                         />
                                     </div>
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24">
+                                <div className="p-10 bg-gray-50 rounded-2xl border border-gray-100 opacity-60">
+                                    <h3 className="text-[1.5rem] mb-4 text-black font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Na čo sa môžete tešiť?</h3>
+                                    <ul className="space-y-4">
+                                        <li className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Kreatívne metódy učenia</li>
+                                        <li className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Práca s hlasom a prejavom pedagóga</li>
+                                        <li className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Zážitková pedagogika v praxi</li>
+                                        <li className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Ako zaujať a udržať pozornosť</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

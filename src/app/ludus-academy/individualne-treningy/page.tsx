@@ -55,30 +55,29 @@ export default async function IndividualneTreningyPage() {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-                                <div className="bg-white p-10 rounded-2xl border-2 border-gray-50 flex flex-col justify-center">
-                                    <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
-                                        Pre koho je tréning určený
-                                    </h3>
-                                    <ul className="space-y-3">
-                                        {[
-                                            'Ľudí, ktorí komunikujú s médiami alebo sa na to pripravujú',
-                                            'Moderátorov a začínajúcich hostiteľov podujatí',
-                                            'Lektorov, pedagógov a vedúcich tímov',
-                                            'Manažérov a podnikateľov prezentujúcich projekty či produkty',
-                                            'Každého, kto chce hovoriť istejšie pred ľuďmi'
-                                        ].map((item, i) => (
-                                            <li key={i} className="flex gap-3 items-start text-[#000]">
-                                                <span className="text-[#f47f44] mt-1 font-bold">•</span>
-                                                {item}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <p className="mt-6 text-sm italic text-gray-500">
-                                        Nie je potrebná predchádzajúca skúsenosť. Tréning sa prispôsobuje konkrétnemu človeku a jeho situáciám.
-                                    </p>
-                                </div>
-
                                 <div className="space-y-8">
+                                    <div className="bg-white p-10 rounded-2xl border-2 border-gray-50 flex flex-col justify-center">
+                                        <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
+                                            Pre koho je tréning určený
+                                        </h3>
+                                        <ul className="space-y-3">
+                                            {[
+                                                'Ľudí, ktorí komunikujú s médiami alebo sa na to pripravujú',
+                                                'Moderátorov a začínajúcich hostiteľov podujatí',
+                                                'Lektorov, pedagógov a vedúcich tímov',
+                                                'Manažérov a podnikateľov prezentujúcich projekty či produkty',
+                                                'Každého, kto chce hovoriť istejšie pred ľuďmi'
+                                            ].map((item, i) => (
+                                                <li key={i} className="flex gap-3 items-start text-[#000]">
+                                                    <span className="text-[#f47f44] mt-1 font-bold">•</span>
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        <p className="mt-6 text-sm italic text-gray-500">
+                                            Nie je potrebná predchádzajúca skúsenosť. Tréning sa prispôsobuje konkrétnemu človeku a jeho situáciám.
+                                        </p>
+                                    </div>
                                     <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100">
                                         <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
                                             Cieľ tréningu
@@ -97,15 +96,16 @@ export default async function IndividualneTreningyPage() {
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="">
-                                        <Image
-                                            src="/GRAFIKA NA WEB KURZOV/individualny-trening.jpg"
-                                            alt="Individuálne tréningy program"
-                                            width={600}
-                                            height={800}
-                                            className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
-                                        />
-                                    </div>
+                                </div>
+
+                                <div className="">
+                                    <Image
+                                        src="/GRAFIKA NA WEB KURZOV/individualny-trening.jpg"
+                                        alt="Individuálne tréningy program"
+                                        width={600}
+                                        height={800}
+                                        className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                                    />
                                 </div>
                             </div>
 

@@ -53,24 +53,23 @@ export default async function FiremnyWorkshopPage() {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-                                <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100">
-                                    <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
-                                        Cieľ workshopu
-                                    </h3>
-                                    <div className="space-y-4 text-[#000]">
-                                        <p>
-                                            Cieľom je, aby členovia tímu vedeli komunikovať jasne, pokojne a profesionálne aj v situáciách, ktoré prinášajú tlak alebo neistotu.
-                                        </p>
-                                        <p>
-                                            Účastníci si osvoja praktické postupy, ako formulovať myšlienky, reagovať pohotovo, pracovať s hlasom a pôsobiť prirodzene pred publikom, klientom alebo kamerou.
-                                        </p>
-                                        <p>
-                                            Dôležitou súčasťou je aj zosúladenie tímu – aby organizácia navonok nepôsobila ako jednotlivci s rôznymi štýlmi, ale ako jeden čitateľný a dôveryhodný celok.
-                                        </p>
-                                    </div>
-                                </div>
-
                                 <div className="space-y-8">
+                                    <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100">
+                                        <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
+                                            Cieľ workshopu
+                                        </h3>
+                                        <div className="space-y-4 text-[#000]">
+                                            <p>
+                                                Cieľom je, aby členovia tímu vedeli komunikovať jasne, pokojne a profesionálne aj v situáciách, ktoré prinášajú tlak alebo neistotu.
+                                            </p>
+                                            <p>
+                                                Účastníci si osvoja praktické postupy, ako formulovať myšlienky, reagovať pohotovo, pracovať s hlasom a pôsobiť prirodzene pred publikom, klientom alebo kamerou.
+                                            </p>
+                                            <p>
+                                                Dôležitou súčasťou je aj zosúladenie tímu – aby organizácia navonok nepôsobila ako jednotlivci s rôznymi štýlmi, ale ako jeden čitateľný a dôveryhodný celok.
+                                            </p>
+                                        </div>
+                                    </div>
                                     <div className="bg-white p-10 rounded-2xl border-2 border-gray-50 flex flex-col justify-center">
                                         <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
                                             Pre koho je určený
@@ -94,15 +93,16 @@ export default async function FiremnyWorkshopPage() {
                                             Nie sú potrebné herecké skúsenosti. Tréning je praktický a prispôsobený konkrétnemu prostrediu organizácie.
                                         </p>
                                     </div>
-                                    <div className="">
-                                        <Image
-                                            src="/GRAFIKA NA WEB KURZOV/firemny-workshop.jpg"
-                                            alt="Firemné workshopy program"
-                                            width={600}
-                                            height={800}
-                                            className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
-                                        />
-                                    </div>
+                                </div>
+
+                                <div className="">
+                                    <Image
+                                        src="/GRAFIKA NA WEB KURZOV/firemny-workshop.jpg"
+                                        alt="Firemné workshopy program"
+                                        width={600}
+                                        height={800}
+                                        className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                                    />
                                 </div>
                             </div>
 

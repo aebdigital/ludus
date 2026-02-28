@@ -43,30 +43,29 @@ export default async function FiremnyTimbildingPage() {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-                                <div className="bg-white p-10 rounded-2xl border-2 border-gray-50 flex flex-col justify-center">
-                                    <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
-                                        Pre koho je určený
-                                    </h3>
-                                    <ul className="space-y-3">
-                                        {[
-                                            'pre tímy, ktoré spolu „hrajú“ každý deň, ale chcú si lepšie porozumieť',
-                                            'pre kolektívy, ktoré hľadajú zmysluplný a kreatívny formát tímbildingu',
-                                            'pre firmy, ktoré chcú posilniť spoluprácu bez tlaku na výkon',
-                                            'pre kolektívy, ktoré spolu pracujú, ale málo sa naozaj poznajú',
-                                            'pre firmy, ktoré chcú podporiť kreativitu, otvorenú komunikáciu a spoluprácu'
-                                        ].map((item, i) => (
-                                            <li key={i} className="flex gap-3 items-start text-[#000]">
-                                                <span className="text-[#f47f44] mt-1 font-bold">•</span>
-                                                {item}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <p className="mt-6 text-sm italic text-gray-500">
-                                        Nie je potrebná žiadna umelecká skúsenosť. Program je prispôsobený tak, aby účastníci mali z neho radosť. Radosť spolu pracovať.
-                                    </p>
-                                </div>
-
                                 <div className="space-y-8">
+                                    <div className="bg-white p-10 rounded-2xl border-2 border-gray-50 flex flex-col justify-center">
+                                        <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
+                                            Pre koho je určený
+                                        </h3>
+                                        <ul className="space-y-3">
+                                            {[
+                                                'pre tímy, ktoré spolu „hrajú“ každý deň, ale chcú si lepšie porozumieť',
+                                                'pre kolektívy, ktoré hľadajú zmysluplný a kreatívny formát tímbildingu',
+                                                'pre firmy, ktoré chcú posilniť spoluprácu bez tlaku na výkon',
+                                                'pre kolektívy, ktoré spolu pracujú, ale málo sa naozaj poznajú',
+                                                'pre firmy, ktoré chcú podporiť kreativitu, otvorenú komunikáciu a spoluprácu'
+                                            ].map((item, i) => (
+                                                <li key={i} className="flex gap-3 items-start text-[#000]">
+                                                    <span className="text-[#f47f44] mt-1 font-bold">•</span>
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        <p className="mt-6 text-sm italic text-gray-500">
+                                            Nie je potrebná žiadna umelecká skúsenosť. Program je prispôsobený tak, aby účastníci mali z neho radosť. Radosť spolu pracovať.
+                                        </p>
+                                    </div>
                                     <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100 flex flex-col justify-center">
                                         <h3 className="text-[1.8rem] mb-6 text-black font-bold uppercase tracking-tight" style={{ fontFamily: 'var(--font-heading)' }}>
                                             DĹŽKA TÍMBILDINGU
@@ -84,15 +83,16 @@ export default async function FiremnyTimbildingPage() {
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="">
-                                        <Image
-                                            src="/GRAFIKA NA WEB KURZOV/kreativny-teambuilding.jpg"
-                                            alt="Kreatívny tímbilding program"
-                                            width={600}
-                                            height={800}
-                                            className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
-                                        />
-                                    </div>
+                                </div>
+
+                                <div className="">
+                                    <Image
+                                        src="/GRAFIKA NA WEB KURZOV/kreativny-teambuilding.jpg"
+                                        alt="Kreatívny tímbilding program"
+                                        width={600}
+                                        height={800}
+                                        className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                                    />
                                 </div>
                             </div>
 

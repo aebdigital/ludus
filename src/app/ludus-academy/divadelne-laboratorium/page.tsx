@@ -53,11 +53,11 @@ export default async function DivadelneLaboratoriumPage() {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                                <div className="p-8 bg-white border border-gray-100 rounded-2xl shadow-sm">
-                                    <h3 className="text-[1.5rem] mb-4 text-black font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Aké skúsenosti sú potrebné?</h3>
-                                    <p className="text-[#000]">Bez ohľadu na to, či máte skúsenosti s herectvom, tvorivým písaním alebo improvizáciou, ak máte chuť otvoriť sa novým podnetom a výzvam, ste na správnom mieste.</p>
-                                </div>
                                 <div className="space-y-8">
+                                    <div className="p-8 bg-white border border-gray-100 rounded-2xl shadow-sm">
+                                        <h3 className="text-[1.5rem] mb-4 text-black font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Aké skúsenosti sú potrebné?</h3>
+                                        <p className="text-[#000]">Bez ohľadu na to, či máte skúsenosti s herectvom, tvorivým písaním alebo improvizáciou, ak máte chuť otvoriť sa novým podnetom a výzvam, ste na správnom mieste.</p>
+                                    </div>
                                     <div className="p-8 bg-black text-white rounded-2xl shadow-xl">
                                         <h3 className="text-[1.5rem] mb-4 text-[#f47f44] font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Pre koho je určený?</h3>
                                         <ul className="space-y-4 text-gray-300">
@@ -66,15 +66,15 @@ export default async function DivadelneLaboratoriumPage() {
                                             <li className="flex gap-2"><span className="text-[#f47f44] font-bold">•</span> Záujemcom, ktorých láka improvizácia and improvizované divadlo.</li>
                                         </ul>
                                     </div>
-                                    <div className="">
-                                        <Image
-                                            src="/GRAFIKA NA WEB KURZOV/divadelne-laboratorium.jpg"
-                                            alt="Divadelné laboratórium program"
-                                            width={600}
-                                            height={800}
-                                            className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
-                                        />
-                                    </div>
+                                </div>
+                                <div className="">
+                                    <Image
+                                        src="/GRAFIKA NA WEB KURZOV/divadelne-laboratorium.jpg"
+                                        alt="Divadelné laboratórium program"
+                                        width={600}
+                                        height={800}
+                                        className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                                    />
                                 </div>
                             </div>
 
