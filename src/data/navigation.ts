@@ -143,8 +143,8 @@ export const academyCategories = [
     title: "Workshopy pre firmy",
     links: [
       { name: "Kreatívny tímbilding", url: "/ludus-academy/firemny-timbilding" },
-      { name: "Individuálne tréningy", url: "/ludus-academy/individualne-treningy" },
-      { name: "Firemné workshopy", url: "/ludus-academy/firemny-workshop" }
+      { name: "Individuálny tréning", url: "/ludus-academy/individualne-treningy" },
+      { name: "Firemný workshop", url: "/ludus-academy/firemny-workshop" }
     ]
   }
 ];

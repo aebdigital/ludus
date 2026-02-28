@@ -62,13 +62,13 @@ const corporateWorkshops = [
     backgroundImage: "/images/academy/IMG_4216.webp"
   },
   {
-    title: "INDIVIDUÁLNE TRÉNINGY",
+    title: "INDIVIDUÁLNY TRÉNING",
     description: <>Radosť <span className="text-[#f47f44]">sa</span> rozvíjať</>,
     href: "/ludus-academy/individualne-treningy",
     backgroundImage: "/images/academy/IMG_9073.webp"
   },
   {
-    title: "FIREMNÉ WORKSHOPY",
+    title: "FIREMNÝ WORKSHOP",
     description: <>Radosť <span className="text-[#f47f44]">spolu</span> objavovať</>,
     href: "/ludus-academy/firemny-workshop",
     backgroundImage: "/images/academy/IMG_3649.webp"
@@ -172,7 +172,7 @@ export default function LudusAcademyPage() {
               className="text-center text-[2.5rem] mt-12 mb-8 text-black border-t border-gray-100 pt-12"
               style={{ fontFamily: 'var(--font-heading)' }}
             >
-              WORKSHOPY pre firmy a jednotlivcov
+              WORKSHOPY pre firmy a jednotlivca
             </h3>
             <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-8 mb-16">
               {corporateWorkshops.map((workshop) => (

@@ -15,7 +15,7 @@ export default async function FiremnyWorkshopPage() {
                     className="relative text-white text-[5rem] z-10 text-center max-md:text-[2.5rem]"
                     style={{ fontFamily: 'var(--font-heading)' }}
                 >
-                    Firemné workshopy
+                    Firemný workshop
                 </h1>
             </section>
 
@@ -98,7 +98,7 @@ export default async function FiremnyWorkshopPage() {
                                 <div className="">
                                     <Image
                                         src="/GRAFIKA NA WEB KURZOV/firemny-workshop.jpg"
-                                        alt="Firemné workshopy program"
+                                        alt="Firemný workshop program"
                                         width={600}
                                         height={800}
                                         className="w-full h-auto rounded-xl shadow-lg border border-gray-100"

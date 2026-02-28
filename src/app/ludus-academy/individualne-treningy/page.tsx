@@ -15,7 +15,7 @@ export default async function IndividualneTreningyPage() {
                     className="relative text-white text-[5rem] z-10 text-center max-md:text-[2.5rem]"
                     style={{ fontFamily: 'var(--font-heading)' }}
                 >
-                    Individuálne tréningy
+                    Individuálny tréning
                 </h1>
             </section>
 
@@ -35,7 +35,7 @@ export default async function IndividualneTreningyPage() {
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#f47f44]/10 rounded-full -mr-16 -mt-16 blur-3xl"></div>
                                 <div className="relative z-10 space-y-4 text-[1.4rem] md:text-[1.8rem] leading-tight font-medium italic">
                                     <p>Hovoriť pred ľuďmi alebo kamerou nie je talent, ale zručnosť.</p>
-                                    <p>Na individuálnych tréningoch v Ludus Academy si ju môžete bezpečne natrénovať.</p>
+                                    <p>Na individuálnom tréningu v Ludus Academy si ju môžete bezpečne natrénovať.</p>
                                     <p className="text-[#f47f44] not-italic font-bold">Pripravíme vás na rozhovory, prezentácie aj nečakané situácie tak, aby ste vedeli reagovať pokojne, jasne a prirodzene.</p>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@ export default async function IndividualneTreningyPage() {
                                         Rozhovor v médiách, moderovanie podujatia, prezentácia pred publikom, pracovný pohovor či moment, keď sa od vás čaká rýchla reakcia a jasná myšlienka.
                                     </p>
                                     <p>
-                                        Individuálne tréningy v Ludus Academy sú prakticky zamerané stretnutia pre jednotlivcov, ktorí chcú vystupovať istejšie, zrozumiteľnejšie a prirodzenejšie. Nejde o teóriu ani poučky. Trénujeme priamo situácie, v ktorých sa potrebujete vedieť oprieť sami o seba.
+                                        Individuálny tréning v Ludus Academy sú prakticky zamerané stretnutia pre jednotlivcov, ktorí chcú vystupovať istejšie, zrozumiteľnejšie a prirodzenejšie. Nejde o teóriu ani poučky. Trénujeme priamo situácie, v ktorých sa potrebujete vedieť oprieť sami o seba.
                                     </p>
                                 </div>
                             </div>
@@ -101,7 +101,7 @@ export default async function IndividualneTreningyPage() {
                                 <div className="">
                                     <Image
                                         src="/GRAFIKA NA WEB KURZOV/individualny-trening.jpg"
-                                        alt="Individuálne tréningy program"
+                                        alt="Individuálny tréning program"
                                         width={600}
                                         height={800}
                                         className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
