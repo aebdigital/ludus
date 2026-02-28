@@ -27,7 +27,7 @@ export default function Sidebar({ category }: SidebarProps) {
     };
 
     return (
-        <aside className="sticky top-[100px] w-full max-w-[320px] bg-[#1eabb0] p-8 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] h-fit max-lg:max-w-none max-lg:static max-lg:mb-8">
+        <aside className="max-xl:order-first sticky top-[100px] w-full max-w-[320px] bg-[#1eabb0] p-8 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] h-fit max-lg:max-w-none max-lg:static max-lg:mb-8">
             <h3
                 className="text-[1.5rem] mb-6 pb-3 border-b-2 border-white/30 text-white"
                 style={{ fontFamily: 'var(--font-heading)' }}
