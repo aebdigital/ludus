@@ -204,8 +204,8 @@ export default async function ImprovizaciaPage() {
                                         <h4 className="text-[1.5rem] font-bold text-black mb-2">12.4. - 7.6.2026</h4>
                                         <p className="font-bold text-black text-lg mb-4 uppercase tracking-tighter">každú NEDEĽU od 15:00 do 17:30</p>
                                         <div className="flex flex-col gap-1 mb-8">
-                                            <span className="text-sm uppercase text-black font-bold">Lektor</span>
-                                            <p className="text-black font-medium">Mgr. art Jozef Jurčišin-Kukľa</p>
+                                            <span className="text-sm uppercase text-black font-bold">Lektori</span>
+                                            <p className="text-black font-medium">Mgr. art Jozef Jurčišin-Kukľa, Bc. Richard Labuda</p>
                                             <p className="text-xs text-black italic">
                                                 <a href="/ludus-academy/lektori" className="hover:underline">(viac o lektoroch)</a>
                                             </p>
@@ -221,7 +221,30 @@ export default async function ImprovizaciaPage() {
                                         </div>
                                     </div>
 
-                                    <div className="bg-[#f47f44]/10 border border-[#f47f44] p-8 rounded-2xl text-center flex flex-col justify-center">
+                                    <div className="bg-white border-2 border-gray-100 p-8 rounded-2xl relative overflow-hidden flex flex-col">
+                                        <div className="absolute top-0 right-0 bg-gray-100 text-black px-4 py-1 font-bold text-xs uppercase">TERMÍN</div>
+                                        <h4 className="text-[1.5rem] font-bold text-black mb-2">14.4 - 9.6.2026</h4>
+                                        <p className="font-bold text-black text-lg mb-4 uppercase tracking-tighter">každý UTOROK od 18:00 do 20:30</p>
+                                        <div className="flex flex-col gap-1 mb-8">
+                                            <span className="text-sm uppercase text-black font-bold">Lektori</span>
+                                            <p className="text-black font-medium">Mgr. art Ladislav Ladomirjak, Mgr. art Jozef Jurčišin-Kukľa</p>
+                                            <p className="text-xs text-black italic">
+                                                <a href="/ludus-academy/lektori" className="hover:underline">(viac o lektoroch)</a>
+                                            </p>
+                                            <p className="text-xs text-[#f47f44] font-bold mt-2 italic">Ide o skupinu, ktorá už spolu absolvovala jeden Improvizačný kurz</p>
+                                        </div>
+                                        <div className="mt-auto">
+                                            <Button
+                                                href="https://form.fapi.cz/?id=c1471aa4-75ac-44fb-99e1-e5cd045be8c5"
+                                                className="w-full justify-center !bg-black !text-white hover:!bg-gray-800"
+                                                target="_blank"
+                                            >
+                                                PRIHLÁSIŤ SA NA KURZ
+                                            </Button>
+                                        </div>
+                                    </div>
+
+                                    <div className="md:col-span-2 bg-[#f47f44]/10 border border-[#f47f44] p-8 rounded-2xl text-center flex flex-col justify-center">
                                         <h4 className="text-[1.5rem] font-bold text-black mb-4 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>
                                             ĎALŠÍ CYKLUS KURZOV SPUSTÍME V SEPTEMBRI 2026
                                         </h4>
