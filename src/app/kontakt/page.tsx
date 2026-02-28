@@ -59,9 +59,9 @@ export default function KontaktPage() {
 
               <div className="grid grid-cols-2 gap-4 max-lg:grid-cols-1 mt-6">
                 {/* SZUŠ LUDUS */}
-                <div className="bg-blue-600 rounded-xl p-6 text-white">
+                <div className="bg-blue-600 rounded-xl p-6 text-black">
                   <h3
-                    className="text-[1.5rem] mb-4 text-white"
+                    className="text-[1.5rem] mb-4 text-black"
                     style={{ fontFamily: 'var(--font-heading)' }}
                   >
                     SZUŠ LUDUS
@@ -71,31 +71,31 @@ export default function KontaktPage() {
                       <p className="text-[1.1rem]">
                         <strong>Zástupca riaditeľa</strong><br />
                         Jakub Ružička<br />
-                        <a href="tel:0905126296" className="hover:text-blue-200">0905 126 296</a><br />
-                        <a href="mailto:jakubludus@gmail.com" className="hover:text-blue-200">jakubludus@gmail.com</a>
+                        <a href="tel:0905126296" className="hover:opacity-70">0905 126 296</a><br />
+                        <a href="mailto:jakubludus@gmail.com" className="hover:opacity-70">jakubludus@gmail.com</a>
                       </p>
                     </div>
                     <div>
                       <p className="text-[1.1rem]">
                         <strong>Zriaďovateľ</strong><br />
                         Mgr.art. Peter Kuba<br />
-                        <a href="tel:0905218088" className="hover:text-blue-200">0905 218 088</a>
+                        <a href="tel:0905218088" className="hover:opacity-70">0905 218 088</a>
                       </p>
                     </div>
                     <div>
                       <p className="text-[1.1rem]">
                         <strong>Riaditeľka</strong><br />
                         Mgr. art Katarína Baranová ArtD.<br />
-                        <a href="tel:0905543282" className="hover:text-blue-200">0905 543 282</a><br />
-                        <a href="mailto:info@skolaludus.sk" className="hover:text-blue-200">info@skolaludus.sk</a>
+                        <a href="tel:0905543282" className="hover:opacity-70">0905 543 282</a><br />
+                        <a href="mailto:info@skolaludus.sk" className="hover:opacity-70">info@skolaludus.sk</a>
                       </p>
                     </div>
                     <div>
                       <p className="text-[1.1rem]">
                         <strong>Organizačný manager</strong><br />
                         Mgr.art Michal Rovňák<br />
-                        <a href="tel:0905462342" className="hover:text-blue-200">0905 462 342</a><br />
-                        <a href="mailto:rovnakludus@gmail.com" className="hover:text-blue-200">rovnakludus@gmail.com</a>
+                        <a href="tel:0905462342" className="hover:opacity-70">0905 462 342</a><br />
+                        <a href="mailto:rovnakludus@gmail.com" className="hover:opacity-70">rovnakludus@gmail.com</a>
                       </p>
                     </div>
                   </div>
@@ -132,16 +132,16 @@ export default function KontaktPage() {
                   </div>
 
                   {/* LUDUS TÁBOR */}
-                  <div className="bg-green-600 rounded-xl p-6 text-white">
+                  <div className="bg-green-600 rounded-xl p-6 text-black">
                     <h3
-                      className="text-[1.5rem] mb-4 text-white"
+                      className="text-[1.5rem] mb-4 text-black"
                       style={{ fontFamily: 'var(--font-heading)' }}
                     >
                       LUDUS TÁBOR
                     </h3>
                     <div className="space-y-2">
                       <p className="text-[1.1rem]"><strong>Kontaktná osoba</strong><br />Jakub Ružička</p>
-                      <p className="text-[1.1rem]"><strong>Email:</strong> <a href="mailto:ludustabor@gmail.com" className="hover:text-green-200">ludustabor@gmail.com</a></p>
+                      <p className="text-[1.1rem]"><strong>Email:</strong> <a href="mailto:ludustabor@gmail.com" className="hover:opacity-70">ludustabor@gmail.com</a></p>
                     </div>
                   </div>
                 </div>
