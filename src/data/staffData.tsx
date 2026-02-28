@@ -208,5 +208,32 @@ export const staffData: Record<string, StaffMember> = {
                 <p>Písaniu sa venuje už 27 rokov. Vyštudovala filmovú a televíznu dramaturgiu a scenáristiku na FTF VŠMU. Písala scenáre pre deti a mládež aj pre dospelých, príbehy na pokračovanie, aj komiksový príbeh s veľmi sexi názvom, ktorý bol v skutočnosti o myšiach. Dva roky bola kmeňovou autorkou seriálu Ordinácia v ružovej záhrade. Napísala a vydala knihu pre deti Gregor – rozprávka o veľkom putovaní. Ako redaktorka legendárneho internetového magazínu inzine.sk sa naučila, ako komunikovať s autormi a baví ju to dodnes. Redigovala aj knihy pre vydavateľstvo Slovart.</p>
             </>
         )
+    },
+    "Viktória Šuplatová": {
+        name: "Mgr. art Viktória Šuplatová",
+        image: "/pedagogovia/VIKTÓRIA ŠUPLATOVÁ.webp",
+        bio: (
+            <>
+                <p>Viki začínala svoje umelecké smerovanie v SZUŠ LUDUS, kam chodila mnoho rokov. Neskôr vyštudovala VŠMU odbor herectvo. V súčasnosti pôsobí v divadle Astorka, kde ju môžete vidieť v rôznych divadelných inscenáciách. Účinkuje aj v iných divadlách a v TV projektoch. Natočila už aj niekoľko filmov.</p>
+            </>
+        )
+    },
+    "David Kakaš": {
+        name: "Mgr. Art David Kakaš",
+        image: "/pedagogovia/kakas.webp",
+        bio: (
+            <>
+                <p>David začínal svoje umelecké smerovanie v SZUŠ LUDUS už v tinedžerskom veku. Neskôr vyštudovala odbor herectvo na VŠMU. Účinkoval v SND, spolupracuje na letných Shakespearovských slávnostiach, účinkuje v divadle Andreja Bagara v Nitre a v rôznych TV projektoch.</p>
+            </>
+        )
+    },
+    "Laura Jankurová": {
+        name: "Mgr. art Laura Jankurová",
+        image: "/pedagogovia/jankurova.webp",
+        bio: (
+            <>
+                <p>Laura študovala konzervatórium v Prešove a neskôr herectvo na VŠMU. Účinkovala vo viacerých divadlách na Slovensku a v súčasnosti ju môžete vidieť v niektorých inscenáciách v SND. Účinkuje aj v rôznych TV projektoch.</p>
+            </>
+        )
     }
 };
