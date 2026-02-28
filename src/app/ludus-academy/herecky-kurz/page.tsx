@@ -7,7 +7,7 @@ export default async function HereckyKurzPage() {
         <div className="bg-white">
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/images/academy/IMG_1128.webp')" }}
+                style={{ backgroundImage: "url('/GRAFIKA NA WEB KURZOV/herecky-kurz.jpg')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1

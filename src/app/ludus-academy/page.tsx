@@ -10,25 +10,25 @@ const courses = [
     title: "HERECKÝ KURZ",
     description: <>Radosť <span className="text-[#f47f44]">sa</span> hrať.</>,
     href: "/ludus-academy/herecky-kurz",
-    backgroundImage: "/images/academy/IMG_1128.webp"
+    backgroundImage: "/GRAFIKA NA WEB KURZOV/herecky-kurz.jpg"
   },
   {
     title: "IMPROVIZAČNÝ KURZ",
     description: <>Radosť <span className="text-[#f47f44]">si</span> improvizovať</>,
     href: "/ludus-academy/improvizacia",
-    backgroundImage: "/images/academy/IMG_3649.webp"
+    backgroundImage: "/GRAFIKA NA WEB KURZOV/improvizacny-kurz.jpg"
   },
   {
     title: "DIVADELNÉ LABORATÓRIUM",
     description: <>Radosť <span className="text-[#f47f44]">sa</span> umelecky realizovať</>,
     href: "/ludus-academy/divadelne-laboratorium",
-    backgroundImage: "/images/academy/IMG_4194.webp"
+    backgroundImage: "/GRAFIKA NA WEB KURZOV/divadelne-laboratorium.jpg"
   },
   {
     title: "KURZ TVORIVÉHO PÍSANIA",
     description: <>Radosť <span className="text-[#f47f44]">vedieť</span> písať</>,
     href: "/ludus-academy/tvorive-pisanie",
-    backgroundImage: "/images/academy/IMG_4766.webp"
+    backgroundImage: "/GRAFIKA NA WEB KURZOV/kurz-tvoriveho-pisania.jpg"
   }
 ];
 
@@ -37,19 +37,19 @@ const workshops = [
     title: "WORKSHOPY PRE ŠKOLY",
     description: <>Radosť <span className="text-[#f47f44]">sa</span> spoznávať</>,
     href: "/ludus-academy/workshopy-skoly",
-    backgroundImage: "/images/academy/IMG_9005.webp"
+    backgroundImage: "/GRAFIKA NA WEB KURZOV/workshop-pre-skoly.jpg"
   },
   {
     title: "WORKSHOP PRE UČITEĽOV",
     description: <>Radosť <span className="text-[#f47f44]">sa</span> učiť</>,
     href: "/ludus-academy/workshop-ucitelia",
-    backgroundImage: "/images/academy/IMG_9026.webp"
+    backgroundImage: "/GRAFIKA NA WEB KURZOV/workshop-pre-ucitelov.jpg"
   },
   {
     title: "WORKSHOP KREATÍVNEHO MYSLENIA",
     description: <>Radosť <span className="text-[#f47f44]">si</span> tvoriť</>,
     href: "/ludus-academy/workshop-kreativita",
-    backgroundImage: "/images/academy/IMG_9087.webp"
+    backgroundImage: "/GRAFIKA NA WEB KURZOV/workshop-kreativneho-myslenia.jpg"
   }
 ];
 
@@ -59,19 +59,19 @@ const corporateWorkshops = [
     title: "KREATÍVNY TÍMBILDING",
     description: <>Radosť <span className="text-[#f47f44]">spolu</span> pracovať</>,
     href: "/ludus-academy/firemny-timbilding",
-    backgroundImage: "/images/academy/IMG_4216.webp"
+    backgroundImage: "/GRAFIKA NA WEB KURZOV/kreativny-teambuilding.jpg"
   },
   {
     title: "INDIVIDUÁLNE TRÉNINGY",
     description: <>Radosť <span className="text-[#f47f44]">sa</span> rozvíjať</>,
     href: "/ludus-academy/individualne-treningy",
-    backgroundImage: "/images/academy/IMG_9073.webp"
+    backgroundImage: "/GRAFIKA NA WEB KURZOV/individualny-trening.jpg"
   },
   {
     title: "FIREMNÉ WORKSHOPY",
     description: <>Radosť <span className="text-[#f47f44]">spolu</span> objavovať</>,
     href: "/ludus-academy/firemny-workshop",
-    backgroundImage: "/images/academy/IMG_3649.webp"
+    backgroundImage: "/GRAFIKA NA WEB KURZOV/firemny-workshop.jpg"
   }
 ];
 
@@ -128,6 +128,15 @@ export default function LudusAcademyPage() {
               <p className="text-[1.1rem] text-black leading-relaxed text-center font-medium italic">
                 Či už Vás láka herecké a divadelné prostredie, túžite sa zlepšiť v improvizačnom myslení a kreativite, chcete zlepšiť svoje prezentačné schopnosti, alebo len zmysluplne tráviť čas a rozvijať svoje kreatívne zručnosti, neexistuje dôvod, prečo by ste to nemohli zrealizovať. Robiť v živote to, čo nás baví a napĺňa je ten najkrajší dar. Vy sa rozhodnite, ktorý z kurzov a workshopov je vášmu srdcu najbližší a my vám pomôžeme naplniť vaše sny, plány a ciele.
               </p>
+              <div className="mt-12">
+                <Image
+                  src="/GRAFIKA NA WEB KURZOV/ludus-academy-onaspage.jpg"
+                  alt="Ludus Academy Program"
+                  width={1200}
+                  height={600}
+                  className="w-full h-auto rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.1)]"
+                />
+              </div>
             </div>
 
             {/* Courses Section */}

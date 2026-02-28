@@ -8,7 +8,7 @@ export default async function KreativnyTimbildingPage() {
         <div className="bg-white">
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/images/academy/IMG_4216.webp')" }}
+                style={{ backgroundImage: "url('/GRAFIKA NA WEB KURZOV/kreativny-teambuilding.jpg')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1

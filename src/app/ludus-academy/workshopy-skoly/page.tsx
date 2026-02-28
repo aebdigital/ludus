@@ -7,7 +7,7 @@ export default async function WorkshopySkolyPage() {
         <div className="bg-white">
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/images/academy/IMG_9005.webp')" }}
+                style={{ backgroundImage: "url('/GRAFIKA NA WEB KURZOV/workshop-pre-skoly.jpg')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1
