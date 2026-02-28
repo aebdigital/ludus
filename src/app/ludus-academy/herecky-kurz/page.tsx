@@ -1,9 +1,7 @@
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
-import { getCategoryAktuality } from '@/lib/api';
 
 export default async function HereckyKurzPage() {
-    const news = await getCategoryAktuality('ludus-academy');
 
     return (
         <div className="bg-white">
@@ -22,7 +20,7 @@ export default async function HereckyKurzPage() {
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
-                    <AcademySubpageSidebar news={news} />
+                    <AcademySubpageSidebar />
 
                     <main className="flex-1 min-w-0">
                         {/* Basic Course Section */}

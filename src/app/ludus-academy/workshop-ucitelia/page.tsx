@@ -1,8 +1,7 @@
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
-import { getCategoryAktuality } from '@/lib/api';
+import Button from '@/components/Button';
 
 export default async function WorkshopUciteliaPage() {
-    const news = await getCategoryAktuality('ludus-academy');
 
     return (
         <div className="bg-white">
@@ -21,7 +20,7 @@ export default async function WorkshopUciteliaPage() {
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
-                    <AcademySubpageSidebar news={news} />
+                    <AcademySubpageSidebar />
 
                     <main className="flex-1 min-w-0">
                         <div className="mb-24">
