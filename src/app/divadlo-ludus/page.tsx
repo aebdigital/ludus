@@ -3,7 +3,6 @@ import Button from '@/components/Button';
 import Sidebar from '@/components/Sidebar';
 import Link from 'next/link';
 import { getProgramEvents } from '@/lib/api';
-import GalleryPreview from '@/components/GalleryPreview';
 
 export const revalidate = 60;
 
@@ -140,12 +139,6 @@ export default async function DivadloLudusPage() {
                   description: 'BlackBox a ďalšie priestory',
                   href: '/divadlo-ludus/priestory',
                   icon: '🏛️'
-                },
-                {
-                  title: 'Galéria',
-                  description: 'Fotografie z predstavení',
-                  href: '/divadlo-ludus/galeria',
-                  icon: '📸'
                 }
               ].map((item) => (
                 <Link
@@ -165,12 +158,7 @@ export default async function DivadloLudusPage() {
               ))}
             </div>
 
-
-            {/* Gallery Preview */}
-            <GalleryPreview category="divadlo-ludus" href="/divadlo-ludus/galeria" />
-
           </main>
-
 
           {/* Sidebar */}
           <Sidebar category="divadlo-ludus" />

@@ -33,7 +33,7 @@ export default function AcademySubpageSidebar() {
             </button>
 
             {/* Navigation Lists (Desktop always visible, Mobile hidden unless open) */}
-            <div className={`mt-4 lg:mt-0 bg-white lg:bg-transparent p-6 lg:p-0 rounded-xl shadow-lg lg:shadow-none border border-gray-100 lg:border-none absolute lg:static w-full left-0 transition-all duration-300 origin-top lg:block ${isDropdownOpen ? 'scale-y-100 opacity-100 visible' : 'scale-y-0 opacity-0 invisible lg:scale-y-100 lg:opacity-100 lg:visible'}`}>
+            <div className={`mt-4 lg:mt-0 bg-white lg:bg-transparent p-6 lg:p-0 rounded-xl shadow-lg lg:shadow-none border border-gray-100 lg:border-none absolute lg:static w-full left-0 z-[100] transition-all duration-300 origin-top lg:block ${isDropdownOpen ? 'scale-y-100 opacity-100 visible' : 'scale-y-0 opacity-0 invisible lg:scale-y-100 lg:opacity-100 lg:visible'}`}>
                 <div className="flex flex-col gap-8">
                     {academyCategories.map((category) => (
                         <div key={category.title}>
