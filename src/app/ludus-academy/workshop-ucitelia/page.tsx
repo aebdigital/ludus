@@ -54,12 +54,7 @@ export default async function WorkshopUciteliaPage() {
                                     </div>
                                 </div>
                                 <div className="h-full flex flex-col space-y-8">
-                                    <div className="p-10 bg-white rounded-2xl border-2 border-dashed border-gray-200 flex items-center justify-center text-center flex-grow">
-                                        <p className="text-gray-400 italic">
-                                            Obsah priebežne dopĺňame. <br />
-                                            Sledujte nás pre aktualizácie.
-                                        </p>
-                                    </div>
+
                                     <div className="">
                                         <Image
                                             src="/GRAFIKA NA WEB KURZOV/workshop-pre-ucitelov.jpg"
