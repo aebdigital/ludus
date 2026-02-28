@@ -8,9 +8,8 @@ export default async function WorkshopySkolyPage() {
         <div className="bg-white">
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/images/academy/IMG_9005.webp')" }}
+                style={{ backgroundImage: "url('/skola.jpeg')" }}
             >
-                <div className="absolute inset-0 bg-black/40" />
                 <h1
                     className="relative text-white text-[5.5rem] z-10 text-center max-md:text-[2.5rem] px-4"
                     style={{ fontFamily: 'var(--font-heading)' }}
@@ -55,6 +54,13 @@ export default async function WorkshopySkolyPage() {
                                         height={800}
                                         className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
                                     />
+                                    <Image
+                                        src="/skoly2.jpeg"
+                                        alt="Workshopy pre školy"
+                                        width={600}
+                                        height={800}
+                                        className="w-full h-auto rounded-xl shadow-lg border border-gray-100 mt-8"
+                                    />
                                 </div>
                             </div>
 
@@ -97,11 +103,11 @@ export default async function WorkshopySkolyPage() {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                                <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                                    <video src="/videos/workshopy-skoly-1.mp4" controls className="w-full h-auto" />
+                                <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200 flex">
+                                    <video src="/videos/workshopy-skoly-1.mp4" controls className="w-full aspect-video object-cover" />
                                 </div>
-                                <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                                    <video src="/videos/workshopy-skoly-2.mp4" controls className="w-full h-auto" />
+                                <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200 flex">
+                                    <video src="/videos/workshopy-skoly-2.mp4" controls className="w-full aspect-video object-cover" />
                                 </div>
                             </div>
 

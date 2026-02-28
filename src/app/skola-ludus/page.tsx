@@ -152,12 +152,13 @@ export default function SkolaLudusPage() {
             </div>
 
             {/* Quick Links */}
-            <div className="grid grid-cols-4 gap-8 mb-16 max-md:grid-cols-2 max-sm:grid-cols-1">
+            <div className="grid grid-cols-5 gap-8 mb-16 max-md:grid-cols-2 max-sm:grid-cols-1">
               {[
                 { title: 'História', href: '/historia', icon: '📜' },
                 { title: 'Prihláška', href: '/skola-ludus/prihlaska', icon: '📝' },
                 { title: 'Školné', href: '/skola-ludus/skolne', icon: '💰' },
-                { title: 'Výučba', href: '/skola-ludus/vyucba', icon: '🎭' }
+                { title: 'Výučba', href: '/skola-ludus/vyucba', icon: '🎭' },
+                { title: 'Priestory', href: '/skola-ludus/priestory-skoly', icon: '🏢' }
               ].map((item) => (
                 <Link
                   key={item.title}

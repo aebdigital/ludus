@@ -6,7 +6,6 @@ interface GalleryNavProps {
 
 export default function GalleryNav({ activeCategory }: GalleryNavProps) {
     const links = [
-        { id: 'divadlo', label: 'Divadlo Ludus', href: '/divadlo-ludus/galeria' },
         { id: 'skola', label: 'Škola Ludus', href: '/skola-ludus/galeria' },
         { id: 'academy', label: 'Ludus Academy', href: '/ludus-academy/galeria' },
         { id: 'tabor', label: 'Denný Tábor', href: '/ludus-tabor/galeria' },

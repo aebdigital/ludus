@@ -17,15 +17,7 @@ const boxImages = [
   { id: 8, url: '/fotky priestorov/blackbox/IMG_5459.webp', alt_text: 'BLACKBOX 3' },
 ];
 
-const triedyImages = [
-  { id: 9, url: '/fotky priestorov/triedy/IMG_5434.webp', alt_text: 'TRIEDA 1' },
-  { id: 10, url: '/fotky priestorov/triedy/IMG_5435.webp', alt_text: 'TRIEDA 2' },
-  { id: 11, url: '/fotky priestorov/triedy/IMG_5436.webp', alt_text: 'TRIEDA 3' },
-  { id: 12, url: '/fotky priestorov/triedy/IMG_5437.webp', alt_text: 'TRIEDA 4' },
-  { id: 13, url: '/fotky priestorov/triedy/IMG_5438.webp', alt_text: 'TRIEDA 5' },
-  { id: 14, url: '/fotky priestorov/triedy/IMG_5445.webp', alt_text: 'TRIEDA 6' },
-  { id: 15, url: '/fotky priestorov/triedy/IMG_5451.webp', alt_text: 'TRIEDA 7' },
-];
+
 
 export default function PriestoryPage() {
   return (
@@ -77,17 +69,7 @@ export default function PriestoryPage() {
                   <GalleryGrid images={labImages} />
                 </section>
 
-                {/* Triedy Section */}
-                <section>
-                  <div className="flex items-center gap-6 mb-8">
-                    <h3 className="text-[2.5rem] m-0" style={{ fontFamily: 'var(--font-heading)' }}>TRIEDY</h3>
-                    <div className="h-px flex-1 bg-gray-100" />
-                  </div>
-                  <p className="text-lg text-black mb-8 leading-relaxed max-w-4xl">
-                    Priestory našej umeleckej školy, v ktorých prebieha výučba literárno-dramatického odboru a kurzov Ludus Academy.
-                  </p>
-                  <GalleryGrid images={triedyImages} />
-                </section>
+
               </div>
             </div>
           </main>

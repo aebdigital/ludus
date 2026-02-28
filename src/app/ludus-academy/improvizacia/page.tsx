@@ -8,9 +8,8 @@ export default async function ImprovizaciaPage() {
         <div className="bg-white">
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/images/academy/IMG_3649.webp')" }}
+                style={{ backgroundImage: "url('/impro-main.jpg')" }}
             >
-                <div className="absolute inset-0 bg-black/40" />
                 <h1
                     className="relative text-white text-[6rem] z-10 text-center max-md:text-[3.5rem]"
                     style={{ fontFamily: 'var(--font-heading)' }}
@@ -119,7 +118,7 @@ export default async function ImprovizaciaPage() {
                                     <video
                                         src="/videos/improvizacia.mp4"
                                         controls
-                                        poster="/images/academy/IMG_3649.webp"
+                                        poster="/impro-main.jpg"
                                         className="w-full aspect-video object-cover"
                                     >
                                         Your browser does not support the video tag.
@@ -127,39 +126,50 @@ export default async function ImprovizaciaPage() {
                                 </div>
                             </div>
 
-                            <div className="bg-black text-white p-10 rounded-2xl mb-12 shadow-xl">
-                                <div className="text-[#f47f44] font-bold uppercase tracking-widest mb-2 text-sm">Investícia</div>
-                                <h3 className="text-[2rem] mb-6 leading-tight">
-                                    NEKUPUJETE SI KURZ, INVESTUJETE DO SVOJHO ROZVOJA: <span className="text-[#f47f44]">308 EUR</span>
-                                </h3>
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+                                <div className="bg-black text-white p-10 rounded-2xl shadow-xl h-fit">
+                                    <div className="text-[#f47f44] font-bold uppercase tracking-widest mb-2 text-sm">Investícia</div>
+                                    <h3 className="text-[2rem] mb-6 leading-tight">
+                                        NEKUPUJETE SI KURZ, INVESTUJETE DO SVOJHO ROZVOJA: <span className="text-[#f47f44]">308 EUR</span>
+                                    </h3>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-gray-300">
-                                    <ul className="space-y-3">
-                                        <li className="flex justify-between border-b border-white/10 pb-2">
-                                            <span>Trvanie kurzu:</span>
-                                            <span className="text-white font-bold">9 týždňov</span>
-                                        </li>
-                                        <li className="flex justify-between border-b border-white/10 pb-2">
-                                            <span>Týždenne:</span>
-                                            <span className="text-white font-bold">2,5 hodiny</span>
-                                        </li>
-                                        <li className="flex justify-between border-b border-white/10 pb-2">
-                                            <span>Celkovo:</span>
-                                            <span className="text-white font-bold">22,5 hodín</span>
-                                        </li>
-                                    </ul>
-                                    <ul className="space-y-2 text-sm">
-                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> 22,5 hodín intenzívnej výučby + divadelná impro show</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Improvizačné cvičenia a techniky</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Praktický tréning</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Profesionálni lektori</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Záverečná impro show pre divákov</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Certifikát</li>
-                                    </ul>
+                                    <div className="text-gray-300">
+                                        <ul className="space-y-3 mb-6">
+                                            <li className="flex justify-between border-b border-white/10 pb-2">
+                                                <span>Trvanie kurzu:</span>
+                                                <span className="text-white font-bold">9 týždňov</span>
+                                            </li>
+                                            <li className="flex justify-between border-b border-white/10 pb-2">
+                                                <span>Týždenne:</span>
+                                                <span className="text-white font-bold">2,5 hodiny</span>
+                                            </li>
+                                            <li className="flex justify-between border-b border-white/10 pb-2">
+                                                <span>Celkovo:</span>
+                                                <span className="text-white font-bold">22,5 hodín</span>
+                                            </li>
+                                        </ul>
+                                        <ul className="space-y-2 text-sm">
+                                            <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> 22,5 hodín intenzívnej výučby + divadelná impro show</li>
+                                            <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Improvizačné cvičenia a techniky</li>
+                                            <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Praktický tréning</li>
+                                            <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Profesionálni lektori</li>
+                                            <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Záverečná impro show pre divákov</li>
+                                            <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Certifikát</li>
+                                        </ul>
+                                    </div>
+                                    <div className="mt-8 pt-6 border-t border-white/10 text-sm italic">
+                                        <p className="opacity-70">PODMIENKA ÚČASTI: vek minimálne 18 rokov a ukončené stredoškolské vzdelanie</p>
+                                        <p className="text-[#f47f44] font-bold mt-2 uppercase tracking-widest">Každý SA VIE NAUČIŤ</p>
+                                    </div>
                                 </div>
-                                <div className="mt-8 pt-6 border-t border-white/10 text-sm italic">
-                                    <p className="opacity-70">PODMIENKA ÚČASTI: vek minimálne 18 rokov a ukončené stredoškolské vzdelanie</p>
-                                    <p className="text-[#f47f44] font-bold mt-2 uppercase tracking-widest">Každý SA VIE NAUČIŤ</p>
+                                <div className="rounded-2xl overflow-hidden shadow-xl h-full flex">
+                                    <Image
+                                        src="/somewhere.jpeg"
+                                        alt="Kurz improvizácie Ludus"
+                                        width={800}
+                                        height={600}
+                                        className="w-full h-full object-cover"
+                                    />
                                 </div>
                             </div>
 
