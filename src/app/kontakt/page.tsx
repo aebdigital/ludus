@@ -59,7 +59,7 @@ export default function KontaktPage() {
 
               <div className="grid grid-cols-2 gap-4 max-lg:grid-cols-1 mt-6">
                 {/* SZUŠ LUDUS */}
-                <div className="bg-blue-600 rounded-xl p-6 text-black">
+                <div className="bg-[#1eabb0] rounded-xl p-6 text-black">
                   <h3
                     className="text-[1.5rem] mb-4 text-black"
                     style={{ fontFamily: 'var(--font-heading)' }}
