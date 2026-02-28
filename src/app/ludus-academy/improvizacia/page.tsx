@@ -1,8 +1,11 @@
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
+import { getCategoryAktuality } from '@/lib/api';
 import Image from 'next/image';
 
-export default function ImprovizaciaPage() {
+export default async function ImprovizaciaPage() {
+    const news = await getCategoryAktuality('ludus-academy');
+
     return (
         <div className="bg-white">
             <section
@@ -20,7 +23,7 @@ export default function ImprovizaciaPage() {
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
-                    <AcademySubpageSidebar />
+                    <AcademySubpageSidebar news={news} />
 
                     <main className="flex-1 min-w-0">
                         <div className="mb-24">
@@ -49,7 +52,7 @@ export default function ImprovizaciaPage() {
                                         Stante sa pánom situácie a uchopte komunikáciu do svojich rúk. Poďte s nami improvizovať a popri tom sa zabaviť a odreagovať.
                                     </p>
                                     <p>
-                                        Prostrednítvom divadelných improvizačných hier a techník narastie vaša sloboda prejavu. Divadelné improvizácie sú v ČR úspešné už niekoľko rokov a my ich teraz prinášame aj na Slovensko pre verejnosť. Ak si kladiete otázku, čo asi na tomto kurze môžete robiť, tak pre lepšie uchopenie si predstavte dlhoročný TV projekt "Partička".
+                                        Prostrednítvom divadelných improvizačných hrier a techník narastie vaša sloboda prejavu. Divadelné improvizácie sú v ČR úspešné už niekoľko rokov a my ich teraz prinášame aj na Slovensko pre verejnosť. Ak si kladiete otázku, čo asi na tomto kurze môžete robiť, tak pre lepšie uchopenie si predstavte dlhoročný TV projekt "Partička".
                                     </p>
                                 </div>
                                 <div className="lg:col-span-1 space-y-4">
@@ -64,7 +67,7 @@ export default function ImprovizaciaPage() {
                                                 title="YouTube video player"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen
-                                                className="absolute top-0 left-0 w-full h-full"
+                                                className="absolute top-0 left-0 w-full h-full border-0"
                                             />
                                         </div>
                                     ))}
@@ -199,27 +202,7 @@ export default function ImprovizaciaPage() {
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="bg-white border-2 border-[#f47f44] p-8 rounded-2xl relative overflow-hidden flex flex-col">
-                                        <div className="absolute top-0 right-0 bg-[#f47f44] text-black px-4 py-1 font-bold text-xs uppercase">1 VOĽNÉ MIESTO</div>
-                                        <h4 className="text-[1.5rem] font-bold text-black mb-2">23.1. - 27.3.2026</h4>
-                                        <p className="text-black mb-4">(hodina nebude: 20.2.2026)</p>
-                                        <p className="font-bold text-black text-lg mb-4 uppercase tracking-tighter">každý PIATOK od 17:30 do 20:00</p>
-                                        <div className="flex flex-col gap-1 mb-8">
-                                            <span className="text-sm uppercase text-black font-bold">Lektori</span>
-                                            <p className="text-black font-medium">Mgr. art Lenka Libjaková, Mgr.art Katarína Gurová</p>
-                                            <p className="text-xs text-black italic">(viac o lektoroch v sekcii O NÁS)</p>
-                                        </div>
-                                        <div className="mt-auto">
-                                            <Button
-                                                href="https://form.fapi.cz/?id=379a5104-4a64-47a3-b0a1-f6969514e15b"
-                                                className="w-full justify-center"
-                                                target="_blank"
-                                            >
-                                                PRIHLÁSIŤ SA NA KURZ
-                                            </Button>
-                                        </div>
-                                    </div>
-
-                                    <div className="bg-white border-2 border-gray-100 p-8 rounded-2xl relative overflow-hidden flex flex-col">
+                                        <div className="absolute top-0 right-0 bg-[#f47f44] text-black px-4 py-1 font-bold text-xs uppercase">TERMÍN</div>
                                         <h4 className="text-[1.5rem] font-bold text-black mb-2">12.4. - 7.6.2026</h4>
                                         <p className="font-bold text-black text-lg mb-4 uppercase tracking-tighter">každú NEDEĽU od 15:00 do 17:30</p>
                                         <div className="flex flex-col gap-1 mb-8">
@@ -230,28 +213,7 @@ export default function ImprovizaciaPage() {
                                         <div className="mt-auto">
                                             <Button
                                                 href="https://form.fapi.cz/?id=379a5104-4a64-47a3-b0a1-f6969514e15b"
-                                                className="w-full justify-center"
-                                                target="_blank"
-                                            >
-                                                PRIHLÁSIŤ SA NA KURZ
-                                            </Button>
-                                        </div>
-                                    </div>
-
-                                    <div className="bg-white border-2 border-gray-100 p-8 rounded-2xl relative overflow-hidden flex flex-col">
-                                        <div className="absolute top-0 right-0 bg-black text-white px-4 py-1 font-bold text-xs uppercase">3 VOĽNÉ MIESTA</div>
-                                        <h4 className="text-[1.5rem] font-bold text-black mb-2">14.4 - 9.6.2026</h4>
-                                        <p className="font-bold text-black text-lg mb-4 uppercase tracking-tighter">každý UTOROK od 18:00 do 20:30</p>
-                                        <div className="flex flex-col gap-1 mb-6">
-                                            <span className="text-sm uppercase text-black font-bold">Lektori</span>
-                                            <p className="text-black font-medium">Mgr. art Ladislav Ladomirjak, Mgr. art Jozef Jurčišin-Kukľa</p>
-                                            <p className="text-xs text-black italic">(viac o lektoroch v sekcii O NÁS)</p>
-                                        </div>
-                                        <p className="text-sm text-[#f47f44] font-bold italic mb-8">Ide o skupinu, ktorá už spolu absolvovala jeden Improvizačný kurz</p>
-                                        <div className="mt-auto">
-                                            <Button
-                                                href="https://form.fapi.cz/?id=379a5104-4a64-47a3-b0a1-f6969514e15b"
-                                                className="w-full justify-center"
+                                                className="w-full justify-center !bg-black !text-white hover:!bg-gray-800"
                                                 target="_blank"
                                             >
                                                 PRIHLÁSIŤ SA NA KURZ
@@ -269,7 +231,7 @@ export default function ImprovizaciaPage() {
                                         <div className="space-y-4">
                                             <h5 className="text-[1.2rem] font-bold text-black uppercase tracking-widest">STAČÍ SA LEN ROZHODNÚŤ</h5>
                                             <p className="text-black text-sm italic">Zábava a rovnako dobre naladení ľudia sú zaručení.</p>
-                                            <Button href="/ludus-academy/kontakt" className="w-full justify-center">Mám záujem o waiting list</Button>
+                                            <Button href="/ludus-academy/kontakt" className="w-full justify-center !bg-black !text-white hover:!bg-gray-800">Mám záujem o waiting list</Button>
                                         </div>
                                     </div>
                                 </div>

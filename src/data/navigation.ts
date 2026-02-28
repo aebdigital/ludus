@@ -126,8 +126,8 @@ export const academyCategories = [
     title: "Kurzy",
     links: [
       { name: "Herecký kurz", url: "/ludus-academy/herecky-kurz" },
-      { name: "Improvizácia", url: "/ludus-academy/improvizacia" },
-      { name: "Divadelé Laboratórium", url: "/ludus-academy/divadelne-laboratorium" },
+      { name: "Improvizačný kurz", url: "/ludus-academy/improvizacia" },
+      { name: "Divadelné laboratórium", url: "/ludus-academy/divadelne-laboratorium" },
       { name: "Kurz tvorivého písania", url: "/ludus-academy/tvorive-pisanie" }
     ]
   },

@@ -1,8 +1,11 @@
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
+import { getCategoryAktuality } from '@/lib/api';
 import Image from 'next/image';
 
-export default function FiremnyTimbildingPage() {
+export default async function FiremnyTimbildingPage() {
+    const news = await getCategoryAktuality('ludus-academy');
+
     return (
         <div className="bg-white">
             <section
@@ -20,7 +23,7 @@ export default function FiremnyTimbildingPage() {
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
-                    <AcademySubpageSidebar />
+                    <AcademySubpageSidebar news={news} />
 
                     <main className="flex-1 min-w-0">
                         <div className="mb-24">
@@ -165,10 +168,16 @@ export default function FiremnyTimbildingPage() {
                                     Kontaktujte nás emailom alebo telefonicky.
                                 </p>
                                 <div className="flex gap-4 justify-center relative z-10 max-sm:flex-col max-sm:items-center">
-                                    <Button href="mailto:info@ludusacademy.sk" className="px-10 py-4 text-lg">
+                                    <Button
+                                        href="mailto:info@ludusacademy.sk"
+                                        className="px-10 py-4 text-lg !bg-black !text-white hover:!bg-gray-800"
+                                    >
                                         info@ludusacademy.sk
                                     </Button>
-                                    <Button href="tel:+421947942125" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-10 py-4 text-lg">
+                                    <Button
+                                        href="tel:+421947942125"
+                                        className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-10 py-4 text-lg"
+                                    >
                                         0947 942 125
                                     </Button>
                                 </div>

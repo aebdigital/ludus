@@ -1,8 +1,10 @@
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
-import Image from 'next/image';
+import { getCategoryAktuality } from '@/lib/api';
 
-export default function HereckyKurzPage() {
+export default async function HereckyKurzPage() {
+    const news = await getCategoryAktuality('ludus-academy');
+
     return (
         <div className="bg-white">
             <section
@@ -20,7 +22,7 @@ export default function HereckyKurzPage() {
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
-                    <AcademySubpageSidebar />
+                    <AcademySubpageSidebar news={news} />
 
                     <main className="flex-1 min-w-0">
                         {/* Basic Course Section */}
@@ -89,9 +91,6 @@ export default function HereckyKurzPage() {
                                 </ul>
                             </div>
 
-                            {/* Rest of the section... (skipping for brevity but keeping logic) */}
-                            {/* I will keep the existing content here */}
-
                             <div className="bg-black text-white p-10 rounded-2xl mb-12 shadow-xl">
                                 <div className="text-[#f47f44] font-bold uppercase tracking-widest mb-2 text-sm">Investícia</div>
                                 <h3 className="text-[2rem] mb-6 leading-tight">
@@ -129,19 +128,22 @@ export default function HereckyKurzPage() {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                                 <div className="bg-white border-2 border-[#f47f44] p-8 rounded-2xl relative overflow-hidden flex flex-col">
-                                    <div className="absolute top-0 right-0 bg-[#f47f44] text-black px-4 py-1 font-bold text-xs">TERMÍN 1</div>
-                                    <h4 className="text-[1.5rem] font-bold text-black mb-2">21.1. - 8.4.2026</h4>
-                                    <p className="text-black mb-4">(hodina nebude: 18.2.2026)</p>
-                                    <p className="font-bold text-black text-lg mb-4 uppercase tracking-tighter">každú STREDU od 18:00 do 20:30</p>
+                                    <div className="absolute top-0 right-0 bg-[#f47f44] text-black px-4 py-1 font-bold text-xs uppercase">HERECKÝ KURZ - TEAMBUILDING</div>
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <span className="bg-[#f47f44] text-black px-2 py-0.5 rounded text-[0.7rem] font-bold">TERMÍN</span>
+                                        <h4 className="text-[1.5rem] font-bold text-black">2.3. - 18.5.2026</h4>
+                                    </div>
+                                    <p className="text-black mb-4">(hodina nebude: 6.4.2026)</p>
+                                    <p className="font-bold text-black text-lg mb-4 uppercase tracking-tighter">každý PONDELOK od 18:00 do 20:30</p>
                                     <div className="flex flex-col gap-1 mb-8">
                                         <span className="text-sm uppercase text-black font-bold">Lektori</span>
-                                        <p className="text-black font-medium">Mgr. art Norman Šáro, Mgr. art Jakub Rek</p>
+                                        <p className="text-black font-medium">Mgr. art Michal Rovňák, Mgr. art Miroslava Durná ArtD.</p>
                                         <p className="text-xs text-black italic">(viac o lektoroch v sekcii O NÁS)</p>
                                     </div>
                                     <div className="mt-auto">
                                         <Button
-                                            href="https://form.fapi.cz/?id=84c249ad-4bcc-4b91-92e1-93837f500d59"
-                                            className="w-full justify-center"
+                                            href="https://form.fapi.cz/?id=8a85a30a-6cd8-4bfd-8844-b468ad175c8f"
+                                            className="w-full justify-center !bg-black !text-white hover:!bg-gray-800"
                                             target="_blank"
                                         >
                                             PRIHLÁSIŤ SA NA KURZ
@@ -150,19 +152,22 @@ export default function HereckyKurzPage() {
                                 </div>
 
                                 <div className="bg-white border-2 border-gray-100 p-8 rounded-2xl relative overflow-hidden flex flex-col">
-                                    <div className="absolute top-0 right-0 bg-gray-100 text-black px-4 py-1 font-bold text-xs">TERMÍN 2</div>
-                                    <h4 className="text-[1.5rem] font-bold text-black mb-2">12.4. - 28.6.2026</h4>
+                                    <div className="absolute top-0 right-0 bg-gray-100 text-black px-4 py-1 font-bold text-xs uppercase">HERECKÝ KURZ - DVERE</div>
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <span className="bg-gray-200 text-black px-2 py-0.5 rounded text-[0.7rem] font-bold">TERMÍN</span>
+                                        <h4 className="text-[1.5rem] font-bold text-black">12.4. - 28.6.2026</h4>
+                                    </div>
                                     <p className="text-black mb-4">(hodina nebude: 14.6.2026)</p>
                                     <p className="font-bold text-black text-lg mb-4 uppercase tracking-tighter">každú NEDEĽU od 18:00 do 20:30</p>
                                     <div className="flex flex-col gap-1 mb-8">
-                                        <span className="text-sm uppercase text-black font-bold">Lektor</span>
-                                        <p className="text-black font-medium">Mgr. art Jozef Jurčišin-Kukľa</p>
+                                        <span className="text-sm uppercase text-black font-bold">Lektori</span>
+                                        <p className="text-black font-medium">Mgr. art Jozef Jurčišin-Kukľa, Bc. Richard Labuda</p>
                                         <p className="text-xs text-black italic">(viac o lektoroch v sekcii O NÁS)</p>
                                     </div>
                                     <div className="mt-auto">
                                         <Button
                                             href="https://form.fapi.cz/?id=84c249ad-4bcc-4b91-92e1-93837f500d59"
-                                            className="w-full justify-center"
+                                            className="w-full justify-center !bg-black !text-white hover:!bg-gray-800"
                                             target="_blank"
                                         >
                                             PRIHLÁSIŤ SA NA KURZ
@@ -173,12 +178,12 @@ export default function HereckyKurzPage() {
 
                             <div className="bg-[#f47f44]/10 border border-[#f47f44] p-10 rounded-2xl text-center">
                                 <h4 className="text-[1.8rem] font-bold text-black mb-4 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>
-                                    ĎALŠÍ CYKLUS KURZOV SPUSTÍME V SEPTEMBRI 2026
+                                    ZAUJALI VÁS TIETO KURZY?
                                 </h4>
                                 <p className="text-[#000] mb-8 max-w-2xl mx-auto">
-                                    V prípade, že máte o tento kurz záujem, tak nám pokojne napíšte a my Vás zaradíme na "WAITING LIST". Akonáhle budeme mať naplánované termíny kurzov, tak Vás budeme medzi prvými informovať aby ste sa mohli prihlásiť.
+                                    V prípade, že máte o tento kurz záujem, tak sa neváhajte prihlásiť. Ak máte akékoľvek otázky, tak nám pokojne napíšte.
                                 </p>
-                                <Button href="/ludus-academy/kontakt">Mám záujem o waiting list</Button>
+                                <Button href="/ludus-academy/kontakt" className="!bg-black !text-white hover:!bg-gray-800">Mám otázku</Button>
                             </div>
 
                             {/* Reviews Section */}
@@ -244,7 +249,7 @@ export default function HereckyKurzPage() {
                                         Ak ste odpovedali aspoň na jednu otázku ÁNO, tento kurz je práve pre vás.
                                     </p>
                                     <p>
-                                        Pridajte sa k nám do pokročilejšej skupiny Level 2 a vnorte sa s nami hlbšie do divadelného umenia, hereckých cvičení a hier a zažite 10 týždňov tvorivej atmosféry spolu s nami.
+                                        Pridajte sa k nám do pokročilejšej skupiny a vnorte sa s nami hlbšie do divadelného umenia, hereckých cvičení a hier a zažite 10 týždňov tvorivej atmosféry spolu s nami.
                                     </p>
                                 </div>
                                 <div className="flex-[0.3] min-w-[300px]">
@@ -321,7 +326,7 @@ export default function HereckyKurzPage() {
                                     PODMIENKA ÚČASTI: vek minimálne 18 rokov a ukončené stredoškolské vzdelanie
                                 </div>
                                 <div className="flex justify-center">
-                                    <Button href="/ludus-academy/kontakt">Mám záujem o kurz pre pokročilých</Button>
+                                    <Button href="/ludus-academy/kontakt" className="!bg-black !text-white hover:!bg-gray-800">Mám záujem o kurz pre pokročilých</Button>
                                 </div>
                             </div>
                         </div>

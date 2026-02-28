@@ -1,8 +1,11 @@
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
+import { getCategoryAktuality } from '@/lib/api';
 import Image from 'next/image';
 
-export default function WorkshopKreativitaPage() {
+export default async function WorkshopKreativitaPage() {
+    const news = await getCategoryAktuality('ludus-academy');
+
     return (
         <div className="bg-white">
             <section
@@ -20,7 +23,7 @@ export default function WorkshopKreativitaPage() {
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
-                    <AcademySubpageSidebar />
+                    <AcademySubpageSidebar news={news} />
 
                     <main className="flex-1 min-w-0">
                         <div className="mb-24">
@@ -53,7 +56,7 @@ export default function WorkshopKreativitaPage() {
                                     <h3 className="text-[1.5rem] mb-4 text-black font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Zámer workshopu</h3>
                                     <div className="space-y-4 text-[#000]">
                                         <p>Cieľom workshopu je rozvíjať kreatívne myslenie a naučiť sa pozerať na veci z nových uhlov. Kreativita nie je len pre umelcov – je prirodzenou súčasťou každého z nás.</p>
-                                        <p>Prostredníctvom rôznych techník a cvičení sa naučíme odbúravať bloky, ktoré nám bránia tvoriť, a posilníme schopnosť prichádzať s novými nápadmi a riešeniami.</p>
+                                        <p>Prostredníctvom rôznych techník and cvičení sa naučíme odbúravať bloky, ktoré nám bránia tvoriť, a posilníme schopnosť prichádzať s novými nápadmi a riešeniami.</p>
                                     </div>
                                 </div>
                             </div>
@@ -130,13 +133,13 @@ export default function WorkshopKreativitaPage() {
                                     </ul>
                                     <ul className="space-y-2 text-sm">
                                         <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Profesionálna lektorka MgA. Baranová</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Kreatívne metódy a techniky</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Kreatívne metódy and techniky</li>
                                         <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Občerstvenie: ovocie, káva, čaj</li>
                                         <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Certifikát o absolvovaní</li>
                                     </ul>
                                 </div>
                                 <div className="mt-8 pt-6 border-t border-white/10 text-sm italic opacity-70">
-                                    PODMIENKA ÚČASTI: vek minimálne 18 rokov a ukončené stredoškolské vzdelanie
+                                    PODMIENKA ÚČASTI: vek minimálne 18 rokov and ukončené stredoškolské vzdelanie
                                 </div>
                             </div>
 
@@ -155,9 +158,9 @@ export default function WorkshopKreativitaPage() {
                                     <div className="flex-1">
                                         <h4 className="text-[1.8rem] font-bold text-black mb-4">Mgr.art Katarína Baranová ArtD.</h4>
                                         <div className="text-[#000] space-y-4 text-[1rem] leading-relaxed">
-                                            <p>V divadle sa ocitla hádam ešte skôr, ako začala chodiť. Celý Katkin život je tak spätý s herectvom, dramatickou výchovou a kreativitou. Vyštudovala bábkoherectvo a od 19 rokov aktívne pôsobí ako pedagóg v škole LUDUS.</p>
-                                            <p>Posledných 15 rokov Katka aktívne využíva svoju kreativitu v OZ Červený nos - Clowndoctors. Od roku 2010 je riaditeľkou SZUŠ LUDUS. Je autorkou viacerých vzdelávacích programov a knihy <strong className="text-black">TVORÍM, TEDA SOM</strong>.</p>
-                                            <p className="italic font-bold text-black">"Ak ťa tento workshop zaujal, tak neváhaj a prihlás sa. Bude to pecka :D"</p>
+                                            <p>V divadle sa ocitla hádam ešte skôr, ako začala chodiť. Celý Katkin život je tak spätý s herectvom, dramatickou výchovou and kreativitou. Vyštudovala bábkoherectvo and od 19 rokov aktívne pôsobí ako pedagóg v škole LUDUS.</p>
+                                            <p>Posledných 15 rokov Katka aktívne využíva svoju kreativitu v OZ Červený nos - Clowndoctors. Od roku 2010 je riaditeľkou SZUŠ LUDUS. Je autorkou viacerých vzdelávacích programov and knihy <strong className="text-black">TVORÍM, TEDA SOM</strong>.</p>
+                                            <p className="italic font-bold text-black">"Ak ťa tento workshop zaujal, tak neváhaj and prihlás sa. Bude to pecka :D"</p>
                                         </div>
                                     </div>
                                 </div>
@@ -172,10 +175,16 @@ export default function WorkshopKreativitaPage() {
                                     <div className="flex justify-between border-b pb-2"><span>Obedná pauza:</span> <strong>12:30 - 13:30</strong></div>
                                 </div>
                                 <div className="flex gap-4 justify-center max-sm:flex-col max-sm:items-center">
-                                    <Button href="mailto:info@ludusacademy.sk">
+                                    <Button
+                                        href="mailto:info@ludusacademy.sk"
+                                        className="!bg-black !text-white hover:!bg-gray-800"
+                                    >
                                         info@ludusacademy.sk
                                     </Button>
-                                    <Button href="tel:+421947942125" className="bg-transparent border-2 border-black text-black hover:bg-black hover:text-white">
+                                    <Button
+                                        href="tel:+421947942125"
+                                        className="bg-transparent border-2 border-black text-black hover:bg-black hover:text-white"
+                                    >
                                         0947 942 125
                                     </Button>
                                 </div>
@@ -202,7 +211,12 @@ export default function WorkshopKreativitaPage() {
                                             <p>Kniha je praktickou príručkou pre pedagógov a lektorov, ktorých zaujímajú kreatívne metódy učenia.</p>
                                             <p>Je zároveň určená pre rodičov a inšpiráciu tu nájdu aj všetci, ktorí chcú sa učiť prostredníctvom zážitku.</p>
                                         </div>
-                                        <Button href="/ludus-academy/kniha" className="bg-[#f47f44] text-black border-none hover:bg-white">Viac o knihe</Button>
+                                        <Button
+                                            href="/ludus-academy/kniha"
+                                            className="bg-[#f47f44] text-black border-none hover:bg-white !bg-[#f47f44]"
+                                        >
+                                            Viac o knihe
+                                        </Button>
                                     </div>
                                 </div>
                             </div>

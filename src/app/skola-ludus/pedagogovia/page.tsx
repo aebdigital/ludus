@@ -110,7 +110,7 @@ const staff = [
   {
     name: 'Mgr. art Edita Koprivčevič Borsová',
     role: 'Pedagóg',
-    image: '/pedagogovia/EDITA BORSOVÁ.webp'
+    image: '/pedagogovia/edita Koprivčevič Borsová.webp'
   },
   {
     name: 'Mgr. art Laura Jankurová',

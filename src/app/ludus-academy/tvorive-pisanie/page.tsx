@@ -1,8 +1,11 @@
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
+import { getCategoryAktuality } from '@/lib/api';
 import Image from 'next/image';
 
-export default function TvorivePisaniePage() {
+export default async function TvorivePisaniePage() {
+    const news = await getCategoryAktuality('ludus-academy');
+
     return (
         <div className="bg-white">
             <section
@@ -20,7 +23,7 @@ export default function TvorivePisaniePage() {
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
-                    <AcademySubpageSidebar />
+                    <AcademySubpageSidebar news={news} />
 
                     <main className="flex-1 min-w-0">
                         <div className="mb-24">
@@ -55,7 +58,7 @@ export default function TvorivePisaniePage() {
                                         'Dozviete sa, v čom tkvie úspech písania vtipných textov.',
                                         'Naučíte sa princípy písania poviedky, divadelného či filmového scenára.',
                                         'Bude Vás učiť profesionálny dlhoročný lektor.',
-                                        'Strávite svoj čas zmysluplne a netradične.',
+                                        'Strávite svoj čas zmysluplne and netradične.',
                                         'Spoznáte viac sám seba.',
                                         'Zlepšíte sa v slovnej zásobe.'
                                     ].map((item, i) => (
@@ -248,7 +251,7 @@ export default function TvorivePisaniePage() {
                                         <div className="mt-auto">
                                             <Button
                                                 href="https://form.fapi.cz/?id=a1d7c8a7-ff33-48e8-8ac1-4eb1c6a8019b"
-                                                className="w-full justify-center py-4 text-xl"
+                                                className="w-full justify-center py-4 text-xl !bg-black !text-white hover:!bg-gray-800"
                                                 target="_blank"
                                             >
                                                 PRIHLÁSIŤ SA NA KURZ
@@ -263,7 +266,7 @@ export default function TvorivePisaniePage() {
                                         <p className="text-[#000] mb-8 max-w-2xl mx-auto">
                                             V prípade, že máte o tento kurz záujem, tak nám pokojne napíšte a my Vás zaradíme na "WAITING LIST". Akonáhle budeme mať naplánované termíny kurzov, tak Vás budeme medzi prvými informovať aby ste sa mohli prihlásiť.
                                         </p>
-                                        <Button href="/ludus-academy/kontakt" className="w-full justify-center">Mám záujem o waiting list</Button>
+                                        <Button href="/ludus-academy/kontakt" className="w-full justify-center !bg-black !text-white hover:!bg-gray-800">Mám záujem o waiting list</Button>
                                     </div>
                                 </div>
                             </div>

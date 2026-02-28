@@ -1,8 +1,11 @@
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
+import { getCategoryAktuality } from '@/lib/api';
 import Image from 'next/image';
 
-export default function DivadelneLaboratoriumPage() {
+export default async function DivadelneLaboratoriumPage() {
+    const news = await getCategoryAktuality('ludus-academy');
+
     return (
         <div className="bg-white">
             <section
@@ -20,7 +23,7 @@ export default function DivadelneLaboratoriumPage() {
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
-                    <AcademySubpageSidebar />
+                    <AcademySubpageSidebar news={news} />
 
                     <main className="flex-1 min-w-0">
                         <div className="mb-24">
@@ -36,7 +39,7 @@ export default function DivadelneLaboratoriumPage() {
                                     Divadelné laboratórium: kurz autorskej tvorby a improvizácie
                                 </p>
                                 <p>
-                                    Divadelné laboratórium je kurz autorskej tvorby a improvizácie pre dospelých, v ktorom prepojíte oblasť herectva, scenáristiky a improvizácie do jedného celku.
+                                    Divadelné laboratórium je kurz autorskej tvorby a improvizácie pre dospelých, v ktorom prepojíte oblasť herectva, scenáristiky a improvizácie do prevahy k modernému celku.
                                 </p>
                                 <p className="italic font-medium text-black">
                                     Chceli by ste vedieť ako sa dá prepojiť herectvo, improvizácia a autorská tvorba? Chceli byť ste byť súčasťou tohto umeleckého procesu a zistiť ako všetko so všetkým súvísí?
@@ -191,7 +194,12 @@ export default function DivadelneLaboratoriumPage() {
                                 <p className="text-[#000] mb-8 max-w-2xl mx-auto">
                                     V prípade, že máte o tento kurz záujem, tak nám pokojne napíšte a my Vás zaradíme na "WAITING LIST". Akonáhle budeme mať naplánované termíny kurzov, tak Vás budeme medzi prvými informovať aby ste sa mohli prihlásiť.
                                 </p>
-                                <Button href="/ludus-academy/kontakt">Mám záujem o waiting list</Button>
+                                <Button
+                                    href="/ludus-academy/kontakt"
+                                    className="!bg-black !text-white hover:!bg-gray-800 px-10 py-4 text-lg"
+                                >
+                                    Mám záujem o waiting list
+                                </Button>
                             </div>
                         </div>
                     </main>

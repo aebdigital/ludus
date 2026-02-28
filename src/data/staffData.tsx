@@ -130,7 +130,7 @@ export const staffData: Record<string, StaffMember> = {
     },
     "Edita Koprivčevič Borsová": {
         name: "Mgr. art Edita Koprivčevič Borsová",
-        image: "/pedagogovia/EDITA BORSOVÁ.webp",
+        image: "/pedagogovia/edita Koprivčevič Borsová.webp",
         bio: (
             <>
                 <p>Editka odmalička chodila do školy LUDUS. Neskôr išla študovať na VŠMU bábkoherectvo, kde pôsobila niekoľko rokov aj ako pedagóg. Spolupracuje s rôznymi divadelnými zoskupeniami a účinkovala v rôznych TV projektoch či filmoch. Editka je aj zdravotným klaunom v OZ Červený nos Clowndoctors</p>
@@ -223,7 +223,7 @@ export const staffData: Record<string, StaffMember> = {
         image: "/pedagogovia/kakas.webp",
         bio: (
             <>
-                <p>David začínal svoje umelecké smerovanie v SZUŠ LUDUS už v tinedžerskom veku. Neskôr vyštudovala odbor herectvo na VŠMU. Účinkoval v SND, spolupracuje na letných Shakespearovských slávnostiach, účinkuje v divadle Andreja Bagara v Nitre a v rôznych TV projektoch.</p>
+                <p>David začínal svoje umelecké smerovanie v SZUŠ LUDUS už v tinedžerskom veku. Neskôr vyštudoval odbor herectvo na VŠMU. Účinkoval v SND, spolupracuje na letných Shakespearovských slávnostiach, účinkuje v divadle Andreja Bagara v Nitre a v rôznych TV projektoch.</p>
             </>
         )
     },

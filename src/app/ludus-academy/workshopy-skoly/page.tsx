@@ -1,8 +1,10 @@
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
-import Image from 'next/image';
+import { getCategoryAktuality } from '@/lib/api';
 
-export default function WorkshopySkolyPage() {
+export default async function WorkshopySkolyPage() {
+    const news = await getCategoryAktuality('ludus-academy');
+
     return (
         <div className="bg-white">
             <section
@@ -20,7 +22,7 @@ export default function WorkshopySkolyPage() {
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
-                    <AcademySubpageSidebar />
+                    <AcademySubpageSidebar news={news} />
 
                     <main className="flex-1 min-w-0">
                         <div className="mb-24">
@@ -99,12 +101,12 @@ export default function WorkshopySkolyPage() {
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
                                     <div className="bg-white/5 p-6 rounded-xl border border-white/10 text-center">
-                                        <p className="text-black text-sm mb-1 uppercase tracking-wider font-bold">120 minútový workshop</p>
+                                        <p className="text-white text-sm mb-1 uppercase tracking-wider font-bold">120 minútový workshop</p>
                                         <p className="text-[#f47f44] text-[2.5rem] font-bold">130 EUR</p>
                                         <p className="text-white/40 text-xs">pre jednu triedu</p>
                                     </div>
                                     <div className="bg-white/5 p-6 rounded-xl border border-white/10 text-center">
-                                        <p className="text-black text-sm mb-1 uppercase tracking-wider font-bold">180 minútový workshop</p>
+                                        <p className="text-white text-sm mb-1 uppercase tracking-wider font-bold">180 minútový workshop</p>
                                         <p className="text-[#f47f44] text-[2.5rem] font-bold">160 EUR</p>
                                         <p className="text-white/40 text-xs">pre jednu triedu</p>
                                     </div>
@@ -195,10 +197,16 @@ export default function WorkshopySkolyPage() {
                                     Kontaktujte nás emailom alebo telefonicky.
                                 </p>
                                 <div className="flex gap-4 justify-center relative z-10 max-sm:flex-col max-sm:items-center">
-                                    <Button href="mailto:info@ludusacademy.sk" className="px-10 py-4 text-lg">
+                                    <Button
+                                        href="mailto:info@ludusacademy.sk"
+                                        className="px-10 py-4 text-lg !bg-black !text-white hover:!bg-gray-800"
+                                    >
                                         info@ludusacademy.sk
                                     </Button>
-                                    <Button href="tel:+421947942125" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-10 py-4 text-lg">
+                                    <Button
+                                        href="tel:+421947942125"
+                                        className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-10 py-4 text-lg"
+                                    >
                                         0947 942 125
                                     </Button>
                                 </div>

@@ -1,12 +1,14 @@
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
-import Button from '@/components/Button';
+import { getCategoryAktuality } from '@/lib/api';
 
-export default function WorkshopUciteliaPage() {
+export default async function WorkshopUciteliaPage() {
+    const news = await getCategoryAktuality('ludus-academy');
+
     return (
         <div className="bg-white">
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/images/academy/IMG_9026.webp')" }}
+                style={{ backgroundImage: "url('/images/academy/IMG_9005.webp')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1
@@ -19,61 +21,51 @@ export default function WorkshopUciteliaPage() {
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
-                    <AcademySubpageSidebar />
+                    <AcademySubpageSidebar news={news} />
 
                     <main className="flex-1 min-w-0">
-                        <div>
+                        <div className="mb-24">
                             <h2 className="text-[3rem] mb-2 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-                                RADOSŤ <span className="text-[#f47f44]">SA</span> UČIŤ
+                                RADOSŤ <span className="text-[#f47f44]">sa</span> UČIŤ zážitkom
                             </h2>
                             <div className="text-[#f47f44] font-bold text-[1.2rem] mb-12 uppercase tracking-widest leading-tight">
-                                HROU KU KREATÍVNEJ VÝUČBE
+                                PRIPRAVUJEME PRE VÁS NOVÉ OBSAHY
                             </div>
 
-                            <div className="bg-gray-50 p-12 rounded-3xl border border-gray-100 mb-12 relative overflow-hidden">
-                                <div className="absolute top-0 right-0 bg-black text-white px-6 py-2 font-bold uppercase tracking-widest text-xs">
-                                    PRIPRAVUJEME
-                                </div>
+                            <div className="bg-black text-white p-20 rounded-3xl text-center shadow-2xl relative overflow-hidden">
+                                <div className="absolute top-0 left-0 w-64 h-64 bg-[#f47f44]/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+                                <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#f47f44]/10 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
 
-                                <div className="text-[1.2rem] text-[#000] space-y-8 leading-relaxed">
-                                    <p className="font-medium text-black text-[1.4rem]">
-                                        Tento workshop pre vás práve pripravujeme.
+                                <div className="relative z-10">
+                                    <div className="text-[#f47f44] text-[4rem] font-bold mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
+                                        PRIPRAVUJEME
+                                    </div>
+                                    <p className="text-[1.5rem] text-gray-300 max-w-2xl mx-auto leading-relaxed italic">
+                                        "Tieto workshopy pre pedagógov a lektorov práve cizelujeme do finálnej podoby. Čoskoro tu nájdete kompletné info o termínoch, obsahu a lektoroch."
                                     </p>
-                                    <p>
-                                        Na medzinárodnej úrovni a vďaka ERASMU+, uvedieme začiatkom roka 2023 zaujímavú kreatívnu metódu <strong className="text-black">IMPROLINGUA</strong>, ktorá učiteľom Anglického jazyka prinesie množstvo inovatívnych hier k výučbe.
-                                    </p>
-                                    <p className="italic border-l-4 border-[#f47f44] pl-6 py-2 text-black font-bold">
-                                        Prostredníctvom hry - k lepšej konverzácii.
-                                    </p>
-                                </div>
 
-                                <div className="mt-12 bg-black text-white p-12 rounded-2xl text-center shadow-2xl relative overflow-hidden group">
-                                    <div className="absolute inset-0 bg-gradient-to-r from-[#f47f44]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                                    <h3 className="text-[2.2rem] mb-6 leading-tight relative z-10">
-                                        Máte záujem?
-                                    </h3>
-                                    <p className="text-gray-300 mb-8 max-w-2xl mx-auto relative z-10 text-[1.1rem]">
-                                        Kontaktujte nás emailom alebo telefonicky.
-                                    </p>
-                                    <div className="flex gap-4 justify-center relative z-10 max-sm:flex-col max-sm:items-center">
-                                        <Button href="mailto:info@ludusacademy.sk" className="px-10 py-4 text-lg">
-                                            info@ludusacademy.sk
-                                        </Button>
-                                        <Button href="tel:+421947942125" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-10 py-4 text-lg">
-                                            0947 942 125
-                                        </Button>
+                                    <div className="mt-12 flex flex-col items-center gap-6">
+                                        <div className="w-16 h-1 bg-[#f47f44]"></div>
+                                        <p className="text-gray-400 uppercase tracking-[0.3em] text-sm">Ludus Academy</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 opacity-50 grayscale">
-                                <div className="p-8 border border-gray-100 rounded-2xl">
-                                    <h4 className="font-bold mb-2">Inovatívne metódy</h4>
-                                    <p className="text-sm">Moderné prístupy k výučbe jazykov cez dramatickú výchovu.</p>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24">
+                                <div className="p-10 bg-gray-50 rounded-2xl border border-gray-100 opacity-60">
+                                    <h3 className="text-[1.5rem] mb-4 text-black font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Na čo sa môžete tešiť?</h3>
+                                    <ul className="space-y-4">
+                                        <li className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Kreatívne metódy učenia</li>
+                                        <li className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Práca s hlasom a prejavom pedagóga</li>
+                                        <li className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Zážitková pedagogika v praxi</li>
+                                        <li className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Ako zaujať a udržať pozornosť</li>
+                                    </ul>
                                 </div>
-                                <div className="p-8 border border-gray-100 rounded-2xl">
-                                    <h4 className="font-bold mb-2">Materiály k výučbe</h4>
-                                    <p className="text-sm">Súbor hier a aktivít priamo využiteľných na hodinách AJ.</p>
+                                <div className="p-10 bg-white rounded-2xl border-2 border-dashed border-gray-200 flex items-center justify-center text-center">
+                                    <p className="text-gray-400 italic">
+                                        Obsah priebežne dopĺňame. <br />
+                                        Sledujte nás pre aktualizácie.
+                                    </p>
                                 </div>
                             </div>
                         </div>

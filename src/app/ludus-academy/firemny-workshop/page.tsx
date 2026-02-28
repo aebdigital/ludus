@@ -1,8 +1,11 @@
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
+import { getCategoryAktuality } from '@/lib/api';
 import Image from 'next/image';
 
-export default function FiremnyWorkshopPage() {
+export default async function FiremnyWorkshopPage() {
+    const news = await getCategoryAktuality('ludus-academy');
+
     return (
         <div className="bg-white">
             <section
@@ -20,7 +23,7 @@ export default function FiremnyWorkshopPage() {
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
-                    <AcademySubpageSidebar />
+                    <AcademySubpageSidebar news={news} />
 
                     <main className="flex-1 min-w-0">
                         <div className="mb-24">
@@ -102,7 +105,7 @@ export default function FiremnyWorkshopPage() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                     {[
                                         'Istotu pri prezentáciách a poradách',
-                                        'Jasnejšie formulovanie myšlienok',
+                                        'Jasnejšie formulovanie myšlienkov',
                                         'Pohotovosť v otázkach a diskusiách',
                                         'Lepšiu spoluprácu pri spoločných vystúpeniach',
                                         'Prirodzený prejav bez strojenosti',
@@ -160,10 +163,16 @@ export default function FiremnyWorkshopPage() {
                                         Kontaktujte nás emailom alebo telefonicky.
                                     </p>
                                     <div className="flex gap-4 justify-center relative z-10 max-xl:flex-col max-xl:items-center">
-                                        <Button href="mailto:info@ludusacademy.sk" className="px-8 py-3 text-base w-fit justify-center min-w-[200px]">
+                                        <Button
+                                            href="mailto:info@ludusacademy.sk"
+                                            className="!bg-black !text-white hover:!bg-gray-800 px-8 py-3 text-base w-fit justify-center min-w-[200px]"
+                                        >
                                             info@ludusacademy.sk
                                         </Button>
-                                        <Button href="tel:+421947942125" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-8 py-3 text-base w-fit justify-center min-w-[200px]">
+                                        <Button
+                                            href="tel:+421947942125"
+                                            className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-8 py-3 text-base w-fit justify-center min-w-[200px]"
+                                        >
                                             0947 942 125
                                         </Button>
                                     </div>
