@@ -24,7 +24,6 @@ export const menuData: NavCategory[] = [
       { name: "Školné", url: "/skola-ludus/skolne", image: "/images/skola/IMG_1875.webp" },
       { name: "Pedagógovia", url: "/skola-ludus/pedagogovia", image: "/images/o-nas/katarina-baranova.webp" },
       { name: "Výučba", url: "/skola-ludus/vyucba", image: "/images/skola/IMG_3487.webp" },
-      { name: "2% z dane", url: "/skola-ludus/2-percenta", image: "/images/skola/IMG_4346.webp" },
       { name: "Galéria", url: "/skola-ludus/galeria", image: "/images/skola/IMG_4346.webp" }
     ]
   },
@@ -38,9 +37,7 @@ export const menuData: NavCategory[] = [
       { name: "Program", url: "/program?category=divadlo-ludus", image: "/images/divadlo-main.webp" },
       { name: "Repertoár", url: "/divadlo-ludus/repertoar", image: "/images/divadlo-main.webp" },
       { name: "Aktivity", url: "/divadlo-ludus/aktivity", image: "/images/divadlo-main.webp" },
-      { name: "Naše priestory", url: "/divadlo-ludus/priestory", image: "/images/divadlo-main.webp" },
-      { name: "2% z dane", url: "/divadlo-ludus/2-percenta", image: "/images/divadlo-main.webp" },
-      { name: "Galéria", url: "/divadlo-ludus/galeria", image: "/images/divadlo-main.webp" }
+      { name: "Naše priestory", url: "/divadlo-ludus/priestory", image: "/images/divadlo-main.webp" }
     ]
   },
   {
@@ -100,7 +97,6 @@ export const schoolLinks = [
   { name: "Školné", url: "/skola-ludus/skolne" },
   { name: "Pedagógovia", url: "/skola-ludus/pedagogovia" },
   { name: "Výučba", url: "/skola-ludus/vyucba" },
-  { name: "2% z dane", url: "/skola-ludus/2-percenta" },
   { name: "Kontakt", url: "/skola-ludus/kontakt" },
   { name: "Galéria", url: "/skola-ludus/galeria" }
 ];
@@ -111,9 +107,7 @@ export const theaterLinks = [
   { name: "Program", url: "/program?category=divadlo-ludus" },
   { name: "Repertoár", url: "/divadlo-ludus/repertoar" },
   { name: "Aktivity", url: "/divadlo-ludus/aktivity" },
-  { name: "Naše priestory", url: "/divadlo-ludus/priestory" },
-  { name: "2% z dane", url: "/divadlo-ludus/2-percenta" },
-  { name: "Galéria", url: "/divadlo-ludus/galeria" }
+  { name: "Naše priestory", url: "/divadlo-ludus/priestory" }
 ];
 
 export const campLinks = [

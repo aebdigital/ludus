@@ -10,6 +10,8 @@ export default function Header() {
   const pathname = usePathname();
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openMobileCategory, setOpenMobileCategory] = useState<number | null>(null);
 
   const getActiveCategory = () => {
     const categoryMap: { [key: string]: number } = {
@@ -32,9 +34,9 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md z-[1000] py-3 flex justify-center shadow-[0_2px_20px_rgba(0,0,0,0.05)]">
-      <div className="w-[95%] grid grid-cols-[auto_1fr_auto] items-center gap-6">
+      <div className="w-[95%] flex justify-between items-center lg:grid lg:grid-cols-[auto_1fr_auto] lg:gap-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center cursor-pointer">
+        <Link href="/" className="flex items-center cursor-pointer" onClick={() => setIsMobileMenuOpen(false)}>
           <Image
             src="/images/loga-4/logo-main.webp"
             alt="LUDUS Logo"
@@ -44,8 +46,18 @@ export default function Header() {
           />
         </Link>
 
-        {/* Navigation */}
-        <nav className="flex justify-center relative">
+        {/* Hamburger Icon for Mobile */}
+        <button
+          className="lg:hidden flex flex-col justify-center items-center w-8 h-8 z-[1100]"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <span className={`bg-black block transition-all duration-300 ease-out h-[2px] w-full rounded-sm ${isMobileMenuOpen ? 'rotate-45 translate-y-[8px]' : '-translate-y-1'}`}></span>
+          <span className={`bg-black block transition-all duration-300 ease-out h-[2px] w-full rounded-sm my-1 ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+          <span className={`bg-black block transition-all duration-300 ease-out h-[2px] w-full rounded-sm ${isMobileMenuOpen ? '-rotate-45 -translate-y-[8px]' : 'translate-y-1'}`}></span>
+        </button>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex justify-center relative">
           <ul className="flex list-none gap-12">
             {menuData.map((item, index) => (
               <li
@@ -104,8 +116,8 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Right Group - Social + Contact */}
-        <div className="flex items-center gap-4">
+        {/* Right Group - Social + Contact (Desktop only) */}
+        <div className="hidden lg:flex items-center gap-4">
 
           <Link href="/kontakt" className="btn-cta !bg-black !text-white hover:!bg-gray-800">
             <span className="btn-text-container">
@@ -113,6 +125,63 @@ export default function Header() {
               <span className="btn-text btn-text-hidden">Kontakt</span>
             </span>
           </Link>
+        </div>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`fixed inset-0 bg-white z-[1050] overflow-y-auto transition-transform duration-300 lg:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className="pt-24 px-6 pb-12 flex flex-col gap-6">
+          <ul className="flex flex-col gap-4">
+            {menuData.map((item, index) => (
+              <li key={item.title} className="border-b border-gray-100 pb-4">
+                <div
+                  className="flex justify-between items-center cursor-pointer"
+                  onClick={() => item.title !== 'Program' ? setOpenMobileCategory(openMobileCategory === index ? null : index) : null}
+                >
+                  <Link
+                    href={item.url}
+                    className={`text-[2rem] font-medium leading-tight ${currentCategory === index ? 'text-[#f47f44]' : 'text-black'}`}
+                    style={{ fontFamily: 'var(--font-heading)' }}
+                    onClick={() => item.title === 'Program' ? setIsMobileMenuOpen(false) : null}
+                  >
+                    {item.title}
+                  </Link>
+                  {item.title !== 'Program' && (
+                    <span className={`text-[#f47f44] text-[1.5rem] transition-transform duration-300 ${openMobileCategory === index ? 'rotate-180' : ''}`}>▼</span>
+                  )}
+                </div>
+
+                {/* Mobile Submenu */}
+                {item.title !== 'Program' && (
+                  <div className={`overflow-hidden transition-all duration-300 ${openMobileCategory === index ? 'max-h-[500px] mt-4 opacity-100' : 'max-h-0 opacity-0'}`}>
+                    <ul className="flex flex-col gap-3 pl-4">
+                      {item.links.map((link) => (
+                        <li key={link.name}>
+                          <Link
+                            href={link.url}
+                            className="text-[1.2rem] text-gray-700 hover:text-[#f47f44]"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {link.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-8">
+            <Link
+              href="/kontakt"
+              className="bg-black text-white px-8 py-4 rounded-full text-center block w-full text-[1.2rem] font-bold"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Kontakt
+            </Link>
+          </div>
         </div>
       </div>
     </header>
