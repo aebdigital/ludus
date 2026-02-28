@@ -80,7 +80,7 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
                         >
                             {/* Close Button */}
                             <button
-                                className="absolute top-0 right-0 sm:-top-12 sm:-right-12 text-white text-5xl font-extralight hover:text-[#f47f44] transition-colors p-4 z-[3100]"
+                                className="fixed top-4 right-4 sm:top-8 sm:right-8 text-white text-5xl font-extralight hover:text-[#f47f44] transition-colors p-4 z-[3100]"
                                 onClick={() => setSelectedIdx(null)}
                             >
                                 ✕
@@ -88,19 +88,19 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
 
                             {/* Navigation Buttons */}
                             <button
-                                className="absolute left-0 sm:-left-20 top-1/2 -translate-y-1/2 bg-white/5 hover:bg-white/20 text-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-4xl transition-all z-[3100] group backdrop-blur-sm"
+                                className="fixed left-4 sm:left-8 top-1/2 -translate-y-1/2 bg-white/5 hover:bg-white/20 text-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-4xl transition-all z-[3100] group backdrop-blur-sm"
                                 onClick={prevImage}
                             >
                                 <span className="group-hover:-translate-x-1 transition-transform">←</span>
                             </button>
                             <button
-                                className="absolute right-0 sm:-right-20 top-1/2 -translate-y-1/2 bg-white/5 hover:bg-white/20 text-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-4xl transition-all z-[3100] group backdrop-blur-sm"
+                                className="fixed right-4 sm:right-8 top-1/2 -translate-y-1/2 bg-white/5 hover:bg-white/20 text-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-4xl transition-all z-[3100] group backdrop-blur-sm"
                                 onClick={nextImage}
                             >
                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
                             </button>
 
-                            <div className="relative w-full h-full">
+                            <div className="relative w-full h-[80vh]">
                                 <Image
                                     src={images[selectedIdx].url}
                                     alt={images[selectedIdx].alt_text || 'Galéria'}
@@ -113,12 +113,12 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
                             </div>
 
                             {/* Info Overlay */}
-                            <div className="absolute bottom-[-60px] left-0 right-0 text-center flex flex-col gap-2">
-                                <span className="text-white/40 font-medium tracking-widest uppercase text-sm">
+                            <div className="mt-4 text-center flex flex-col gap-2 relative z-[3100]">
+                                <span className="text-white/70 font-medium tracking-widest uppercase text-sm drop-shadow-md">
                                     Fotografia {selectedIdx + 1} z {images.length}
                                 </span>
                                 {images[selectedIdx].alt_text && (
-                                    <span className="text-white text-lg font-light tracking-wide">{images[selectedIdx].alt_text}</span>
+                                    <span className="text-white text-xl font-bold tracking-wide drop-shadow-lg">{images[selectedIdx].alt_text}</span>
                                 )}
                             </div>
                         </motion.div>
