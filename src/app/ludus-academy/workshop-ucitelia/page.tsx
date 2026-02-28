@@ -1,5 +1,6 @@
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
+import Image from 'next/image';
 
 export default async function WorkshopUciteliaPage() {
 
@@ -7,15 +8,25 @@ export default async function WorkshopUciteliaPage() {
         <div className="bg-white">
             <section
                 className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
-                style={{ backgroundImage: "url('/GRAFIKA NA WEB KURZOV/workshop-pre-ucitelov.jpg')" }}
+                style={{ backgroundImage: "url('/images/academy/IMG_9026.webp')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1
-                    className="relative text-white text-[5rem] z-10 text-center max-md:text-[3rem] px-4"
+                    className="relative text-white text-[5.5rem] z-10 text-center max-md:text-[2.2rem]"
                     style={{ fontFamily: 'var(--font-heading)' }}
                 >
                     Workshop pre učiteľov
                 </h1>
+            </section>
+
+            <section className="w-[95%] mx-auto mt-12 mb-[-2rem]">
+                <Image
+                    src="/GRAFIKA NA WEB KURZOV/workshop-pre-ucitelov.jpg"
+                    alt="Workshop pre učiteľov program"
+                    width={1400}
+                    height={600}
+                    className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                />
             </section>
 
             <div className="w-[95%] mx-auto py-16">

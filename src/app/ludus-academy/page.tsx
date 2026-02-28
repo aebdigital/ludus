@@ -10,25 +10,25 @@ const courses = [
     title: "HERECKÝ KURZ",
     description: <>Radosť <span className="text-[#f47f44]">sa</span> hrať.</>,
     href: "/ludus-academy/herecky-kurz",
-    backgroundImage: "/GRAFIKA NA WEB KURZOV/herecky-kurz.jpg"
+    backgroundImage: "/images/academy/IMG_1128.webp"
   },
   {
     title: "IMPROVIZAČNÝ KURZ",
     description: <>Radosť <span className="text-[#f47f44]">si</span> improvizovať</>,
     href: "/ludus-academy/improvizacia",
-    backgroundImage: "/GRAFIKA NA WEB KURZOV/improvizacny-kurz.jpg"
+    backgroundImage: "/images/academy/IMG_3649.webp"
   },
   {
     title: "DIVADELNÉ LABORATÓRIUM",
     description: <>Radosť <span className="text-[#f47f44]">sa</span> umelecky realizovať</>,
     href: "/ludus-academy/divadelne-laboratorium",
-    backgroundImage: "/GRAFIKA NA WEB KURZOV/divadelne-laboratorium.jpg"
+    backgroundImage: "/images/academy/IMG_4194.webp"
   },
   {
     title: "KURZ TVORIVÉHO PÍSANIA",
     description: <>Radosť <span className="text-[#f47f44]">vedieť</span> písať</>,
     href: "/ludus-academy/tvorive-pisanie",
-    backgroundImage: "/GRAFIKA NA WEB KURZOV/kurz-tvoriveho-pisania.jpg"
+    backgroundImage: "/images/academy/IMG_4766.webp"
   }
 ];
 
@@ -37,19 +37,19 @@ const workshops = [
     title: "WORKSHOPY PRE ŠKOLY",
     description: <>Radosť <span className="text-[#f47f44]">sa</span> spoznávať</>,
     href: "/ludus-academy/workshopy-skoly",
-    backgroundImage: "/GRAFIKA NA WEB KURZOV/workshop-pre-skoly.jpg"
+    backgroundImage: "/images/academy/IMG_9005.webp"
   },
   {
     title: "WORKSHOP PRE UČITEĽOV",
     description: <>Radosť <span className="text-[#f47f44]">sa</span> učiť</>,
     href: "/ludus-academy/workshop-ucitelia",
-    backgroundImage: "/GRAFIKA NA WEB KURZOV/workshop-pre-ucitelov.jpg"
+    backgroundImage: "/images/academy/IMG_9026.webp"
   },
   {
     title: "WORKSHOP KREATÍVNEHO MYSLENIA",
     description: <>Radosť <span className="text-[#f47f44]">si</span> tvoriť</>,
     href: "/ludus-academy/workshop-kreativita",
-    backgroundImage: "/GRAFIKA NA WEB KURZOV/workshop-kreativneho-myslenia.jpg"
+    backgroundImage: "/images/academy/IMG_9087.webp"
   }
 ];
 
@@ -59,19 +59,19 @@ const corporateWorkshops = [
     title: "KREATÍVNY TÍMBILDING",
     description: <>Radosť <span className="text-[#f47f44]">spolu</span> pracovať</>,
     href: "/ludus-academy/firemny-timbilding",
-    backgroundImage: "/GRAFIKA NA WEB KURZOV/kreativny-teambuilding.jpg"
+    backgroundImage: "/images/academy/IMG_4216.webp"
   },
   {
     title: "INDIVIDUÁLNE TRÉNINGY",
     description: <>Radosť <span className="text-[#f47f44]">sa</span> rozvíjať</>,
     href: "/ludus-academy/individualne-treningy",
-    backgroundImage: "/GRAFIKA NA WEB KURZOV/individualny-trening.jpg"
+    backgroundImage: "/images/academy/IMG_9073.webp"
   },
   {
     title: "FIREMNÉ WORKSHOPY",
     description: <>Radosť <span className="text-[#f47f44]">spolu</span> objavovať</>,
     href: "/ludus-academy/firemny-workshop",
-    backgroundImage: "/GRAFIKA NA WEB KURZOV/firemny-workshop.jpg"
+    backgroundImage: "/images/academy/IMG_3649.webp"
   }
 ];
 
@@ -94,6 +94,7 @@ export default function LudusAcademyPage() {
 
       <div className="w-[95%] mx-auto py-16">
         <div className="flex gap-16 items-start max-xl:flex-col">
+
 
           {/* Main Content Column */}
           <main className="flex-1 min-w-0">
@@ -123,18 +124,19 @@ export default function LudusAcademyPage() {
               />
             </div>
 
-            {/* Colored Box below O NÁS */}
-            <div className="bg-white p-8 rounded-xl border border-gray-100 mb-16 shadow-[0_10px_40px_rgba(0,0,0,0.05)]">
-              <p className="text-[1.1rem] text-black leading-relaxed text-center font-medium italic">
-                Či už Vás láka herecké a divadelné prostredie, túžite sa zlepšiť v improvizačnom myslení a kreativite, chcete zlepšiť svoje prezentačné schopnosti, alebo len zmysluplne tráviť čas a rozvijať svoje kreatívne zručnosti, neexistuje dôvod, prečo by ste to nemohli zrealizovať. Robiť v živote to, čo nás baví a napĺňa je ten najkrajší dar. Vy sa rozhodnite, ktorý z kurzov a workshopov je vášmu srdcu najbližší a my vám pomôžeme naplniť vaše sny, plány a ciele.
-              </p>
-              <div className="mt-12">
+            {/* Intro Section - Description with Image on the right */}
+            <div className="bg-white p-10 rounded-xl border border-gray-100 mb-16 shadow-[0_10px_40px_rgba(0,0,0,0.05)] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <p className="text-[1.1rem] text-black leading-relaxed text-left font-medium italic">
+                  Či už Vás láka herecké a divadelné prostredie, túžite sa zlepšiť v improvizačnom myslení a kreativite, chcete zlepšiť svoje prezentačné schopnosti, alebo len zmysluplne tráviť čas a rozvijať svoje kreatívne zručnosti, neexistuje dôvod, prečo by ste to nemohli zrealizovať. Robiť v živote to, čo nás baví a napĺňa je ten najkrajší dar. Vy sa rozhodnite, ktorý z kurzov a workshopov je vášmu srdcu najbližší a my vám pomôžeme naplniť vaše sny, plány a ciele.
+                </p>
+              </div>
+              <div className="relative h-[350px] w-full">
                 <Image
                   src="/GRAFIKA NA WEB KURZOV/ludus-academy-onaspage.jpg"
                   alt="Ludus Academy Program"
-                  width={1200}
-                  height={600}
-                  className="w-full h-auto rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.1)]"
+                  fill
+                  className="object-cover rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.1)]"
                 />
               </div>
             </div>
