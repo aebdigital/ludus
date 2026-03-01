@@ -105,7 +105,7 @@ export default function LudusTaborPage() {
                             </div>
 
                             {/* Turnusy */}
-                            <div id="terminy" className="bg-black text-white p-10 rounded-xl shadow-xl h-full flex flex-col scroll-mt-28">
+                            <div id="terminy" className="bg-[#066831] text-white p-10 rounded-xl shadow-xl h-full flex flex-col scroll-mt-28">
                                 <h3 className="text-[2rem] mb-6 text-[#f47f44]" style={{ fontFamily: 'var(--font-heading)' }}>
                                     Termíny 2026
                                 </h3>
@@ -113,7 +113,7 @@ export default function LudusTaborPage() {
                                 <div className="space-y-6 flex-1">
                                     <div className="bg-white/10 p-6 rounded-lg border border-white/10">
                                         <div className="flex flex-col gap-1 mb-4">
-                                            <span className="text-2xl font-bold text-[#f47f44]">1. Turnus</span>
+                                            <span className="text-2xl font-bold text-white">1. Turnus</span>
                                             <span className="text-lg font-medium">6.7. - 10.7. 2026</span>
                                         </div>
                                         <Button href="https://form.fapi.cz/?id=6d899098-ce0d-4184-82de-90b29d27b099" className="w-full text-center justify-center py-3 bg-white text-black hover:bg-[#f47f44] text-sm uppercase font-bold">
@@ -123,7 +123,7 @@ export default function LudusTaborPage() {
 
                                     <div className="bg-white/10 p-6 rounded-lg border border-white/10">
                                         <div className="flex flex-col gap-1 mb-4">
-                                            <span className="text-2xl font-bold text-[#f47f44]">2. Turnus</span>
+                                            <span className="text-2xl font-bold text-white">2. Turnus</span>
                                             <span className="text-lg font-medium">13.7. - 17.7. 2026</span>
                                         </div>
                                         <Button href="https://form.fapi.cz/?id=96498f09-72d0-4039-a918-96343e26cf0d" className="w-full text-center justify-center py-3 bg-white text-black hover:bg-[#f47f44] text-sm uppercase font-bold">

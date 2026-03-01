@@ -99,8 +99,8 @@ export default async function Home() {
                       </div>
                       <h3
                         className={`text-[1.4rem] max-md:text-[1.1rem] font-bold mt-0 mb-2 ${item.link
-                            ? "group-hover/aktualita:text-purple-700 transition-colors duration-200"
-                            : ""
+                          ? "group-hover/aktualita:text-purple-700 transition-colors duration-200"
+                          : ""
                           }`}
                         style={{ fontFamily: "var(--font-body)" }}
                       >
@@ -133,7 +133,7 @@ export default async function Home() {
           </div>
 
           {/* Program Box */}
-          <div className="bg-black text-white rounded-xl p-8 max-md:p-6">
+          <div className="bg-[#066831] text-white rounded-xl p-8 max-md:p-6">
             <h2 className="text-[2.5rem] max-md:text-[1.6rem] mb-6 text-white" style={{ fontFamily: 'var(--font-heading)' }}>
               Divadelný program
             </h2>

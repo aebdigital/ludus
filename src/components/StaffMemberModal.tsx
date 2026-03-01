@@ -61,15 +61,15 @@ export default function StaffMemberModal({ member, onClose }: StaffMemberModalPr
 
     return (
         <div
-            className="fixed inset-0 z-[2000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity duration-300"
+            className="fixed inset-0 z-[2000] flex items-center justify-center p-4 max-md:p-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300"
         >
             <div
                 ref={modalRef}
-                className="bg-white rounded-2xl w-full max-w-7xl max-h-[70vh] shadow-2xl flex flex-col md:flex-row relative animate-in fade-in zoom-in-95 duration-200"
+                className="bg-white rounded-2xl max-md:rounded-none w-full max-w-7xl max-h-[85vh] max-md:max-h-full max-md:h-full shadow-2xl flex flex-col md:flex-row relative animate-in fade-in zoom-in-95 duration-200 overflow-hidden max-md:overflow-y-auto"
             >
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 z-10 p-2 bg-white/80 rounded-full hover:bg-gray-100 transition-colors"
+                    className="absolute md:absolute top-4 right-4 z-[2010] p-2 bg-white/80 rounded-full hover:bg-gray-100 transition-colors max-md:fixed"
                     aria-label="Close"
                 >
                     <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,7 +77,7 @@ export default function StaffMemberModal({ member, onClose }: StaffMemberModalPr
                     </svg>
                 </button>
 
-                <div className="w-full md:w-1/3 relative h-[250px] md:min-h-[70vh] shrink-0 overflow-hidden rounded-tl-2xl rounded-bl-2xl">
+                <div className="w-full md:w-1/3 relative h-[450px] md:min-h-[85vh] shrink-0 overflow-hidden rounded-tl-2xl rounded-bl-2xl max-md:rounded-none">
                     <Image
                         src={member.image}
                         alt={member.name}
@@ -89,8 +89,7 @@ export default function StaffMemberModal({ member, onClose }: StaffMemberModalPr
 
                 <div
                     ref={scrollContainerRef}
-                    className="w-full md:w-2/3 p-8 md:p-12 bg-white rounded-r-2xl overflow-y-auto overscroll-contain"
-                    style={{ maxHeight: '70vh' }}
+                    className="w-full md:w-2/3 p-8 md:p-12 bg-white rounded-r-2xl max-md:rounded-none overflow-y-auto max-md:overflow-visible overscroll-contain max-h-[85vh] max-md:max-h-none flex-1"
                 >
                     <h2 className="text-[2rem] leading-tight mb-2 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
                         {member.name}

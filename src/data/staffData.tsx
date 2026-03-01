@@ -226,14 +226,5 @@ export const staffData: Record<string, StaffMember> = {
                 <p>David začínal svoje umelecké smerovanie v SZUŠ LUDUS už v tinedžerskom veku. Neskôr vyštudoval odbor herectvo na VŠMU. Účinkoval v SND, spolupracuje na letných Shakespearovských slávnostiach, účinkuje v divadle Andreja Bagara v Nitre a v rôznych TV projektoch.</p>
             </>
         )
-    },
-    "Laura Jankurová": {
-        name: "Mgr. art Laura Jankurová",
-        image: "/pedagogovia/jankurova.webp",
-        bio: (
-            <>
-                <p>Laura študovala konzervatórium v Prešove a neskôr herectvo na VŠMU. Účinkovala vo viacerých divadlách na Slovensku a v súčasnosti ju môžete vidieť v niektorých inscenáciách v SND. Účinkuje aj v rôznych TV projektoch.</p>
-            </>
-        )
     }
 };

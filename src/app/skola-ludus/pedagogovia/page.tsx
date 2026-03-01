@@ -112,11 +112,7 @@ const staff = [
         role: 'Pedagóg',
         image: '/pedagogovia/Edita Koprivčević Borsová.webp'
     },
-    {
-        name: 'Mgr. art Laura Jankurová',
-        role: 'Pedagóg',
-        image: '/pedagogovia/jankurova.webp'
-    }
+
 ];
 
 const getStaffData = (name: string) => {

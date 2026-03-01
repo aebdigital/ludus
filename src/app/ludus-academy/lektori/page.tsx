@@ -82,11 +82,7 @@ const staff = [
         role: 'Lektor',
         image: '/pedagogovia/kakas.webp'
     },
-    {
-        name: 'Mgr. art Laura Jankurová',
-        role: 'Lektor',
-        image: '/pedagogovia/jankurova.webp'
-    }
+
 ];
 
 const getStaffData = (name: string) => {

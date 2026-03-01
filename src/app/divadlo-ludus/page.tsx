@@ -74,7 +74,7 @@ export default async function DivadloLudusPage() {
 
                         {/* Program Section */}
                         {events.length > 0 && (
-                            <div className="bg-black text-white rounded-xl p-12 max-md:p-6">
+                            <div className="bg-[#066831] text-white rounded-xl p-12 max-md:p-6">
                                 <h2
                                     className="text-[3rem] mb-8 text-white text-center"
                                     style={{ fontFamily: 'var(--font-heading)' }}
@@ -135,7 +135,7 @@ export default async function DivadloLudusPage() {
                                     icon: '🎭'
                                 },
                                 {
-                                    title: 'Naše priestory',
+                                    title: 'Priestory',
                                     description: 'BlackBox a ďalšie priestory',
                                     href: '/divadlo-ludus/priestory',
                                     icon: '🏛️'
