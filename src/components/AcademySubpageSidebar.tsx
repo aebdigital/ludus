@@ -24,7 +24,7 @@ export default function AcademySubpageSidebar() {
         <aside className="lg:sticky lg:top-[100px] w-full lg:max-w-[300px] bg-white lg:p-8 lg:rounded-xl lg:shadow-[0_10px_30px_rgba(0,0,0,0.05)] lg:border lg:border-gray-100 h-fit mb-8 lg:mb-0 relative z-50">
             {/* Mobile Dropdown Button */}
             <button
-                className="lg:hidden w-full flex items-center justify-between p-4 bg-white border border-[#f47f44] text-[#f47f44] rounded-xl shadow-md cursor-pointer font-bold text-lg"
+                className="lg:hidden w-full flex items-center justify-between py-2.5 px-3 bg-white border border-[#f47f44] text-[#f47f44] rounded-xl shadow-md cursor-pointer font-bold text-base"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 style={{ fontFamily: 'var(--font-heading)' }}
             >
@@ -33,17 +33,17 @@ export default function AcademySubpageSidebar() {
             </button>
 
             {/* Navigation Lists (Desktop always visible, Mobile hidden unless open) */}
-            <div className={`mt-4 lg:mt-0 bg-white lg:bg-transparent p-6 lg:p-0 rounded-xl shadow-lg lg:shadow-none border border-gray-100 lg:border-none absolute lg:static w-full left-0 z-[100] transition-all duration-300 origin-top lg:block ${isDropdownOpen ? 'scale-y-100 opacity-100 visible' : 'scale-y-0 opacity-0 invisible lg:scale-y-100 lg:opacity-100 lg:visible'}`}>
-                <div className="flex flex-col gap-8">
+            <div className={`mt-4 lg:mt-0 bg-white lg:bg-transparent p-4 lg:p-0 rounded-xl shadow-lg lg:shadow-none border border-gray-100 lg:border-none absolute lg:static w-full left-0 z-[100] transition-all duration-300 origin-top lg:block ${isDropdownOpen ? 'scale-y-100 opacity-100 visible' : 'scale-y-0 opacity-0 invisible lg:scale-y-100 lg:opacity-100 lg:visible'}`}>
+                <div className="flex flex-col gap-8 max-lg:gap-4">
                     {academyCategories.map((category) => (
                         <div key={category.title}>
                             <h3
-                                className="text-[1.2rem] mb-4 pb-2 border-b-2 border-[#f47f44] text-black font-bold uppercase tracking-wider"
+                                className="text-[1.2rem] max-lg:text-[1rem] mb-4 max-lg:mb-2 pb-2 max-lg:pb-1 border-b-2 border-[#f47f44] text-black font-bold uppercase tracking-wider"
                                 style={{ fontFamily: 'var(--font-heading)' }}
                             >
                                 {category.title}
                             </h3>
-                            <nav className="flex flex-col gap-3">
+                            <nav className="flex flex-col gap-3 max-lg:gap-2">
                                 {category.links.map((link) => {
                                     const isActive = pathname === link.url;
                                     return (

@@ -27,7 +27,7 @@ export default async function Home() {
   return (
     <div className="flex flex-col">
       {/* Intro Container - 4 Main Sections */}
-      <main className="flex h-[50vh] w-[calc(100%-2rem)] max-md:w-[95%] mx-auto p-4 max-md:px-0 gap-4 max-md:gap-2 max-md:flex-col max-md:h-auto order-1 md:order-1 mt-2 md:mt-10 max-md:mt-12">
+      <main className="flex h-[50vh] w-[calc(100%-2rem)] max-md:w-[95%] mx-auto p-4 max-md:px-0 gap-4 max-md:gap-2 max-md:flex-col max-md:h-auto order-1 md:order-1 mt-2 md:mt-10 max-md:mt-13">
         <IntroSection
           href="/skola-ludus"
           title="Škola Ludus"
@@ -66,11 +66,11 @@ export default async function Home() {
       </main>
 
       {/* Aktuality & Program Section */}
-      <section className="p-4 max-md:px-0 w-[calc(100%-2rem)] max-md:w-[95%] mx-auto order-2 md:order-2 max-md:mt-6 md:mt-0">
+      <section className="p-4 max-md:px-0 w-[calc(100%-2rem)] max-md:w-[95%] mx-auto order-2 md:order-2 max-md:mt-2 md:mt-0">
         <div className="grid grid-cols-[60%_calc(40%-1rem)] gap-4 max-lg:grid-cols-1">
           {/* Aktuality Box */}
-          <div className="bg-white rounded-xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
-            <h2 className="text-[3rem] mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
+          <div className="bg-white rounded-xl p-8 max-md:p-6 shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
+            <h2 className="text-[3rem] max-md:text-[1.8rem] mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
               Aktuality
             </h2>
             <div className="flex flex-col gap-6">
@@ -97,9 +97,19 @@ export default async function Home() {
                           {formatDate(item.date)}
                         </span>
                       </div>
-                      <h3 className={`text-[1.4rem] font-bold mt-0 mb-2 ${item.link ? "group-hover/aktualita:text-purple-700 transition-colors duration-200" : ""}`} style={{ fontFamily: 'var(--font-body)' }}>
+                      <h3
+                        className={`text-[1.4rem] max-md:text-[1.1rem] font-bold mt-0 mb-2 ${item.link
+                            ? "group-hover/aktualita:text-purple-700 transition-colors duration-200"
+                            : ""
+                          }`}
+                        style={{ fontFamily: "var(--font-body)" }}
+                      >
                         {item.title}
-                        {item.link && <span className="inline-block ml-2 text-[0.9rem] opacity-0 group-hover/aktualita:opacity-100 transition-opacity duration-200">→</span>}
+                        {item.link && (
+                          <span className="inline-block ml-2 text-[0.9rem] opacity-0 group-hover/aktualita:opacity-100 transition-opacity duration-200">
+                            →
+                          </span>
+                        )}
                       </h3>
                       <p className="text-base text-black m-0">
                         {item.description}
@@ -123,8 +133,8 @@ export default async function Home() {
           </div>
 
           {/* Program Box */}
-          <div className="bg-black text-white rounded-xl p-8">
-            <h2 className="text-[2.5rem] mb-6 text-white" style={{ fontFamily: 'var(--font-heading)' }}>
+          <div className="bg-black text-white rounded-xl p-8 max-md:p-6">
+            <h2 className="text-[2.5rem] max-md:text-[1.6rem] mb-6 text-white" style={{ fontFamily: 'var(--font-heading)' }}>
               Divadelný program
             </h2>
             <div className="flex flex-col gap-4">

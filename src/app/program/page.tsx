@@ -5,38 +5,38 @@ import ProgramClient from './ProgramClient';
 export const revalidate = 0; // Ensure dynamic data fetching
 
 export default async function ProgramPage({
-    searchParams,
+ searchParams,
 }: {
-    searchParams: Promise<{ category?: string }>;
+ searchParams: Promise<{ category?: string }>;
 }) {
-    const { category: categoryParam } = await searchParams;
-    const category = (categoryParam as ProgramCategory) || 'skola-ludus';
+ const { category: categoryParam } = await searchParams;
+ const category = (categoryParam as ProgramCategory) || 'skola-ludus';
 
-    // Fetch events based on category (or all if none, filters in client)
-    // Actually, better fetch filtered by category to optimize, 
-    // but if we want fast category switching without server roundtrip we'd fetch all using client.
-    // BUT the requirements say "Server component", so let's fetch based on URL.
-    const events = await getProgramEvents(category);
+ // Fetch events based on category (or all if none, filters in client)
+ // Actually, better fetch filtered by category to optimize, 
+ // but if we want fast category switching without server roundtrip we'd fetch all using client.
+ // BUT the requirements say "Server component", so let's fetch based on URL.
+ const events = await getProgramEvents(category);
 
-    return (
-        <>
-            {/* Hero */}
-            <section
-                className="h-[40vh] max-md:h-[20vh] bg-cover bg-center flex items-center justify-center relative mt-20"
-                style={{ backgroundImage: "url('/images/program/program-hero.webp')", backgroundPosition: 'center 35%' }}
-            >
-                <div className="absolute inset-0 bg-black/40" />
-                <h1
-                    className="relative text-white text-[5rem] z-10 text-center max-md:text-[3rem]"
-                    style={{ fontFamily: 'var(--font-heading)' }}
-                >
-                    Program
-                </h1>
-            </section>
+ return (
+ <>
+ {/* Hero */}
+ <section
+ className="h-[40vh] max-md:h-[20vh] bg-cover bg-center flex items-center justify-center relative mt-20 max-md:mt-13 "
+ style={{ backgroundImage: "url('/images/program/program-hero.webp')", backgroundPosition: 'center 35%' }}
+ >
+ <div className="absolute inset-0 bg-black/40" />
+ <h1
+ className="relative text-white text-[5rem] z-10 text-center max-md:text-[3rem]"
+ style={{ fontFamily: 'var(--font-heading)' }}
+ >
+ Program
+ </h1>
+ </section>
 
-            <Suspense fallback={<div className="p-20 text-center">Načítavam program...</div>}>
-                <ProgramClient events={events} />
-            </Suspense>
-        </>
-    );
+ <Suspense fallback={<div className="p-20 text-center">Načítavam program...</div>}>
+ <ProgramClient events={events} />
+ </Suspense>
+ </>
+ );
 }

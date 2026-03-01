@@ -130,7 +130,7 @@ export const staffData: Record<string, StaffMember> = {
     },
     "Edita Koprivčevič Borsová": {
         name: "Mgr. art Edita Koprivčevič Borsová",
-        image: "/pedagogovia/EDITA BORSOVÁ.webp",
+        image: "/pedagogovia/Edita Koprivčević Borsová.jpg",
         bio: (
             <>
                 <p>Editka odmalička chodila do školy LUDUS. Neskôr išla študovať na VŠMU bábkoherectvo, kde pôsobila niekoľko rokov aj ako pedagóg. Spolupracuje s rôznymi divadelnými zoskupeniami a účinkovala v rôznych TV projektoch či filmoch. Editka je aj zdravotným klaunom v OZ Červený nos Clowndoctors</p>

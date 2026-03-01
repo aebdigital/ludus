@@ -18,7 +18,7 @@ export default function PriceCard({
   buttonText = 'Prihlásiť sa'
 }: PriceCardProps) {
   return (
-    <div className="bg-white p-12 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] text-center flex flex-col justify-between transition-all duration-300 border border-transparent hover:-translate-y-1 hover:border-[#f47f44]">
+    <div className="bg-white p-12 max-md:p-6 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] text-center flex flex-col justify-between transition-all duration-300 border border-transparent hover:-translate-y-1 hover:border-[#f47f44]">
       <div>
         <h3
           className="text-[1.8rem] text-black mb-6 leading-tight"

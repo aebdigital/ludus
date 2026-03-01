@@ -5,7 +5,7 @@ export default function VyucbaPage() {
     return (
         <>
             <section
-                className="h-[40vh] max-md:h-[20vh] bg-cover flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+                className="h-[40vh] max-md:h-[20vh] bg-cover flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-13 "
                 style={{ backgroundImage: "url('/images/skola/IMG_1789.webp')", backgroundPosition: 'center 35%' }}
             >
                 <div className="absolute inset-0 bg-black/40" />
@@ -21,12 +21,12 @@ export default function VyucbaPage() {
                 <main className="space-y-24">
                     {/* Block 1: VÝUČBA + photo */}
                     <div className="grid grid-cols-[1fr_500px] gap-12 items-stretch max-lg:grid-cols-1">
-                        <div className="bg-white p-12 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
+                        <div className="bg-white p-12 max-md:p-6 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
                             <h2
                                 className="text-[2.5rem] mb-8 border-b-2 border-[#f47f44] pb-2 inline-block"
                                 style={{ fontFamily: 'var(--font-heading)' }}
                             >
-                                SKOLA LUDUS: VÝUČBA
+                                NAŠA VÝUČBA
                             </h2>
                             <div className="prose prose-lg text-[#000] max-w-none space-y-6">
                                 <p>
@@ -36,7 +36,7 @@ export default function VyucbaPage() {
                                     <p>Najmladší žiaci sú vo veku <strong>8 rokov</strong>.</p>
                                     <p>Najstarší žiaci ktorých prijímame do SZUŠ LUDUS sú vo veku <strong>16 rokov</strong>.</p>
                                 </div>
-                                <div className="bg-gray-50 p-8 rounded-xl space-y-4">
+                                <div className="bg-gray-50 p-8 max-md:p-4 rounded-xl space-y-4">
                                     <p>
                                         <strong>Žiaci do 14 rokov</strong> mávajú výučbu, ktorá prebieha v časoch <strong>15.00-17.15</strong> alebo <strong>15.30-17.45 hod.</strong>
                                     </p>
@@ -54,7 +54,7 @@ export default function VyucbaPage() {
                             alt="Výučba"
                             width={600}
                             height={800}
-                            className="w-full h-full object-cover rounded-2xl shadow-xl"
+                            className="w-full h-full max-md:h-[225px] object-cover rounded-2xl shadow-xl"
                         />
                     </div>
 
@@ -65,10 +65,10 @@ export default function VyucbaPage() {
                             alt="Javiskový pohyb"
                             width={600}
                             height={800}
-                            className="w-full h-full object-cover rounded-2xl shadow-xl max-lg:order-first"
+                            className="w-full h-full max-md:h-[225px] object-cover rounded-2xl shadow-xl max-lg:order-first"
                         />
                         <div className="space-y-12">
-                            <div className="bg-white p-12 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
+                            <div className="bg-white p-12 max-md:p-6 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
                                 <h2
                                     className="text-[2.5rem] mb-6 border-b-2 border-[#f47f44] pb-2 inline-block"
                                     style={{ fontFamily: 'var(--font-heading)' }}
@@ -88,7 +88,7 @@ export default function VyucbaPage() {
                                 </div>
                             </div>
 
-                            <div className="bg-black text-white p-12 rounded-xl relative overflow-hidden">
+                            <div className="bg-black text-white p-12 max-md:p-6 rounded-xl relative overflow-hidden">
                                 <h2
                                     className="text-[2.5rem] mb-6 border-b-2 border-[#f47f44] pb-2 inline-block text-white"
                                     style={{ fontFamily: 'var(--font-heading)' }}
@@ -104,7 +104,7 @@ export default function VyucbaPage() {
 
                     {/* Block 3: Tvorivé písanie + photo */}
                     <div className="grid grid-cols-[1fr_500px] gap-12 items-stretch max-lg:grid-cols-1">
-                        <div className="bg-white p-12 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
+                        <div className="bg-white p-12 max-md:p-6 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
                             <h2
                                 className="text-[2.5rem] mb-6 border-b-2 border-[#f47f44] pb-2 inline-block"
                                 style={{ fontFamily: 'var(--font-heading)' }}
@@ -115,12 +115,12 @@ export default function VyucbaPage() {
                                 <p>
                                     Žiaci SZUŠ LUDUS sa môžu prihlásiť na <strong>hodiny tvorivého písania</strong>. Tréningom tvorivého písania sa žiaci učia rozvíjať svoje literárne zručnosti, zoznamujú sa s rôznymi štýlmi písania a rozvíjajú kreatívne myslenie prostredníctvom písaného slova.
                                 </p>
-                                <div className="bg-[#f47f44]/10 border-l-4 border-[#f47f44] p-6 rounded-r-xl">
+                                <div className="bg-[#f47f44]/10 border-l-4 border-[#f47f44] p-6 max-md:p-3 rounded-r-xl">
                                     <p className="font-bold mb-2">
                                         Na hodiny tvorivého písania sa môžu prihlásiť aj deti a tínedžeri, ktorí nenavštevujú LDO našej školy.
                                     </p>
                                 </div>
-                                <div className="grid grid-cols-2 gap-8 max-md:grid-cols-1 bg-gray-50 p-8 rounded-xl">
+                                <div className="grid grid-cols-2 gap-8 max-md:grid-cols-1 bg-gray-50 p-8 max-md:p-4 rounded-xl">
                                     <ul className="space-y-3">
                                         <li>• Žiaci sú rozdelení do skupín podľa veku.</li>
                                         <li>• Záujem dávame do pozornosti vždy na začiatku školského roka.</li>
@@ -140,7 +140,7 @@ export default function VyucbaPage() {
                             alt="Tvorivé písanie"
                             width={600}
                             height={800}
-                            className="w-full h-full object-cover rounded-2xl shadow-xl"
+                            className="w-full h-full max-md:h-[225px] object-cover rounded-2xl shadow-xl"
                         />
                     </div>
                 </main>
