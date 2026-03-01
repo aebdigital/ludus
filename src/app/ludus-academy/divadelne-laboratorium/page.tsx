@@ -97,7 +97,7 @@ export default function DivadelneLaboratoriumPage() {
  </div>
  <div className="flex-[0.3] min-w-[300px]">
  <Image
- src="/GRAFIKA NA WEB KURZOV/divadelne-laboratorium.jpg"
+ src="/GRAFIKA NA WEB KURZOV/divadelne-laboratorium.webp"
  alt="Divadelné laboratórium program"
  width={600}
  height={800}

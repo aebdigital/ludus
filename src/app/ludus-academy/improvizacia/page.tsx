@@ -8,7 +8,7 @@ export default async function ImprovizaciaPage() {
  <div className="bg-white">
  <section
  className="h-[40vh] max-md:h-[20vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-13 "
- style={{ backgroundImage: "url('/impro-main.jpg')" }}
+ style={{ backgroundImage: "url('/impro-main.webp')" }}
  >
  <div className="absolute inset-0 bg-black/40" />
  <h1
@@ -57,7 +57,7 @@ export default async function ImprovizaciaPage() {
  </div>
  <div className="lg:col-span-1">
  <Image
- src="/GRAFIKA NA WEB KURZOV/improvizacny-kurz.jpg"
+ src="/GRAFIKA NA WEB KURZOV/improvizacny-kurz.webp"
  alt="Improvizačný kurz program"
  width={600}
  height={800}
@@ -127,7 +127,7 @@ export default async function ImprovizaciaPage() {
  </video>
  </div>
  <Image
- src="/impro-main.jpg"
+ src="/impro-main.webp"
  alt="Improvizačný kurz"
  width={800}
  height={500}
@@ -174,7 +174,7 @@ export default async function ImprovizaciaPage() {
  </div>
  <div className="rounded-2xl overflow-hidden shadow-xl h-full flex">
  <Image
- src="/somewhere.jpeg"
+ src="/somewhere.webp"
  alt="Kurz improvizácie Ludus"
  width={800}
  height={600}

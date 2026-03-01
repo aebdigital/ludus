@@ -97,7 +97,7 @@ export default function TvorivePisaniePage() {
  </div>
  <div className="flex-[0.3] min-w-[300px]">
  <Image
- src="/GRAFIKA NA WEB KURZOV/kurz-tvoriveho-pisania.jpg"
+ src="/GRAFIKA NA WEB KURZOV/kurz-tvoriveho-pisania.webp"
  alt="Kurz tvorivého písania program"
  width={600}
  height={800}

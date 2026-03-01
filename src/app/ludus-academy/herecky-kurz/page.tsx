@@ -56,7 +56,7 @@ export default async function HereckyKurzPage() {
  <div className="flex-[0.3] min-w-[300px] flex flex-col gap-8">
  <div>
  <Image
- src="/GRAFIKA NA WEB KURZOV/herecky-kurz.jpg"
+ src="/GRAFIKA NA WEB KURZOV/herecky-kurz.webp"
  alt="Herecký kurz program"
  width={600}
  height={800}

@@ -46,7 +46,7 @@ export default async function IndividualneTreningyPage() {
  </div>
  <div className="flex-[0.3] min-w-[300px]">
  <Image
- src="/GRAFIKA NA WEB KURZOV/individualny-trening.jpg"
+ src="/GRAFIKA NA WEB KURZOV/individualny-trening.webp"
  alt="Individuálny tréning program"
  width={600}
  height={800}

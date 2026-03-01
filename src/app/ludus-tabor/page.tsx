@@ -174,7 +174,7 @@ export default function LudusTaborPage() {
                         {/* Tabor Poster Image */}
                         <div className="my-16 flex justify-center">
                             <Image
-                                src="/plagat2.jpg"
+                                src="/plagat2.webp"
                                 alt="Ludus Tábor 2026 Plagát"
                                 width={1200}
                                 height={1600}

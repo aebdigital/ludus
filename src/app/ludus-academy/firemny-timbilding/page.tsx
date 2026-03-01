@@ -45,7 +45,7 @@ export default async function FiremnyTimbildingPage() {
  </div>
  <div className="flex-[0.3] min-w-[300px]">
  <Image
- src="/GRAFIKA NA WEB KURZOV/kreativny-teambuilding.jpg"
+ src="/GRAFIKA NA WEB KURZOV/kreativny-teambuilding.webp"
  alt="Kreatívny tímbilding program"
  width={600}
  height={800}

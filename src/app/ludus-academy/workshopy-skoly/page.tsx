@@ -8,7 +8,7 @@ export default async function WorkshopySkolyPage() {
  <div className="bg-white">
  <section
  className="h-[40vh] max-md:h-[20vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-13 "
- style={{ backgroundImage: "url('/skola.jpeg')" }}
+ style={{ backgroundImage: "url('/skola.webp')" }}
  >
  <div className="absolute inset-0 bg-black/40" />
  <h1
@@ -49,14 +49,14 @@ export default async function WorkshopySkolyPage() {
  </div>
  <div className="flex-[0.3] min-w-[300px]">
  <Image
- src="/GRAFIKA NA WEB KURZOV/workshop-pre-skoly.jpg"
+ src="/GRAFIKA NA WEB KURZOV/workshop-pre-skoly.webp"
  alt="Workshopy pre školy program"
  width={600}
  height={800}
  className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
  />
  <Image
- src="/skoly2.jpeg"
+ src="/skoly2.webp"
  alt="Workshopy pre školy"
  width={600}
  height={800}

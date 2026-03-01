@@ -45,7 +45,7 @@ export default async function FiremnyWorkshopPage() {
  </div>
  <div className="flex-[0.3] min-w-[300px]">
  <Image
- src="/GRAFIKA NA WEB KURZOV/firemny-workshop.jpg"
+ src="/GRAFIKA NA WEB KURZOV/firemny-workshop.webp"
  alt="Firemný workshop program"
  width={600}
  height={800}

@@ -133,7 +133,7 @@ export default function LudusAcademyPage() {
                             </div>
                             <div className="relative h-[350px] w-full">
                                 <Image
-                                    src="/GRAFIKA NA WEB KURZOV/ludus-academy-onaspage.jpg"
+                                    src="/GRAFIKA NA WEB KURZOV/ludus-academy-onaspage.webp"
                                     alt="Ludus Academy Program"
                                     fill
                                     className="object-cover rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.1)]"

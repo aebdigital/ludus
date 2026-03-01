@@ -82,7 +82,7 @@ export default function WorkshopKreativitaPage() {
  </div>
  <div className="flex-[0.3] min-w-[300px]">
  <Image
- src="/GRAFIKA NA WEB KURZOV/workshop-kreativneho-myslenia.jpg"
+ src="/GRAFIKA NA WEB KURZOV/workshop-kreativneho-myslenia.webp"
  alt="Workshop kreatívneho myslenia program"
  width={600}
  height={800}

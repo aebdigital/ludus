@@ -64,7 +64,7 @@ export default async function WorkshopUciteliaPage() {
  </div>
  <div className="flex-[0.3] min-w-[300px]">
  <Image
- src="/GRAFIKA NA WEB KURZOV/workshop-pre-ucitelov.jpg"
+ src="/GRAFIKA NA WEB KURZOV/workshop-pre-ucitelov.webp"
  alt="Workshop pre učiteľov program"
  width={600}
  height={800}

@@ -80,7 +80,7 @@ export const staffData: Record<string, StaffMember> = {
     },
     "Ladislav Ladomirjak": {
         name: "Mgr. art Ladislav Ladomirjak",
-        image: "/pedagogovia/Laci Ladomirjak.jpeg",
+        image: "/pedagogovia/Laci Ladomirjak.webp",
         bio: (
             <>
                 <p>Laci je herec, muzikant a zdravotný klaun, ktorý sa vyprofiloval najmä vďaka pôsobeniu v Divadle Alexandra Duchnoviča v Prešove, kde strávil viac než dekádu. Študoval hru na gitare na Konzervatóriu v Žiline, neskôr absolvoval herectvo na Akadémii umenia v Banskej Bystrici a po škole zakotvil v rusínskom divadle. Od roku 2015 vedie kapelu Rusnack's, ktorá originálne interpretuje rusínske ľudové piesne vo funky šate. Popri profesionálnej hereckej dráhe pôsobí aj ako zdravotný klaun v organizácii Červený Nos – Clowndoctors.</p>
@@ -130,7 +130,7 @@ export const staffData: Record<string, StaffMember> = {
     },
     "Edita Koprivčevič Borsová": {
         name: "Mgr. art Edita Koprivčevič Borsová",
-        image: "/pedagogovia/Edita Koprivčević Borsová.jpg",
+        image: "/pedagogovia/Edita Koprivčević Borsová.webp",
         bio: (
             <>
                 <p>Editka odmalička chodila do školy LUDUS. Neskôr išla študovať na VŠMU bábkoherectvo, kde pôsobila niekoľko rokov aj ako pedagóg. Spolupracuje s rôznymi divadelnými zoskupeniami a účinkovala v rôznych TV projektoch či filmoch. Editka je aj zdravotným klaunom v OZ Červený nos Clowndoctors</p>
@@ -202,7 +202,7 @@ export const staffData: Record<string, StaffMember> = {
     },
     "Soňa Borušovičová": {
         name: "Mgr. art Soňa Borušovičová",
-        image: "/pedagogovia/Sona-borusovicova.png",
+        image: "/pedagogovia/Sona-borusovicova.webp",
         bio: (
             <>
                 <p>Písaniu sa venuje už 27 rokov. Vyštudovala filmovú a televíznu dramaturgiu a scenáristiku na FTF VŠMU. Písala scenáre pre deti a mládež aj pre dospelých, príbehy na pokračovanie, aj komiksový príbeh s veľmi sexi názvom, ktorý bol v skutočnosti o myšiach. Dva roky bola kmeňovou autorkou seriálu Ordinácia v ružovej záhrade. Napísala a vydala knihu pre deti Gregor – rozprávka o veľkom putovaní. Ako redaktorka legendárneho internetového magazínu inzine.sk sa naučila, ako komunikovať s autormi a baví ju to dodnes. Redigovala aj knihy pre vydavateľstvo Slovart.</p>
