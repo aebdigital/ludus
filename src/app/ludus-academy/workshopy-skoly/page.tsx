@@ -7,9 +7,10 @@ export default async function WorkshopySkolyPage() {
     return (
         <div className="bg-white">
             <section
-                className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+                className="h-[40vh] max-md:h-[20vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-14"
                 style={{ backgroundImage: "url('/skola.jpeg')" }}
             >
+                <div className="absolute inset-0 bg-black/40" />
                 <h1
                     className="relative text-white text-[5.5rem] z-10 text-center max-md:text-[2.5rem] px-4"
                     style={{ fontFamily: 'var(--font-heading)' }}
@@ -38,7 +39,7 @@ export default async function WorkshopySkolyPage() {
                                     <p>
                                         Každý učiteľ bude azda súhlasiť s tým, že učiť triedu žiakov, kde funguje komunikácia, priateľské vzťahy a kde je medzi žiakmi a učiteľom vytvorená dôvera je úspech. Každý učiteľ chce mať v triede dobrú atmosféru. Nie vždy je to však jednoduché dosiahnuť.
                                     </p>
-                                    <p className="italic font-medium text-black border-l-4 border-[#f47f44] pl-6 py-2">
+                                    <p className="italic font-light text-black border-l-4 border-[#f47f44] pl-6 py-2">
                                         Práve preto sme vytvorili workshopy pre žiakov a učiteľov, ktorých cieľom je lepšie sa navzájom spoznať, nájsť cestu ako spolupracovať, spoločne niečo vytvoriť, naučiť sa myslieť tímovo a rešpektovať sa navzájom.
                                     </p>
                                     <p>
@@ -217,7 +218,7 @@ export default async function WorkshopySkolyPage() {
                                 <div className="flex gap-4 justify-center relative z-10 max-sm:flex-col max-sm:items-center">
                                     <Button
                                         href="mailto:info@ludusacademy.sk"
-                                        className="px-10 py-4 text-lg !bg-black !text-white hover:!bg-gray-800"
+                                        className="px-10 py-4 text-lg !bg-white !text-black hover:!bg-gray-200"
                                     >
                                         info@ludusacademy.sk
                                     </Button>

@@ -36,6 +36,20 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
         requestAnimationFrame(raf);
 
         window.__lenis = lenis;
+
+        // On route change: scroll to hash target or top of page
+        const hash = window.location.hash;
+        if (hash) {
+          requestAnimationFrame(() => {
+            const target = document.querySelector(hash);
+            if (target) {
+              lenis.scrollTo(target, { offset: -112, duration: 1.2, immediate: false });
+            }
+          });
+        } else {
+          lenis.scrollTo(0, { immediate: true });
+        }
+
         return lenis;
       }
     };

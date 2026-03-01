@@ -19,7 +19,7 @@ export default async function DivadloLudusPage() {
     <>
       {/* Hero */}
       <section
-        className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+        className="h-[40vh] max-md:h-[20vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
         style={{ backgroundImage: "url('/images/divadlo-main.webp')" }}
       >
         <div className="absolute inset-0 bg-black/40" />
@@ -114,7 +114,7 @@ export default async function DivadloLudusPage() {
             )}
 
             {/* Quick Links */}
-            <div className="grid grid-cols-3 gap-8 max-md:grid-cols-2 max-sm:grid-cols-1">
+            <div className="grid grid-cols-4 gap-8 max-md:grid-cols-2 max-sm:grid-cols-1">
               {[
                 {
                   title: 'História',

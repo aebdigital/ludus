@@ -16,7 +16,7 @@ export default async function RepertoarPage() {
   return (
     <>
       <section
-        className="h-[40vh] bg-cover bg-[center_30%] flex items-center justify-center relative overflow-hidden mt-20"
+        className="h-[40vh] max-md:h-[20vh] bg-cover bg-[center_30%] flex items-center justify-center relative overflow-hidden mt-20"
         style={{ backgroundImage: "url('/images/repertoar-hero.webp')" }}
       >
         <div className="absolute inset-0 bg-black/40" />

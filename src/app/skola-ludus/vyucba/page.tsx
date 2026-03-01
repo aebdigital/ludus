@@ -5,7 +5,7 @@ export default function VyucbaPage() {
     return (
         <>
             <section
-                className="h-[40vh] bg-cover flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+                className="h-[40vh] max-md:h-[20vh] bg-cover flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
                 style={{ backgroundImage: "url('/images/skola/IMG_1789.webp')", backgroundPosition: 'center 35%' }}
             >
                 <div className="absolute inset-0 bg-black/40" />

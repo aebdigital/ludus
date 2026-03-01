@@ -7,7 +7,7 @@ export default async function FiremnyWorkshopPage() {
     return (
         <div className="bg-white">
             <section
-                className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+                className="h-[40vh] max-md:h-[20vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-14"
                 style={{ backgroundImage: "url('/images/academy/IMG_3649.webp')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
@@ -31,71 +31,19 @@ export default async function FiremnyWorkshopPage() {
                                 Radosť <span className="text-[#f47f44]">spolu</span> objavovať
                             </h2>
 
-                            <div className="bg-black text-white p-12 rounded-2xl mb-12 shadow-xl relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-[#f47f44]/10 rounded-full -mr-16 -mt-16 blur-3xl"></div>
-                                <div className="relative z-10 space-y-4 text-[1.4rem] md:text-[1.8rem] leading-tight font-medium italic">
-                                    <p>Každá organizácia komunikuje.</p>
-                                    <p>Otázka je, či pôsobí presvedčivo, zrozumiteľne a jednotne.</p>
-                                    <p>Dobré nápady nestačia, ak sa stratia v podaní.</p>
-                                    <p className="text-[#f47f44] not-italic font-bold">Pripravíme váš tím na situácie, v ktorých na slovách záleží.</p>
-                                </div>
-                            </div>
-
                             <div className="flex gap-12 max-lg:flex-col mb-16">
-                                <div className="flex-1 text-[1.15rem] text-[#000] space-y-6 leading-relaxed">
+                                <div className="flex-[0.7] text-[1.15rem] text-[#000] space-y-6 leading-relaxed flex flex-col justify-center">
+                                    <p className="italic font-light text-black border-l-4 border-[#f47f44] pl-6 py-2">
+                                        Každá organizácia komunikuje. Otázka je, či pôsobí presvedčivo, zrozumiteľne a jednotne. Dobré nápady nestačia, ak sa stratia v podaní.
+                                    </p>
                                     <p>
                                         Skupinové workshopy v Ludus Academy sú prakticky orientované tréningy pre tímy, ktoré chcú zlepšiť vystupovanie, spoluprácu a komunikáciu navonok aj vo vnútri organizácie. Program pripravujeme na mieru podľa potrieb klienta – od prezentácií a mediálnych výstupov až po moderovanie či vystupovanie pred kamerou.
                                     </p>
-                                    <p className="font-bold border-l-4 border-[#f47f44] pl-6 py-2">
-                                        Workshopy môžu mať formu poldňového alebo celodenného tréningu.
+                                    <p className="text-[1.3rem] font-bold text-black border-l-4 border-[#f47f44] pl-6 py-2">
+                                        Pripravíme váš tím na situácie, v ktorých na slovách záleží. Workshopy môžu mať formu poldňového alebo celodenného tréningu.
                                     </p>
                                 </div>
-                            </div>
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-                                <div className="space-y-8">
-                                    <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100">
-                                        <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
-                                            Cieľ workshopu
-                                        </h3>
-                                        <div className="space-y-4 text-[#000]">
-                                            <p>
-                                                Cieľom je, aby členovia tímu vedeli komunikovať jasne, pokojne a profesionálne aj v situáciách, ktoré prinášajú tlak alebo neistotu.
-                                            </p>
-                                            <p>
-                                                Účastníci si osvoja praktické postupy, ako formulovať myšlienky, reagovať pohotovo, pracovať s hlasom a pôsobiť prirodzene pred publikom, klientom alebo kamerou.
-                                            </p>
-                                            <p>
-                                                Dôležitou súčasťou je aj zosúladenie tímu – aby organizácia navonok nepôsobila ako jednotlivci s rôznymi štýlmi, ale ako jeden čitateľný a dôveryhodný celok.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="bg-white p-10 rounded-2xl border-2 border-gray-50 flex flex-col justify-center">
-                                        <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
-                                            Pre koho je určený
-                                        </h3>
-                                        <ul className="space-y-3">
-                                            {[
-                                                'Firmy komunikujúce s klientmi alebo partnermi',
-                                                'Tímy pripravujúce prezentácie a verejné vystúpenia',
-                                                'Organizácie poskytujúce rozhovory médiám',
-                                                'Manažérov a vedúcich pracovníkov',
-                                                'Hovorcov, projektových manažérov a obchodníkov',
-                                                'Odborníkov, ktorí potrebujú zrozumiteľne vysvetľovať svoju prácu'
-                                            ].map((item, i) => (
-                                                <li key={i} className="flex gap-3 items-start text-[#000]">
-                                                    <span className="text-[#f47f44] mt-1 font-bold">•</span>
-                                                    {item}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                        <p className="mt-6 text-sm italic text-gray-500">
-                                            Nie sú potrebné herecké skúsenosti. Tréning je praktický a prispôsobený konkrétnemu prostrediu organizácie.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="">
+                                <div className="flex-[0.3] min-w-[300px]">
                                     <Image
                                         src="/GRAFIKA NA WEB KURZOV/firemny-workshop.jpg"
                                         alt="Firemný workshop program"
@@ -103,6 +51,48 @@ export default async function FiremnyWorkshopPage() {
                                         height={800}
                                         className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
                                     />
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                                <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100">
+                                    <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
+                                        Cieľ workshopu
+                                    </h3>
+                                    <div className="space-y-4 text-[#000]">
+                                        <p>
+                                            Cieľom je, aby členovia tímu vedeli komunikovať jasne, pokojne a profesionálne aj v situáciách, ktoré prinášajú tlak alebo neistotu.
+                                        </p>
+                                        <p>
+                                            Účastníci si osvoja praktické postupy, ako formulovať myšlienky, reagovať pohotovo, pracovať s hlasom a pôsobiť prirodzene pred publikom, klientom alebo kamerou.
+                                        </p>
+                                        <p>
+                                            Dôležitou súčasťou je aj zosúladenie tímu – aby organizácia navonok nepôsobila ako jednotlivci s rôznymi štýlmi, ale ako jeden čitateľný a dôveryhodný celok.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="bg-white p-10 rounded-2xl border-2 border-gray-50 flex flex-col justify-center">
+                                    <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
+                                        Pre koho je určený
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        {[
+                                            'Firmy komunikujúce s klientmi alebo partnermi',
+                                            'Tímy pripravujúce prezentácie a verejné vystúpenia',
+                                            'Organizácie poskytujúce rozhovory médiám',
+                                            'Manažérov a vedúcich pracovníkov',
+                                            'Hovorcov, projektových manažérov a obchodníkov',
+                                            'Odborníkov, ktorí potrebujú zrozumiteľne vysvetľovať svoju prácu'
+                                        ].map((item, i) => (
+                                            <li key={i} className="flex gap-3 items-start text-[#000]">
+                                                <span className="text-[#f47f44] mt-1 font-bold">•</span>
+                                                {item}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <p className="mt-6 text-sm italic text-gray-500">
+                                        Nie sú potrebné herecké skúsenosti. Tréning je praktický a prispôsobený konkrétnemu prostrediu organizácie.
+                                    </p>
                                 </div>
                             </div>
 
@@ -176,7 +166,7 @@ export default async function FiremnyWorkshopPage() {
                                     <div className="flex gap-4 justify-center relative z-10 max-xl:flex-col max-xl:items-center">
                                         <Button
                                             href="mailto:info@ludusacademy.sk"
-                                            className="!bg-black !text-white hover:!bg-gray-800 px-8 py-3 text-base w-fit justify-center min-w-[200px]"
+                                            className="!bg-white !text-black hover:!bg-gray-200 px-8 py-3 text-base w-fit justify-center min-w-[200px]"
                                         >
                                             info@ludusacademy.sk
                                         </Button>

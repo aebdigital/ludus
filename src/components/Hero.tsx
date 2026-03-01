@@ -6,7 +6,7 @@ interface HeroProps {
 
 export default function Hero({ title, backgroundImage, height = 'small' }: HeroProps) {
   const heightClasses = {
-    small: 'h-[40vh]',
+    small: 'h-[40vh] max-md:h-[20vh]',
     medium: 'h-[50vh]',
     large: 'h-[60vh]'
   };

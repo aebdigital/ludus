@@ -7,7 +7,7 @@ export default async function HereckyKurzPage() {
     return (
         <div className="bg-white">
             <section
-                className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+                className="h-[40vh] max-md:h-[20vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-14"
                 style={{ backgroundImage: "url('/images/academy/IMG_1128.webp')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
@@ -43,17 +43,26 @@ export default async function HereckyKurzPage() {
 
                             <div className="flex gap-12 max-lg:flex-col mb-12">
                                 <div className="flex-[0.7] text-[1.1rem] text-[#000] space-y-6 leading-relaxed">
-                                    <p className="italic font-medium text-black">
+                                    <p className="italic font-light text-black border-l-4 border-[#f47f44] pl-6 py-2">
                                         Mávate niekedy pocit, že by ste radi viac spoznali sami seba? Keď vidíte hercov vo filmoch, seriáloch alebo reklamách, rozmyšlate ako by ste to zvládli na ich mieste? Stáva sa Vám, že keď sa počúvate pri komunikácii, rozmýšľate ako by ste ju mohli vylepšit? Mávate niekedy strach z vystupovania na verejnosti, alebo práve naopak radi ste stredobodom pozornosti? Túžite niekedy tráviť svoje voľné chvíle v divadelnom prostredí s príjemnými ľudmi? Chcete sa hrať a cítiť sa pri tom slobodne?
                                     </p>
                                     <p>
                                         To všetko a ešte oveľa viac si viete splniť s hereckým kurzom pod vedením profesionálnych pedagógov a hercov. Uvedú Vás do tajov divadla, odkryjú vaše emócie o ktorých ste možno ani netušili, naučia Vás ako pracovať na svojich hereckých zručnostiach a poodkryjú vám cestu ako pôsobíť prirodzene a presvedčivo. Prostredníctvom divadelných techník, bude rásť aj vaša osobnosť.
                                     </p>
-                                    <p className="text-[1.3rem] font-bold text-black border-l-4 border-[#f47f44] pl-6 py-2">
+                                    <p className="italic font-light text-black border-l-4 border-[#f47f44] pl-6 py-2">
                                         Sny sa plnia ľudom, ktorí idu do AKCIE. Staneš sa jeden z nich?
                                     </p>
                                 </div>
-                                <div className="flex-[0.3] min-w-[300px]">
+                                <div className="flex-[0.3] min-w-[300px] flex flex-col gap-8">
+                                    <div>
+                                        <Image
+                                            src="/GRAFIKA NA WEB KURZOV/herecky-kurz.jpg"
+                                            alt="Herecký kurz program"
+                                            width={600}
+                                            height={800}
+                                            className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                                        />
+                                    </div>
                                     <div className="aspect-video w-full rounded-xl overflow-hidden shadow-lg border border-gray-100">
                                         <iframe
                                             width="100%"
@@ -64,15 +73,6 @@ export default async function HereckyKurzPage() {
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             allowFullScreen
                                         ></iframe>
-                                    </div>
-                                    <div className="mt-8">
-                                        <Image
-                                            src="/GRAFIKA NA WEB KURZOV/herecky-kurz.jpg"
-                                            alt="Herecký kurz program"
-                                            width={600}
-                                            height={800}
-                                            className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
-                                        />
                                     </div>
                                 </div>
                             </div>
@@ -158,7 +158,7 @@ export default async function HereckyKurzPage() {
                                             className="w-full justify-center !bg-black !text-white hover:!bg-gray-800"
                                             target="_blank"
                                         >
-                                            PRIHLÁSIŤ SA NA KURZ
+                                            PRIHLÁSIŤ SA
                                         </Button>
                                     </div>
                                 </div>
@@ -184,7 +184,7 @@ export default async function HereckyKurzPage() {
                                             className="w-full justify-center !bg-black !text-white hover:!bg-gray-800"
                                             target="_blank"
                                         >
-                                            PRIHLÁSIŤ SA NA KURZ
+                                            PRIHLÁSIŤ SA
                                         </Button>
                                     </div>
                                 </div>
@@ -332,7 +332,7 @@ export default async function HereckyKurzPage() {
                                     PODMIENKA ÚČASTI: vek minimálne 18 rokov a ukončené stredoškolské vzdelanie
                                 </div>
                                 <div className="flex justify-center">
-                                    <Button href="/ludus-academy/kontakt" className="!bg-black !text-white hover:!bg-gray-800">Mám záujem o kurz pre pokročilých</Button>
+                                    <Button href="/ludus-academy/kontakt" className="!bg-white !text-black hover:!bg-gray-200">Mám záujem</Button>
                                 </div>
                             </div>
                         </div>

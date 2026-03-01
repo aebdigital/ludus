@@ -16,7 +16,7 @@ export default function CollapsibleList({ items }: CollapsibleListProps) {
     return (
         <div className="relative">
             <motion.div
-                className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-8 gap-y-4 text-base text-left overflow-hidden"
+                className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-2 md:gap-x-8 gap-y-4 text-[0.7rem] sm:text-sm md:text-base text-left overflow-hidden"
                 layout
             >
                 <AnimatePresence initial={false} mode="popLayout">

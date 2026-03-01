@@ -35,7 +35,7 @@ const founders: Founder[] = [
             "pedagóg na konzervatóriu v Bratislave",
             "umelecký šéf detskej dramatickej družiny Československého rozhlasu",
             "člen Divadla pre deti a mládež Trnava",
-            "moderátor detskej relácie „Poďte s nami“ pre STV"
+            "moderátor detskej relácie „Poďte s nami\" pre STV"
         ]
     },
     {
@@ -62,7 +62,7 @@ export default function HistoriaPage() {
         <div className="bg-[#fcfcfc] min-h-screen">
             {/* Hero */}
             <section
-                className="h-[40vh] bg-cover flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+                className="h-[40vh] max-md:h-[20vh] bg-cover flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
                 style={{ backgroundImage: "url('/images/divadlo-main.webp')", backgroundPosition: 'center 30%' }}
             >
                 <div className="absolute inset-0 bg-black/40" />
@@ -296,13 +296,13 @@ export default function HistoriaPage() {
 
                     <div className="space-y-24">
                         {/* Youth Projects */}
-                        <div className="bg-white p-12 rounded-3xl shadow-sm border border-gray-100">
-                            <div className="bg-black py-6 px-10 rounded-2xl mb-12 shadow-lg">
+                        <div>
+                            <div className="bg-black py-6 px-10 rounded-2xl mb-4 shadow-lg">
                                 <h3 className="text-[#f47f44] text-3xl font-bold uppercase tracking-widest m-0 text-left">
                                     Úspešné projekty pre mládež
                                 </h3>
                             </div>
-                            <div className="text-base text-left">
+                            <div className="bg-white p-12 rounded-3xl shadow-sm border border-gray-100 text-base text-left">
                                 <CollapsibleList
                                     items={[
                                         "1974 - I. Demovič / P. Kuba: Tonic klub",
@@ -327,7 +327,7 @@ export default function HistoriaPage() {
                                         "1996 – j. Cocteau: Svadobčania z Eiffelovky",
                                         "1997, 2006 –P. Kuba / J. Letenay / Ľ. Jarjabka: Nemám rád II.",
                                         "1998, 2001 - P. Kuba: Prvé lásky",
-                                        "1999 – P. Kuba, V. Shulzová: Stačí povedať „nie!“",
+                                        '1999 – P. Kuba, V. Shulzová: Stačí povedať „nie!\"',
                                         "1999 - P. Scherhaufer: Geometria mŕtvych bodov",
                                         "2000 - P. Turrini: Lov na krysy",
                                         "2001 - I. Horovitz: Čiara, alebo každý chce byť prvý",
@@ -356,13 +356,13 @@ export default function HistoriaPage() {
                         </div>
 
                         {/* Children Projects */}
-                        <div className="bg-white p-12 rounded-3xl shadow-sm border border-gray-100 mt-16">
-                            <div className="bg-black py-6 px-10 rounded-2xl mb-12 shadow-lg">
+                        <div className="mt-16">
+                            <div className="bg-black py-6 px-10 rounded-2xl mb-4 shadow-lg">
                                 <h3 className="text-[#f47f44] text-3xl font-bold uppercase tracking-widest m-0 text-left">
                                     Projekty pre deti
                                 </h3>
                             </div>
-                            <div className="text-base text-left">
+                            <div className="bg-white p-12 rounded-3xl shadow-sm border border-gray-100 text-base text-left">
                                 <CollapsibleList
                                     items={[
                                         "1971 – S. Maršák: Mačkin dom",

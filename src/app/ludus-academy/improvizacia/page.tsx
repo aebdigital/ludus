@@ -7,9 +7,10 @@ export default async function ImprovizaciaPage() {
     return (
         <div className="bg-white">
             <section
-                className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+                className="h-[40vh] max-md:h-[20vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-14"
                 style={{ backgroundImage: "url('/impro-main.jpg')" }}
             >
+                <div className="absolute inset-0 bg-black/40" />
                 <h1
                     className="relative text-white text-[6rem] z-10 text-center max-md:text-[3.5rem]"
                     style={{ fontFamily: 'var(--font-heading)' }}
@@ -39,7 +40,7 @@ export default async function ImprovizaciaPage() {
 
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
                                 <div className="lg:col-span-2 text-[1.1rem] text-[#000] space-y-6 leading-relaxed">
-                                    <div className="space-y-4 italic font-medium text-black border-l-4 border-[#f47f44] pl-6 py-2">
+                                    <div className="italic font-light text-black border-l-4 border-[#f47f44] pl-6 py-2 leading-relaxed">
                                         <p>Stáva sa Vám, že sa v určitých situáciach cítite zatlačený do kúta?</p>
                                         <p>Príde na vás neistota a jednoducho Vám začínajú dochádzať slová?</p>
                                         <p>Potrebujete z daného momentu alebo komunikácie rýchlo vykorčulovať a neviete ako na to?</p>
@@ -54,33 +55,33 @@ export default async function ImprovizaciaPage() {
                                         Prostrednítvom divadelných improvizačných hrier a techník narastie vaša sloboda prejavu. Divadelné improvizácie sú v ČR úspešné už niekoľko rokov a my ich teraz prinášame aj na Slovensko pre verejnosť. Ak si kladiete otázku, čo asi na tomto kurze môžete robiť, tak pre lepšie uchopenie si predstavte dlhoročný TV projekt "Partička".
                                     </p>
                                 </div>
-                                <div className="lg:col-span-1 space-y-4">
-                                    {[
-                                        "FeAV8Z_55rI",
-                                        "ZGeBKba0faU",
-                                        "oOXcZaUoWG0"
-                                    ].map((id) => (
-                                        <div key={id} className="relative w-full pb-[56.25%] rounded-xl overflow-hidden shadow-lg bg-black">
-                                            <iframe
-                                                src={`https://www.youtube.com/embed/${id}`}
-                                                title="YouTube video player"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                allowFullScreen
-                                                className="absolute top-0 left-0 w-full h-full border-0"
-                                            />
-                                        </div>
-                                    ))}
-                                    {/* New Graphic Placement */}
-                                    <div className="mt-8">
-                                        <Image
-                                            src="/GRAFIKA NA WEB KURZOV/improvizacny-kurz.jpg"
-                                            alt="Improvizačný kurz program"
-                                            width={600}
-                                            height={800}
-                                            className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                                <div className="lg:col-span-1">
+                                    <Image
+                                        src="/GRAFIKA NA WEB KURZOV/improvizacny-kurz.jpg"
+                                        alt="Improvizačný kurz program"
+                                        width={600}
+                                        height={800}
+                                        className="w-full h-auto rounded-xl shadow-lg border border-gray-100"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                                {[
+                                    "FeAV8Z_55rI",
+                                    "ZGeBKba0faU",
+                                    "oOXcZaUoWG0"
+                                ].map((id) => (
+                                    <div key={id} className="relative w-full pb-[56.25%] rounded-xl overflow-hidden shadow-lg bg-black">
+                                        <iframe
+                                            src={`https://www.youtube.com/embed/${id}`}
+                                            title="YouTube video player"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                            className="absolute top-0 left-0 w-full h-full border-0"
                                         />
                                     </div>
-                                </div>
+                                ))}
                             </div>
 
                             <h3 className="text-[1.8rem] mb-8 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
@@ -114,15 +115,24 @@ export default async function ImprovizaciaPage() {
                                     </ul>
                                 </div>
 
-                                <div className="rounded-2xl overflow-hidden shadow-xl h-fit sticky top-24">
-                                    <video
-                                        src="/videos/improvizacia.mp4"
-                                        controls
-                                        poster="/impro-main.jpg"
-                                        className="w-full aspect-video object-cover"
-                                    >
-                                        Your browser does not support the video tag.
-                                    </video>
+                                <div className="space-y-6 h-fit sticky top-24">
+                                    <div className="rounded-2xl overflow-hidden shadow-xl">
+                                        <video
+                                            src="/videos/improvizacia.mp4"
+                                            controls
+                                            preload="metadata"
+                                            className="w-full aspect-video object-cover"
+                                        >
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                    <Image
+                                        src="/impro-main.jpg"
+                                        alt="Improvizačný kurz"
+                                        width={800}
+                                        height={500}
+                                        className="w-full rounded-2xl shadow-xl object-cover"
+                                    />
                                 </div>
                             </div>
 
@@ -238,7 +248,7 @@ export default async function ImprovizaciaPage() {
                                                 className="w-full justify-center !bg-black !text-white hover:!bg-gray-800"
                                                 target="_blank"
                                             >
-                                                PRIHLÁSIŤ SA NA KURZ
+                                                PRIHLÁSIŤ SA
                                             </Button>
                                         </div>
                                     </div>
@@ -261,22 +271,22 @@ export default async function ImprovizaciaPage() {
                                                 className="w-full justify-center !bg-black !text-white hover:!bg-gray-800"
                                                 target="_blank"
                                             >
-                                                PRIHLÁSIŤ SA NA KURZ
+                                                PRIHLÁSIŤ SA
                                             </Button>
                                         </div>
                                     </div>
 
-                                    <div className="md:col-span-2 bg-[#f47f44]/10 border border-[#f47f44] p-8 rounded-2xl text-center flex flex-col justify-center">
-                                        <h4 className="text-[1.5rem] font-bold text-black mb-4 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>
+                                    <div className="md:col-span-2 bg-black border border-gray-800 p-8 rounded-2xl text-center flex flex-col justify-center shadow-xl">
+                                        <h4 className="text-[1.5rem] font-bold text-white mb-4 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>
                                             ĎALŠÍ CYKLUS KURZOV SPUSTÍME V SEPTEMBRI 2026
                                         </h4>
-                                        <p className="text-[#000] text-sm mb-6">
-                                            V prípade, že máte o tento kurz záujem, tak nám pokojne napíšte a my Vás zaradíme na "WAITING LIST".
+                                        <p className="text-gray-300 text-sm mb-6">
+                                            V prípade, že máte o tento kurz záujem, tak nám pokojne napíšte a my Vás zaradíme na "WAITING LIST". Akonáhle budeme mať naplánované termíny kurzov, tak Vás budeme medzi prvými informovať aby ste sa mohli prihlásiť.
                                         </p>
-                                        <div className="space-y-4">
-                                            <h5 className="text-[1.2rem] font-bold text-black uppercase tracking-widest">STAČÍ SA LEN ROZHODNÚŤ</h5>
-                                            <p className="text-black text-sm italic">Zábava a rovnako dobre naladení ľudia sú zaručení.</p>
-                                            <Button href="/ludus-academy/kontakt" className="w-full justify-center !bg-black !text-white hover:!bg-gray-800">Mám záujem o waiting list</Button>
+                                        <div className="space-y-4 mt-auto">
+                                            <h5 className="text-[1.2rem] font-bold text-white uppercase tracking-widest">STAČÍ SA LEN ROZHODNÚŤ</h5>
+                                            <p className="text-gray-300 text-sm italic mb-4">Zábava a rovnako dobre naladení ľudia sú zaručení.</p>
+                                            <Button href="/ludus-academy/kontakt" className="w-full justify-center !bg-white !text-black hover:!bg-gray-200 py-4 text-lg">Mám záujem</Button>
                                         </div>
                                     </div>
                                 </div>

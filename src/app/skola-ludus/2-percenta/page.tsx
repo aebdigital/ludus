@@ -5,7 +5,7 @@ export default function Skola2PercentaPage() {
     return (
         <>
             <section
-                className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+                className="h-[40vh] max-md:h-[20vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
                 style={{ backgroundImage: "url('/images/skola/IMG_2915.webp')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
@@ -34,7 +34,7 @@ export default function Skola2PercentaPage() {
                             <div className="mt-8 pt-8 border-t border-gray-100">
                                 <h4 className="font-bold text-black mb-4 uppercase tracking-wider text-sm">Údaje o prijímateľovi:</h4>
                                 <div className="space-y-1 text-black font-medium">
-                                    <p>Občianske združenie „ Škola hrou“</p>
+                                    <p>Občianske združenie „ Škola hrou"</p>
                                     <p>Nábr.arm.gen.L.Svobodu 3 81102 Bratislava - mestská časť Staré Mesto</p>
                                     <p>IČO: 31795188</p>
                                     <p>DIČ: 2021627036</p>

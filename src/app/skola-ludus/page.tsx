@@ -10,7 +10,7 @@ export default function SkolaLudusPage() {
     <>
       {/* Hero */}
       <section
-        className="h-[40vh] bg-cover flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+        className="h-[40vh] max-md:h-[20vh] bg-cover flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
         style={{ backgroundImage: "url('/images/skola-main.webp')", backgroundPosition: 'center 35%' }}
       >
         <div className="absolute inset-0 bg-black/40" />
@@ -60,10 +60,7 @@ export default function SkolaLudusPage() {
             {/* Two Column Layout: Manifesto & Warning */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-24">
               {/* Premium HTML Manifest */}
-              <section className="p-6 md:p-8 bg-[#1eabb0] rounded-[2rem] text-center shadow-xl relative overflow-hidden group border border-white/5 flex flex-col justify-center">
-                {/* Decorative background glows */}
-                <div className="absolute top-0 right-0 w-80 h-80 bg-white/20 rounded-full -mr-40 -mt-40 blur-[60px]" />
-                <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/10 rounded-full -ml-40 -mb-40 blur-[60px]" />
+              <section className="p-6 md:p-8 bg-[#f47f46] rounded-[2rem] text-center shadow-xl relative overflow-hidden group border border-white/5 flex flex-col justify-center">
 
                 <div className="relative z-10 space-y-3 max-w-2xl mx-auto w-full py-4">
                   {[
@@ -114,7 +111,7 @@ export default function SkolaLudusPage() {
             </div>
 
             {/* Alumni Section */}
-            <div className="bg-white p-12 rounded-xl shadow-[0_5px_20px_rgba(0,0,0,0.05)] mb-16">
+            <div className="bg-white p-6 md:p-12 rounded-xl shadow-[0_5px_20px_rgba(0,0,0,0.05)] mb-16">
               <h2 className="text-[2rem] mb-6 text-center" style={{ fontFamily: 'var(--font-heading)' }}>
                 Naši absolventi
               </h2>
@@ -128,7 +125,7 @@ export default function SkolaLudusPage() {
                   Aj tieto osobnosti sú bývalými žiakmi školy Ludus a pôsobia alebo pôsobili v umeleckej sfére:
                 </p>
               </div>
-              <div className="bg-gray-50/50 p-8 rounded-xl text-sm leading-relaxed text-[#555]">
+              <div className="bg-gray-50/50 p-4 md:p-8 rounded-xl text-sm leading-relaxed text-[#555]">
                 <CollapsibleList
                   items={[
                     'Peter Sklár', 'Oľga Belešová', 'Roman Luknár', 'Ady Hajdu', 'Zuzana Vačková', 'Eňa Podzámska',
@@ -237,7 +234,7 @@ export default function SkolaLudusPage() {
             </div>
 
             {/* Gallery Preview */}
-            <GalleryPreview category="skola-ludus" href="/skola-ludus/galeria" />
+            <GalleryPreview category="skola-ludus" href="/skola-ludus/galeria" limit={3} />
           </main>
 
           <Sidebar category="skola-ludus" />

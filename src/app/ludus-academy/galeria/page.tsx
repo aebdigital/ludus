@@ -17,7 +17,7 @@ export default async function AcademyGalériaPage() {
     <>
       {/* Hero */}
       <section
-        className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+        className="h-[40vh] max-md:h-[20vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-14"
         style={{ backgroundImage: "url('/images/academy/IMG_1318.webp')" }}
       >
         <div className="absolute inset-0 bg-black/40" />

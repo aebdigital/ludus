@@ -34,7 +34,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md z-[1000] py-3 flex justify-center shadow-[0_2px_20px_rgba(0,0,0,0.05)]">
+      <header className="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md z-[1000] py-3 max-md:py-1.5 flex justify-center shadow-[0_2px_20px_rgba(0,0,0,0.05)]">
         <div className="w-[95%] flex justify-between items-center lg:grid lg:grid-cols-[auto_1fr_auto] lg:gap-6">
           {/* Logo */}
           <Link href="/" className="flex items-center cursor-pointer" onClick={() => setIsMobileMenuOpen(false)}>
@@ -43,7 +43,7 @@ export default function Header() {
               alt="LUDUS Logo"
               width={120}
               height={60}
-              className="h-[60px] w-auto object-contain"
+              className="h-[60px] max-md:h-[40px] w-auto object-contain"
             />
           </Link>
 
@@ -133,14 +133,14 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 bg-white z-[1050] overflow-y-auto transition-transform duration-300 lg:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         {/* Overlay Header with Logo and Close Button */}
-        <div className="w-full py-3 flex justify-center mb-4">
+        <div className="w-full py-1.5 flex justify-center mb-4">
           <div className="w-[95%] flex justify-between items-center">
             <Image
               src="/images/loga-4/logo-main.webp"
               alt="LUDUS Logo"
               width={120}
               height={60}
-              className="h-[60px] w-auto object-contain"
+              className="h-[40px] w-auto object-contain"
             />
             <button
               className="flex flex-col justify-center items-center w-8 h-8 relative z-[1100]"

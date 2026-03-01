@@ -54,8 +54,8 @@ export const staffData: Record<string, StaffMember> = {
                 <p className="font-bold mb-2">ZAKLADATEĽKA LUDUS ACADEMY</p>
                 <p>V divadle sa ocitla hádam ešte skôr, ako začala chodiť. Už je to viac ako 50 rokov keď jej rodičia Xénia Gracová Kubová a Peter Kuba založili divadelnú školu a divadlo LUDUS. Celý Katkin život je tak spätý s herectvom a dramatickou výchovou.</p>
                 <p>Vyštudovala bábkoherectvo a ako herečka účinkovala v divadle, v televíznych seriáloch a reklamách. Od 19 rokov aktívne pôsobí ako pedagóg dramatickej výchovy v škole LUDUS. 6 rokov pôsobila aj na VŠMU ako pedagóg DPŠ, kde učila didaktiku dramatickej výchovy. V súčastnosti učí didaktiku na Strednej pedagogickej škole. Posledných 15 rokov Katka aktívne využíva svoju kreativitu v OZ Červený nos - Clowndoctors, kde pôsobí ako zdravotný klaun, umelecký kouč a lektor.</p>
-                <p>Manažérske a organizačné zručnosti uplatňuje Katka od roku 2010 ako riaditeľka SZŠU LUDUS v ktorej momentálne pôsobí viac ako 20 pedagógov a navštevuje ju viac ako 350 detí a tínedžerov. Katka je taktiež autorka viacerých vzdelávacích programov, medzinárodných vzdelávacích projektov, workshopov, a je autorkou knihy Tvorím, teda som. Tá je práve zameraná na kreatívne hry a cvičenia.</p>
-                <p>Na svojej ceste pomohla množstvu ľudí od detí až po dospelých zlepšitťsvoje zručnosti a žiť kreatívnejší, pestrejší a šťastnejší život. Opierajúc sa o 50 ročnú tradíciu LUDUSu a 25 ročné skúsenosti pedagóga, Katka zakladá v roku 2022 LUDUS ACADEMY. So svojim tímom profesionálnych pedagógov sú pripravení odovzdať Vám to najlepšie.</p>
+                <p>Manažérske a organizačné zručnosti uplatňuje Katka od roku 2010 ako riaditeľka SZŠU LUDUS v ktorej momentálne pôsobí viac ako 20 pedagógov a navštevuje ju viac ako 350 detí a tínedžerov. Katka je taktiež autorka viacerých vzdelávacích programov, medzinárodných vzdelávacích projektov, workshopov, a je autorkou knihy <a href="/ludus-academy/kniha" className="text-black font-bold underline hover:text-[#f47f44] transition-colors uppercase">TVORÍM, TEDA SOM</a>. Tá je práve zameraná na kreatívne hry a cvičenia.</p>
+                <p>Na svojej ceste pomohla množstvu ľudí od detí až po dospelých zlepšiť svoje zručnosti a žiť kreatívnejší, pestrejší a šťastnejší život. Opierajúc sa o 50 ročnú tradíciu LUDUSu a 25 ročné skúsenosti pedagóga, Katka zakladá v roku 2022 LUDUS ACADEMY. So svojim tímom profesionálnych pedagógov sú pripravení odovzdať Vám to najlepšie.</p>
             </>
         )
     },
@@ -152,7 +152,7 @@ export const staffData: Record<string, StaffMember> = {
         image: "/pedagogovia/NORO ŠARO.webp",
         bio: (
             <>
-                <p>V profesionálnych divadlách sa pohybuje od roku 2001. Po ukončení magisterského štúdia herectva na divadelnej fakulte VŠMU v Bratislave sa zamestnal v Mestskom divadle Žilina. Dnes ho môžete vidieť napr. na javisku v muzikáli „Kubo“. Svoje hudobné vlohy vložil do svojho projektu Abnorman ako DJ, ale aj ako kapelník hudobného zoskupenia Bluefields Rockers. Moderoval niekoľko veľkých hudobných festivalov a udalostí po celom Slovensku. V SZUŠ Ludus učí tvorivú dramatiku a v LUDUS ACADEMY je lektorom hereckých kurzov.</p>
+                <p>V profesionálnych divadlách sa pohybuje od roku 2001. Po ukončení magisterského štúdia herectva na divadelnej fakulte VŠMU v Bratislave sa zamestnal v Mestskom divadle Žilina. Dnes ho môžete vidieť napr. na javisku v muzikáli „Kubo". Svoje hudobné vlohy vložil do svojho projektu Abnorman ako DJ, ale aj ako kapelník hudobného zoskupenia Bluefields Rockers. Moderoval niekoľko veľkých hudobných festivalov a udalostí po celom Slovensku. V SZUŠ Ludus učí tvorivú dramatiku a v LUDUS ACADEMY je lektorom hereckých kurzov.</p>
             </>
         )
     },

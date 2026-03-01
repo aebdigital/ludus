@@ -1,13 +1,67 @@
+'use client';
+
+import { useState } from 'react';
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
 import Image from 'next/image';
+import { staffData, StaffMember } from '@/data/staffData';
+import StaffMemberModal from '@/components/StaffMemberModal';
 
-export default async function TvorivePisaniePage() {
+export default function TvorivePisaniePage() {
+    const [selectedMember, setSelectedMember] = useState<StaffMember | null>(null);
+
+    const lectors = [
+        {
+            name: 'Mgr. art Michal Rovňák',
+            role: 'Pedagóg',
+            image: '/pedagogovia/MICHAL ROVŇÁK.webp'
+        },
+        {
+            name: 'Mgr. art Janko Mikuš',
+            role: 'Pedagóg',
+            image: '/pedagogovia/JANKO MIKUŠ.webp'
+        }
+    ];
+
+    const getStaffData = (name: string) => {
+        if (staffData[name]) return staffData[name];
+        const cleanName = name
+            .replace(/^(Mgr\. art |Bc\. |MgA\. |Mgr\.art )/i, '')
+            .replace(/ ArtD\.?$/i, '')
+            .trim();
+
+        if (staffData[cleanName]) return staffData[cleanName];
+
+        const variations: Record<string, string> = {
+            "Michal Rovňák": "Michal Rovňák",
+            "Ján Mikuš": "Janko Mikuš",
+            "Janko Mikuš": "Janko Mikuš"
+        };
+        if (variations[cleanName] && staffData[variations[cleanName]]) {
+            return staffData[variations[cleanName]];
+        }
+        return null;
+    };
+
+    const handleMemberClick = (member: { name: string; role: string; image: string }) => {
+        const data = getStaffData(member.name);
+        if (data) {
+            setSelectedMember({
+                ...data,
+                role: member.role
+            });
+        }
+    };
 
     return (
         <div className="bg-white">
+            <StaffMemberModal
+                member={selectedMember}
+                onClose={() => setSelectedMember(null)}
+            />
+
             <section
-                className="h-[40vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20"
+                className="h-[40vh] max-md:h-[20vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-14"
                 style={{ backgroundImage: "url('/images/academy/IMG_4766.webp')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
@@ -18,8 +72,6 @@ export default async function TvorivePisaniePage() {
                     Kurz tvorivého písania
                 </h1>
             </section>
-
-
 
             <div className="w-[95%] mx-auto py-16">
                 <div className="flex gap-16 items-start max-xl:flex-col">
@@ -36,11 +88,11 @@ export default async function TvorivePisaniePage() {
 
                             <div className="flex gap-12 max-lg:flex-col mb-12">
                                 <div className="flex-[0.7] text-[1.1rem] text-[#000] space-y-6 leading-relaxed">
-                                    <p className="italic font-medium text-black border-l-4 border-[#f47f44] pl-6 py-2">
-                                        Nie všetko sa dá povedať nahlas. Niekedy je lepšie písať. Písanie umožňuje človeku usporiadať si myšlienky a vyjadriť oveľa viac emócii zo zákutí vlastného ja, než rozprávanie.
+                                    <p className="italic font-light text-black border-l-4 border-[#f47f44] pl-6 py-2">
+                                        Nie všetko sa dá povedať nahlas. Niekedy je lepšie písať. Písanie umožňuje človeku usporiadať si myšlienky and vyjadriť oveľa viac emócii zo zákutí vlastného ja, než rozprávanie.
                                     </p>
                                     <p>
-                                        Pomáha vám, ak svoje pocity vyjadríte písaným slovom? Je papier a pero vašim priateľom v ťažkých chvíľach? Prináša vám písanie radosť a uspokojenie? Cítite radosť, ak sa vám podarí napísať niečo úprimné? Chcete objaviť nové možnosti, ako sa vyjadriť pomocou písaného slova? Máte chuť zistiť rozdiel medzi textom a "textom"? Chcete spoznať možnosti, ako váš text urobiť pôsobivejším? Chcete vedieť, ako sa vyhnúť klišé a objaviť spôsoby, ako byť originálny? Tento kurz prinesie do vášho života nové impulzy a nový uhol pohľadu na písaný text.
+                                        Pomáha vám, ak svoje pocity vyjadríte písaným slovom? Je papier and pero vašim priateľom v ťažkých chvíľach? Prináša vám písanie radosť and uspokojenie? Cítite radosť, ak sa vám podarí napísať niečo úprimné? Chcete objaviť nové možnosti, ako sa vyjadriť pomocou písaného slova? Máte chuť zistiť rozdiel medzi textom and "textom"? Chcete spoznať možnosti, ako váš text urobiť pôsobivejším? Chcete vedieť, ako sa vyhnúť klišé and objaviť spôsoby, ako byť originálny? Tento kurz prinesie do vášho života nové impulzy and nový uhol pohľadu na písaný text.
                                     </p>
                                 </div>
                                 <div className="flex-[0.3] min-w-[300px]">
@@ -60,12 +112,12 @@ export default async function TvorivePisaniePage() {
                                 </h3>
                                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
                                     {[
-                                        'Naučíte sa ako prostredníctvom písania uchopiť tému, námet a príbeh.',
+                                        'Naučíte sa ako prostredníctvom písania uchopiť tému, námet and príbeh.',
                                         'Zistíte ako dať textu správnu štruktúru, ako zvoliť správny žáner.',
-                                        'Dozviete sa ako sa vyhnúť alogizmom, klišé a frázam.',
+                                        'Dozviete sa ako sa vyhnúť alogizmom, klišé and frázam.',
                                         'Naučíte sa vytvárať atmosféru, ktorá vtiahne čitateľa.',
-                                        'Vysvetlíte si, ako vybudovať živú postavu, vzťahy a motivácie postáv.',
-                                        'Budete vedieť preniesť do textu emóciu, dramatickú situáciu a živý dialóg.',
+                                        'Vysvetlíte si, ako vybudovať živú postavu, vzťahy and motivácie postáv.',
+                                        'Budete vedieť preniesť do textu emóciu, dramatickú situáciu and živý dialóg.',
                                         'Dozviete sa, v čom tkvie úspech písania vtipných textov.',
                                         'Naučíte sa princípy písania poviedky, divadelného či filmového scenára.',
                                         'Bude Vás učiť profesionálny dlhoročný lektor.',
@@ -106,56 +158,51 @@ export default async function TvorivePisaniePage() {
                                         <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Profesionálny lektor so skúsenosťami</li>
                                         <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Individuálny prístup</li>
                                         <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Rôzne tvorivé metódy písania</li>
-                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Káva a čaj počas kurzu</li>
+                                        <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Káva and čaj počas kurzu</li>
                                         <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Certifikát</li>
                                     </ul>
                                 </div>
                                 <div className="mt-8 pt-6 border-t border-white/10 text-sm italic opacity-70">
-                                    PODMIENKA ÚČASTI: vek minimálne 18 rokov a ukončené stredoškolské vzdelanie
+                                    PODMIENKA ÚČASTI: vek minimálne 18 rokov and ukončené stredoškolské vzdelanie
                                 </div>
                             </div>
 
-                            {/* Lector Section */}
-                            <div className="bg-white border border-gray-100 p-10 rounded-2xl mb-12 shadow-sm">
-                                <h3 className="text-[1.8rem] mb-8 text-black" style={{ fontFamily: 'var(--font-heading)' }}>Kto sa vám bude venovať?</h3>
-
-                                {/* Michal Rovňák */}
-                                <div className="flex gap-8 items-start max-md:flex-col mb-16">
-                                    <div className="w-[180px] h-[180px] rounded-full overflow-hidden flex-shrink-0 border-4 border-[#f47f44] relative">
-                                        <Image
-                                            src="/pedagogovia/MICHAL ROVŇÁK.webp"
-                                            alt="Mgr. art. Michal Rovňák"
-                                            fill
-                                            className="object-cover"
-                                        />
-                                    </div>
-                                    <div className="flex-1">
-                                        <h4 className="text-[1.5rem] font-bold text-black mb-4">Mgr. art. Michal Rovňák</h4>
-                                        <div className="text-[#000] space-y-4 text-[0.95rem] leading-relaxed">
-                                            <p>Je absolventom katedry herectva na VŠMU, ale vo svojej profesnej kariére sa dlhoročne a vo veľkej miere venuje autorskej práci s textom.</p>
-                                            <p>Pracoval ako scenárista pre všetky slovenské plnoformátové televízie. Je autorom množstva senárov k seriálom a reláciám zábavného typu. Celé desaťročia spolupracuje na vývoji, príprave a realizácii množstva obľúbených formátov. (Knižkotipy, Horná Dolná, Bez servítky, Tomu neuveríš, Uhádni môj vek, Kakao)</p>
-                                            <p>Bol copywriterom (textárom) v niekoľkých reklamných agentúrach a na kreatívnom oddelení televízie Markíza. Je autorom množstva článkov pre webové stránky, scenárista relácie Ťažký týždeň a autor divadelných hier pre mladú generáciu. Zároveň dlhé roky pracoval ako prekladateľ a úpravca dialógov (napríklad Dr. House) a je autorom textov piesní.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Ján Mikuš */}
-                                <div className="flex gap-8 items-start max-md:flex-col pt-8 border-t border-gray-50">
-                                    <div className="w-[180px] h-[180px] rounded-full overflow-hidden flex-shrink-0 border-4 border-gray-100 relative">
-                                        <Image
-                                            src="/pedagogovia/JANKO MIKUŠ.webp"
-                                            alt="MgA. Ján Mikuš"
-                                            fill
-                                            className="object-cover"
-                                        />
-                                    </div>
-                                    <div className="flex-1">
-                                        <h4 className="text-[1.5rem] font-bold text-black mb-4">MgA. Ján Mikuš</h4>
-                                        <div className="text-[#000] space-y-4 text-[0.95rem] leading-relaxed">
-                                            <p>Janko vyštudoval réžiu na JAMU v Brne. Režíroval v Divadle Husa na provázku, Hadivadle, Divadle Polárka i v Národnom divadle v Košiciach.</p>
-                                            <p>V súčasnosti je pedagógom Ateliéru Fyzické divadlo na JAMU v Brne a tiež pedagógom v SZUŠ LUDUS. Dlhodobo spolupracuje s Rádiom Devín ako autor a režisér rozhlasových hier a venuje sa nezávislému autorskému filmu.</p>
-                                        </div>
-                                    </div>
+                            {/* Lector Profile */}
+                            <div className="mb-24">
+                                <h3 className="text-[2.5rem] mb-12 text-black" style={{ fontFamily: 'var(--font-heading)' }}>Kto sa vám bude venovať?</h3>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                    {lectors.map((member) => {
+                                        const data = getStaffData(member.name);
+                                        const canOpen = !!data;
+                                        return (
+                                            <div
+                                                key={member.name}
+                                                className={`bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 ${canOpen ? 'cursor-pointer hover:shadow-xl ring-2 ring-transparent hover:ring-[#f47f44]/50 group' : ''}`}
+                                                onClick={() => canOpen && handleMemberClick(member)}
+                                            >
+                                                <div className="aspect-[3/4] relative bg-gray-100 overflow-hidden">
+                                                    <Image
+                                                        src={member.image}
+                                                        alt={member.name}
+                                                        fill
+                                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                    />
+                                                    <div className="absolute bottom-0 left-0 right-0 z-10 p-4 bg-gradient-to-t from-black/70 to-transparent">
+                                                        <h3 className="text-white text-[1.1rem] mb-0.5 leading-tight drop-shadow-lg" style={{ fontFamily: 'var(--font-heading)' }}>{member.name}</h3>
+                                                        <p className="text-[#f47f44] font-bold text-xs uppercase tracking-wider drop-shadow-lg">{member.role}</p>
+                                                    </div>
+                                                    {canOpen && (
+                                                        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                                            <span className="bg-white text-black px-4 py-2 rounded-full font-bold text-sm shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                                                Viac info
+                                                            </span>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
 
@@ -163,7 +210,7 @@ export default async function TvorivePisaniePage() {
                             <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100 mb-12">
                                 <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>Čo je potrebné priniesť na kurz:</h3>
                                 <p className="text-[#000] leading-relaxed">
-                                    Ideálne je na hodinách písať do laptopu, aby ste vedeli flexibilne a rýchlo texty upraviť a prepísať. Je teda vhodné, keby ste si na lekcie nosili svoj laptop. Ak žiadny nemáte, vieme vám požičať, prípadne ak preferujete písať rukou, môžete, avšak ku koncu kurzu by bolo vhodné texty prepísať do elektronickej podoby.
+                                    Ideálne je na hodinách písať do laptopu, aby ste vedeli flexibilne and rýchlo texty upraviť and prepísať. Je teda vhodné, keby ste si na lekcie nosili svoj laptop. Ak žiadny nemáte, vieme vám požičať, prípadne ak preferujete písať rukou, môžete, avšak ku koncu kurzu by bolo vhodné texty prepísať do elektronickej podoby.
                                 </p>
                             </div>
 
@@ -176,7 +223,7 @@ export default async function TvorivePisaniePage() {
                                                 Vaša tvorba nás inšpiruje
                                             </h3>
                                             <p className="text-xl text-black leading-relaxed mb-8">
-                                                Náš kurz tvorivého písania nakopol účastníčku **Ivetku** k napísaniu svojej prvej knihy. Sme radi, že vás inšpirujeme a sme súčasťou vašej kreatívnej cesty.
+                                                Náš kurz tvorivého písania nakopol účastníčku **Ivetku** k napísaniu svojej prvej knihy. Sme radi, že vás inšpirujeme and sme súčasťou vašej kreatívnej cesty.
                                             </p>
                                             <div className="relative h-[250px] w-2/3 max-md:w-full">
                                                 <Image
@@ -267,19 +314,19 @@ export default async function TvorivePisaniePage() {
                                                 className="w-full justify-center py-4 text-xl !bg-black !text-white hover:!bg-gray-800"
                                                 target="_blank"
                                             >
-                                                PRIHLÁSIŤ SA NA KURZ
+                                                PRIHLÁSIŤ SA
                                             </Button>
                                         </div>
                                     </div>
 
-                                    <div className="bg-[#f47f44]/10 border border-[#f47f44] p-10 rounded-2xl text-center flex flex-col justify-center">
-                                        <h4 className="text-[1.8rem] font-bold text-black mb-4 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>
+                                    <div className="bg-black border border-gray-800 p-10 rounded-2xl text-center flex flex-col justify-center shadow-xl">
+                                        <h4 className="text-[1.8rem] font-bold text-white mb-4 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>
                                             ĎALŠÍ CYKLUS KURZOV SPUSTÍME V SEPTEMBRI 2026
                                         </h4>
-                                        <p className="text-[#000] mb-8 max-w-2xl mx-auto">
-                                            V prípade, že máte o tento kurz záujem, tak nám pokojne napíšte a my Vás zaradíme na "WAITING LIST". Akonáhle budeme mať naplánované termíny kurzov, tak Vás budeme medzi prvými informovať aby ste sa mohli prihlásiť.
+                                        <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                                            V prípade, že máte o tento kurz záujem, tak nám pokojne napíšte and my Vás zaradíme na "WAITING LIST". Akonáhle budeme mať naplánované termíny kurzov, tak Vás budeme medzi prvými informovať aby ste sa mohli prihlásiť.
                                         </p>
-                                        <Button href="/ludus-academy/kontakt" className="w-full justify-center !bg-black !text-white hover:!bg-gray-800">Mám záujem o waiting list</Button>
+                                        <Button href="/ludus-academy/kontakt" className="!bg-white !text-black hover:!bg-gray-200 px-10 py-4 text-lg">Mám záujem</Button>
                                     </div>
                                 </div>
                             </div>
