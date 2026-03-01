@@ -225,11 +225,10 @@ export default function LudusAcademyPage() {
                             </div>
                         </div>
 
-                                    {/* Gallery Preview */}
+                        {/* Gallery Preview */}
+                        <GalleryPreview category="ludus-academy" href="/ludus-academy/galeria" limit={3} />
 
-                                    <GalleryPreview category="ludus-academy" href="/ludus-academy/galeria" limit={3} />
-
-                                </div>
+                    </main>
 
                     {/* Sidebar Column */}
                     <Sidebar category="ludus-academy" />
