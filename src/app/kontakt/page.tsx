@@ -111,10 +111,9 @@ export default function KontaktPage() {
                                         >
                                             Divadlo LUDUS
                                         </h3>
-                                        <p className="text-[1.1rem]">
-                                            <strong>Kontakt:</strong> <a href="mailto:info@divadloludus.sk" className="hover:opacity-70">info@divadloludus.sk</a>
-                                        </p>
-                                    </div>
+                                                                    <p className="text-[1.1rem]">
+                                                                        <strong>Kontakt:</strong> <a href="mailto:info@skolaludus.sk" className="hover:opacity-70">info@skolaludus.sk</a>
+                                                                    </p>                                    </div>
 
                                     {/* LUDUS ACADEMY */}
                                     <div className="bg-[#f47f44] rounded-xl p-6 text-black">

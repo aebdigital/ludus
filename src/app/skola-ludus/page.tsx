@@ -49,7 +49,7 @@ export default function SkolaLudusPage() {
                                 </div>
                             </div>
                             <Image
-                                src="/images/skola/IMG_2993.webp"
+                                src="/images/skola/54330fa8-0400-428d-a97f-d2fe7193c6a8.webp"
                                 alt="Škola Ludus"
                                 width={600}
                                 height={400}

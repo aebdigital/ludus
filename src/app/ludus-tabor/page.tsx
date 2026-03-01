@@ -184,7 +184,7 @@ export default function LudusTaborPage() {
                         </div>
 
                         {/* Gallery Preview */}
-                        <GalleryPreview category="ludus-tabor" href="/ludus-tabor/galeria" />
+                        <GalleryPreview category="ludus-tabor" href="/ludus-tabor/galeria" limit={3} />
 
                     </main>
 

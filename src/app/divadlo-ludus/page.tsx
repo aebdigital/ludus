@@ -20,7 +20,7 @@ export default async function DivadloLudusPage() {
             {/* Hero */}
             <section
                 className="h-[40vh] max-md:h-[20vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-13 "
-                style={{ backgroundImage: "url('/images/divadlo-main.webp')" }}
+                style={{ backgroundImage: "url('/images/program/program-hero.webp')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1

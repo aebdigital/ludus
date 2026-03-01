@@ -103,7 +103,7 @@ export default function HistoriaPage() {
                                             ))}
                                         </ul>
                                         <div>
-                                            <h4 className="text-xs font-bold uppercase tracking-widest text-[#000] mb-3 opacity-70">
+                                            <h4 className="text-sm font-bold uppercase tracking-widest text-black mb-3">
                                                 V minulosti pôsobil(a) ako:
                                             </h4>
                                             <ul className="space-y-1 list-none p-0">
@@ -196,13 +196,13 @@ export default function HistoriaPage() {
                                 zoskupenie. A tak spolu s Jurajom Bindzárom založili LUDUS. Jeho
                                 ciele definovali vo svojom manifeste:
                             </p>
-                            <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1 bg-[#f47f44]/5 p-8 rounded-xl border-l-8 border-[#f47f44] mb-8 not-italic">
-                                <ul className="space-y-3 font-semibold text-black italic">
+                            <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1 bg-[#d66420] p-8 rounded-xl mb-8 not-italic shadow-lg">
+                                <ul className="space-y-3 font-semibold text-white italic">
                                     <li>Hra ako základné umelecko – pedagogické východisko</li>
                                     <li>Hra ako krídla slobodného človeka</li>
                                     <li>Hra ako krídla fantázie</li>
                                 </ul>
-                                <ul className="space-y-3 font-semibold text-black italic">
+                                <ul className="space-y-3 font-semibold text-white italic">
                                     <li>
                                         Hra oslobodzujúca od všednosti, konvencie and nepravdy
                                     </li>
@@ -273,9 +273,9 @@ export default function HistoriaPage() {
                                 absolventom hrať v profesionálnych podmienkach and s
                                 profesionálmi.
                             </p>
-                            <div className="bg-black text-white p-12 rounded-2xl text-center shadow-xl">
+                            <div className="bg-[#066831] text-white p-12 rounded-2xl text-center shadow-xl">
                                 <h3
-                                    className="text-[#f47f44] text-[2.5rem] mb-4"
+                                    className="text-white text-[2.5rem] mb-4"
                                     style={{ fontFamily: "var(--font-heading)" }}
                                 >
                                     Súčasnosť
@@ -311,8 +311,8 @@ export default function HistoriaPage() {
                 </h2>
                 <div className="space-y-24">
                     <div>
-                        <div className="bg-black py-6 px-10 max-md:py-3 max-md:px-5 rounded-2xl mb-4 shadow-lg">
-                            <h3 className="text-[#f47f44] text-3xl max-md:text-xl font-bold uppercase tracking-widest m-0 text-left">
+                        <div className="bg-[#066831] py-6 px-10 max-md:py-3 max-md:px-5 rounded-2xl mb-4 shadow-lg">
+                            <h3 className="text-white text-3xl max-md:text-xl font-bold uppercase tracking-widest m-0 text-left">
                                 Úspešné projekty pre mládež
                             </h3>
                         </div>
@@ -370,8 +370,8 @@ export default function HistoriaPage() {
                     </div>
 
                     <div className="mt-16">
-                        <div className="bg-black py-6 px-10 max-md:py-3 max-md:px-5 rounded-2xl mb-4 shadow-lg">
-                            <h3 className="text-[#f47f44] text-3xl max-md:text-xl font-bold uppercase tracking-widest m-0 text-left">
+                        <div className="bg-[#066831] py-6 px-10 max-md:py-3 max-md:px-5 rounded-2xl mb-4 shadow-lg">
+                            <h3 className="text-white text-3xl max-md:text-xl font-bold uppercase tracking-widest m-0 text-left">
                                 Projekty pre deti
                             </h3>
                         </div>

@@ -88,32 +88,34 @@ export default async function Home() {
                   const badge = getCategoryStyle(item.category);
 
                   const content = (
-                    <article key={item.id} className={`${index < aktuality.length - 1 ? "pb-6 border-b border-gray-100" : "pb-0"} ${item.link ? "group/aktualita" : ""}`}>
-                      <div className="flex items-center gap-3 mb-2">
-                        <span className={`text-[0.7rem] font-bold px-2 py-1 rounded ${badge.className}`}>
-                          {badge.label}
-                        </span>
-                        <span className="text-[0.85rem] text-black font-semibold uppercase tracking-wider">
-                          {formatDate(item.date)}
-                        </span>
-                      </div>
-                      <h3
-                        className={`text-[1.4rem] max-md:text-[1.1rem] font-bold mt-0 mb-2 ${item.link
-                          ? "group-hover/aktualita:text-purple-700 transition-colors duration-200"
-                          : ""
-                          }`}
-                        style={{ fontFamily: "var(--font-body)" }}
-                      >
-                        {item.title}
-                        {item.link && (
-                          <span className="inline-block ml-2 text-[0.9rem] opacity-0 group-hover/aktualita:opacity-100 transition-opacity duration-200">
-                            →
+                    <article key={item.id} className={`${item.link ? "group/aktualita" : ""}`}>
+                      <div className="p-5 border border-gray-200 rounded-2xl transition-all duration-300 hover:border-[#f47f44]/30 hover:shadow-sm">
+                        <div className="flex items-center gap-3 mb-2">
+                          <span className={`text-[0.7rem] font-bold px-2 py-1 rounded ${badge.className}`}>
+                            {badge.label}
                           </span>
-                        )}
-                      </h3>
-                      <p className="text-base text-black m-0">
-                        {item.description}
-                      </p>
+                          <span className="text-[0.85rem] text-black font-semibold uppercase tracking-wider">
+                            {formatDate(item.date)}
+                          </span>
+                        </div>
+                        <h3
+                          className={`text-[1.4rem] max-md:text-[1.1rem] font-bold mt-0 mb-2 ${item.link
+                            ? "group-hover/aktualita:text-[#f47f44] transition-colors duration-200"
+                            : ""
+                            }`}
+                          style={{ fontFamily: "var(--font-body)" }}
+                        >
+                          {item.title}
+                          {item.link && (
+                            <span className="inline-block ml-2 text-[0.9rem] opacity-0 group-hover/aktualita:opacity-100 transition-opacity duration-200">
+                              →
+                            </span>
+                          )}
+                        </h3>
+                        <p className="text-base text-black m-0 leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
                     </article>
                   );
 
@@ -145,7 +147,7 @@ export default async function Home() {
                     href={`/program/${evt.slug}`}
                     className="flex items-center gap-4 p-4 bg-white/10 rounded-xl transition-all duration-300 hover:bg-white/15 hover:translate-x-1"
                   >
-                    <span className="text-[1.5rem] font-bold min-w-[70px] text-[#f47f44]" style={{ fontFamily: 'var(--font-heading)' }}>
+                    <span className="text-[1.5rem] font-bold min-w-[70px] text-black" style={{ fontFamily: 'var(--font-heading)' }}>
                       {formatEventDate(evt.event_date)}
                     </span>
                     <div>
