@@ -28,19 +28,19 @@ export default async function IndividualneTreningyPage() {
  <main className="flex-1 min-w-0">
  <div className="mb-24">
  <h2 className="text-[3rem] mb-8 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
- Radosť <span className="text-[#f47f44]">sa</span> rozvíjať
+ Radosť <span className="text-[#066831]">sa</span> rozvíjať
  </h2>
 
  <div className="flex gap-12 max-lg:flex-col mb-16">
  <div className="flex-[0.7] text-[1.15rem] text-[#000] space-y-6 leading-relaxed flex flex-col justify-center">
- <p className="italic font-light text-black border-l-4 border-[#f47f44] pl-6 py-2">
+ <p className="italic font-light text-black border-l-4 border-[#066831] pl-6 py-2">
  Hovoriť pred ľuďmi alebo kamerou nie je talent, ale zručnosť. Na individuálnom tréningu v Ludus Academy si ju môžete bezpečne natrénovať.
  </p>
  <p>
  Rozhovor v médiách, moderovanie podujatia, prezentácia pred publikom, pracovný pohovor či moment, keď sa od vás čaká rýchla reakcia a jasná myšlienka.
  Individuálny tréning v Ludus Academy sú prakticky zamerané stretnutia pre jednotlivcov, ktorí chcú vystupovať istejšie, zrozumiteľnejšie a prirodzenejšie. Nejde o teóriu ani poučky. Trénujeme priamo situácie, v ktorých sa potrebujete vedieť oprieť sami o seba.
  </p>
- <p className="text-[1.3rem] font-bold text-black border-l-4 border-[#f47f44] pl-6 py-2">
+ <p className="text-[1.3rem] font-bold text-black border-l-4 border-[#066831] pl-6 py-2">
  Pripravíme vás na rozhovory, prezentácie aj nečakané situácie tak, aby ste vedeli reagovať pokojne, jasne a prirodzene. Niektoré situácie totiž neprichádzajú s druhým pokusom.
  </p>
  </div>
@@ -56,7 +56,7 @@ export default async function IndividualneTreningyPage() {
  </div>
 
  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
- <div className="bg-white p-10 rounded-2xl border-2 border-gray-50 flex flex-col justify-center">
+ <div className="bg-white p-10 max-md:p-4 rounded-2xl border-2 border-gray-50 flex flex-col justify-center">
  <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
  Pre koho je tréning určený
  </h3>
@@ -69,7 +69,7 @@ export default async function IndividualneTreningyPage() {
  'Každého, kto chce hovoriť istejšie pred ľuďmi'
  ].map((item, i) => (
  <li key={i} className="flex gap-3 items-start text-[#000]">
- <span className="text-[#f47f44] mt-1 font-bold">•</span>
+ <span className="text-[#066831] mt-1 font-bold">•</span>
  {item}
  </li>
  ))}
@@ -78,7 +78,7 @@ export default async function IndividualneTreningyPage() {
  Nie je potrebná predchádzajúca skúsenosť. Tréning sa prispôsobuje konkrétnemu človeku a jeho situáciám.
  </p>
  </div>
- <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100">
+ <div className="bg-gray-50 p-10 max-md:p-4 rounded-2xl border border-gray-100">
  <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
  Cieľ tréningu
  </h3>
@@ -98,7 +98,7 @@ export default async function IndividualneTreningyPage() {
  </div>
  </div>
 
- <div className="bg-[#f47f44]/5 border border-[#f47f44]/20 p-10 rounded-2xl mb-16">
+ <div className="bg-[#066831]/5 border border-[#066831]/20 p-10 max-md:p-4 rounded-2xl mb-16">
  <h3 className="text-[2rem] mb-8 text-black text-center" style={{ fontFamily: 'var(--font-heading)' }}>
  Čo môžete získať
  </h3>
@@ -113,8 +113,8 @@ export default async function IndividualneTreningyPage() {
  'Väčšiu sebadôveru pri prezentáciách',
  'Kreativitu a flexibilitu v komunikácii'
  ].map((benefit, i) => (
- <div key={i} className="flex gap-3 items-center bg-white p-4 rounded-xl shadow-sm border border-[#f47f44]/10">
- <span className="w-6 h-6 rounded-full bg-[#f47f44] flex items-center justify-center text-black text-xs font-bold">✓</span>
+ <div key={i} className="flex gap-3 items-center bg-white p-4 rounded-xl shadow-sm border border-[#066831]/10">
+ <span className="w-6 h-6 rounded-full bg-[#066831] flex items-center justify-center text-black text-xs font-bold">✓</span>
  <span className="text-[1rem] font-medium text-black">{benefit}</span>
  </div>
  ))}
@@ -124,8 +124,8 @@ export default async function IndividualneTreningyPage() {
  </p>
  </div>
 
- <div className="bg-black text-white p-12 rounded-2xl text-center shadow-2xl relative overflow-hidden group">
- <div className="absolute inset-0 bg-gradient-to-r from-[#f47f44]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+ <div className="bg-[#d66420] text-white p-12 max-md:p-5 rounded-2xl text-center shadow-2xl relative overflow-hidden group">
+ <div className="absolute inset-0 bg-gradient-to-r from-[#066831]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
  <h3 className="text-[2.2rem] mb-6 leading-tight relative z-10">
  Máte záujem?
  </h3>

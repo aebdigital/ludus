@@ -28,37 +28,32 @@ export default async function WorkshopUciteliaPage() {
  <main className="flex-1 min-w-0">
  <div className="mb-24">
  <h2 className="text-[3rem] mb-2 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
- RADOSŤ <span className="text-[#f47f44]">sa</span> UČIŤ
+ RADOSŤ <span className="text-[#e79b2c]">sa</span> UČIŤ
  </h2>
- <div className="text-[#f47f44] font-bold text-[1.2rem] mb-12 uppercase tracking-widest leading-tight">
+ <div className="text-[#e79b2c] font-bold text-[1.2rem] mb-12 uppercase tracking-widest leading-tight">
  PRIPRAVUJEME PRE VÁS NOVÉ OBSAHY
  </div>
 
  <div className="flex gap-12 max-lg:flex-col">
  <div className="flex-[0.7]">
- <div className="bg-black text-white p-16 rounded-3xl text-center shadow-2xl relative overflow-hidden h-full flex flex-col justify-center">
- <div className="absolute top-0 left-0 w-64 h-64 bg-[#f47f44]/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
- <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#f47f44]/10 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
+ <div className="bg-[#1a6b8a] text-white p-16 max-md:p-5 rounded-3xl text-center shadow-2xl relative overflow-hidden h-full flex flex-col justify-center">
+ <div className="absolute top-0 left-0 w-64 h-64 bg-[#e79b2c]/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+ <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#e79b2c]/10 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
 
  <div className="relative z-10">
- <div className="text-[#f47f44] text-[3.5rem] font-bold mb-8" style={{ fontFamily: 'var(--font-heading)' }}>
+ <div className="text-[#e79b2c] text-[3.5rem] font-bold mb-8" style={{ fontFamily: 'var(--font-heading)' }}>
  PRIPRAVUJEME
  </div>
 
- <div className="max-w-md mx-auto text-left">
- <h3 className="text-[1.5rem] mb-6 text-white font-bold uppercase text-center" style={{ fontFamily: 'var(--font-heading)' }}>Na čo sa môžete tešiť?</h3>
- <ul className="space-y-4 text-gray-300">
- <li className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Kreatívne metódy učenia</li>
- <li className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Práca s hlasom a prejavom pedagóga</li>
- <li className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Zážitková pedagogika v praxi</li>
- <li className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Ako zaujať a udržať pozornosť</li>
+ <div className="max-w-md mx-auto">
+ <ul className="space-y-4 text-gray-300 text-center">
+ <li className="flex gap-3"><span className="text-[#e79b2c] font-bold">•</span> Kreatívne metódy učenia</li>
+ <li className="flex gap-3"><span className="text-[#e79b2c] font-bold">•</span> Práca s hlasom a prejavom pedagóga</li>
+ <li className="flex gap-3"><span className="text-[#e79b2c] font-bold">•</span> Zážitková pedagogika v praxi</li>
+ <li className="flex gap-3"><span className="text-[#e79b2c] font-bold">•</span> Ako zaujať a udržať pozornosť</li>
  </ul>
  </div>
 
- <div className="mt-12 flex flex-col items-center gap-6">
- <div className="w-16 h-1 bg-[#f47f44]"></div>
- <p className="text-gray-400 uppercase tracking-[0.3em] text-sm">Ludus Academy</p>
- </div>
  </div>
  </div>
  </div>

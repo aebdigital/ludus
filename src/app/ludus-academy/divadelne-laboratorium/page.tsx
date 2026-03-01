@@ -74,9 +74,9 @@ export default function DivadelneLaboratoriumPage() {
  <main className="flex-1 min-w-0">
  <div className="mb-24">
  <h2 className="text-[3rem] mb-2 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
- RADOSŤ <span className="text-[#f47f44]">sa</span> umelecky REALIZOVAŤ
+ RADOSŤ <span className="text-[#e79b2c]">sa</span> umelecky REALIZOVAŤ
  </h2>
- <div className="text-[#f47f44] font-bold text-[1.2rem] mb-8 uppercase tracking-widest leading-tight">
+ <div className="text-[#e79b2c] font-bold text-[1.2rem] mb-8 uppercase tracking-widest leading-tight">
  TVORÍM AUTENTICKY, ŽIJEM SLOBODNE
  </div>
 
@@ -85,7 +85,7 @@ export default function DivadelneLaboratoriumPage() {
  <p>
  Divadelné laboratórium je kurz autorskej tvorby a improvizácie pre dospelých, v ktorom prepojíte oblasť herectva, scenáristiky a improvizácie do prevahy k modernému celku.
  </p>
- <p className="italic font-light text-black border-l-4 border-[#f47f44] pl-6 py-2">
+ <p className="italic font-light text-black border-l-4 border-[#e79b2c] pl-6 py-2">
  Chceli by ste vedieť ako sa dá prepojiť herectvo, improvizácia a autorská tvorba? Chceli byť ste byť súčasťou tohto umeleckého procesu a zistiť ako všetko so všetkým súvísí?
  </p>
  <p>
@@ -111,17 +111,17 @@ export default function DivadelneLaboratoriumPage() {
  <h3 className="text-[1.5rem] mb-4 text-black font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Aké skúsenosti sú potrebné?</h3>
  <p className="text-[#000]">Bez ohľadu na to, či máte skúsenosti s herectvom, tvorivým písaním alebo improvizáciou, ak máte chuť otvoriť sa novým podnetom a výzvam, ste na správnom mieste.</p>
  </div>
- <div className="p-8 bg-black text-white rounded-2xl shadow-xl">
- <h3 className="text-[1.5rem] mb-4 text-[#f47f44] font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Pre koho je určený?</h3>
- <ul className="space-y-4 text-gray-300">
- <li className="flex gap-2"><span className="text-[#f47f44] font-bold">•</span> Záujemcom ktorých zaujíma tvorivé písanie and scenáristika.</li>
- <li className="flex gap-2"><span className="text-[#f47f44] font-bold">•</span> Tým, ktorých zaujíma herectvo.</li>
- <li className="flex gap-2"><span className="text-[#f47f44] font-bold">•</span> Záujemcom, ktorých láka improvizácia and improvizované divadlo.</li>
+ <div className="p-8 bg-[#d66420] text-white rounded-2xl shadow-xl">
+ <h3 className="text-[1.5rem] mb-4 text-black font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Pre koho je určený?</h3>
+ <ul className="space-y-4 text-white">
+ <li className="flex gap-2"><span className="text-[#e79b2c] font-bold">•</span> Záujemcom ktorých zaujíma tvorivé písanie and scenáristika.</li>
+ <li className="flex gap-2"><span className="text-[#e79b2c] font-bold">•</span> Tým, ktorých zaujíma herectvo.</li>
+ <li className="flex gap-2"><span className="text-[#e79b2c] font-bold">•</span> Záujemcom, ktorých láka improvizácia and improvizované divadlo.</li>
  </ul>
  </div>
  </div>
 
- <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100 mb-12">
+ <div className="bg-[#e79b2c] p-10 max-md:p-4 rounded-2xl mb-12 shadow-xl">
  <h3 className="text-[1.8rem] mb-8 text-black" style={{ fontFamily: 'var(--font-heading)' }}>Kurz sa zameriava na:</h3>
  <div className="space-y-6">
  <div>
@@ -143,7 +143,7 @@ export default function DivadelneLaboratoriumPage() {
  </div>
  </div>
 
- <div className="bg-white p-10 rounded-2xl border-2 border-[#f47f44]/30 mb-12">
+ <div className="bg-white p-10 max-md:p-4 rounded-2xl border-2 border-[#e79b2c]/30 mb-12">
  <h3 className="text-[1.8rem] mb-8 text-black" style={{ fontFamily: 'var(--font-heading)' }}>AKÉ ZMENY PRINESIE KURZ DO VÁŠHO ŽIVOTA?</h3>
  <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
  {[
@@ -162,7 +162,7 @@ export default function DivadelneLaboratoriumPage() {
  'Získate nové priateľstvá a zážitky.'
  ].map((item, i) => (
  <li key={i} className="flex gap-3 items-start text-[#000]">
- <span className="text-[#f47f44] mt-1 font-bold">✓</span>
+ <span className="text-[#e79b2c] mt-1 font-bold">✓</span>
  {item}
  </li>
  ))}
@@ -170,14 +170,14 @@ export default function DivadelneLaboratoriumPage() {
  </div>
 
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
- <div className="bg-black text-white p-10 rounded-2xl shadow-xl h-full flex flex-col justify-between">
+ <div className="bg-[#d66420] text-white p-10 max-md:p-4 rounded-2xl shadow-xl h-full flex flex-col justify-between">
  <div>
- <div className="text-[#f47f44] font-bold uppercase tracking-widest mb-2 text-sm">Investícia</div>
+ <div className="text-black font-bold uppercase tracking-widest mb-2 text-sm">Investícia</div>
  <h3 className="text-[2rem] mb-6 leading-tight">
- NEKUPUJETE SI KURZ, INVESTUJETE DO SVOJHO ROZVOJA: <span className="text-[#f47f44]">378 EUR</span>
+ NEKUPUJETE SI KURZ, INVESTUJETE DO SVOJHO ROZVOJA: <span className="text-black">378 EUR</span>
  </h3>
 
- <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-gray-300">
+ <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-white">
  <ul className="space-y-3">
  <li className="flex justify-between border-b border-white/10 pb-2">
  <span>Počet hodín:</span>
@@ -193,11 +193,11 @@ export default function DivadelneLaboratoriumPage() {
  </li>
  </ul>
  <ul className="space-y-2 text-sm">
- <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Herecké and improvizačné cvičenia</li>
- <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Praktický tréning</li>
- <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Malé občerstvenie</li>
- <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Záverečné vystúpenie pre divákov</li>
- <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Certifikát</li>
+ <li className="flex gap-2 items-center"><span className="text-[#e79b2c]">•</span> Herecké and improvizačné cvičenia</li>
+ <li className="flex gap-2 items-center"><span className="text-[#e79b2c]">•</span> Praktický tréning</li>
+ <li className="flex gap-2 items-center"><span className="text-[#e79b2c]">•</span> Malé občerstvenie</li>
+ <li className="flex gap-2 items-center"><span className="text-[#e79b2c]">•</span> Záverečné vystúpenie pre divákov</li>
+ <li className="flex gap-2 items-center"><span className="text-[#e79b2c]">•</span> Certifikát</li>
  </ul>
  </div>
  </div>
@@ -206,12 +206,11 @@ export default function DivadelneLaboratoriumPage() {
  </div>
  </div>
 
- <div className="bg-white p-10 rounded-2xl border border-gray-100 shadow-sm h-full flex flex-col">
+ <div className="bg-white p-10 max-md:p-4 rounded-2xl border border-gray-100 shadow-sm h-full flex flex-col">
  <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>Slovami účastníkov</h3>
- <div className="rounded-xl overflow-hidden shadow-lg border-4 border-black flex-grow relative">
- <div className="absolute inset-0">
+ <div className="rounded-xl overflow-hidden shadow-lg border-4 border-black aspect-video">
+ 
  <video src="/videos/divadelne-laboratorium.mp4" controls className="w-full h-full object-cover" />
- </div>
  </div>
  </div>
  </div>
@@ -226,7 +225,7 @@ export default function DivadelneLaboratoriumPage() {
  return (
  <div
  key={member.name}
- className={`bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 ${canOpen ? 'cursor-pointer hover:shadow-xl ring-2 ring-transparent hover:ring-[#f47f44]/50 group' : ''}`}
+ className={`bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 ${canOpen ? 'cursor-pointer hover:shadow-xl ring-2 ring-transparent hover:ring-[#e79b2c]/50 group' : ''}`}
  onClick={() => canOpen && handleMemberClick(member)}
  >
  <div className="aspect-[3/4] relative bg-gray-100 overflow-hidden">
@@ -239,7 +238,7 @@ export default function DivadelneLaboratoriumPage() {
  />
  <div className="absolute bottom-0 left-0 right-0 z-10 p-4 bg-gradient-to-t from-black/70 to-transparent">
  <h3 className="text-white text-[1.1rem] mb-0.5 leading-tight drop-shadow-lg" style={{ fontFamily: 'var(--font-heading)' }}>{member.name}</h3>
- <p className="text-[#f47f44] font-bold text-xs uppercase tracking-wider drop-shadow-lg">{member.role}</p>
+ <p className="text-[#e79b2c] font-bold text-xs uppercase tracking-wider drop-shadow-lg">{member.role}</p>
  </div>
  {canOpen && (
  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -255,11 +254,11 @@ export default function DivadelneLaboratoriumPage() {
  </div>
  </div>
 
- <div className="bg-black text-white p-10 rounded-2xl text-center shadow-xl">
+ <div className="bg-[#d66420] text-white p-10 max-md:p-4 rounded-2xl text-center shadow-xl">
  <h4 className="text-[1.8rem] font-bold text-white mb-4 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>
  ĎALŠÍ CYKLUS KURZOV SPUSTÍME V SEPTEMBRI 2026
  </h4>
- <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+ <p className="text-white mb-8 max-w-2xl mx-auto">
  V prípade, že máte o tento kurz záujem, tak nám pokojne napíšte and my Vás zaradíme na "WAITING LIST". Akonáhle budeme mať naplánované termíny kurzov, tak Vás budeme medzi prvými informovať aby ste sa mohli prihlásiť.
  </p>
  <Button

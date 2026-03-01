@@ -65,15 +65,15 @@ export default function WorkshopKreativitaPage() {
  <main className="flex-1 min-w-0">
  <div className="mb-24">
  <h2 className="text-[3rem] mb-2 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
- RADOSŤ <span className="text-[#f47f44]">si</span> TVORIŤ
+ RADOSŤ <span className="text-[#149951]">si</span> TVORIŤ
  </h2>
- <div className="text-[#f47f44] font-bold text-[1.2rem] mb-8 uppercase tracking-widest leading-tight">
+ <div className="text-[#149951] font-bold text-[1.2rem] mb-8 uppercase tracking-widest leading-tight">
  KAŽDÝ Z NÁS VIE A MÔŽE BYŤ KREATÍVNY
  </div>
 
  <div className="flex gap-12 max-lg:flex-col mb-12">
  <div className="flex-[0.7] text-[1.1rem] text-[#000] space-y-6 leading-relaxed">
- <p className="italic font-light text-black border-l-4 border-[#f47f44] pl-6 py-2">
+ <p className="italic font-light text-black border-l-4 border-[#149951] pl-6 py-2">
  Naša predstavivosť a kreativita majú neobmedzené možnosti.
  </p>
  <p>
@@ -92,9 +92,9 @@ export default function WorkshopKreativitaPage() {
  </div>
 
  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
- <div className="p-8 bg-black text-white rounded-2xl shadow-xl">
- <h3 className="text-[1.5rem] mb-4 text-[#f47f44] font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Pre koho je workshop určený?</h3>
- <div className="space-y-4 text-gray-300">
+ <div className="p-8 bg-[#269fab] text-white rounded-2xl shadow-xl">
+ <h3 className="text-[1.5rem] mb-4 text-black font-bold uppercase" style={{ fontFamily: 'var(--font-heading)' }}>Pre koho je workshop určený?</h3>
+ <div className="space-y-4 text-white">
  <p>Workshop kreatívneho myslenia je určený pre všetkých, ktorí chcú objaviť alebo rozvíjať svoju kreativitu – bez ohľadu na vek, profesiu či skúsenosti.</p>
  <p>Je ideálny pre ľudí, ktorí sa chcú naučiť myslieť inak, hľadať nové riešenia, byť otvorenejší novým nápadom alebo prekonať obmedzujúce presvedčenia.</p>
  <p className="font-bold text-white">Ak cítite, že by ste chceli do svojho života vniesť viac hravosti, tvorivosti a spontánnosti, tento kurz je pre vás.</p>
@@ -109,7 +109,7 @@ export default function WorkshopKreativitaPage() {
  </div>
  </div>
 
- <div className="bg-white border border-[#f47f44]/20 p-10 rounded-2xl mb-12 shadow-[0_10px_40px_rgba(0,0,0,0.03)]">
+ <div className="bg-white border border-[#149951]/20 p-10 max-md:p-4 rounded-2xl mb-12 shadow-[0_10px_40px_rgba(0,0,0,0.03)]">
  <p className="mb-6 leading-relaxed text-[#000]">
  Zameriame sa na rozvoj konkrétnych zručností, ktoré podporujú tvorivé myslenie.
  Budeme pracovať s metódami ako <strong className="text-black">synektika, analógia, metafora, metóda šiestich mysliacich klobúkov, improvizácia, či zmyslové vnímanie</strong>.
@@ -122,19 +122,19 @@ export default function WorkshopKreativitaPage() {
 
  <div className="mt-12">
  <h3 className="text-[1.8rem] mb-8 text-black" style={{ fontFamily: 'var(--font-heading)' }}>Čo si z workshopu odnesiete?</h3>
- <div className="bg-gray-50 border border-gray-100 p-8 rounded-xl space-y-4">
- <p className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Po absolvovaní workshopu budete kreatívnejší and schopnejší riešiť problémy originálnejším spôsobom.</p>
- <p className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Naučíte sa, ako rozvíjať svoju tvorivosť v každodennom živote, práci aj medziľudských vzťahoch.</p>
- <p className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Získate praktické nástroje and techniky, ktoré vám pomôžu rozvíjať kreativitu aj po skončení workshopu.</p>
- <p className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Stačí sa odvážiť skúšať, hrať sa and objavovať!</p>
- <p className="flex gap-3"><span className="text-[#f47f44] font-bold">•</span> Zistíte, kde sú vaše silné stránky, kde máte limity and čo s nimi môžete robiť.</p>
- <p className="flex gap-3 font-bold text-black"><span className="text-[#f47f44]">•</span> Posuniete svoje kreatívne myslenie na vyššiu úroveň and naučíte sa pracovať so svojím potenciálom.</p>
+ <div className="bg-gray-50 border border-gray-100 p-8 max-md:p-3 rounded-xl space-y-4">
+ <p className="flex gap-3"><span className="text-[#149951] font-bold">•</span> Po absolvovaní workshopu budete kreatívnejší and schopnejší riešiť problémy originálnejším spôsobom.</p>
+ <p className="flex gap-3"><span className="text-[#149951] font-bold">•</span> Naučíte sa, ako rozvíjať svoju tvorivosť v každodennom živote, práci aj medziľudských vzťahoch.</p>
+ <p className="flex gap-3"><span className="text-[#149951] font-bold">•</span> Získate praktické nástroje and techniky, ktoré vám pomôžu rozvíjať kreativitu aj po skončení workshopu.</p>
+ <p className="flex gap-3"><span className="text-[#149951] font-bold">•</span> Stačí sa odvážiť skúšať, hrať sa and objavovať!</p>
+ <p className="flex gap-3"><span className="text-[#149951] font-bold">•</span> Zistíte, kde sú vaše silné stránky, kde máte limity and čo s nimi môžete robiť.</p>
+ <p className="flex gap-3 font-bold text-black"><span className="text-[#149951]">•</span> Posuniete svoje kreatívne myslenie na vyššiu úroveň and naučíte sa pracovať so svojím potenciálom.</p>
  </div>
  </div>
  </div>
 
- <div className="bg-white p-10 rounded-2xl border-2 border-black mb-12">
- <h3 className="text-[1.8rem] mb-8 text-black uppercase" style={{ fontFamily: 'var(--font-heading)' }}>AKÉ ZMENY PRINESIE KURZ DO VÁŠHO ŽIVOTA?</h3>
+ <div className="bg-[#149951] p-10 max-md:p-4 rounded-2xl mb-12 shadow-xl">
+ <h3 className="text-[1.8rem] mb-8 text-white uppercase" style={{ fontFamily: 'var(--font-heading)' }}>AKÉ ZMENY PRINESIE KURZ DO VÁŠHO ŽIVOTA?</h3>
  <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
  {[
  'Zbavíte sa obmedzujúcich presvedčení.',
@@ -150,21 +150,21 @@ export default function WorkshopKreativitaPage() {
  'Lepšie zvládanie zmien a nepredvídateľnosti.',
  'Väčšia sebadôvera v tvorivom procese.'
  ].map((item, i) => (
- <li key={i} className="flex gap-3 items-start text-[#000]">
- <span className="text-[#f47f44] mt-1 font-bold">✓</span>
+ <li key={i} className="flex gap-3 items-start text-white">
+ <span className="text-white mt-1 font-bold">✓</span>
  {item}
  </li>
  ))}
  </ul>
  </div>
 
- <div className="bg-black text-white p-10 rounded-2xl mb-12 shadow-xl">
- <div className="text-[#f47f44] font-bold uppercase tracking-widest mb-2 text-sm text-center">Investícia</div>
+ <div className="bg-[#269fab] text-white p-10 max-md:p-4 rounded-2xl mb-12 shadow-xl">
+ <div className="text-black font-bold uppercase tracking-widest mb-2 text-sm text-center">Investícia</div>
  <h3 className="text-[2rem] mb-8 text-center leading-tight">
- NEKUPUJETE SI WORKSHOP, INVESTUJETE DO SVOJHO ROZVOJA: <span className="text-[#f47f44]">119 EUR</span>
+ NEKUPUJETE SI WORKSHOP, INVESTUJETE DO SVOJHO ROZVOJA: <span className="text-black">119 EUR</span>
  </h3>
 
- <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-gray-300">
+ <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-white">
  <ul className="space-y-3 font-medium">
  <li className="flex justify-between border-b border-white/10 pb-2">
  <span>Trvanie kurzu:</span>
@@ -180,10 +180,10 @@ export default function WorkshopKreativitaPage() {
  </li>
  </ul>
  <ul className="space-y-2 text-sm">
- <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Profesionálna lektorka MgA. Baranová</li>
- <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Kreatívne metódy and techniky</li>
- <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Občerstvenie: ovocie, káva, čaj</li>
- <li className="flex gap-2 items-center"><span className="text-[#f47f44]">•</span> Certifikát o absolvovaní</li>
+ <li className="flex gap-2 items-center"><span className="text-[#149951]">•</span> Profesionálna lektorka MgA. Baranová</li>
+ <li className="flex gap-2 items-center"><span className="text-[#149951]">•</span> Kreatívne metódy and techniky</li>
+ <li className="flex gap-2 items-center"><span className="text-[#149951]">•</span> Občerstvenie: ovocie, káva, čaj</li>
+ <li className="flex gap-2 items-center"><span className="text-[#149951]">•</span> Certifikát o absolvovaní</li>
  </ul>
  </div>
  <div className="mt-8 pt-6 border-t border-white/10 text-sm italic opacity-70">
@@ -201,7 +201,7 @@ export default function WorkshopKreativitaPage() {
  return (
  <div
  key={member.name}
- className={`bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 ${canOpen ? 'cursor-pointer hover:shadow-xl ring-2 ring-transparent hover:ring-[#f47f44]/50 group' : ''}`}
+ className={`bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 ${canOpen ? 'cursor-pointer hover:shadow-xl ring-2 ring-transparent hover:ring-[#149951]/50 group' : ''}`}
  onClick={() => canOpen && handleMemberClick(member)}
  >
  <div className="aspect-[3/4] relative bg-gray-100 overflow-hidden">
@@ -214,7 +214,7 @@ export default function WorkshopKreativitaPage() {
  />
  <div className="absolute bottom-0 left-0 right-0 z-10 p-4 bg-gradient-to-t from-black/70 to-transparent">
  <h3 className="text-white text-[1.1rem] mb-0.5 leading-tight drop-shadow-lg" style={{ fontFamily: 'var(--font-heading)' }}>{member.name}</h3>
- <p className="text-[#f47f44] font-bold text-xs uppercase tracking-wider drop-shadow-lg">{member.role}</p>
+ <p className="text-[#149951] font-bold text-xs uppercase tracking-wider drop-shadow-lg">{member.role}</p>
  </div>
  {canOpen && (
  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -231,12 +231,12 @@ export default function WorkshopKreativitaPage() {
  </div>
 
  {/* Terms and Waiting List */}
- <div className="bg-black text-white border border-gray-800 p-10 rounded-2xl mb-12 relative overflow-hidden text-center shadow-xl">
+ <div className="bg-[#269fab] text-white p-10 max-md:p-4 rounded-2xl mb-12 relative overflow-hidden text-center shadow-xl">
  <h4 className="text-[2rem] font-bold text-white mb-4 uppercase" style={{ fontFamily: 'var(--font-heading)' }}>TERMÍN: WAITING LIST</h4>
  <p className="text-[1.2rem] text-white font-bold mb-4 uppercase tracking-tighter">NAPÍŠTE NÁM A MY VÁS PRIDÁME</p>
- <div className="flex flex-col gap-2 mb-8 max-w-md mx-auto text-gray-300">
- <div className="flex justify-between border-b border-gray-800 pb-2"><span>Čas:</span> <strong>09:30 - 16:30</strong></div>
- <div className="flex justify-between border-b border-gray-800 pb-2"><span>Obedná pauza:</span> <strong>12:30 - 13:30</strong></div>
+ <div className="flex flex-col gap-2 mb-8 max-w-md mx-auto text-white">
+ <div className="flex justify-between border-b border-white/30 pb-2"><span>Čas:</span> <strong>09:30 - 16:30</strong></div>
+ <div className="flex justify-between border-b border-white/30 pb-2"><span>Obedná pauza:</span> <strong>12:30 - 13:30</strong></div>
  </div>
  <div className="flex gap-4 justify-center max-sm:flex-col max-sm:items-center">
  <Button

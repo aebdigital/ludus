@@ -28,18 +28,18 @@ export default async function FiremnyWorkshopPage() {
  <main className="flex-1 min-w-0">
  <div className="mb-24">
  <h2 className="text-[3rem] mb-8 text-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
- Radosť <span className="text-[#f47f44]">spolu</span> objavovať
+ Radosť <span className="text-[#d66420]">spolu</span> objavovať
  </h2>
 
  <div className="flex gap-12 max-lg:flex-col mb-16">
  <div className="flex-[0.7] text-[1.15rem] text-[#000] space-y-6 leading-relaxed flex flex-col justify-center">
- <p className="italic font-light text-black border-l-4 border-[#f47f44] pl-6 py-2">
+ <p className="italic font-light text-black border-l-4 border-[#d66420] pl-6 py-2">
  Každá organizácia komunikuje. Otázka je, či pôsobí presvedčivo, zrozumiteľne a jednotne. Dobré nápady nestačia, ak sa stratia v podaní.
  </p>
  <p>
  Skupinové workshopy v Ludus Academy sú prakticky orientované tréningy pre tímy, ktoré chcú zlepšiť vystupovanie, spoluprácu a komunikáciu navonok aj vo vnútri organizácie. Program pripravujeme na mieru podľa potrieb klienta – od prezentácií a mediálnych výstupov až po moderovanie či vystupovanie pred kamerou.
  </p>
- <p className="text-[1.3rem] font-bold text-black border-l-4 border-[#f47f44] pl-6 py-2">
+ <p className="text-[1.3rem] font-bold text-black border-l-4 border-[#d66420] pl-6 py-2">
  Pripravíme váš tím na situácie, v ktorých na slovách záleží. Workshopy môžu mať formu poldňového alebo celodenného tréningu.
  </p>
  </div>
@@ -55,11 +55,11 @@ export default async function FiremnyWorkshopPage() {
  </div>
 
  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
- <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100">
+ <div className="bg-[#e79b2c] p-10 max-md:p-4 rounded-2xl">
  <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
  Cieľ workshopu
  </h3>
- <div className="space-y-4 text-[#000]">
+ <div className="space-y-4 text-black">
  <p>
  Cieľom je, aby členovia tímu vedeli komunikovať jasne, pokojne a profesionálne aj v situáciách, ktoré prinášajú tlak alebo neistotu.
  </p>
@@ -71,7 +71,7 @@ export default async function FiremnyWorkshopPage() {
  </p>
  </div>
  </div>
- <div className="bg-white p-10 rounded-2xl border-2 border-gray-50 flex flex-col justify-center">
+ <div className="bg-white p-10 max-md:p-4 rounded-2xl border-2 border-gray-50 flex flex-col justify-center">
  <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
  Pre koho je určený
  </h3>
@@ -85,7 +85,7 @@ export default async function FiremnyWorkshopPage() {
  'Odborníkov, ktorí potrebujú zrozumiteľne vysvetľovať svoju prácu'
  ].map((item, i) => (
  <li key={i} className="flex gap-3 items-start text-[#000]">
- <span className="text-[#f47f44] mt-1 font-bold">•</span>
+ <span className="text-[#d66420] mt-1 font-bold">•</span>
  {item}
  </li>
  ))}
@@ -96,11 +96,11 @@ export default async function FiremnyWorkshopPage() {
  </div>
  </div>
 
- <div className="bg-[#f47f44]/5 border border-[#f47f44]/20 p-10 rounded-2xl mb-16">
- <h3 className="text-[2rem] mb-6 text-black text-center" style={{ fontFamily: 'var(--font-heading)' }}>
+ <div className="bg-[#d66420] p-10 max-md:p-4 rounded-2xl mb-16 shadow-xl">
+ <h3 className="text-[2rem] mb-6 text-white text-center" style={{ fontFamily: 'var(--font-heading)' }}>
  Čo účastníci získajú
  </h3>
- <p className="mb-8 text-center text-[1.1rem] text-black">
+ <p className="mb-8 text-center text-[1.1rem] text-white">
  Počas workshopu účastníci pracujú na reálnych situáciách z ich praxe. Podľa vašich preferencií môžu účastníci získať najmä:
  </p>
  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -115,13 +115,13 @@ export default async function FiremnyWorkshopPage() {
  'Zvládanie trémy a stresových situácií',
  'Schopnosť viesť rozhovor alebo moderovať stretnutie'
  ].map((benefit, i) => (
- <div key={i} className="flex gap-3 items-center bg-white p-4 rounded-xl shadow-sm border border-[#f47f44]/10">
- <span className="w-6 h-6 rounded-full bg-[#f47f44] flex items-center justify-center text-black text-xs font-bold">✓</span>
- <span className="text-[1rem] font-medium text-black">{benefit}</span>
+ <div key={i} className="flex gap-3 items-center bg-white/15 p-4 rounded-xl">
+ <span className="w-6 h-6 rounded-full bg-white flex items-center justify-center text-[#d66420] text-xs font-bold">✓</span>
+ <span className="text-[1rem] font-medium text-white">{benefit}</span>
  </div>
  ))}
  </div>
- <p className="mt-8 text-center text-gray-600 italic">
+ <p className="mt-8 text-center text-white/70 italic">
  Počas workshopu účastníci pracujú na reálnych situáciách z ich praxe.
  </p>
  </div>
@@ -155,8 +155,8 @@ export default async function FiremnyWorkshopPage() {
  <video src="/videos/firemny-workshop.mp4" controls className="w-full aspect-video object-cover" />
  </div>
 
- <div className="bg-black text-white p-10 rounded-2xl text-center shadow-2xl relative overflow-hidden group">
- <div className="absolute inset-0 bg-gradient-to-r from-[#f47f44]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+ <div className="bg-[#e79b2c] text-white p-10 max-md:p-4 rounded-2xl text-center shadow-2xl relative overflow-hidden group">
+ <div className="absolute inset-0 bg-gradient-to-r from-[#d66420]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
  <h3 className="text-[2.2rem] mb-6 leading-tight relative z-10">
  Máte záujem?
  </h3>
