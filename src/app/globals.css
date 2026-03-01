@@ -10,6 +10,15 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Festivo LC Fixed';
+  src: url('/fonts/FestivoLC-Wood-fixed3.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 /* Tailwind theme tokens */
 @theme inline {
   --color-primary: #000000;
@@ -18,16 +27,18 @@
   --color-bg: #f8f7f1;
   --color-header-bg: rgba(255, 255, 255, 0.95);
   --color-footer-bg: #f47f44;
-  --font-heading: 'Festivo LC', 'Antonio', sans-serif;
+  --font-heading: 'Festivo LC Fixed', 'Antonio', sans-serif;
   --font-body: 'Raleway', sans-serif;
   --radius: 12px;
 }
+
 
 /* Hide scrollbar but keep scroll */
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }

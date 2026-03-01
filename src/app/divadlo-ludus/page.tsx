@@ -18,6 +18,7 @@ export default async function DivadloLudusPage() {
     return (
         <>
             {/* Hero */}
+
             <section
                 className="h-[40vh] max-md:h-[20vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-13 "
                 style={{ backgroundImage: "url('/images/program/program-hero.webp')" }}

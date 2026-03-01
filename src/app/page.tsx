@@ -33,8 +33,8 @@ export default async function Home() {
           title="Škola Ludus"
           description="SZUŠ s tvorivou dramatikou pre deti a tínedžerov"
           backgroundImage="/images/skola-main.webp"
-          logo="/images/loga-4/logo-skola.webp"
-          logoAlt="Logo Skola Ludus"
+          logoText={['Súkromná', 'Základná', 'Umelecká', 'Škola']}
+          logoAlt="Logo Škola Ludus"
         />
 
         <IntroSection
@@ -42,7 +42,7 @@ export default async function Home() {
           title="DIVADLO LUDUS"
           description="divadelná tvorba pre mladých"
           backgroundImage="/images/divadlo-main.webp"
-          logo="/images/loga-4/logo-divadlo.webp"
+          logoText="divadlo"
           logoAlt="Logo Ludus Divadlo"
         />
 
@@ -51,7 +51,7 @@ export default async function Home() {
           title="Ludus Academy"
           description="Divadelné kurzy a workshopy pre dospelých"
           backgroundImage="/images/academy-main-new.webp"
-          logo="/images/loga-4/logo-academy.webp"
+          logoText="academy"
           logoAlt="Logo Ludus Academy"
         />
 
@@ -60,8 +60,8 @@ export default async function Home() {
           title="Ludus Tábor"
           description="Denný letný divadelný tábor pre deti a tínedžerov"
           backgroundImage="/images/tabor/IMG_5438.webp"
-          logo="/images/loga-4/logo-tabor.webp"
-          logoAlt="Logo Ludus Tabor"
+          logoText="tábor"
+          logoAlt="Logo Ludus Tábor"
         />
       </main>
 

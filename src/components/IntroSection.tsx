@@ -8,7 +8,7 @@ interface IntroSectionProps {
   title: React.ReactNode;
   description: string;
   backgroundImage: string;
-  logo: string;
+  logoText: string | string[];
   logoAlt: string;
 }
 
@@ -17,9 +17,12 @@ export default function IntroSection({
   title,
   description,
   backgroundImage,
-  logo,
+  logoText,
   logoAlt
 }: IntroSectionProps) {
+  const textLines = Array.isArray(logoText) ? logoText : [logoText];
+  const isMultiLine = textLines.length > 1;
+
   return (
     <Link
       href={href}
@@ -36,14 +39,28 @@ export default function IntroSection({
 
       {/* Content */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center w-full px-5 transition-all duration-500 group-hover:bg-black/20">
-        {/* Logo */}
-        <Image
-          src={logo}
-          alt={logoAlt}
-          width={150}
-          height={100}
-          className="block max-w-[120px] max-md:max-w-[100px] max-h-[80px] mx-auto mb-4 max-md:mb-2 object-contain transition-transform duration-500 drop-shadow-lg bg-white py-2 px-4 rounded-xl"
-        />
+        {/* Logo: LUDUS image + line + text */}
+        <div className="flex items-center gap-3 max-md:gap-2 bg-white rounded-xl px-4 py-2 max-md:px-3 max-md:py-1.5 mb-4 max-md:mb-2 drop-shadow-lg">
+          <Image
+            src="/images/loga-4/logo-main.webp"
+            alt={logoAlt}
+            width={120}
+            height={60}
+            className="h-[45px] max-md:h-[30px] w-auto object-contain !rounded-none"
+          />
+          <div className="w-[2px] self-stretch bg-black rounded-full" />
+          <div className="flex flex-col items-start justify-start">
+            {textLines.map((line, i) => (
+              <span
+                key={i}
+                className={`text-black font-bold leading-tight ${isMultiLine ? 'text-[0.55rem] max-md:text-[0.4rem] uppercase' : 'text-[1.1rem] max-md:text-[0.75rem]'}`}
+                style={{ fontFamily: 'var(--font-body)', letterSpacing: '0.05em' }}
+              >
+                {line}
+              </span>
+            ))}
+          </div>
+        </div>
 
         {/* Title */}
         <h2
