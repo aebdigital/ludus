@@ -147,20 +147,21 @@ export default function SkolaLudusPage() {
                         {/* Quick Links */}
                         <div className="grid grid-cols-5 gap-8 mb-16 max-md:grid-cols-2">
                             {[
-                                { title: 'História', href: '/historia', icon: '📜' },
-                                { title: 'Prihláška', href: '/skola-ludus/prihlaska', icon: '📝' },
-                                { title: 'Školné', href: '/skola-ludus/skolne', icon: '💰' },
-                                { title: 'Výučba', href: '/skola-ludus/vyucba', icon: '🎭' },
-                                { title: 'Priestory', href: '/skola-ludus/priestory-skoly', icon: '🏢' }
+                                { title: 'História', href: '/historia', image: '/images/skola/IMG_2993.webp' },
+                                { title: 'Prihláška', href: '/skola-ludus/prihlaska', image: '/images/skola/IMG_4742.webp' },
+                                { title: 'Školné', href: '/skola-ludus/skolne', image: '/images/skola/IMG_2915.webp' },
+                                { title: 'Výučba', href: '/skola-ludus/vyucba', image: '/images/skola/IMG_1789.webp' },
+                                { title: 'Priestory', href: '/skola-ludus/priestory-skoly', image: '/fotky priestorov/triedy/IMG_5436.webp' }
                             ].map((item) => (
                                 <Link
                                     key={item.title}
                                     href={item.href}
-                                    className="bg-white p-8 max-md:p-4 rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.05)] text-center transition-all duration-300 border border-transparent hover:-translate-y-1 hover:border-[#f47f44] no-underline"
+                                    className="relative rounded-xl overflow-hidden shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-all duration-300 hover:-translate-y-1 no-underline h-[200px] max-md:h-[140px] flex items-center justify-center bg-cover bg-center"
+                                    style={{ backgroundImage: `url('${item.image}')` }}
                                 >
-                                    <span className="text-4xl max-md:text-3xl mb-4 max-md:mb-2 block">{item.icon}</span>
+                                    <div className="absolute inset-0 bg-black/50" />
                                     <h3
-                                        className="text-[1.5rem] max-md:text-[1.1rem] mb-0 text-black"
+                                        className="relative z-10 text-[1.5rem] max-md:text-[1.1rem] mb-0 text-white"
                                         style={{ fontFamily: 'var(--font-heading)' }}
                                     >
                                         {item.title}
@@ -171,9 +172,9 @@ export default function SkolaLudusPage() {
 
                         {/* Info Grid */}
                         <div className="grid grid-cols-2 gap-16 max-md:grid-cols-1">
-                            <div className="bg-white p-12 max-md:p-6 rounded-xl shadow-[0_5px_20px_rgba(0,0,0,0.05)]">
+                            <div className="bg-[#1a6b8a] p-12 max-md:p-6 rounded-xl shadow-[0_5px_20px_rgba(0,0,0,0.05)]">
                                 <h3
-                                    className="text-[2rem] mb-6 border-b-2 border-[#f47f44] pb-2 inline-block"
+                                    className="text-[2rem] mb-6 border-b-2 border-[#f47f44] pb-2 inline-block text-white"
                                     style={{ fontFamily: 'var(--font-heading)' }}
                                 >
                                     Čo ponúkame
@@ -190,7 +191,7 @@ export default function SkolaLudusPage() {
                                     ].map((item) => (
                                         <li
                                             key={item}
-                                            className="relative pl-8 mb-4 text-[1.1rem] text-[#000] before:content-['•'] before:text-[#f47f44] before:font-bold before:text-xl before:absolute before:left-0"
+                                            className="relative pl-8 mb-4 text-[1.1rem] text-white before:content-['•'] before:text-[#f47f44] before:font-bold before:text-xl before:absolute before:left-0"
                                         >
                                             {item}
                                         </li>

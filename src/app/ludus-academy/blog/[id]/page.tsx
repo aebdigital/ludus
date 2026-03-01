@@ -44,7 +44,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
  <div className="w-[95%] mx-auto py-12">
  <div className="flex gap-16 items-start max-lg:flex-col">
  {/* Main Content */}
- <article className="flex-[2]">
+ <article className="flex-[3]">
  <div className="bg-white p-12 rounded-xl shadow-[0_5px_20px_rgba(0,0,0,0.05)] max-md:p-6">
  <header className="mb-8 border-b border-gray-200 pb-4">
  <span className="text-base text-black font-bold">{post.date}</span>

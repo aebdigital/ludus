@@ -69,7 +69,29 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
                         className="fixed inset-0 z-[3000] flex items-center justify-center p-4 sm:p-12 bg-black/95 backdrop-blur-md"
                         onClick={() => setSelectedIdx(null)}
                     >
-                        <motion.div
+                            {/* Close Button */}
+                        <button
+                            className="fixed top-4 right-4 sm:top-8 sm:right-8 text-white text-5xl font-extralight hover:text-[#f47f44] transition-colors p-4 z-[3100]"
+                            onClick={() => setSelectedIdx(null)}
+                        >
+                            ✕
+                        </button>
+
+                        {/* Navigation Buttons */}
+                        <button
+                            className="fixed left-4 sm:left-8 top-1/2 -translate-y-1/2 bg-white/5 hover:bg-white/20 text-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-4xl transition-all z-[3100] group backdrop-blur-sm"
+                            onClick={prevImage}
+                        >
+                            <span className="group-hover:-translate-x-1 transition-transform">←</span>
+                        </button>
+                        <button
+                            className="fixed right-4 sm:right-8 top-1/2 -translate-y-1/2 bg-white/5 hover:bg-white/20 text-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-4xl transition-all z-[3100] group backdrop-blur-sm"
+                            onClick={nextImage}
+                        >
+                            <span className="group-hover:translate-x-1 transition-transform">→</span>
+                        </button>
+
+                    <motion.div
                             key={selectedIdx}
                             initial={{ scale: 0.9, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
@@ -78,28 +100,6 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
                             className="relative w-full max-w-7xl h-full flex flex-col items-center justify-center"
                             onClick={(e) => e.stopPropagation()}
                         >
-                            {/* Close Button */}
-                            <button
-                                className="fixed top-4 right-4 sm:top-8 sm:right-8 text-white text-5xl font-extralight hover:text-[#f47f44] transition-colors p-4 z-[3100]"
-                                onClick={() => setSelectedIdx(null)}
-                            >
-                                ✕
-                            </button>
-
-                            {/* Navigation Buttons */}
-                            <button
-                                className="fixed left-4 sm:left-8 top-1/2 -translate-y-1/2 bg-white/5 hover:bg-white/20 text-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-4xl transition-all z-[3100] group backdrop-blur-sm"
-                                onClick={prevImage}
-                            >
-                                <span className="group-hover:-translate-x-1 transition-transform">←</span>
-                            </button>
-                            <button
-                                className="fixed right-4 sm:right-8 top-1/2 -translate-y-1/2 bg-white/5 hover:bg-white/20 text-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-4xl transition-all z-[3100] group backdrop-blur-sm"
-                                onClick={nextImage}
-                            >
-                                <span className="group-hover:translate-x-1 transition-transform">→</span>
-                            </button>
-
                             <div className="relative w-full h-[80vh]">
                                 <Image
                                     src={images[selectedIdx].url}

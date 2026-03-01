@@ -64,12 +64,13 @@ export default function ProgramGallery({ images, title }: ProgramGalleryProps) {
 
     if (images.length === 1) {
         return (
-            <div className="w-full h-full relative">
+            <div className="w-full h-full min-h-[50vh] relative">
                 <Image
                     src={images[0]}
                     alt={title}
                     fill
-                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover max-md:!rounded-none"
                     priority
                 />
             </div>
@@ -77,7 +78,7 @@ export default function ProgramGallery({ images, title }: ProgramGalleryProps) {
     }
 
     return (
-        <div className="w-full h-full relative overflow-hidden group bg-gray-200">
+        <div className="w-full h-full min-h-[50vh] relative overflow-hidden group bg-gray-200">
             <AnimatePresence initial={false} custom={direction}>
                 <motion.div
                     key={currentIndex}
@@ -108,7 +109,8 @@ export default function ProgramGallery({ images, title }: ProgramGalleryProps) {
                         src={images[currentIndex]}
                         alt={`${title} - image ${currentIndex + 1}`}
                         fill
-                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover max-md:!rounded-none"
                         priority={currentIndex === 0}
                     />
                 </motion.div>

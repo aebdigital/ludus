@@ -88,6 +88,9 @@ export default function KnihaPage() {
  </p>
  </div>
 
+ <p className="mt-4 text-white underline">
+ Knihu dostanete kúpiť na vo všetkých knihkupectvách.
+ </p>
  <div className="mt-4">
  <Button href="/kontakt" className="bg-[#f47f44] text-black px-10 py-4 text-xl border-none hover:bg-white transition-colors">
  Objednať knihu
@@ -170,8 +173,8 @@ export default function KnihaPage() {
  </div>
 
  {/* Gallery */}
- <div className="bg-gray-50 p-12 rounded-xl text-center mb-8 mt-24 shadow-lg transform rotate-[1deg] hover:rotate-0 transition-transform duration-300 max-w-5xl mx-auto border border-gray-100">
- <p className="text-[1.5rem] font-bold uppercase tracking-wide max-w-3xl mx-auto text-[#000] leading-relaxed" style={{ fontFamily: 'var(--font-heading)' }}>
+ <div className="bg-[#07793f] p-12 rounded-xl text-center mb-32 mt-24 shadow-lg transform rotate-[1deg] hover:rotate-0 transition-transform duration-300 max-w-5xl mx-auto">
+ <p className="text-[1.5rem] font-bold uppercase tracking-wide max-w-3xl mx-auto text-white leading-relaxed" style={{ fontFamily: 'var(--font-heading)' }}>
  KREATÍVNI VIEME BYŤ TAKMER PRI KAŽDEJ ČINNOSTI, KTORÚ KAŽDODENNE ROBÍME. JE TO SCHOPNOSŤ, KTORÚ VIEME ROZVÍJAŤ.
  </p>
  </div>

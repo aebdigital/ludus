@@ -166,11 +166,22 @@ function ContactForm() {
  className="w-full p-3 rounded border border-gray-200 focus:border-[#f47f44] outline-none transition-colors bg-white"
  >
  <option value="">Vyberte možnosť...</option>
- <option value="Herecké kurzy">Herecké kurzy</option>
- <option value="Improvizačné kurzy">Improvizačné kurzy</option>
+ <optgroup label="Kurzy">
+ <option value="Herecký kurz">Herecký kurz</option>
+ <option value="Improvizačný kurz">Improvizačný kurz</option>
+ <option value="Divadelné laboratórium">Divadelné laboratórium</option>
  <option value="Kurz tvorivého písania">Kurz tvorivého písania</option>
- <option value="Workshopy">Workshopy</option>
- <option value="Tréningy pre firmy">Tréningy pre firmy</option>
+ </optgroup>
+ <optgroup label="Workshopy">
+ <option value="Workshopy pre školy">Workshopy pre školy</option>
+ <option value="Workshop pre učiteľov">Workshop pre učiteľov</option>
+ <option value="Workshop kreatívneho myslenia">Workshop kreatívneho myslenia</option>
+ </optgroup>
+ <optgroup label="Pre firmy">
+ <option value="Kreatívny tímbilding">Kreatívny tímbilding</option>
+ <option value="Individuálny tréning">Individuálny tréning</option>
+ <option value="Firemný workshop">Firemný workshop</option>
+ </optgroup>
  <option value="Iné">Iné</option>
  </select>
  </div>

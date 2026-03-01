@@ -37,7 +37,7 @@ const workshops = [
         title: "WORKSHOPY PRE ŠKOLY",
         description: <>Radosť <span className="text-[#f47f44]">sa</span> spoznávať</>,
         href: "/ludus-academy/workshopy-skoly",
-        backgroundImage: "/images/academy/IMG_9005.webp"
+        backgroundImage: "/skola.webp"
     },
     {
         title: "WORKSHOP PRE UČITEĽOV",

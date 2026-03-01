@@ -59,7 +59,7 @@ export default async function DivadloLudusPage() {
                                 </div>
                             </div>
                             <Image
-                                src="/images/divadlo-main.webp"
+                                src="/images/divadlo-onas.webp"
                                 alt="Divadlo Ludus"
                                 width={600}
                                 height={400}
@@ -67,7 +67,7 @@ export default async function DivadloLudusPage() {
                             />
                         </div>
 
-                        <div className="bg-white p-8 max-md:p-4 rounded-xl border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.05)] font-bold text-center text-xl text-black">
+                        <div className="bg-[#f47f44] p-8 max-md:p-4 rounded-xl border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.05)] font-bold text-center text-xl text-black">
                             História Ludusu sa nekončí. Naopak - pokračuje ďalej v novej podobe.
                         </div>
 
@@ -89,7 +89,7 @@ export default async function DivadloLudusPage() {
                                             className="flex items-center gap-6 max-md:gap-3 p-6 max-md:p-4 bg-white/10 rounded-xl transition-colors duration-300 hover:bg-white/15 no-underline"
                                         >
                                             <span
-                                                className="text-[2rem] max-md:text-[1.8rem] font-bold min-w-[80px] max-md:min-w-[70px] text-[#f47f44]"
+                                                className="text-[2rem] max-md:text-[1.8rem] font-bold min-w-[80px] max-md:min-w-[70px] text-black"
                                                 style={{ fontFamily: 'var(--font-heading)' }}
                                             >
                                                 {formatEventDate(event.event_date)}
@@ -106,7 +106,7 @@ export default async function DivadloLudusPage() {
                                     ))}
                                 </div>
                                 <div className="text-center mt-8">
-                                    <Link href="/program?category=divadlo-ludus" className="text-[#f47f44] font-bold hover:underline no-underline">
+                                    <Link href="/program?category=divadlo-ludus" className="text-black font-bold hover:underline no-underline">
                                         Zobraziť celý program →
                                     </Link>
                                 </div>
@@ -118,42 +118,38 @@ export default async function DivadloLudusPage() {
                             {[
                                 {
                                     title: 'História',
-                                    description: 'História divadla Ludus',
                                     href: '/historia',
-                                    icon: '📜'
+                                    image: '/images/skola/IMG_2993.webp'
                                 },
                                 {
                                     title: 'Repertoár',
-                                    description: 'Aktuálna ponuka predstavení',
                                     href: '/divadlo-ludus/repertoar',
-                                    icon: '🎭'
+                                    image: '/images/repertoar-hero.webp'
                                 },
                                 {
                                     title: 'Aktivity',
-                                    description: 'Divadelné aktivity a projekty',
                                     href: '/divadlo-ludus/aktivity',
-                                    icon: '🎭'
+                                    image: '/images/divadlo-main.webp'
                                 },
                                 {
                                     title: 'Priestory',
-                                    description: 'BlackBox a ďalšie priestory',
                                     href: '/divadlo-ludus/priestory',
-                                    icon: '🏛️'
+                                    image: '/fotky priestorov/blackbox/IMG_5459.webp'
                                 }
                             ].map((item) => (
                                 <Link
                                     key={item.title}
                                     href={item.href}
-                                    className="bg-white p-10 max-md:p-5 rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.05)] text-center transition-all duration-300 border border-transparent hover:-translate-y-1 hover:border-[#f47f44] no-underline"
+                                    className="relative rounded-xl overflow-hidden shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-all duration-300 hover:-translate-y-1 no-underline h-[200px] max-md:h-[140px] flex items-center justify-center bg-cover bg-center"
+                                    style={{ backgroundImage: `url('${item.image}')` }}
                                 >
-                                    <span className="text-5xl max-md:text-3xl mb-4 max-md:mb-2 block">{item.icon}</span>
+                                    <div className="absolute inset-0 bg-black/50" />
                                     <h3
-                                        className="text-[1.8rem] max-md:text-[1.3rem] mb-2 max-md:mb-0 text-black"
+                                        className="relative z-10 text-[1.8rem] max-md:text-[1.3rem] mb-0 text-white"
                                         style={{ fontFamily: 'var(--font-heading)' }}
                                     >
                                         {item.title}
                                     </h3>
-                                    <p className="text-base text-[#000] m-0 max-md:hidden">{item.description}</p>
                                 </Link>
                             ))}
                         </div>

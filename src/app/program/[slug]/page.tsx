@@ -52,12 +52,12 @@ export default async function ProgramDetailPage({ params }: { params: Promise<{ 
  }
 
  return (
- <main className="min-h-screen pt-20">
+ <main className="min-h-screen pt-20 max-md:pt-13">
  {/* Header Section: Split 50/50 */}
  <section className="flex flex-col lg:flex-row min-h-[85vh]">
  {/* Left: Content & Info - Program Color */}
  <div
- className="w-full lg:w-1/2 p-8 lg:p-20 flex flex-col justify-center relative order-2 lg:order-1"
+ className="w-full lg:w-1/2 p-4 lg:p-20 flex flex-col justify-center relative order-2 lg:order-1"
  style={{ backgroundColor: event.color && event.color !== '#ffffff' ? event.color : '#f3f4f6' }}
  >
  <div className="space-y-6 max-w-xl mx-auto lg:mx-0">
@@ -82,16 +82,6 @@ export default async function ProgramDetailPage({ params }: { params: Promise<{ 
 
  {/* Info Grid (Date, Venue, etc) */}
  <div className="grid grid-cols-2 gap-y-8 gap-x-12 py-8 border-t border-black/10 mt-8">
- <div>
- <span className="block text-xs opacity-50 uppercase tracking-widest mb-1">Dátum</span>
- <div className="text-xl font-medium">
- {new Date(event.event_date).toLocaleDateString('sk-SK')}
- </div>
- <div className="text-lg opacity-80">
- {event.time}
- </div>
- </div>
-
  <div>
  <span className="block text-xs opacity-50 uppercase tracking-widest mb-1">Miesto</span>
  <div className="text-xl font-medium">
@@ -283,6 +273,7 @@ export default async function ProgramDetailPage({ params }: { params: Promise<{ 
  </Link>
  ) : null}
  </div>
+ <p className="text-sm text-black/60 mt-2 mb-0">Správa cez Instagram</p>
  </div>
  ))}
  </div>

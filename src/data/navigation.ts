@@ -67,7 +67,7 @@ export const menuData: NavCategory[] = [
   },
   {
     title: "Program",
-    url: "/program",
+    url: "/program?category=divadlo-ludus",
     image: "/images/painting.webp",
     links: [
       { name: "Škola Ludus", url: "/program?category=skola-ludus", image: "/images/skola-main.webp" },
@@ -98,7 +98,8 @@ export const schoolLinks = [
   { name: "Pedagógovia", url: "/skola-ludus/pedagogovia" },
   { name: "Výučba", url: "/skola-ludus/vyucba" },
   { name: "Kontakt", url: "/skola-ludus/kontakt" },
-  { name: "Galéria", url: "/skola-ludus/galeria" }
+  { name: "Galéria", url: "/skola-ludus/galeria" },
+  { name: "2% z dane", url: "/skola-ludus/2-percenta" }
 ];
 
 export const theaterLinks = [
@@ -107,7 +108,8 @@ export const theaterLinks = [
   { name: "Program", url: "/program?category=divadlo-ludus" },
   { name: "Repertoár", url: "/divadlo-ludus/repertoar" },
   { name: "Aktivity", url: "/divadlo-ludus/aktivity" },
-  { name: "Naše priestory", url: "/divadlo-ludus/priestory" }
+  { name: "Naše priestory", url: "/divadlo-ludus/priestory" },
+  { name: "2% z dane", url: "/divadlo-ludus/2-percenta" }
 ];
 
 export const campLinks = [

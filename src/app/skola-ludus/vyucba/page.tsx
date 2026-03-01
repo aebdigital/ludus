@@ -6,7 +6,7 @@ export default function VyucbaPage() {
         <>
             <section
                 className="h-[40vh] max-md:h-[20vh] bg-cover flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-13 "
-                style={{ backgroundImage: "url('/images/skola/IMG_1789.webp')", backgroundPosition: 'center 35%' }}
+                style={{ backgroundImage: "url('/images/skola/IMG_1789.webp')", backgroundPosition: 'center 25%' }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1
@@ -88,7 +88,7 @@ export default function VyucbaPage() {
                                 </div>
                             </div>
 
-                            <div className="bg-black text-white p-12 max-md:p-6 rounded-xl relative overflow-hidden">
+                            <div className="bg-[#269fab] text-white p-12 max-md:p-6 rounded-xl relative overflow-hidden">
                                 <h2
                                     className="text-[2.5rem] mb-6 border-b-2 border-[#f47f44] pb-2 inline-block text-white"
                                     style={{ fontFamily: 'var(--font-heading)' }}

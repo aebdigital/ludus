@@ -19,7 +19,7 @@ export default function Divadlo2PercentaPage() {
  <div className="w-[95%] max-w-[1600px] mx-auto py-16">
  <div className="grid grid-cols-[1.5fr_1fr] gap-12 items-start max-lg:grid-cols-1 mb-16">
  {/* Left Column: Text */}
- <div className="bg-white p-12 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-gray-100 h-full">
+ <div className="bg-white p-12 max-md:p-4 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-gray-100 h-full">
  <h2 className="text-[2.5rem] mb-6 leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
  Podporte ochotnícke divadelné umenie - Divadlo Ludus
  </h2>
@@ -31,8 +31,8 @@ export default function Divadlo2PercentaPage() {
  Váš príspevok investujeme priamo do umeleckej tvorby - do kostýmov, scény, osvetlenia a do všetkých tých detailov, ktoré robia divadlo magickým miestom. Vďaka vašej podpore môžeme pokračovať v tradícii autorského divadla, ktoré má v Bratislave svoje nezastupiteľné miesto.
  </p>
  <div className="mt-8 pt-8 border-t border-gray-100">
- <h4 className="font-bold text-black mb-4 uppercase tracking-wider text-sm">Údaje o prijímateľovi:</h4>
- <div className="space-y-1 text-black font-medium">
+ <h4 className="font-bold text-black mb-4 uppercase tracking-wider text-lg">Údaje o prijímateľovi:</h4>
+ <div className="space-y-2 text-black font-medium text-[1.2rem]">
  <p>Občianske združenie „ Škola hrou"</p>
  <p>Nábr.arm.gen.L.Svobodu 3 81102 Bratislava - mestská časť Staré Mesto</p>
  <p>IČO: 31795188</p>
@@ -43,7 +43,7 @@ export default function Divadlo2PercentaPage() {
  </div>
 
  {/* Right Column: Documents */}
- <div className="bg-white p-12 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-gray-100">
+ <div className="bg-white p-12 max-md:p-4 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-gray-100">
  <h3 className="text-[2rem] text-center mb-8" style={{ fontFamily: 'var(--font-heading)' }}>
  Dokumenty na stiahnutie
  </h3>

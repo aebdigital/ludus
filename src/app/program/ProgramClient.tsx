@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import { ProgramEvent, ProgramCategory } from '@/lib/api';
@@ -48,6 +48,21 @@ export default function ProgramClient({ events, initialCategory }: ProgramClient
     const currentMonthValue = months[currentMonthIndex].value;
 
     const [activeMonth, setActiveMonth] = useState(currentMonthValue);
+    const monthsContainerRef = useRef<HTMLDivElement>(null);
+    const activeMonthRef = useRef<HTMLButtonElement>(null);
+
+    const scrollToActiveMonth = useCallback(() => {
+        if (activeMonthRef.current && monthsContainerRef.current) {
+            const container = monthsContainerRef.current;
+            const button = activeMonthRef.current;
+            const scrollLeft = button.offsetLeft - container.offsetWidth / 2 + button.offsetWidth / 2;
+            container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+        }
+    }, []);
+
+    useEffect(() => {
+        scrollToActiveMonth();
+    }, [activeMonth, scrollToActiveMonth]);
 
     // Determine current category
     const category = searchParams.get('category') || 'skola-ludus'; // Default to skola-ludus if none
@@ -82,28 +97,22 @@ export default function ProgramClient({ events, initialCategory }: ProgramClient
             </div>
 
             {/* Month Navigation */}
-            <section className="py-6 bg-white sticky top-[84px] z-40 border-b border-black">
-                <div className="w-[95%] mx-auto flex items-center justify-center gap-8 text-xl font-medium max-sm:text-base max-sm:gap-4 overflow-x-auto">
-                    {/* Show Previous, Current, Next month roughly */}
-                    {months.map((m) => {
-                        // Simple logic to show all months or just active +- 1?
-                        // Old design showed 3 months. Let's just list all for simplicity or match the 3-month style?
-                        // Let's list all as a scrollable strip or just the active one prominent. 
-                        // To match old "december january februar" style:
-                        return (
+            <section className="py-6 bg-white border-b border-black">
+                <div ref={monthsContainerRef} className="w-[95%] mx-auto flex items-center justify-center gap-8 text-xl font-medium max-sm:text-base max-sm:gap-3 overflow-x-auto scrollbar-hide pb-1">
+                    {months.map((m) => (
                             <button
                                 key={m.value}
+                                ref={m.value === activeMonth ? activeMonthRef : undefined}
                                 onClick={() => setActiveMonth(m.value)}
-                                className={`whitespace-nowrap transition-all ${activeMonth === m.value
-                                    ? 'text-black font-bold text-2xl scale-110'
-                                    : 'text-black hover:text-black text-lg'
+                                className={`whitespace-nowrap transition-all shrink-0 ${activeMonth === m.value
+                                    ? 'text-black font-bold text-2xl max-sm:text-xl scale-110'
+                                    : 'text-black hover:text-black text-lg max-sm:text-base'
                                     }`}
                                 style={{ fontFamily: 'var(--font-heading)' }}
                             >
                                 {m.value}
                             </button>
-                        )
-                    })}
+                        ))}
                 </div>
             </section>
 

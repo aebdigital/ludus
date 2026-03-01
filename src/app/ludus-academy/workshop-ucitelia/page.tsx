@@ -1,6 +1,7 @@
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default async function WorkshopUciteliaPage() {
 
@@ -31,7 +32,7 @@ export default async function WorkshopUciteliaPage() {
                                 RADOSŤ <span className="text-[#e79b2c]">sa</span> UČIŤ
                             </h2>
                             <div className="text-[#e79b2c] font-bold text-[1.2rem] mb-12 uppercase tracking-widest leading-tight">
-                                PRIPRAVUJEME PRE VÁS NOVÉ OBSAHY
+                                HROU KU KREATÍVNEJ VÝUČBE
                             </div>
 
                             <div className="flex gap-12 max-lg:flex-col">
@@ -41,19 +42,15 @@ export default async function WorkshopUciteliaPage() {
                                         <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#e79b2c]/10 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
 
                                         <div className="relative z-10">
-                                            <div className="text-[#e79b2c] text-[3.5rem] font-bold mb-8" style={{ fontFamily: 'var(--font-heading)' }}>
-                                                PRIPRAVUJEME
+                                            <div className="max-w-lg mx-auto space-y-4 text-white text-lg leading-relaxed">
+                                                <p>Tento workshop pre vás práve pripravujeme. Na medzinárodnej úrovni a vďaka ERASMU+, uvedieme začiatkom roka 2023 zaujímavú kreatívnu metódu IMPROLINGUA, ktorá učiteľom Anglického jazyka prinesie množstvo inovatívnych hier k výučbe.</p>
+                                                <p>Prostredníctvom hry - k lepšej konverzácii.</p>
+                                                <p>Kontaktujte nás a my vám dáme info hneď, ako bude workshop pripravený.</p>
                                             </div>
 
-                                            <div className="max-w-md mx-auto">
-                                                <ul className="space-y-4 text-gray-300 text-center">
-                                                    <li className="flex gap-3 justify-center"><span className="text-[#e79b2c] font-bold">•</span> Kreatívne metódy učenia</li>
-                                                    <li className="flex gap-3 justify-center"><span className="text-[#e79b2c] font-bold">•</span> Práca s hlasom a prejavom pedagóga</li>
-                                                    <li className="flex gap-3 justify-center"><span className="text-[#e79b2c] font-bold">•</span> Zážitková pedagogika v praxi</li>
-                                                    <li className="flex gap-3 justify-center"><span className="text-[#e79b2c] font-bold">•</span> Ako zaujať a udržať pozornosť</li>
-                                                </ul>
-                                            </div>
-
+                                            <Link href="/ludus-academy/kontakt" className="inline-block mt-8 px-8 py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-gray-100 transition-colors rounded-lg no-underline">
+                                                Kontaktovať
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
