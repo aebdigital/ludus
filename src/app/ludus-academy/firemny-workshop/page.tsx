@@ -1,6 +1,12 @@
+import { Metadata } from 'next';
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+    title: "Firemný komunikáčny workshop Bratislava",
+    description: "Zlepšite vystupovanie, prezentáciu a vnútrofiremnú komunikáciu vášho tímu. Praktické tréningy na mieru pre organizácie v LUDUS Academy.",
+};
 
 export default async function FiremnyWorkshopPage() {
 

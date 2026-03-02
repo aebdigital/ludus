@@ -1,6 +1,12 @@
+import { Metadata } from 'next';
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+    title: "Individuálny komunikačný tréning Bratislava",
+    description: "Zlepšite svoje vystupovanie pred ľuďmi alebo kamerou. Praktické individuálne tréningy zamerané na jasnú komunikáciu a autentický prejav.",
+};
 
 export default async function IndividualneTreningyPage() {
 

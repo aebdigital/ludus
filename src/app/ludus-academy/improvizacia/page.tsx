@@ -2,6 +2,12 @@ import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
 import Image from 'next/image';
 import LektorCards from '@/components/LektorCards';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Improvizačný kurz pre dospelých Bratislava",
+    description: "Získajte pohotovosť, sebavedomie a radosť z komunikácie. Kurz divadelnej improvizácie v Bratislave pod vedením skúsených lektorov.",
+};
 
 export default async function ImprovizaciaPage() {
 

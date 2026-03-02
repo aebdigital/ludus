@@ -1,5 +1,11 @@
 import Image from 'next/image';
 import Button from '@/components/Button';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Výučba a krúžky",
+    description: "Informácie o výučbe literárno-dramatického odboru, javiskovom pohybe a hodinách tvorivého písania v SZUŠ LUDUS Bratislava.",
+};
 
 export default function VyucbaPage() {
     return (

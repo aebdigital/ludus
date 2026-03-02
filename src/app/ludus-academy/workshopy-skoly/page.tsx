@@ -1,6 +1,12 @@
+import { Metadata } from 'next';
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+    title: "Workshopy pre školy Bratislava",
+    description: "Ponúkame interaktívne workshopy pre žiakov a učiteľov zamerané na spoluprácu, kreativitu a efektívne učenie. Vyskúšajte metódy tvorivej dramatiky.",
+};
 
 export default async function WorkshopySkolyPage() {
 

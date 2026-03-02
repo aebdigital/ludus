@@ -1,68 +1,74 @@
 import PriceCard from '@/components/PriceCard';
 import Button from '@/components/Button';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Školné a poplatky",
+    description: "Prehľad školného pre literárno-dramatický odbor v SZUŠ LUDUS. Informácie o zľavách, súrodeneckých poplatkoch a čestnom prehlásení.",
+};
 
 export default function SkolnePage() {
- return (
- <>
- <section
- className="h-[40vh] max-md:h-[20vh] bg-cover flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-13 "
- style={{ backgroundImage: "url('/images/skola/IMG_2915.webp')", backgroundPosition: 'center 15%' }}
- >
- <div className="absolute inset-0 bg-black/40" />
- <h1
- className="relative text-white text-[6rem] z-10 text-center max-md:text-[3rem]"
- style={{ fontFamily: 'var(--font-heading)' }}
- >
- Školné
- </h1>
- </section>
+    return (
+        <>
+            <section
+                className="h-[40vh] max-md:h-[20vh] bg-cover flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-13 "
+                style={{ backgroundImage: "url('/images/skola/IMG_2915.webp')", backgroundPosition: 'center 15%' }}
+            >
+                <div className="absolute inset-0 bg-black/40" />
+                <h1
+                    className="relative text-white text-[6rem] z-10 text-center max-md:text-[3rem]"
+                    style={{ fontFamily: 'var(--font-heading)' }}
+                >
+                    Školné
+                </h1>
+            </section>
 
- <div className="w-[95%] mx-auto py-12">
- <p className="text-center max-w-[800px] mx-auto mb-16 text-[1.2rem] text-[#555]">
- Školné na mesiac sa odvíja od toho, či žiak dodá škole na začiatku školského roka čestné prehlásenie.
- Systém vygeneruje školné na celý rok, s možnosťou voľby frekvencie platieb.
- </p>
+            <div className="w-[95%] mx-auto py-12">
+                <p className="text-center max-w-[800px] mx-auto mb-16 text-[1.2rem] text-[#555]">
+                    Školné na mesiac sa odvíja od toho, či žiak dodá škole na začiatku školského roka čestné prehlásenie.
+                    Systém vygeneruje školné na celý rok, s možnosťou voľby frekvencie platieb.
+                </p>
 
- <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 mb-16">
- <PriceCard
- title="S čestným prehlásením"
- price="42€"
- period="/ mesiac"
- href="/skola-ludus/prihlaska"
- />
- <PriceCard
- title="Bez čestného prehlásenia"
- price="52€"
- period="/ mesiac"
- href="/skola-ludus/prihlaska"
- />
- <PriceCard
- title="Súrodenecké školné"
- price="35€"
- period="/ mesiac"
- href="/skola-ludus/prihlaska"
- />
- <PriceCard
- title="Tvorivé písanie"
- price="25€"
- period="/ mesiac"
- href="/skola-ludus/prihlaska"
- />
- <PriceCard
- title="Príprava na VŠMU/ konzervatórium"
- price="100€"
- period="Študenti LUDUSU"
- note="Verejnosť: podľa dohody"
- />
- </div>
+                <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 mb-16">
+                    <PriceCard
+                        title="S čestným prehlásením"
+                        price="42€"
+                        period="/ mesiac"
+                        href="/skola-ludus/prihlaska"
+                    />
+                    <PriceCard
+                        title="Bez čestného prehlásenia"
+                        price="52€"
+                        period="/ mesiac"
+                        href="/skola-ludus/prihlaska"
+                    />
+                    <PriceCard
+                        title="Súrodenecké školné"
+                        price="35€"
+                        period="/ mesiac"
+                        href="/skola-ludus/prihlaska"
+                    />
+                    <PriceCard
+                        title="Tvorivé písanie"
+                        price="25€"
+                        period="/ mesiac"
+                        href="/skola-ludus/prihlaska"
+                    />
+                    <PriceCard
+                        title="Príprava na VŠMU/ konzervatórium"
+                        price="100€"
+                        period="Študenti LUDUSU"
+                        note="Verejnosť: podľa dohody"
+                    />
+                </div>
 
- <p className="text-center text-sm text-black mb-16 italic max-w-2xl mx-auto">
- * Súrodenecká zľava sa vzťahuje na oboch súrodencov v prípade, že obdržíme čestné prehlásenie od oboch žiakov.
- </p>
+                <p className="text-center text-sm text-black mb-16 italic max-w-2xl mx-auto">
+                    * Súrodenecká zľava sa vzťahuje na oboch súrodencov v prípade, že obdržíme čestné prehlásenie od oboch žiakov.
+                </p>
 
 
 
- </div>
- </>
- );
+            </div>
+        </>
+    );
 }

@@ -2,6 +2,12 @@ import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
 import Image from 'next/image';
 import LektorCards from '@/components/LektorCards';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Herecký kurz pre dospelých Bratislava",
+    description: "Rozvíjajte svoje herecké zručnosti a osobnosť pod vedením profesionálov. Herecký kurz pre začiatočníkov aj pokročilých v Bratislave.",
+};
 
 export default async function HereckyKurzPage() {
 

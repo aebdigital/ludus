@@ -1,7 +1,13 @@
+import { Metadata } from 'next';
 import AcademySubpageSidebar from '@/components/AcademySubpageSidebar';
 import Button from '@/components/Button';
 import Image from 'next/image';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+    title: "Workshop pre učiteľov Bratislava",
+    description: "Pripravujeme inovatívne workshopy pre učiteľov. Objavte metódu IMPROLINGUA a inšpirujte sa hravým prístupom k výučbe cudzích jazykov.",
+};
 
 export default async function WorkshopUciteliaPage() {
 

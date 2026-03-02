@@ -1,6 +1,12 @@
+import { Metadata } from 'next';
 import GalleryNav from '@/components/GalleryNav';
 import { getGalleryImages, getImageUrl } from '@/lib/api';
 import GalleryGrid from '@/components/GalleryGrid';
+
+export const metadata: Metadata = {
+    title: "Fotogaléria | LUDUS Academy",
+    description: "Nazrite do atmosféry našich kurzov a workshopov. Fotografie z hereckých hodín, improvizácií a tvorivých projektov.",
+};
 
 export const revalidate = 60; // Revalidate every 60 seconds
 
