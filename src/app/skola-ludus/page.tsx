@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import SkolaLudusClient from './SkolaLudusClient';
+import GalleryPreview from '@/components/GalleryPreview';
 
 export const metadata: Metadata = {
     title: "Škola Ludus Bratislava - Súkromná umelecká škola",
@@ -11,5 +12,5 @@ export const metadata: Metadata = {
 };
 
 export default function SkolaLudusPage() {
-    return <SkolaLudusClient />;
+    return <SkolaLudusClient galleryPreview={<GalleryPreview category="skola-ludus" href="/skola-ludus/galeria" limit={3} />} />;
 }

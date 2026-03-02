@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import LudusAcademyClient from './LudusAcademyClient';
+import GalleryPreview from '@/components/GalleryPreview';
 
 export const metadata: Metadata = {
     title: "Ludus Academy Bratislava - Herecké kurzy pre dospelých",
@@ -11,5 +12,5 @@ export const metadata: Metadata = {
 };
 
 export default function LudusAcademyPage() {
-    return <LudusAcademyClient />;
+    return <LudusAcademyClient galleryPreview={<GalleryPreview category="ludus-academy" href="/ludus-academy/galeria" limit={3} />} />;
 }

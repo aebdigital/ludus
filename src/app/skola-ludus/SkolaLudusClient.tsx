@@ -5,9 +5,13 @@ import Button from '@/components/Button';
 import Link from 'next/link';
 import Sidebar from '@/components/Sidebar';
 import CollapsibleList from '@/components/CollapsibleList';
-import GalleryPreview from '@/components/GalleryPreview';
+import { ReactNode } from 'react';
 
-export default function SkolaLudusClient() {
+interface SkolaLudusClientProps {
+    galleryPreview: ReactNode;
+}
+
+export default function SkolaLudusClient({ galleryPreview }: SkolaLudusClientProps) {
     return (
         <>
             {/* Hero */}
@@ -237,7 +241,7 @@ export default function SkolaLudusClient() {
                         </div>
 
                         {/* Gallery Preview */}
-                        <GalleryPreview category="skola-ludus" href="/skola-ludus/galeria" limit={3} />
+                        {galleryPreview}
                     </main>
 
                     <Sidebar category="skola-ludus" />

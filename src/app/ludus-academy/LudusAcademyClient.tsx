@@ -4,7 +4,7 @@ import Image from 'next/image';
 import CourseCard from '@/components/CourseCard';
 import Button from '@/components/Button';
 import Sidebar from '@/components/Sidebar';
-import GalleryPreview from '@/components/GalleryPreview';
+import { ReactNode } from 'react';
 
 const courses = [
     {
@@ -75,7 +75,11 @@ const corporateWorkshops = [
     }
 ];
 
-export default function LudusAcademyClient() {
+interface LudusAcademyClientProps {
+    galleryPreview: ReactNode;
+}
+
+export default function LudusAcademyClient({ galleryPreview }: LudusAcademyClientProps) {
     return (
         <div>
             {/* Hero */}
@@ -226,7 +230,7 @@ export default function LudusAcademyClient() {
                         </div>
 
                         {/* Gallery Preview */}
-                        <GalleryPreview category="ludus-academy" href="/ludus-academy/galeria" limit={3} />
+                        {galleryPreview}
 
                     </main>
 
