@@ -66,14 +66,14 @@ export default function LudusTaborClient({ galleryPreview }: LudusTaborClientPro
                                 alt="Ludus Tábor"
                                 width={600}
                                 height={400}
-                                className="w-full h-[450px] object-cover rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.1)] max-md:order-first"
+                                className="w-full h-[450px] max-md:h-[225px] object-cover rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.1)] max-md:order-first"
                             />
                         </div>
 
                         {/* Price and Dates Grid */}
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
                             {/* Price section */}
-                            <div className="bg-white p-10 rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.05)] border-l-4 border-[#f47f44] h-full flex flex-col">
+                            <div className="bg-white p-10 max-md:p-4 rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.05)] border-l-4 border-[#f47f44] h-full flex flex-col">
                                 <h3 className="text-[2rem] mb-6 inline-block" style={{ fontFamily: 'var(--font-heading)' }}>
                                     Cena a platba
                                 </h3>
@@ -109,7 +109,7 @@ export default function LudusTaborClient({ galleryPreview }: LudusTaborClientPro
                             </div>
 
                             {/* Turnusy */}
-                            <div id="terminy" className="bg-[#066831] text-white p-10 rounded-xl shadow-xl h-full flex flex-col scroll-mt-28">
+                            <div id="terminy" className="bg-[#066831] text-white p-10 max-md:p-4 rounded-xl shadow-xl h-full flex flex-col scroll-mt-28">
                                 <h3 className="text-[2rem] mb-6 text-[#f47f44]" style={{ fontFamily: 'var(--font-heading)' }}>
                                     Termíny 2026
                                 </h3>
@@ -139,7 +139,7 @@ export default function LudusTaborClient({ galleryPreview }: LudusTaborClientPro
                         </div>
 
                         {/* Program & Workshops */}
-                        <div className="bg-white p-10 rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.05)]">
+                        <div className="bg-white p-10 max-md:p-4 rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.05)]">
                             <h3 className="text-[2rem] mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
                                 Tento rok vás čakajú tematické workshopy
                             </h3>
@@ -153,7 +153,7 @@ export default function LudusTaborClient({ galleryPreview }: LudusTaborClientPro
                         </div>
 
                         {/* Important Details */}
-                        <div className="bg-white p-10 rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.05)]">
+                        <div className="bg-white p-10 max-md:p-4 rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.05)]">
                             <div className="grid grid-cols-2 gap-8 max-sm:grid-cols-1">
                                 <div>
                                     <h4 className="font-bold uppercase text-black text-sm mb-2 tracking-wider">Miesto konania</h4>

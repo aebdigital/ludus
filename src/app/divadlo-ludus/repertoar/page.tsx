@@ -66,11 +66,6 @@ export default async function RepertoarPage() {
                                             {item.subtitle && (
                                                 <p className="text-gray-500 text-lg m-0">{item.subtitle}</p>
                                             )}
-                                            {(item.year || item.venue) && (
-                                                <p className="text-gray-400 text-sm m-0">
-                                                    {[item.year, item.venue].filter(Boolean).join(' · ')}
-                                                </p>
-                                            )}
                                         </div>
                                     </div>
 

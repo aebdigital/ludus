@@ -23,7 +23,7 @@ export default function AcademyKontaktPage() {
             </section>
 
             <div className="w-[95%] mx-auto py-12">
-                <div className="flex gap-16 items-start max-xl:flex-col -mt-32 relative z-10">
+                <div className="flex gap-16 items-start max-xl:flex-col -mt-32 max-md:-mt-12 relative z-10">
                     <main className="flex-1 min-w-0 w-full">
                         <AcademyKontaktClient />
                     </main>

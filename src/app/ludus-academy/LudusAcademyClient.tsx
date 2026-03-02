@@ -124,7 +124,7 @@ export default function LudusAcademyClient({ galleryPreview }: LudusAcademyClien
                                 alt="Ludus Academy"
                                 width={600}
                                 height={400}
-                                className="w-full h-[450px] object-cover rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.1)] max-md:order-first"
+                                className="w-full h-[450px] max-md:h-[225px] object-cover rounded-xl shadow-[0_5px_15px_rgba(0,0,0,0.1)] max-md:order-first"
                             />
                         </div>
 
