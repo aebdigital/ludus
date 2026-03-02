@@ -163,8 +163,11 @@ export default function SkolaLudusPedagogoviaPage() {
 
             {/* Hero */}
             <section
-                className="h-[40vh] max-md:h-[20vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-13 "
-                style={{ backgroundImage: "url('/images/skola/IMG_2915.webp')" }}
+                className="h-[40vh] max-md:h-[20vh] bg-cover flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-13 "
+                style={{
+                    backgroundImage: "url('/images/skola/IMG_2915.webp')",
+                    backgroundPosition: 'center 15%'
+                }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1

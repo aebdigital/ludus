@@ -22,7 +22,7 @@ export const menuData: NavCategory[] = [
       { name: "Program", url: "/program?category=skola-ludus", image: "/images/skola/IMG_1821.webp" },
       { name: "Prihláška", url: "/skola-ludus/prihlaska", image: "/images/skola/IMG_9976.webp" },
       { name: "Školné", url: "/skola-ludus/skolne", image: "/images/skola/IMG_1875.webp" },
-      { name: "Pedagógovia", url: "/skola-ludus/pedagogovia", image: "/images/o-nas/katarina-baranova.webp" },
+      { name: "Pedagógovia", url: "/skola-ludus/pedagogovia", image: "/pedagogovia/KATARÍNA BARANOVA.webp" },
       { name: "Výučba", url: "/skola-ludus/vyucba", image: "/images/skola/IMG_3487.webp" },
       { name: "Galéria", url: "/skola-ludus/galeria", image: "/images/skola/IMG_4346.webp" }
     ]
@@ -32,12 +32,12 @@ export const menuData: NavCategory[] = [
     url: "/divadlo-ludus",
     image: "/images/divadlo-main.webp",
     links: [
-      { name: "O nás", url: "/divadlo-ludus", image: "/images/divadlo-main.webp" },
-      { name: "História", url: "/historia", image: "/images/divadlo-main.webp" },
-      { name: "Program", url: "/program?category=divadlo-ludus", image: "/images/divadlo-main.webp" },
-      { name: "Repertoár", url: "/divadlo-ludus/repertoar", image: "/images/divadlo-main.webp" },
+      { name: "O nás", url: "/divadlo-ludus", image: "/images/divadlo-onas.webp" },
+      { name: "História", url: "/historia", image: "/images/skola/IMG_2993.webp" },
+      { name: "Program", url: "/program?category=divadlo-ludus", image: "/images/program/program-hero.webp" },
+      { name: "Repertoár", url: "/divadlo-ludus/repertoar", image: "/images/repertoar-hero.webp" },
       { name: "Aktivity", url: "/divadlo-ludus/aktivity", image: "/images/divadlo-main.webp" },
-      { name: "Naše priestory", url: "/divadlo-ludus/priestory", image: "/images/divadlo-main.webp" }
+      { name: "Naše priestory", url: "/divadlo-ludus/priestory", image: "/fotky priestorov/blackbox/IMG_5459.webp" }
     ]
   },
   {
@@ -68,7 +68,7 @@ export const menuData: NavCategory[] = [
   {
     title: "Program",
     url: "/program?category=divadlo-ludus",
-    image: "/images/painting.webp",
+    image: "/images/skola/IMG_1821.webp",
     links: [
       { name: "Škola Ludus", url: "/program?category=skola-ludus", image: "/images/skola-main.webp" },
       { name: "Divadlo Ludus", url: "/program?category=divadlo-ludus", image: "/images/divadlo-main.webp" },

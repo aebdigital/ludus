@@ -7,8 +7,11 @@ export default async function IndividualneTreningyPage() {
     return (
         <div className="bg-white">
             <section
-                className="h-[40vh] max-md:h-[20vh] bg-cover bg-center flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-13 "
-                style={{ backgroundImage: "url('/images/academy/IMG_9073.webp')" }}
+                className="h-[40vh] max-md:h-[20vh] bg-cover flex items-center justify-center relative rounded-b-xl overflow-hidden mt-20 max-md:mt-13 "
+                style={{
+                    backgroundImage: "url('/images/academy/IMG_9073.webp')",
+                    backgroundPosition: 'center 30%'
+                }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <h1

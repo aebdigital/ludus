@@ -54,8 +54,8 @@ export default async function FiremnyWorkshopPage() {
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                                <div className="bg-[#e79b2c] p-10 max-md:p-4 rounded-2xl">
+                            <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] items-center gap-8 mb-8">
+                                <div className="bg-[#e79b2c] p-10 max-md:p-4 rounded-2xl h-full flex flex-col justify-center">
                                     <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
                                         Cieľ workshopu
                                     </h3>
@@ -71,29 +71,37 @@ export default async function FiremnyWorkshopPage() {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="bg-white p-10 max-md:p-4 rounded-2xl border-2 border-gray-50 flex flex-col justify-center">
-                                    <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
-                                        Pre koho je určený
-                                    </h3>
-                                    <ul className="space-y-3">
-                                        {[
-                                            'Firmy komunikujúce s klientmi alebo partnermi',
-                                            'Tímy pripravujúce prezentácie a verejné vystúpenia',
-                                            'Organizácie poskytujúce rozhovory médiám',
-                                            'Manažérov a vedúcich pracovníkov',
-                                            'Hovorcov, projektových manažérov a obchodníkov',
-                                            'Odborníkov, ktorí potrebujú zrozumiteľne vysvetľovať svoju prácu'
-                                        ].map((item, i) => (
-                                            <li key={i} className="flex gap-3 items-start text-[#000]">
-                                                <span className="text-[#d66420] mt-1 font-bold">•</span>
-                                                {item}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <p className="mt-6 text-sm italic text-gray-500">
-                                        Nie sú potrebné herecké skúsenosti. Tréning je praktický a prispôsobený konkrétnemu prostrediu organizácie.
-                                    </p>
+                                <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-black">
+                                    <video
+                                        src="/VIDEO-2026-03-02-10-55-25.mp4"
+                                        controls
+                                        className="w-full h-full object-cover"
+                                    />
                                 </div>
+                            </div>
+
+                            <div className="bg-white p-10 max-md:p-4 rounded-2xl border-2 border-gray-100 flex flex-col justify-center mb-16 shadow-sm">
+                                <h3 className="text-[1.8rem] mb-6 text-black" style={{ fontFamily: 'var(--font-heading)' }}>
+                                    Pre koho je určený
+                                </h3>
+                                <ul className="space-y-3">
+                                    {[
+                                        'Firmy komunikujúce s klientmi alebo partnermi',
+                                        'Tímy pripravujúce prezentácie a verejné vystúpenia',
+                                        'Organizácie poskytujúce rozhovory médiám',
+                                        'Manažérov a vedúcich pracovníkov',
+                                        'Hovorcov, projektových manažérov a obchodníkov',
+                                        'Odborníkov, ktorí potrebujú zrozumiteľne vysvetľovať svoju prácu'
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex gap-3 items-start text-[#000]">
+                                            <span className="text-[#d66420] mt-1 font-bold">•</span>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <p className="mt-6 text-sm italic text-gray-500">
+                                    Nie sú potrebné herecké skúsenosti. Tréning je praktický a prispôsobený konkrétnemu prostrediu organizácie.
+                                </p>
                             </div>
 
                             <div className="bg-[#d66420] p-10 max-md:p-4 rounded-2xl mb-16 shadow-xl">

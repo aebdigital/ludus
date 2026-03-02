@@ -8,18 +8,19 @@ const founders = [
     {
         name: "Mgr. art PETER KUBA",
         description:
-            "Spoluzakladateľ divadla a školy LUDUS, zriaďovateľ SZUŠ LUDUS",
+            "Spoluzakladateľ divadelnej školy LUDUS, zriaďovateľ SZUŠ LUDUS, pedagóg",
         image: "/new/founders/peter-kuba-300x300.webp",
         details: [
             "Štúdium na VŠMU odbor herectvo",
-            "Dlhoročný umelecký šéf and režisér Divadla Ludus kreatívneho centra mladých",
+            "Umelecký šéf a režisér Divadla Ludus, kreatívne centrum mladých",
+            "Spoluautor učebných plánov a metodiky ZUŠ",
         ],
         pastRoles: [
-            "pedagóg doplňujúceho pedagogického štúdia na VŠMU",
-            "pedagóg na konzervatóriu v Bratislave",
-            "umelecký šéf detskej dramatickej družiny Československého rozhlasu",
-            "člen Divadla pre deti a mládež Trnava",
-            'moderátor detskej relácie „Poďte s nami" pre STV',
+            "Pedagóg doplňujúceho pedagogického štúdia na VŠMU",
+            "Bol umelecký šéf detskej dramatickej družiny Československého rozhlasu",
+            "Bol členom Divadla pre deti a mládež Trnava",
+            "Rôzne pedagogické skúsenosti: Konzervatórium, Osvetový ústav",
+            "Účinkovanie v TV",
         ],
     },
     {
@@ -27,15 +28,16 @@ const founders = [
         description: "Spoluzakladateľka školy LUDUS, bývalý dlhoročný pedagóg",
         image: "/new/founders/xenia-kubova-gracova-290x290.webp",
         details: [
-            "Štúdium na štátnom konzervatórium v Bratlavě",
-            "Dlhoročný pedagóg v škole LUDUS a autorka učebných osnov a metodiky pre ĽŠU – literárno dramatický odbor",
+            "Štúdium na štátnom konzervatórium v Bratislave",
+            "Tvorca osnov a plánov pre LDO",
+            "Spoluautorka metodiky pre žiakov LDO, podľa ktorých sa učí dodnes",
         ],
         pastRoles: [
-            "členka dedinského divadla a herečka Žilinského divadla",
+            "Bola členka dedinského divadla a herečka Žilinského divadla",
             "Spoluzakladateľka súboru LUDUS",
             "Vedúca odboru LŠU, zástupca riaditeľa",
-            "Porotkyňa prednesu na rôznych súťažiach",
-            "pedagóg v rozhlasovej dramatickej družine",
+            "Porotkyňa prednesu na rôznych súťažiach, pedagóg v rozhlasovej dramatickej družine",
+            "Účinkovanie v TV",
         ],
     },
 ];
@@ -182,6 +184,18 @@ export default function HistoriaPage() {
                                 Dokument Fenomén LUDUS (STVR)
                             </h4>
                         </a>
+                        <div className="flex flex-col gap-4">
+                            <div className="aspect-video w-full rounded-xl overflow-hidden shadow-lg bg-black">
+                                <iframe
+                                    className="w-full h-full"
+                                    src="https://www.youtube.com/embed/Isn3rIxLaZo"
+                                    title="Xeňa a Peter - CENA AICT"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                            <h4 className="text-xl font-bold">Xeňa a Peter - CENA AICT</h4>
+                        </div>
                     </div>
                 </div>
 
@@ -204,18 +218,18 @@ export default function HistoriaPage() {
                                 </ul>
                                 <ul className="space-y-3 font-semibold text-white italic">
                                     <li>
-                                        Hra oslobodzujúca od všednosti, konvencie and nepravdy
+                                        Hra oslobodzujúca od všednosti, konvencie a nepravdy
                                     </li>
-                                    <li>Hra ako kľúč k svetu and životu</li>
+                                    <li>Hra ako kľúč k svetu a životu</li>
                                     <li>
-                                        Hra ako prapodstata umeleckého prejavu and tvorby vôbec
+                                        Hra ako prapodstata umeleckého prejavu a tvorby vôbec
                                     </li>
                                 </ul>
                             </div>
                             <p className="text-[1.2rem] leading-relaxed text-[#000]">
-                                Tieto princípy sa ukázali ako veľmi nadčasové and týchto zásad
-                                sa Ludus držal celé desaťročia and platia až doteraz. Ludus sa
-                                stal miestom, kde deti and mladí ľudia našli miesto, kde sa
+                                Tieto princípy sa ukázali ako veľmi nadčasové a týchto zásad
+                                sa Ludus držal celé desaťročia a platia až doteraz. Ludus sa
+                                stal miestom, kde deti a mladí ľudia našli miesto, kde sa
                                 cítili slobodne. Našli svoju vnútornú slobodu. Hrali sa. A vďaka
                                 hre sa učili... To je stále základný princíp Ludusu. Hra, ako
                                 cesta.
@@ -243,8 +257,8 @@ export default function HistoriaPage() {
                             />
                         </div>
                         <div className="space-y-8 text-[1.2rem] leading-relaxed text-[#000]">
-                            <p>
-                                Z Ludusu sa postupne stala mimoriadne úspešná škola pre deti and
+                            <p className="text-[1.2rem] leading-relaxed text-[#000]">
+                                Z Ludusu sa postupne stala mimoriadne úspešná škola pre deti a
                                 mladých, ktorých životom bolo divadlo. Vysoké renomé školy sa
                                 začalo prejavovať aj v počte úspešných uchádzačov o štúdium
                                 herectva. Začiatkom 80tych rokov získal Ludus veľkorysé
@@ -254,7 +268,7 @@ export default function HistoriaPage() {
                                 pripomínali tvorbu profesionálnych divadiel.
                             </p>
                             <div className="bg-white p-12 max-md:p-4 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100 italic text-center">
-                                "Postupne vznikla potreba premostenia Ludusu medzi detskou and
+                                "Postupne vznikla potreba premostenia Ludusu medzi detskou a
                                 profesionálnou úrovňou. Z amatérskeho krúžku sa Ludus stal
                                 centrom, ktoré bolo priekopníkom divadla hraného mladými pre
                                 mladých."
@@ -267,10 +281,10 @@ export default function HistoriaPage() {
                             <p className="text-[1.2rem] leading-relaxed text-[#000]">
                                 Od roku 1990 funguje Ludus v dvoch líniách. Jednou je Škola
                                 Ludus (SZUŠ LUDUS) – vtedy ako literárno-dramatický odbor, v
-                                ktorom sa vzdelávajú deti and mladí. Druhou líniou bolo
+                                ktorom sa vzdelávajú deti a mladí. Druhou líniou bolo
                                 Profesionálne divadlo Ludus (ako divadlo v pôsobnosti BSK).
-                                Ktoré však vždy úzko spolupracovalo so školou and dalo možnosť
-                                absolventom hrať v profesionálnych podmienkach and s
+                                Ktoré však vždy úzko spolupracovalo so školou a dalo možnosť
+                                absolventom hrať v profesionálnych podmienkach a s
                                 profesionálmi.
                             </p>
                             <div className="bg-[#066831] text-white p-12 rounded-2xl text-center shadow-xl">
@@ -282,9 +296,9 @@ export default function HistoriaPage() {
                                 </h3>
                                 <p className="text-xl opacity-90 leading-relaxed">
                                     V súčasnosti pôsobíme pod jednou strechou na Palackého 22, v
-                                    novom komornom priestore BLACKBOX. Sme rodinnou školou and
-                                    divadlom, kde sa stretávajú generácie and odovzdávajú si svoje
-                                    skúsenosti. Stále s radosťou, v slobode and v HRE.
+                                    novom komornom priestore BLACKBOX. Sme rodinnou školou a
+                                    divadlom, kde sa stretávajú generácie a odovzdávajú si svoje
+                                    skúsenosti. Stále s radosťou, v slobode a v HRE.
                                 </p>
                             </div>
                         </div>
@@ -350,7 +364,7 @@ export default function HistoriaPage() {
                                     "2007 – K. Žiška: Čiernobiele srdce Charlieho Chaplina",
                                     "2007 - J. Záborský & comp.:Dva dni v Chujave",
                                     "2008 – M. Hudec / K. Kollárik / P. Kuba: Objav roka",
-                                    "2008 – F. Rabelaise / K. Žiška: Gargantua and Pantagruel",
+                                    "2008 – F. Rabelaise / K. Žiška: Gargantua a Pantagruel",
                                     "2009 – K. Žiška / M. Dacho / P. Kuba: Velipsespilev",
                                     "2009 – N. V. Gogoľ / P. Kuba: Acta psychopata",
                                     "2010 – L. Kerata: Fantázia (Fascikliáda)",
@@ -391,10 +405,10 @@ export default function HistoriaPage() {
                                     "1992 - J. Benčík: Dlhý, Široký, Bystrozraký",
                                     "1992 - P. Kuba: Kráľ Strach",
                                     "1993 (SRN), 2003 J. Bindzár: Robinson",
-                                    "1993 – V. Macek, j. Pražmári: O psíškovi and mačičke",
+                                    "1993 – V. Macek, j. Pražmári: O psíčkovi a mačičke",
                                     "1993 – J. Čepoveckij: Môj strýčko klaun",
                                     "1994 – O. Hoffmannová: Čarodejnica Ivica",
-                                    "1995 – J. C. Hronský: Budkáčik and Dubkáčik",
+                                    "1995 – J. C. Hronský: Budkáčik a Dubkáčik",
                                     "1996 – O. Hoffmannová: Letí, letí...",
                                     "1997 – P. Kuba: Kontajnerstory",
                                     "1998 – J. Pražmári and kol.: Najstaršia rozprávka",
@@ -409,7 +423,7 @@ export default function HistoriaPage() {
                                     "2006 – DF. Dušek: Pištáčikovo pestvo",
                                     "2006 – J. Synková: Malá čarodejnica",
                                     "2007 – P. Garajová-Jarjabková: Do dávnych čias mesta",
-                                    "2008 – J. Mokoš: Hasprčko and Mrcúlik",
+                                    "2008 – J. Mokoš: Hasprčko a Mrcúlik",
                                     "2009 – M. Beňová: Strašiak",
                                     "2009 – Kolektív: Vlk, neklam!",
                                     "2010 – A. Lingrenová: Popletená punčocha",
