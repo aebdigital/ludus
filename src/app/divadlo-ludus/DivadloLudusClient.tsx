@@ -64,7 +64,7 @@ export default function DivadloLudusClient({ events }: DivadloLudusClientProps) 
                                         myšlienke zakladateľov, že divadlo a škola tvoria jeden živý celok, v ktorom mladí tvoria pre mladých.
                                     </p>
                                     <p>
-                                        Sú v spojené nádoby, kde sa mladí ľudia inšpirujú od profesionálov a naopak. Prichádza tak k iniciačnému
+                                        Sú to spojené nádoby, kde sa mladí ľudia inšpirujú od profesionálov a naopak. Prichádza tak k iniciačnému
                                         momentu, ktorý vždy bol a stále je pre LUDUS dôležitý.
                                     </p>
                                 </div>

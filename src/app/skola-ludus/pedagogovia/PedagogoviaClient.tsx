@@ -67,7 +67,7 @@ const staff = [
         image: '/pedagogovia/RICHARD LABUDA.webp'
     },
     {
-        name: 'Bc. Dano Zwach',
+        name: 'Bc. Daniel Zwach',
         role: 'Pedagóg',
         image: '/pedagogovia/DANIEL ZWACH.webp'
     },
