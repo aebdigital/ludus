@@ -206,8 +206,7 @@ export default function HistoriaClient() {
                                 Peter Kuba sa spolu so Xéniou začali v roku 1970 venovať mladým
                                 ľuďom, ktorí milujú divadlo. Vznikol nápad poňať bežný
                                 literárno-dramatický odbor Ľudovej školy umenia ako divadelné
-                                zoskupenie. A tak spolu s Jurajom Bindzárom založili LUDUS. Jeho
-                                ciele definovali vo svojom manifeste:
+                                zoskupenie. A tak založili Ludus. Jeho hodnoty definovali spolu s Jurajom Bindzárom vo svojom manifeste.
                             </p>
                             <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1 bg-[#d66420] p-8 rounded-xl mb-8 not-italic shadow-lg">
                                 <ul className="space-y-3 font-semibold text-white italic">
