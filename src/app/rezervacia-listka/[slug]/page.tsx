@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useEffect, use } from 'react';
+import { useState, useEffect, use, useCallback } from 'react';
 import { notFound } from 'next/navigation';
 import { getProgramEventBySlug, ProgramEvent } from '@/lib/api';
+import TurnstileWidget from '@/components/TurnstileWidget';
 
 export default function TicketReservationPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = use(params);
@@ -17,9 +18,12 @@ export default function TicketReservationPage({ params }: { params: Promise<{ sl
         phone: '',
         ticket_count: 1,
         message: '',
-        captcha: '',
         gdpr: false
     });
+    const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+
+    const handleVerify = useCallback((token: string) => setTurnstileToken(token), []);
+    const handleExpire = useCallback(() => setTurnstileToken(null), []);
 
     useEffect(() => {
         getProgramEventBySlug(slug).then(data => {
@@ -46,8 +50,8 @@ export default function TicketReservationPage({ params }: { params: Promise<{ sl
 
         if (!event) return;
 
-        if (formData.captcha !== '3') {
-            alert('Nesprávna odpoveď na kontrolnú otázku.');
+        if (!turnstileToken) {
+            alert('Prosím počkajte na overenie CAPTCHA.');
             return;
         }
 
@@ -68,6 +72,7 @@ export default function TicketReservationPage({ params }: { params: Promise<{ sl
                     phone: formData.phone,
                     subject: 'ticket-reservation',
                     message: `Nová rezervácia lístkov (Počet: ${formData.ticket_count})\nSpráva: ${formData.message}`,
+                    turnstileToken,
                     reservationDetails: {
                         'Predstavenie': event.title,
                         'Dátum': new Date(event.event_date).toLocaleDateString('sk-SK'),
@@ -192,18 +197,8 @@ export default function TicketReservationPage({ params }: { params: Promise<{ sl
                         />
                     </div>
 
-                    {/* Captcha */}
-                    <div>
-                        <label className="block text-sm font-bold mb-1">Kontrolná otázka: 2+1=?</label>
-                        <input
-                            type="text"
-                            name="captcha"
-                            required
-                            value={formData.captcha}
-                            onChange={handleChange}
-                            className="w-20 border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-500 text-center"
-                        />
-                    </div>
+                    {/* Turnstile CAPTCHA */}
+                    <TurnstileWidget onVerify={handleVerify} onExpire={handleExpire} />
 
                     {/* GDPR */}
                     <div className="flex items-start gap-3 pt-4 border-t">
@@ -225,8 +220,8 @@ export default function TicketReservationPage({ params }: { params: Promise<{ sl
                     <div className="pt-6">
                         <button
                             type="submit"
-                            disabled={isSubmitting}
-                            className={`w-full ${isSubmitting ? 'bg-gray-500 cursor-not-allowed' : 'bg-black hover:bg-gray-800 hover:-translate-y-0.5'} text-white font-bold uppercase tracking-widest py-4 rounded-lg transition-all shadow-lg hover:shadow-xl transform`}
+                            disabled={isSubmitting || !turnstileToken}
+                            className={`w-full ${isSubmitting || !turnstileToken ? 'bg-gray-500 cursor-not-allowed' : 'bg-black hover:bg-gray-800 hover:-translate-y-0.5'} text-white font-bold uppercase tracking-widest py-4 rounded-lg transition-all shadow-lg hover:shadow-xl transform`}
                         >
                             {isSubmitting ? 'Odosiela sa...' : 'Rezervovať lístok'}
                         </button>

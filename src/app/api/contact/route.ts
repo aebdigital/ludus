@@ -3,7 +3,41 @@ import { NextResponse } from 'next/server';
 export async function POST(request: Request) {
     try {
         const body = await request.json();
-        const { name, email, phone, subject, message } = body;
+        const { name, email, phone, subject, message, turnstileToken } = body;
+
+        // Verify Turnstile CAPTCHA
+        if (!turnstileToken) {
+            return NextResponse.json(
+                { error: 'Chýba overenie CAPTCHA.' },
+                { status: 400 }
+            );
+        }
+
+        const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
+        if (!turnstileSecret) {
+            console.error('TURNSTILE_SECRET_KEY is not defined');
+            return NextResponse.json(
+                { error: 'Server configuration error' },
+                { status: 500 }
+            );
+        }
+
+        const turnstileResponse = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                secret: turnstileSecret,
+                response: turnstileToken,
+            }),
+        });
+
+        const turnstileResult = await turnstileResponse.json();
+        if (!turnstileResult.success) {
+            return NextResponse.json(
+                { error: 'CAPTCHA overenie zlyhalo. Skúste to znova.' },
+                { status: 400 }
+            );
+        }
 
         // Validate required fields
         if (!name || !email || !message) {

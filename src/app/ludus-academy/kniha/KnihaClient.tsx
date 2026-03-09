@@ -2,8 +2,9 @@
 
 import Image from 'next/image';
 import Button from '@/components/Button';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import TurnstileWidget from '@/components/TurnstileWidget';
 
 const previewImages = [
     '/images/kniha/ukazka1.webp',
@@ -17,9 +18,17 @@ export default function KnihaClient() {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+
+    const handleVerify = useCallback((token: string) => setTurnstileToken(token), []);
+    const handleExpire = useCallback(() => setTurnstileToken(null), []);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        if (!turnstileToken) {
+            alert('Prosím počkajte na overenie CAPTCHA.');
+            return;
+        }
         setIsSubmitting(true);
 
         try {
@@ -30,7 +39,8 @@ export default function KnihaClient() {
                     name,
                     email,
                     subject: 'ebook-lead',
-                    message: `Záujemca o E-book: ${name} (${email})`
+                    message: `Záujemca o E-book: ${name} (${email})`,
+                    turnstileToken,
                 }),
             });
 
@@ -268,10 +278,11 @@ export default function KnihaClient() {
                                 required
                             />
                         </div>
+                        <TurnstileWidget onVerify={handleVerify} onExpire={handleExpire} />
                         <button
                             type="submit"
-                            disabled={isSubmitting}
-                            className={`w-full ${isSubmitting ? 'bg-gray-500 cursor-not-allowed' : 'bg-[#6f42c1] hover:bg-[#5a32a3]'} text-white font-bold py-3 px-6 rounded transition-colors uppercase`}
+                            disabled={isSubmitting || !turnstileToken}
+                            className={`w-full ${isSubmitting || !turnstileToken ? 'bg-gray-500 cursor-not-allowed' : 'bg-[#6f42c1] hover:bg-[#5a32a3]'} text-white font-bold py-3 px-6 rounded transition-colors uppercase`}
                         >
                             {isSubmitting ? 'Odosiela sa...' : 'CHCEM E-BOOK ZDARMA'}
                         </button>

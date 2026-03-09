@@ -2,7 +2,8 @@
 
 import Image from 'next/image';
 import Button from '@/components/Button';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
+import TurnstileWidget from '@/components/TurnstileWidget';
 
 export default function SkolaKontaktClient() {
     return (
@@ -101,9 +102,17 @@ export default function SkolaKontaktClient() {
 function ContactForm() {
     const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState<'success' | 'error' | null>(null);
+    const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+
+    const handleVerify = useCallback((token: string) => setTurnstileToken(token), []);
+    const handleExpire = useCallback(() => setTurnstileToken(null), []);
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
+        if (!turnstileToken) {
+            setStatus('error');
+            return;
+        }
         setLoading(true);
         setStatus(null);
 
@@ -114,6 +123,7 @@ function ContactForm() {
             phone: formData.get('phone'),
             subject: formData.get('subject') || 'skola-ludus',
             message: formData.get('message'),
+            turnstileToken,
         };
 
         try {
@@ -162,6 +172,8 @@ function ContactForm() {
                 <textarea id="message" name="message" rows={5} required disabled={loading} className="w-full p-3 rounded border border-gray-200 focus:border-[#f47f44] outline-none transition-colors" />
             </div>
 
+            <TurnstileWidget onVerify={handleVerify} onExpire={handleExpire} />
+
             {status === 'success' && (
                 <div className="bg-green-100 text-green-700 p-3 rounded mb-2">
                     Správa bola úspešne odoslaná.
@@ -174,7 +186,7 @@ function ContactForm() {
                 </div>
             )}
 
-            <Button type="submit" className="w-full justify-center !bg-black !text-white hover:!bg-gray-800" disabled={loading}>
+            <Button type="submit" className="w-full justify-center !bg-black !text-white hover:!bg-gray-800" disabled={loading || !turnstileToken}>
                 {loading ? 'Odosielam...' : 'Odoslať'}
             </Button>
         </form>
