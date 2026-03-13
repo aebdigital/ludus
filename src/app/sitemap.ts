@@ -43,10 +43,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: route === '' ? 1.0 : 0.8,
     }));
 
-    // Dynamic routes for program events
+    // Dynamic routes for program events (deduplicate by slug)
     const events = await getProgramEvents();
-    const eventRoutes = events.map((event) => ({
-        url: `${baseUrl}/program/${event.slug}`,
+    const uniqueSlugs = [...new Set(events.map((e) => e.slug))];
+    const eventRoutes = uniqueSlugs.map((slug) => ({
+        url: `${baseUrl}/program/${slug}`,
         lastModified: new Date(),
         changeFrequency: 'daily' as const,
         priority: 0.7,
