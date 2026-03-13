@@ -4,10 +4,10 @@ import HomeClient from './HomeClient';
 
 export const metadata: Metadata = {
   title: "LUDUS Bratislava - Divadelné centrum, škola a divadlo",
-  description: "Divadelné centrum v Bratislave s 55-ročnou tradíciou. Škola Ludus pre deti, Ludus Academy pre dospelých, profesionálne Divadlo Ludus a letné tábory.",
+  description: "Škola Ludus pre mladých, Ludus Academy pre dospelých, Divadlo Ludus pre všetkých, divadelné letné tábory pre deti a tínedžerov.",
   openGraph: {
     title: "LUDUS Bratislava - Divadelné centrum, škola a divadlo",
-    description: "Škola, divadlo, kurzy a tábory v jednom umeleckom centre v srdci Bratislavy.",
+    description: "Škola Ludus pre mladých, Ludus Academy pre dospelých, Divadlo Ludus pre všetkých, divadelné letné tábory pre deti a tínedžerov.",
   }
 };
 
